@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>In the Pursuit of Unicorns — Races</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+@keyframes twinkle{from{opacity:.08}to{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+:root{
+  --bg:#04040f;
+  --surface:#09091a;
+  --gold:#c9a84c;
+  --text:#d4c9a8;
+  --muted:#5a5044;
+  --dim:#8a7e64;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  font-family:'EB Garamond',serif;
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+#stars{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  pointer-events:none;z-index:0;
+}
+.star{
+  position:absolute;background:#fff;border-radius:50%;
+}
+
+.wrap{
+  position:relative;z-index:1;
+  max-width:860px;margin:0 auto;
+  padding:3rem 1.25rem 5rem;
+}
+
+/* ── Header ── */
+.hd{text-align:center;margin-bottom:2.75rem}
+.hd-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.9rem,5vw,2.8rem);
+  font-weight:700;letter-spacing:.14em;
+  color:var(--gold);
+  text-shadow:0 0 60px rgba(201,168,76,.28);
+}
+.hd-sub{
+  margin-top:.4rem;
+  font-size:.72rem;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--muted);
+}
+
+/* ── Tabs ── */
+.tabs{
+  display:flex;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  margin-bottom:1.75rem;
+  overflow-x:auto;scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar{display:none}
+
+.tab{
+  flex:1;min-width:110px;
+  padding:.7rem .5rem;
+  background:none;border:none;
+  border-bottom:2px solid transparent;
+  font-family:'Cinzel',serif;
+  font-size:.63rem;letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#b8a5f1;cursor:pointer;
+  transition:color .2s,border-color .2s,text-shadow .2s;
+  white-space:nowrap;text-align:center;
+}
+.tab:hover:not(.active){color:#5a4e70}
+.tab.active{
+  color:var(--cc);
+  border-bottom-color:var(--cc);
+  text-shadow:0 0 18px var(--cg);
+}
+
+/* ── Panels ── */
+.panel{display:none}
+.panel.active{display:block;animation:fadeUp .3s ease}
+
+/* ── Card ── */
+.card{
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:3px;overflow:hidden;
+  background:var(--surface);
+}
+
+/* ── Race header ── */
+.cls-hd{
+  padding:1.75rem 2.25rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  position:relative;overflow:hidden;
+}
+.cls-hd::before{
+  content:'';position:absolute;
+  top:0;left:0;width:3px;height:100%;
+  background:var(--cc);opacity:.85;
+}
+.cls-name{
+  font-family:'Cinzel',serif;
+  font-size:1.85rem;font-weight:700;
+  letter-spacing:.07em;line-height:1;
+  color:var(--cc);
+  text-shadow:0 0 35px var(--cg);
+}
+.cls-role{
+  margin-top:.35rem;
+  font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);
+}
+.cls-stats{
+  display:flex;flex-wrap:wrap;gap:.4rem;
+  margin-top:.7rem;
+}
+.cls-mod{
+  display:inline-block;
+  padding:.18rem .75rem;
+  border:1px solid rgba(255,255,255,.1);
+  color:var(--cc);
+  font-family:'Cinzel',serif;
+  font-size:.68rem;letter-spacing:.12em;
+  border-radius:2px;
+}
+.cls-flavor{
+  margin-top:.9rem;
+  font-style:italic;color:var(--dim);
+  font-size:1.05rem;line-height:1.65;
+}
+.cls-lore{
+  margin-top:.75rem;
+  color:#918cac;
+  font-size:1.05rem;line-height:1.7;
+  border-top:1px solid rgba(255,255,255,.04);
+  padding-top:.75rem;
+}
+
+/* ── Section label ── */
+.sec-lbl{
+  padding:.4rem 2.25rem;
+  font-family:'Cinzel',serif;
+  font-size:.58rem;letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#ee81a2;
+  background:rgba(0,0,0,.22);
+  border-bottom:1px solid rgba(255,255,255,.025);
+}
+.sec-lbl.active-lbl{
+  color:#85ee81;
+}
+
+/* ── Ability rows ── */
+.ab{
+  padding:1.15rem 2.25rem;
+  border-bottom:1px solid rgba(255,255,255,.03);
+  transition:background .15s;
+}
+.ab:last-child{border-bottom:none}
+.ab:hover{background:rgba(255,255,255,.012)}
+
+.ab-top{
+  display:flex;align-items:baseline;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:.4rem .75rem;
+  margin-bottom:.4rem;
+}
+.ab-name{
+  font-family:'Cinzel',serif;
+  font-size:1.22rem;font-weight:600;
+  color:#ddd0a8;letter-spacing:.03em;
+}
+.ab-mech{
+  font-family:'Cinzel',serif;
+  font-size:.95rem;letter-spacing:.06em;
+  color:var(--cc);opacity:.72;
+  text-align:right;flex-shrink:0;
+}
+.ab-desc{
+  font-size:1.112rem;color:#afa899;line-height:1.65;
+}
+.ab-desc em{color:#8a7e64;font-style:italic}
+.ab-desc strong{color:#d8ceb2;font-style:normal}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
+
+@media(max-width:560px){
+  .cls-hd,.ab,.sec-lbl{padding-left:1.25rem;padding-right:1.25rem}
+  .cls-name{font-size:1.5rem}
+  .ab-top{flex-direction:column;gap:.2rem}
+  .ab-mech{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<div class="wrap">
+
+  <header class="hd">
+    <h1 class="hd-title">In the Pursuit of Unicorns</h1>
+    <p class="hd-sub">Playable Races</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Races">
+    <button class="tab active" role="tab" data-i="0" style="--cc:#f97316;--cg:rgba(249,115,22,.4)">Foxborn</button>
+    <button class="tab" role="tab" data-i="1" style="--cc:#c4a882;--cg:rgba(196,168,130,.4)">Human</button>
+    <button class="tab" role="tab" data-i="2" style="--cc:#d946ef;--cg:rgba(217,70,239,.4)">Moth Fairy</button>
+    <button class="tab" role="tab" data-i="3" style="--cc:#84cc16;--cg:rgba(132,204,22,.4)">Barkskinned</button>
+    <button class="tab" role="tab" data-i="4" style="--cc:#fb7185;--cg:rgba(251,113,133,.4)">The Stitched</button>
+    <button class="tab" role="tab" data-i="5" style="--cc:#38bdf8;--cg:rgba(56,189,248,.4)">Echoes</button>
+    <button class="tab" role="tab" data-i="6" style="--cc:#818cf8;--cg:rgba(129,140,248,.4)">Resurrected</button>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════════════════════ FOXBORN ════ -->
+    <section class="panel active" id="p0" style="--cc:#f97316;--cg:rgba(249,115,22,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">Foxborn</h2>
+          <p class="cls-role">Trickster · Charming · Forest-born</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+1 Cunningness</span>
+            <span class="cls-mod">+1 Understanding</span>
+          </div>
+          <p class="cls-flavor">"Never ask a Foxborn a straight question. You won't get a straight answer — but you might get something better."</p>
+          <p class="cls-lore">The Foxborn emerged from a boundary that was never meant to blur — between the deep forest and the villages at its edge. Whether fairy mischief, old magic, or simply centuries of humans and foxes living too close together, the result is the same: a fairy folk who are sharp, warm, unreliable, and almost impossible not to like. Adrenalin makes them reckless with charm. They were already dangerous enough.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Silver Tongue</span>
+            <span class="ab-mech">Passive · Always active</span>
+          </div>
+          <p class="ab-desc">Magical truth detection does not work on Foxborn. Enchantments that compel honesty, detect lies, or read intent simply slide off them. Additionally, whenever a Foxborn attempts to deceive or charm someone, the DM whispers whether the target is suspicious — <em>they always know if it's working.</em></p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Slip Away</span>
+            <span class="ab-mech">Once per scene · Automatic · No roll needed</span>
+          </div>
+          <p class="ab-desc">When targeted by an attack or grabbed, the Foxborn simply isn't where they were. The attack automatically causes half the inital damage to the attacker — no roll required. Must be declared before damage is rolled.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════ HUMAN ════ -->
+    <section class="panel" id="p1" style="--cc:#c4a882;--cg:rgba(196,168,130,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">Human</h2>
+          <p class="cls-role">Adaptable · Resilient · Ordinary</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+1 to any two stats of your choice</span>
+          </div>
+          <p class="cls-flavor">"No excuse. No heritage. Just the choice, made again every morning, to keep their eyes open."</p>
+          <p class="cls-lore">Humans have no special bloodline, no ancient pact, nothing to explain why some of them resist the Bliss while everyone else smiles into the dark. They are simply the most stubborn creature in a world that has given up. There is no magic in that. Just the particular human refusal to accept that this is simply how things are now.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Stubborn</span>
+            <span class="ab-mech">Passive · Sanity 12 · Re-roll once per scene</span>
+          </div>
+          <p class="ab-desc">Humans begin with <strong>Sanity 12</strong> instead of 10. Their sheer ordinariness makes them harder to unmake. Once per scene, a Human may re-roll any failed Sanity save and take the new result, even if it is worse. <em>The willingness to try again is its own kind of courage.</em></p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Neutral Entity</span>
+            <span class="ab-mech">Once per scene</span>
+          </div>
+          <p class="ab-desc">You can persuate any creature, even the most monsterous ones, to consider talking first, before rising weapons - or claws. However, the creature must have a trace of brain, a mind. You cannot talk your way out of a fight with a lightning cloud.</em></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ MOTH FAIRY ════ -->
+    <section class="panel" id="p2" style="--cc:#d946ef;--cg:rgba(217,70,239,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">Moth Fairy</h2>
+          <p class="cls-role">Fallen · Fairy-touched · Seeker</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+1 Understanding</span>
+            <span class="cls-mod">+1 Willpower</span>
+          </div>
+          <p class="cls-flavor">"You can still see the remnants of colors on now moth wings, from when she still was a butterfly."</p>
+          <p class="cls-lore">Every fairy tribe holds one law above all others: the tribe's magic is not yours to use for yourself. Moth Fairy broke it — whether out of desperation, selfishness, or a conviction that she was right and they were wrong. The punishment was immediate: her wings were not cut, they were unmade, withdrawn as though they had never existed. Now she walks, which among her kind looks almost obscene. What she does with that shame is entirely her own decision. Looking for a redemption by doing something good in the world. Or maybe, dissapointed, finding a way to cause even more damage.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Faelight</span>
+            <span class="ab-mech">Passive · −2 to all stealth · Detects fairy magic</span>
+          </div>
+          <p class="ab-desc">The Moth Fairy emits a faint, cold luminescence she cannot suppress. True darkness does not exist within <strong>15 feet</strong> of her — she and all nearby allies always see clearly. She also detects fairy magic instinctively, without a roll. The drawback: <strong>−2</strong> to any stealth attempt. <em>She cannot hide in darkness. She is the light.</em></p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Tribal Memory</span>
+            <span class="ab-mech">Once per scene · Choose one effect</span>
+          </div>
+          <p class="ab-desc">She draws on the magic her tribe taught her before she was cast out. Choose one effect — each use is a reminder of what she lost.<br><br>
+          <strong>Love Hex</strong> · One target within sight. DC 13 Willpower save or they fall in love with you. They will try to protect you and overwhelm you in gifts. Lasts 2 rounds.<br>
+          <strong>Flash of Joy</strong> · One friendly target feels better about themself. For 3 rounds, they recieve +1 to any ability modifier of choice.<br>
+          <strong>True Invisibility</strong> · Turns invisible. Lasts 2 rounds, or until she attacks or casts.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ BARKSKINNED ════ -->
+    <section class="panel" id="p3" style="--cc:#84cc16;--cg:rgba(132,204,22,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">Barkskinned</h2>
+          <p class="cls-role">Ancient · Enduring · Plant-blooded</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+2 Constitution</span>
+          </div>
+          <p class="cls-flavor">"She remembers the old king's coronation. She does not remember his name."</p>
+          <p class="cls-lore">They were human once, and they loved the Old Trees, and over centuries the trees quietly returned the favour. Bark spread across their skin. Roots threaded through their muscles. There was no single moment of transformation — just a morning, somewhere in their fourth or fifth century, when they looked at their hands and saw wood grain. They are ancient, often over a thousand years old, with memories vast and full of holes. The Bliss barely touches them. They have been here longer than whatever is causing it.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Ancient Bark</span>
+            <span class="ab-mech">Passive · −1 incoming physical damage · Fire vulnerability</span>
+          </div>
+          <p class="ab-desc">The Barkskinned reduce all incoming physical damage by <strong>1</strong>. Their ancient body also filters toxins — they are completely immune to drugged food, and poisoned water - not to Blissed herbs, however. Also, they are vulnerable to fire: all fire damage they receive is increased by <strong>1</strong>. <em>The trees remember everything fire has ever done to them.</em></p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Root Hold</span>
+            <span class="ab-mech">Once per scene · Lasts 2 rounds · Automatic</span>
+          </div>
+          <p class="ab-desc">The Barkskinned drives roots into the ground, anchoring themselves completely. For <strong>2 rounds</strong> they cannot be moved, knocked prone, or grappled by any means. Any creature that strikes them in melee takes <strong>1d4 piercing damage</strong> from thorns. The effect ends immediately if they choose to move.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ THE STITCHED ════ -->
+    <section class="panel" id="p4" style="--cc:#fb7185;--cg:rgba(251,113,133,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">The Stitched</h2>
+          <p class="cls-role">Constructed · Independent · Uncanny</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+1 Constitution</span>
+            <span class="cls-mod">+1 to one stat of your choice</span>
+          </div>
+          <p class="cls-flavor">"Inanimate objects made alive by magic - like homonculy, but independent of their creator."</p>
+          <p class="cls-lore">The Stitched are assembled — cloth, wood, glass, river stones, old teeth, things found under beds — and then given a spark that nobody fully understands. They wake knowing nothing except that they exist, and that someone made them. The lucky ones were made from love. The unlucky ones were made as tools, or experiments, or worse.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Constructed</span>
+            <span class="ab-mech">Passive · Immune to poison and disease</span>
+          </div>
+          <p class="ab-desc">The Stitched do not eat, sleep, or breathe. They are immune to poison and disease. When reduced to <strong>0 HP</strong>, they do not die — they begin <em>coming apart</em>, losing pieces of themselves but remaining active each round. After 5 rounds, they truly stop — their body became too distant. Someone must take a full round to gather and reattach the pieces before they can be healed.</p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Detach</span>
+            <span class="ab-mech">Once per scene · Lasts 1 minute</span>
+          </div>
+          <p class="ab-desc">The Stitched removes one of their own parts, which continues to function independently for up to <strong>1 minute</strong>. A hand can crawl and pick a lock. An eye can be rolled to see around a corner. A jaw detached and thrown can bite for <strong>1d4</strong>. Reattachment at the end is automatic. <em>It does not hurt. That might be the most unsettling thing about it.</em></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════ ECHOES ════ -->
+    <section class="panel" id="p5" style="--cc:#38bdf8;--cg:rgba(56,189,248,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">Echoes</h2>
+          <p class="cls-role">Ethereal · Perceptive · Between Worlds</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+1 Instinct</span>
+            <span class="cls-mod">+1 Willpower</span>
+          </div>
+          <p class="cls-flavor">"They are not ghosts. They are very much alive, and very tired of explaining the difference."</p>
+          <p class="cls-lore">Echoes are fully alive — they breathe, hunger, age, and can be hurt. The confusion arises because touching them feels like touching a memory: something is there, but it registers as almost nothing. Not warm, not cold. No one is certain what caused the first Echoes, only that some people fell partway through a boundary that should never have opened, and came back not quite fully anchored to the physical world. They see things others cannot. The walls aren't entirely sure they're real, and sometimes let a little light leak through anyway.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Between</span>
+            <span class="ab-mech">Passive · Once per scene · Pass through thin surfaces</span>
+          </div>
+          <p class="ab-desc">Echoes leave no footprints and produce no sound unless they choose to. They cannot be tracked by magical means.</p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Unreal</span>
+            <span class="ab-mech">Once per scene · Lasts 1 round · DC 12 Constitution</span>
+          </div>
+          <p class="ab-desc">The Echo becomes fully intangible for <strong>1 round</strong>. All physical attacks pass through them entirely. During this time they cannot attack, cast, or interact with objects. When they snap back to solidity, anything too close is briefly repelled — same goes for creatures. Once per scene — they may pass through any surface up to <strong>6 inches thick</strong>: a locked door, a thin wall, a wooden floor. Solid stone stops them. <em>The world is simply not entirely sure they are real.</em></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ RESURRECTED ════ -->
+    <section class="panel" id="p6" style="--cc:#818cf8;--cg:rgba(129,140,248,.3)">
+      <div class="card">
+        <div class="cls-hd">
+          <h2 class="cls-name">Resurrected</h2>
+          <p class="cls-role">Returned · Cold · Unfinished</p>
+          <div class="cls-stats">
+            <span class="cls-mod">+1 Constitution</span>
+            <span class="cls-mod">+1 Willpower</span>
+          </div>
+          <p class="cls-flavor">"They didn't ask to come back. Nobody asked them if they desire to exit the peace of death."</p>
+          <p class="cls-lore">Someone needed them alive — a king, a lover, a child who couldn't face the world alone — and pulled them back from whatever comes after death. The Resurrected remember dying. They remember what came after, too, though most refuse to speak about it. They returned slightly too calm, carrying something cold in them that was not there before. They are not undead. But they were not consulted, either, and that specific, quiet fury — about having the most personal decision imaginable made for them by someone else — defines everything they do next.</p>
+        </div>
+
+        <div class="sec-lbl">Passive Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Already Died</span>
+            <span class="ab-mech">Passive · Immune to fear · Advantage on Sanity saves</span>
+          </div>
+          <p class="ab-desc">The Resurrected are immune to all fear effects and roll with advantage on Sanity saves. They have seen what comes after. They do not find this world as frightening as others do. Additionally, once per session, when they reach <strong>0 HP</strong>, they may stabilise themselves without assistance — <em>they simply refuse to go back.</em></p>
+        </div>
+
+        <div class="sec-lbl active-lbl">Active Ability</div>
+
+        <div class="ab">
+          <div class="ab-top">
+            <span class="ab-name">Death's Reach</span>
+            <span class="ab-mech">Once per scene · Touch · DC 14 Willpower save</span>
+          </div>
+          <p class="ab-desc">The Resurrected reaches out and forces a creature to feel what dying feels like — a moment of absolute cold certainty. The target takes no damage. They simply <em>stop</em>. On a failed <strong>DC 14 Willpower save</strong>, the target is paralysed for <strong>1 round</strong>, locked inside the vision. They can act normally after. <em>They remember it forever.</em></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+/* Stars */
+(function(){
+  const el = document.getElementById('stars');
+  for(let i=0;i<160;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const sz = Math.random()*1.6+.3;
+    s.style.cssText =
+      'left:'+Math.random()*100+'%;'+
+      'top:'+Math.random()*100+'%;'+
+      'width:'+sz+'px;height:'+sz+'px;'+
+      'animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate';
+    el.appendChild(s);
+  }
+})();
+
+/* Tabs */
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('p'+btn.dataset.i).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
