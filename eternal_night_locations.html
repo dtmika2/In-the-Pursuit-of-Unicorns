@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>In the Pursuit of Unicorns — Locations</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes twinkle{from{opacity:.08}to{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+:root{--bg:#04040f;--surface:#09091a;--gold:#c9a84c;--text:#d4c9a8;--muted:#5a5044;--dim:#8a7e64;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-height:100vh;overflow-x:hidden;}
+#stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.star{position:absolute;background:#fff;border-radius:50%;}
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:3rem 1.25rem 5rem;}
+.hd{text-align:center;margin-bottom:2.75rem}
+.hd-title{font-family:'Cinzel',serif;font-size:clamp(1.9rem,5vw,2.8rem);font-weight:700;letter-spacing:.14em;color:var(--gold);text-shadow:0 0 60px rgba(201,168,76,.28);}
+.hd-sub{margin-top:.4rem;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+.tabs{display:flex;border-bottom:1px solid rgba(255,255,255,.05);margin-bottom:1.75rem;overflow-x:auto;scrollbar-width:none;}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1;min-width:120px;padding:.7rem .5rem;background:none;border:none;border-bottom:2px solid transparent;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:#2e2840;cursor:pointer;transition:color .2s,border-color .2s,text-shadow .2s;white-space:nowrap;text-align:center;}
+.tab:hover:not(.active){color:#5a4e70}
+.tab.active{color:var(--cc);border-bottom-color:var(--cc);text-shadow:0 0 18px var(--cg);}
+.panel{display:none}
+.panel.active{display:block;animation:fadeUp .3s ease}
+.card{border:1px solid rgba(255,255,255,.055);border-radius:3px;overflow:hidden;background:var(--surface);margin-bottom:1.25rem;}
+.card:last-child{margin-bottom:0}
+.loc-hd{padding:1.75rem 2.25rem;border-bottom:1px solid rgba(255,255,255,.04);position:relative;overflow:hidden;}
+.loc-hd::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--cc);opacity:.85;}
+.loc-name{font-family:'Cinzel',serif;font-size:1.85rem;font-weight:700;letter-spacing:.07em;line-height:1;color:var(--cc);text-shadow:0 0 35px var(--cg);}
+.loc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.55rem;}
+.loc-tag{display:inline-block;padding:.18rem .75rem;border:1px solid rgba(255,255,255,.1);color:var(--cc);font-family:'Cinzel',serif;font-size:.63rem;letter-spacing:.12em;border-radius:2px;opacity:.75;}
+.loc-quote{margin-top:.9rem;font-style:italic;color:var(--dim);font-size:1.05rem;line-height:1.65;max-width:62ch;}
+.loc-lore{margin-top:.65rem;color:#918cac;font-size:1.05rem;line-height:1.75;}
+.loc-lore+.loc-lore{margin-top:.5rem}
+.sec-lbl{padding:.4rem 2.25rem;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cc);opacity:.45;background:rgba(0,0,0,.22);border-bottom:1px solid rgba(255,255,255,.025);}
+.row{padding:1.15rem 2.25rem;border-bottom:1px solid rgba(255,255,255,.03);transition:background .15s;}
+.row:last-child{border-bottom:none}
+.row:hover{background:rgba(255,255,255,.01)}
+.row-top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.35rem .75rem;margin-bottom:.4rem;}
+.row-name{font-family:'Cinzel',serif;font-size:1.2rem;font-weight:600;color:#ddd0a8;letter-spacing:.03em;}
+.row-meta{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.06em;color:var(--cc);opacity:.65;text-align:right;flex-shrink:0;}
+.row-desc{font-size:1.05rem;color:#afa899;line-height:1.68;}
+.row-desc em{color:#7a7060;font-style:italic}
+.row-desc strong{color:#d8ceb2;font-style:normal}
+.row-desc p{margin-top:.65rem}
+.row-desc p:first-child{margin-top:0}
+.bliss-badge{display:inline-block;padding:.1rem .6rem;border-radius:2px;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.18);color:var(--gold);margin-left:.5rem;vertical-align:middle;}
+.xbtn{margin-top:.75rem;display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .7rem;background:none;border:1px solid rgba(255,255,255,.07);color:var(--cc);font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;opacity:.55;border-radius:2px;transition:opacity .2s,border-color .2s;}
+.xbtn:hover{opacity:1;border-color:rgba(255,255,255,.14)}
+.xtbl{display:none;margin-top:.85rem;animation:fadeUp .2s ease}
+.xtbl.open{display:block}
+table{width:100%;border-collapse:collapse;font-size:.87rem}
+thead th{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cc);opacity:.6;text-align:left;padding:.38rem .55rem;border-bottom:1px solid rgba(255,255,255,.06);}
+tbody td{padding:.52rem .55rem;color:var(--dim);border-bottom:1px solid rgba(255,255,255,.025);vertical-align:top;line-height:1.55;}
+tbody tr:last-child td{border-bottom:none}
+tbody td:first-child{color:#ccc0a0;font-weight:500}
+tbody td em{color:#6a6454;font-style:italic}
+tbody td strong{color:#c4b898}
+.mechbox{margin:0 2.25rem 1.25rem;padding:.9rem 1.15rem;border:1px solid rgba(255,255,255,.05);border-left:2px solid var(--cc);border-radius:2px;background:rgba(0,0,0,.18);}
+.mechbox-title{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cc);opacity:.65;margin-bottom:.6rem;}
+.mechbox ul{list-style:none;padding:0;}
+.mechbox li{font-size:1rem;color:#8a7e64;line-height:1.65;padding:.2rem 0 .2rem 1.1em;position:relative;}
+.mechbox li::before{content:'·';position:absolute;left:0;color:var(--cc);opacity:.5;}
+.mechbox li strong{color:#c0b498}
+.mechbox li em{color:#6a6454;font-style:italic}
+.dm-note{margin:0 2.25rem 1.5rem;padding:.85rem 1.1rem;border:1px solid rgba(255,255,255,.035);border-left:2px solid rgba(255,255,255,.08);border-radius:2px;background:rgba(255,255,255,.012);font-style:italic;font-size:.97rem;color:#4e4840;line-height:1.72;}
+.dm-note strong{color:#6e6454;font-style:normal}
+.trap-num{display:inline-block;width:1.6em;height:1.6em;line-height:1.6em;text-align:center;font-family:'Cinzel',serif;font-size:.65rem;font-weight:700;border:1px solid rgba(255,255,255,.12);border-radius:2px;color:var(--cc);opacity:.8;margin-right:.5rem;vertical-align:middle;flex-shrink:0;}
+.trap-row{display:flex;align-items:flex-start;gap:.5rem;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.025);}
+.trap-row:last-child{border-bottom:none}
+.trap-body{font-size:1rem;color:#afa899;line-height:1.6;flex:1;}
+.trap-body strong{color:#d8ceb2}
+.trap-body em{color:#7a7060;font-style:italic}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
+@media(max-width:560px){
+  .loc-hd,.row,.sec-lbl,.mechbox,.dm-note{padding-left:1.25rem;padding-right:1.25rem}
+  .loc-name{font-size:1.5rem}
+  .row-top{flex-direction:column;gap:.2rem}
+  .row-meta{text-align:left}
+}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<div class="wrap">
+  <header class="hd">
+    <h1 class="hd-title">In the Pursuit of Unicorns</h1>
+    <p class="hd-sub">Locations</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Locations">
+    <button class="tab active" role="tab" data-i="0" style="--cc:#f59e0b;--cg:rgba(245,158,11,.4)">I · The Carnival</button>
+    <button class="tab" role="tab" data-i="1" style="--cc:#a855f7;--cg:rgba(168,85,247,.4)">II · Mellwood</button>
+    <button class="tab" role="tab" data-i="2" style="--cc:#38bdf8;--cg:rgba(56,189,248,.4)">III · The Blackmere</button>
+    <button class="tab" role="tab" data-i="3" style="--cc:#fde047;--cg:rgba(253,224,71,.4)">IV · The Lamp-Hvozd</button>
+    <button class="tab" role="tab" data-i="4" style="--cc:#94a3b8;--cg:rgba(148,163,184,.3)">V · The Sinking Station</button>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════ I — CARNIVAL ════ -->
+    <section class="panel active" id="p0" style="--cc:#f59e0b;--cg:rgba(245,158,11,.3)">
+      <div class="card">
+        <div class="loc-hd">
+          <h2 class="loc-name">The Carnival in the Whispering Wood</h2>
+          <div class="loc-tags">
+            <span class="loc-tag">Location I · Opening</span>
+            <span class="loc-tag">Tutorial</span>
+            <span class="loc-tag">Tone-Setter</span>
+          </div>
+          <p class="loc-quote">"The lanterns are always lit. The carousel always turns. Nobody told it to stop."</p>
+          <p class="loc-lore">The Whispering Wood does not behave like a forest. Its trees grow inward — not a slight lean but a visible, committed angle, roots running outward, crowns bowing toward the center as if pressing toward a stage. The further in you go, the more pronounced it becomes. At the heart, the branches overhead nearly touch. Walking through the wood is walking inside something slowly closing around you.</p>
+          <p class="loc-lore">There is no wind in the Whispering Wood. There is sound — a low, layered hum produced by every tree simultaneously, each at a slightly different pitch. Together it sits just below the threshold of language. It sounds like voices. It sounds like a name being said by many people, very quietly. It sounds like something you were about to remember.</p>
+          <p class="loc-lore">The clearing arrives without warning. One moment the trees lean and crowd — then a break in the canopy, and light. Colored lanterns, strung between bent branches in patterns that almost make sense. A carousel, turning slowly, silently. A tent. A ticket booth. The smell of something sweet and not quite right. Nobody expected a carnival here. That is precisely the point.</p>
+        </div>
+
+        <div class="sec-lbl">Points of Interest</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Carousel</span><span class="row-meta">DC 10 Hallucination Save to ride</span></div>
+          <p class="row-desc">The painted animals are not typical fairground creatures. There is a gnome, a unicorn, a small fairy with broken wings, and one figure at the back — too many joints, facing the wrong direction, its face worn smooth. The gnome figure's face has been carefully scratched off. Perrin does not know when that happened.</p>
+          <p class="row-desc">Riding triggers a Hallucination Save. On failure: the rider briefly sees the carnival populated with ghostly crowds — laughing, jostling, alive. The sound is unbearable in its beauty. On success: just the motion, the painted faces, and a strange sense of loss.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Fortune Tent</span></div>
+          <p class="row-desc">Inside: a velvet-draped table, a deck of illustrated cards, two chairs. The cards show many illustrations but always deal the same image face-up, regardless of shuffle: <strong>a factory chimney rising against a dark sky</strong>. The card appears to have been added later. At the back of the tent, behind a curtain: a standing mirror. It reflects the room but not the party. It shows the room as it was — full of people. One of them is looking directly at whoever looks in.</p>
+          <p class="row-desc"><em>The Dreamcaster using Lucid Sight on the mirror sees it clearly: a door in one of the chimneys. A way in.</em></p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Ticket Booth</span></div>
+          <p class="row-desc">A logbook inside, fifteen years of entries in Perrin's progressively smaller handwriting. The last six months show deterioration: shorter entries, stranger observations about the trees. The final line reads: <em>"No one came today either. The trees are very loud tonight. Something is coming. I hope it remembers what carnivals are for."</em></p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Food Table</span><span class="row-meta">DC 10 Hallucination Save if eaten · No Sanity cost · No lasting harm</span></div>
+          <p class="row-desc">Elaborate, perfectly preserved. Perrin laid this out years before the Night for a show about visions that never ran. He <strong>completely forgot he laced it</strong>. He will be mortified when he remembers. On fail: the party sees the carnival show that never happened — a full vivid performance, beautiful and strange. A safe, warm first encounter with the Hallucination mechanic.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Center Pole</span></div>
+          <p class="row-desc">The tall post at the carnival's heart. All the inward-leaning trees of the wood point at it. Carved into the base, legible only if you crouch: <em>while the night holds, what was joyful becomes compass.</em> Perrin did not put it there. He pretends he understands it.</p>
+        </div>
+
+        <div class="sec-lbl">The Gnome — Perrin</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Perrin <span class="bliss-badge">Bliss: Tolerant · Anchored</span></span></div>
+          <p class="row-desc">Small, creased, smelling of cedar smoke and machine oil. He has operated this carnival for thirty years. When the Night fell he was here — front-row. The Whispering Wood's air has been in his lungs for decades; he has developed a tolerance no one can quite explain. <strong>The carnival is his anchor.</strong> As long as it turns, he stays real. If it stopped, he thinks he would drift.</p>
+          <p class="row-desc">He knows the party is coming. Not because he is psychic — the trees have been louder for three days. He has set out chairs. He is the warmest person the players will meet in this world. He is also very sad. He used to have crowds. They laughed because the acts were funny, not because they couldn't stop. <em>He misses the difference more than anything.</em></p>
+        </div>
+
+        <div class="mechbox">
+          <div class="mechbox-title">Tutorial — What Perrin Teaches</div>
+          <ul>
+            <li><strong>The Sanity Meter</strong> · He taps his temple, counts on his fingers: <em>"Ten feels like this. Three feels like that. Zero feels like everyone else looks."</em> First time players see and record their Sanity 10.</li>
+            <li><strong>Hallucination Saves</strong> · He offers dried moonpetal — DC 8, very mild. <em>"Try a little. Less frightening than the accidents."</em> On fail: visions of the world before, warm and clear. Gentle landing for the first roll of the session.</li>
+            <li><strong>The Bliss</strong> · <em>"It isn't peace. Peace is when you've solved something. This is when you've stopped caring there's something to solve."</em></li>
+            <li><strong>The Castle on the horizon</strong> · He has seen its smoke. He believes it is magical — the source of the Night. He is wrong, and wrong in a way that matters for the revelation later.</li>
+          </ul>
+        </div>
+
+        <div class="dm-note"><strong>DM Tone Note ·</strong> Nothing threatens here. Nothing attacks. Let players breathe, explore, ask questions. They should leave liking Perrin. When they go, he stays. He always stays. Let the carousel still be turning when they glance back through the trees.</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ II — MELLWOOD ════ -->
+    <section class="panel" id="p1" style="--cc:#a855f7;--cg:rgba(168,85,247,.3)">
+      <div class="card">
+        <div class="loc-hd">
+          <h2 class="loc-name">Mellwood</h2>
+          <div class="loc-tags">
+            <span class="loc-tag">Location II · Main Hub</span>
+            <span class="loc-tag">Return Point</span>
+            <span class="loc-tag">Rest · Trade · Social</span>
+          </div>
+          <p class="loc-quote">"They're all still here. Fine. Ask them — they'll tell you, through the laughter, through the tears, through the nothing behind their eyes. Everything is fine."</p>
+          <p class="loc-lore">Mellwood is a proper village. Sixty-odd people, a well, a market square, a mill at the river's edge. It looks the way a village is supposed to look. The wrongness is entirely in the details — the baker who laughs softly to no one while he works; the child reaching calmly for the party's sharpest weapon; the man who has been sitting in the square for four days in a state of perfect content. The Bliss does not make these people evil. It makes them <strong>unreachable</strong>, each in their own particular way.</p>
+          <p class="loc-lore">Mellwood is the party's hub. They return here after every dangerous location to rest, trade, and speak with NPCs who have more to say each time. Design it to reward coming back — the garrison opens, Aldric comes down, the hidden three emerge. None of this happens on the first visit.</p>
+        </div>
+
+        <div class="sec-lbl">The Villagers — Bliss Manifestations</div>
+        <div class="row">
+          <button class="xbtn" onclick="xtoggle(this,'t-bliss')">▼ Show Villager Table</button>
+          <div class="xtbl" id="t-bliss">
+            <table>
+              <thead><tr><th>Name</th><th>Manifestation</th><th>Story Function</th></tr></thead>
+              <tbody>
+                <tr><td>Brennan the Baker</td><td><strong>Endless laughter.</strong> Soft, constant, gentle. Still bakes perfect loaves. Has been laughing since Thursday. Cannot explain the joke.</td><td>Warm entry NPC. Offers bread freely. Laughs through any conversation. Unsettling only in retrospect.</td></tr>
+                <tr><td>Pip (child, ~8)</td><td><strong>No fear.</strong> Approaches the party without hesitation. Reaches for weapons. Tries to pet any creature. Entirely delighted by everything dangerous.</td><td>Quietly horrifying. Her parents don't notice. <em>She should make the players feel something without the DM explaining what.</em></td></tr>
+                <tr><td>Elder Corm</td><td><strong>Dementia.</strong> Knows he is important. Cannot remember why. Occasionally surfaces a fragment of before, then dismisses it: <em>"Oh, that. Yes. That was something."</em></td><td>Carries the fortress postern key without knowing what it opens. Has carried it for thirty years. Gives it away cheerfully if asked.</td></tr>
+                <tr><td>Marta the Herbalist</td><td><strong>Paranoia.</strong> Barricaded in her house. Shouts warnings through the window. Refuses to open the door for any reason.</td><td>Partially right about several things. Information available through creative roleplay — shout through the door. She knows the river water changed first.</td></tr>
+                <tr><td>Iven &amp; Luce</td><td><strong>Obsessive love.</strong> Euphorically devoted. Haven't left the house in weeks. Friends leave food at the door. They think this is completely normal.</td><td>Mostly atmospheric. Their house is the nicest in the village. They can be heard warmly through the walls at almost any hour.</td></tr>
+                <tr><td>Soot (old man)</td><td><strong>Euphoric stillness.</strong> Sitting in the market square for four days. Smiles. Breathes. Does nothing else.</td><td>Villagers route around him without comment. He responds to questions with enormous, unhurried warmth, then returns to stillness.</td></tr>
+                <tr><td>Willa the Weaver</td><td><strong>Weeping from joy.</strong> Cries constantly. Insists she is not sad — <em>"It's all just so beautiful."</em> Means it completely.</td><td>Good information source. Can speak clearly through tears. The contrast between her words and her face is one of the session's stranger images.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sec-lbl">Sub-Locations</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Forgetting Inn</span><span class="row-meta">DC 12 on eating or drinking inside</span></div>
+          <p class="row-desc">Fourteen guests who arrived across the last three months, all "just passing through," all still here. Bags remain packed by their beds. They remember everything about each other and nothing about where they came from. The innkeeper refills cups already full. No one pays. No one minds.</p>
+          <button class="xbtn" onclick="xtoggle(this,'t-guests')">▼ Show Notable Guests</button>
+          <div class="xtbl" id="t-guests">
+            <table>
+              <thead><tr><th>Guest</th><th>Background</th><th>What They Hold</th></tr></thead>
+              <tbody>
+                <tr><td>Dorvan, merchant</td><td>Arrived nine weeks ago with urgent cargo. Has completely forgotten what it was for.</td><td>Crated goods in the cellar, addressed to a settlement east — toward the factory. The crates are stenciled in the same unknown language as the factory's products.</td></tr>
+                <tr><td>Serryn, soldier</td><td>On official business she cannot recall. Polishes her armor every morning out of discipline rather than purpose.</td><td>Her written orders use a cipher that shouldn't appear in military documents. The cipher matches the factory's labeling. She doesn't know this.</td></tr>
+                <tr><td>Aldoven the Scholar</td><td>Was writing a manuscript on the Eternal Night. Has written eleven weeks of research and stopped mid-sentence.</td><td><em>On the Nature of the Eternal Night,</em> half-finished. The last chapter is one sentence, repeated forty-three times: <em>"I had it and then."</em> The sentence before it describes an industrial dispersal process.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Watchtower</span><span class="row-meta">Aldric · Lucid · Cannot descend · Key information source</span></div>
+          <p class="row-desc"><strong>Aldric</strong> has been at the top for months. He is not blissed — the elevation keeps the contaminated air below him. His legs have atrophied. He cannot descend. He lowers a bucket for supplies the villagers have mostly forgotten to fill. He survives on caught birds, rainwater, and a parapet herb garden. He is thinner than he should be and more informed than anyone else in the village.</p>
+          <p class="row-desc">He communicates through densely written notes. He has been watching the distant castle for months: <strong>the smoke increases at dawn and at dusk, like machinery on a schedule.</strong> He will give everything he knows to anyone who fills his bucket and looks like they haven't smiled without reason in six weeks. Getting Aldric down is a side objective — on return, with resources, it becomes possible. He becomes a genuine ally.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Sealed Fortress</span><span class="row-meta">Inaccessible · Paranoid garrison · Opens on return visit</span></div>
+          <p class="row-desc">A fortress at the village's northern edge, drawbridge up. The mechanism is on the inside. Twelve soldiers sealed themselves in six weeks ago — their Bliss manifestation is <strong>paranoia</strong>. They believe the village is compromised. They are not entirely wrong. They shout through arrow slits and will not negotiate with strangers.</p>
+          <p class="row-desc"><strong>What the garrison knows:</strong> one of them was a chemist's apprentice and identified the castle's smoke as industrial. They have a rough map of the approach. They have been waiting for someone who doesn't smell of Bliss.</p>
+          <button class="xbtn" onclick="xtoggle(this,'t-fortress')">▼ Access Methods</button>
+          <div class="xtbl" id="t-fortress">
+            <table>
+              <thead><tr><th>Method</th><th>Who</th><th>Notes</th></tr></thead>
+              <tbody>
+                <tr><td>Persuasion (hard)</td><td>Anyone</td><td>DC 17 on first visit. Drops to DC 12 if the party returns from the factory with proof.</td></tr>
+                <tr><td>Serpent squeeze</td><td>Shapeshifter · Beast Form</td><td>A serpent fits through arrow slits. The soldier inside will be very alarmed. Triggers a tense interior negotiation.</td></tr>
+                <tr><td>Puppet / Telepathy</td><td>Dreamcaster</td><td>Force a soldier to trigger the drawbridge. They know it was you. The garrison is furious and grateful simultaneously.</td></tr>
+                <tr><td>The Elder's Key</td><td>Investigation · Elder Corm</td><td>Corm carries a key he has completely forgotten. It opens a postern door the garrison itself didn't know existed.</td></tr>
+                <tr><td>Return with proof</td><td>Story beat</td><td>The natural solution. The garrison opens the gate themselves the moment they see evidence of the factory.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Maypole Yard</span><span class="row-meta">DC 12 Investigation to read the carving</span></div>
+          <p class="row-desc">A village green with a tall maypole. The ribbons are worn through at the grip. The dirt around the base has been worn into circular trenches — someone has danced here so many times the footprints are now carved into earth. The dancer is never present when the party arrives. The footprints are always fresh.</p>
+          <p class="row-desc">Carved into the pole's base: <em>while the pole stands, the night ends.</em> No one in the village put it there. Elder Corm says it has always been there. It has not. Whether this is a true clue, a metaphor, or a red herring is for the DM to decide. The pole is very old and something wants it here.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Cave Sanctuary</span><span class="row-meta">Moonpetal seam: DC 11 after 10 min · False wall: DC 13</span></div>
+          <p class="row-desc">A shrine cave at the village's edge. Candles, always lit, always tended by no one. A seam of moonpetal along one wall — naturally occurring, beautiful, passive hazard for extended stays. At the back: a false wall. DC 13 to find. Behind it, three people have been hiding for eight weeks.</p>
+          <button class="xbtn" onclick="xtoggle(this,'t-hidden')">▼ The Hidden Three</button>
+          <div class="xtbl" id="t-hidden">
+            <table>
+              <thead><tr><th>Name</th><th>Who</th><th>What They Carry</th></tr></thead>
+              <tbody>
+                <tr><td>Sable</td><td>Former healer. Recognized the Bliss symptoms early and hid before she was affected. Calm, precise, and afraid of how long this has taken.</td><td>Full catalogue of Bliss manifestations she observed in the village. Traced contamination to river-users first. Has a supply of herbs, carefully rationed.</td></tr>
+                <tr><td>Moss</td><td>Old man, apparently immune. Gnome heritage somewhere back — he doesn't know this. Believes he is simply stubborn. He is also, genuinely, very stubborn.</td><td>Has lived in Mellwood his whole life. Knows every path, every shortcut. Knows a route to the lake that avoids the worst contaminated air.</td></tr>
+                <tr><td>Wren</td><td>A child who came with them when they hid. Was ten. Is now twelve. Has spent two years in a cave and is thoughtful and strange because of it.</td><td>Has kept a journal in the dark — two years of detailed observations. Contains more useful information than she understands. Key evidence for the fortress garrison.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dm-note"><strong>DM Return Note ·</strong> Mellwood earns its payoff on the second visit. The garrison opens. Aldric comes down. The hidden three emerge into the village for the first time in two years. The pieces the party gathered at the Lamp-Hvozd and the Sinking Station connect to what these people already knew. Design two or three small <em>"oh — that's what that meant"</em> moments between the hidden three's observations and the other locations' discoveries. Those connections are the emotional reward for building this as a return hub.</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ III — BLACKMERE ════ -->
+    <section class="panel" id="p2" style="--cc:#38bdf8;--cg:rgba(56,189,248,.3)">
+      <div class="card">
+        <div class="loc-hd">
+          <h2 class="loc-name">The Blackmere</h2>
+          <div class="loc-tags">
+            <span class="loc-tag">Location III</span>
+            <span class="loc-tag">Empathy Beat</span>
+            <span class="loc-tag">First Revelation</span>
+          </div>
+          <p class="loc-quote">"The water is black. When you put your hand in, you see the sky. The sky is the most beautiful thing any of them have ever seen. That is the worst part."</p>
+          <p class="loc-lore">Following the river downstream from the village, the water changes. Clear and cold at first, then darker by degrees, until it runs the color of nothing: <strong>black like void</strong>, like the river has swallowed a piece of the Night and is carrying it somewhere. The Ranger clocks the shift automatically. Others need a DC 11 Perception. The smell is faintly sweet in a wrong way — chemical, almost pleasant, almost something you'd want to breathe more of.</p>
+          <p class="loc-lore">The river ends at the Blackmere. A lake of absolute, perfect darkness. Its surface does not move. It does not reflect. Looking into it from the bank you see nothing — no sky, no trees, no face peering back. Just the complete absence of everything. And yet it is not threatening. It is almost restful. The unicorns think so too, which is the problem.</p>
+        </div>
+
+        <div class="sec-lbl">The Water</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Touching the Surface</span><span class="row-meta">Automatic · No save · Cannot be avoided</span></div>
+          <p class="row-desc">Anyone who makes contact with the Blackmere sees it immediately, without save, without choice: a <strong>bright daylit sky</strong>. Blue, enormous, warm, with clouds moving quickly and birds crossing in the distance. The sounds of day. Not a hallucination — everyone touching the water at the same moment sees the same thing. It lasts as long as contact is maintained. Stepping back ends it cleanly, as if a window closed.</p>
+          <p class="row-desc"><em>The water's surface is remembering the sky it last reflected. The DM should describe this with the full weight of what it means — this may be the first time any player character has experienced daylight in this world.</em></p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Drinking the Water</span><span class="row-meta">DC 13 Hallucination Save · Lose 1 Sanity on fail</span></div>
+          <p class="row-desc"><strong>On Failure:</strong> the daylight does not stay at the surface. It becomes immersive — not just the sky, but the world beneath it. Green fields, moving air, warmth on skin. Beautiful and absolutely crushing in what it implies is gone. Lose 1 Sanity. The DM may whisper a hidden piece of knowledge in this vision.</p>
+          <p class="row-desc"><strong>On Success:</strong> the daylight vision flickers, brief and surface-level. And beneath it, visible through the brightness for just a moment: the lake bed. Pipes — dark, wide, set into the rock. Three of them, running in the direction of the distant castle. <em>This is what is making the water black.</em></p>
+        </div>
+
+        <div class="mechbox">
+          <div class="mechbox-title">Class Interactions</div>
+          <ul>
+            <li><strong>Ranger · Herbalist</strong> — Automatic identification of contamination. Can trace the source upstream with a Track roll. Notes the chemical profile matches the sweetness on the air near the distant castle.</li>
+            <li><strong>Dreamcaster · Lucid Sight</strong> — Sees the pipes at the lake bed clearly: three of them, a material not of this world, cold and regular and wrong.</li>
+            <li><strong>Shapeshifter · Predator Sense</strong> — The unicorns' heartbeats are wrong. Too slow. Too regular. <em>"Like something turning,"</em> if they have the words for it.</li>
+            <li><strong>Sorcerer · Channel Bliss</strong> — The Bliss energy around this lake is very concentrated. Extremely high-risk, high-reward for drawing on it here.</li>
+          </ul>
+        </div>
+
+        <div class="sec-lbl">The Unicorns</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Herd at the Shore</span></div>
+          <p class="row-desc">Six unicorns at the lake's edge. Beautiful and wrong. Their horns are dim — not lightless, but far below what they should be, the way a lamp looks in the middle of the day. Their movements are slow and effortful, as though the air around them is slightly thicker. They are drinking from the black water. <strong>They cannot stop.</strong> The Bliss draws them here. They cannot name the compulsion. They simply return, again and again, to the shore that is quietly hurting them.</p>
+          <p class="row-desc">They do not flee. They do not display fear. They turn their heads with calm, slow eyes — <strong>calm in a way that is very different from peaceful</strong>. They allow themselves to be touched. When a hand is placed on a flank, the animal leans into it very slightly. Not in joy. In something that remembers joy and cannot quite find where it went.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Moment of Contact</span><span class="row-meta">Roleplay-triggered · Optional DC 8 Hallucination Save</span></div>
+          <p class="row-desc">If a character is patient and genuinely kind in their approach — the DM's call, based on roleplay — one unicorn will press its head against them. Its horn glows, briefly. A small warmth, like catching sunlight through a window.</p>
+          <p class="row-desc">The character may take a voluntary DC 8 Hallucination Save. <strong>On any result,</strong> they see a flash from the unicorn's memory: running through a sunlit field at full speed, the world green and enormous. And then a smell arriving. The light going away. The field getting slower. Getting further. And then this shore, and this water, and the wanting to drink, and the not knowing why.</p>
+          <p class="row-desc"><em>There is no mechanical consequence beyond what the DM adds. Its purpose is to give the players something to carry. They are not saving a world in the abstract. They have now met something specific that is being ruined. That difference matters.</em></p>
+        </div>
+
+        <div class="sec-lbl">The Horizon</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Silhouette Across the Lake</span><span class="row-meta">DC 16 Perception · Dreamcaster sees truth · Bliss Root: both at once</span></div>
+          <p class="row-desc">On the far shore, beyond hills that slope into fog: a silhouette. At this distance it reads as a castle — dark towers, stone battlements, smoke that looks like clouds caught on the highest parapet. It is exactly what it looks like, and it is nothing of the sort.</p>
+          <p class="row-desc"><strong>DC 16 Perception:</strong> something is wrong with the shape. The edges are too clean. The "towers" are too evenly spaced. Stone does not sit quite like that.</p>
+          <p class="row-desc"><strong>Dreamcaster · Lucid Sight:</strong> sees it completely. Glass, steel, ventilation stacks. The smoke is exhaust. The spires are chimneys. The Dreamcaster must decide what to tell the others, and how, and how fast.</p>
+          <p class="row-desc"><strong>Bliss Root consumed here:</strong> both images occupy the same space simultaneously — the castle and the factory, flickering between each other, neither fully stable. The truth visible beneath the lie for a few seconds at a time. Lose 1 Sanity. The DM may use this as the session's first hard revelation.</p>
+        </div>
+
+        <div class="dm-note"><strong>DM Tone Note ·</strong> This location has the weight of a nature documentary — the kind where you watch something being slowly destroyed and cannot look away. The unicorns are not in immediate danger. They are in the slow danger of something being done to them that they cannot understand and the party cannot fix yet. Let that settle before moving on. The players should leave the Blackmere with a clear emotional reason to keep going.</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ IV — LAMP-HVOZD ════ -->
+    <section class="panel" id="p3" style="--cc:#fde047;--cg:rgba(253,224,71,.3)">
+      <div class="card">
+        <div class="loc-hd">
+          <h2 class="loc-name">The Lamp-Hvozd</h2>
+          <div class="loc-tags">
+            <span class="loc-tag">Location IV · Combat</span>
+            <span class="loc-tag">Artifacts</span>
+            <span class="loc-tag">→ Return to Mellwood</span>
+          </div>
+          <p class="loc-quote">"A forest of iron poles and glass lanterns. No flame inside them. No hum. They simply glow, the way trees simply grow — as if this is what they have always done, and always will."</p>
+          <p class="loc-lore">It announces itself as a glow on the horizon before the trees even thin. Walking toward it, warm light filters between normal trunks. Then the normal trees thin. Then there are no normal trees. There are only lamps: iron poles, five to fifteen feet tall, each topped with a glass lantern. Hundreds of them, in no discernible order, spaced as randomly as trees in a natural forest. Their light is steady and makes no sound. There is no electrical hum. There is no visible flame. They simply glow.</p>
+          <p class="loc-lore">The effect is deeply uncanny and, despite everything, deeply calming. The space between the poles is like forest understory — soft ground, the occasional root, light filtered from above. But the light comes from iron, and the iron goes on in every direction, and this <em>hvozd</em> — this ancient, dense, dark forest — is made entirely of things that should not grow here.</p>
+          <p class="loc-lore">The truth, long forgotten: the factory's first outdoor electrical test array. Workers placed the lamps across the countryside to test which areas received reliable power from the generators. The test succeeded. The workers left. Everyone forgot. The lamps have been running for years on power they draw from a cable buried just below the topsoil, still connected, still fed by the factory's output.</p>
+        </div>
+
+        <div class="sec-lbl">The Inverses — Shadow Creatures</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">What They Are</span></div>
+          <p class="row-desc">The Inverses do not have their own form. What the party sees, when the creatures emerge, is themselves.</p>
+          <p class="row-desc">The Inverses observe from shadow before combat begins — studying each party member carefully, copying their appearance with perfect fidelity. Same face. Same clothing. Same weapon, same posture, same way of standing. The copies are visually exact. They do not speak. They move with a stillness between steps, like a portrait that has learned to walk.</p>
+          <p class="row-desc">The horror happens before the first attack. <strong>DM narration:</strong> <em>"You notice [character name] walking just a few feet to your left — same coat, same weapon. You don't think much of it. And then you look ahead, and [character name] is already there, talking to someone else. You look back. The thing wearing [character name]'s face slowly turns its head toward you. And then it attacks."</em></p>
+          <p class="row-desc">The tells, visible on close inspection: <strong>no shadow of their own</strong> (ironic, given what they are), eyes that are flat and wrong — painted rather than alive — and absolute silence. No breath. No voice. On first contact, none of this is obvious from a distance. In the lamp light and the confusion, they are indistinguishable.</p>
+          <p class="row-desc"><strong>DC 13 Perception or Insight</strong> to distinguish an Inverse from a real party member before engaging. <em>Automatic for the Ranger</em> using Predator Sense — they smell of nothing, where a person should be. <em>Automatic for the Dreamcaster</em> who attempts Telepathy — there is no mind to find. For everyone else, the wraith-vision holds until the check is made or the Inverse attacks first.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Combat Rules</span><span class="row-meta">5 Inverses · 10 HP each</span></div>
+          <button class="xbtn" onclick="xtoggle(this,'t-inverses')">▼ Show Inverse Stats</button>
+          <div class="xtbl" id="t-inverses">
+            <table>
+              <thead><tr><th>Condition</th><th>AC</th><th>Attack Rolls Against Them</th><th>Behavior</th></tr></thead>
+              <tbody>
+                <tr><td><strong>In shadow</strong> (between lamps, more than 5ft from any light)</td><td>15</td><td>Disadvantage — hard to target something that <em>is</em> the darkness</td><td>Preferred state. They try to stay here and attack from it.</td></tr>
+                <tr><td><strong>In light</strong> (within 5ft of any lamp)</td><td>10</td><td>Normal — their edges are crisp and visible</td><td>They hiss and act desperately, attacking harder to escape back to shadow.</td></tr>
+                <tr><td colspan="4"><strong>Movement:</strong> As their action, an Inverse may collapse into any nearby shadow and emerge from any other shadow pool within 30ft. This is not teleportation — it is absence moving.</td></tr>
+                <tr><td colspan="4"><strong>Attack:</strong> Shade-touch. d20+2 vs AC. On hit: 1d4 psychic damage. Target also has -1 to their next attack roll (the cold of it lingers).</td></tr>
+                <tr><td colspan="4"><strong>Defeat:</strong> An Inverse reduced to 0 HP simply... stops. It collapses into a small pool of warm darkness that fades within a minute, leaving nothing behind.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="row-desc" style="margin-top:.75rem"><strong>Tactical note:</strong> Characters who drive an Inverse toward a lamp — through positioning, forced movement, or creative ability use — will find them significantly easier to hit. The Jester's Pratfall is extremely effective here. The Ranger's Roped Shot can drag one into light. The Dreamcaster's Veil of Fog eliminates the tactical advantage of moving between shadows in the affected area.</p>
+        </div>
+
+        <div class="sec-lbl">The Burst</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">When the Last Inverse Falls</span></div>
+          <p class="row-desc">A moment of absolute stillness. The Lamp-Hvozd holds its breath.</p>
+          <p class="row-desc">Then, beginning from the furthest visible lamp and traveling inward like a slow wave: every lamp cracks. The glass fractures from base to top. The iron splits. The bulbs shatter in a silent sequence, moving toward the party's center. It takes about ten seconds. It is very beautiful and slightly terrifying.</p>
+          <p class="row-desc">And the light stays.</p>
+          <p class="row-desc">It rises from each shattered lamp as a small hovering orb — warm, still, soft, slightly golden. The Lamp-Hvozd is darker in some ways (no lamp fixtures) and lighter in others (the light moves freely, drifting at head height, filling the space evenly without source or shadow). The orbs drift slowly toward the party as if curious. A few follow them when they eventually leave — a gentle, warm escort through the treeline that fades after a few hundred meters.</p>
+          <p class="row-desc">In the debris at the base of each shattered lamp: <strong>one item</strong>, found by the character nearest to it at the moment of the burst. The items were inside the lamps — preserved for years in glass, unreachable until now.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Artifacts</span><span class="row-meta">One per character · Found in lamp debris</span></div>
+          <p class="row-desc">The artifacts from the burst lamps are not new items. Each lamp contains a refracted copy of what the character nearest to it already carries — the same weapon, the same focus, the same tool — reforged in crystallized lamp-glass. Slightly better than what they had before. As if the lamps spent years watching this world and prepared accordingly.</p>
+          <button class="xbtn" onclick="xtoggle(this,'t-artifacts')">▼ Show Artifact Table</button>
+          <div class="xtbl" id="t-artifacts">
+            <table>
+              <thead><tr><th>Class</th><th>Original</th><th>Glass Version</th><th>Upgrade</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Jester</td>
+                  <td>Primary blade · 1d6</td>
+                  <td><strong>Glass scimitar.</strong> Same weight as before. The edge is crystallized light — it bends the lamp-glow around it when it moves. The hilt is warm to the touch even in cold air. It looks like the Jester's original blade, except wrong in a beautiful way.</td>
+                  <td>1d6+2 damage</td>
+                </tr>
+                <tr>
+                  <td>Dreamcaster</td>
+                  <td>Casting focus · Focus +2</td>
+                  <td><strong>Glass orb.</strong> Perfectly clear, slightly larger than a fist. A fragment of frozen lamp-light is suspended at its center, pulsing faintly when held. The original focus is inside it — absorbed into the glass during the burst, unreachable but still present.</td>
+                  <td>+2 added to all Focus modifier rolls (total +4)</td>
+                </tr>
+                <tr>
+                  <td>Ranger</td>
+                  <td>Bow + arrows · 1d10</td>
+                  <td><strong>Glass-tipped quiver (12 arrows).</strong> Tips formed from the lamp's focusing lens, ground to a point. They narrow the light ahead of them as they fly — finding gaps in cover that shouldn't exist, reading wind differently. The bow itself is unchanged. The arrows are what matter.</td>
+                  <td>1d10+2 damage · Still ignores cover</td>
+                </tr>
+                <tr>
+                  <td>Shapeshifter</td>
+                  <td>Beast Form natural attacks · 1d6</td>
+                  <td><strong>Glass-thread hide wrap.</strong> Thin copper-glass filaments woven into a band that melds seamlessly with any form taken — wolf, bear, serpent, frog. In beast form, natural weapons take on glass edges. The wrap is invisible once merged. It cannot be removed without reverting to humanoid form.</td>
+                  <td>Natural attacks 1d6+2 in all Beast Forms</td>
+                </tr>
+                <tr>
+                  <td>Sorcerer</td>
+                  <td>Casting focus · Willpower +2</td>
+                  <td><strong>Glass conductor rod.</strong> Slightly longer than expected, faintly warm, with a hollow core that hums when arcane force moves through it. It channels the Sorcerer's volatile energy and narrows it — like the difference between a river and a directed stream. Slightly terrifying to hold. Exactly right.</td>
+                  <td>+2 added to all Willpower modifier rolls (total +4)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="row-desc" style="margin-top:.75rem"><em>Six lamps burst for five characters. The sixth artifact stays in the debris — glowing faintly, uncollected. The DM decides what it would have been. Nothing compels anyone to take it. Nothing stops them either.</em></p>
+        </div>
+
+        <div class="mechbox">
+          <div class="mechbox-title">After the Burst — Story Return</div>
+          <ul>
+            <li>The party is intact and has new artifacts. The floating light orbs follow them a short distance through the trees — a gentle escort.</li>
+            <li>This is a natural return beat to Mellwood: rest, process what happened, interact with NPCs who have new things to say now that the party has been to another dangerous place.</li>
+            <li>The Lamp-Hvozd is now permanently different. If the party returns to it later, the lamps are gone and the floating orbs still drift between the iron poles. The Inverses are not replaced.</li>
+          </ul>
+        </div>
+
+        <div class="dm-note"><strong>DM Tone Note ·</strong> The Lamp-Hvozd is the session's one uncomplicated win — a real combat encounter with a beautiful and surprising payoff. Play it with a slightly lighter hand than the other locations. The artifacts should feel like gifts. The floating lights should feel like the world saying thank you in the only language it still has. Let the players have this before things get harder.</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ V — SINKING STATION ════ -->
+    <section class="panel" id="p4" style="--cc:#94a3b8;--cg:rgba(148,163,184,.3)">
+      <div class="card">
+        <div class="loc-hd">
+          <h2 class="loc-name">The Sinking Station</h2>
+          <div class="loc-tags">
+            <span class="loc-tag">Location V · Trap Zone</span>
+            <span class="loc-tag">Loot</span>
+            <span class="loc-tag">→ Return to Mellwood</span>
+          </div>
+          <p class="loc-quote">"Someone was here. Someone who knew what was happening, who understood it better than anyone, who was <em>this close</em> to stopping it. And then the Bliss got them too. And then no one came to check."</p>
+          <p class="loc-lore">A partially collapsed hatch in a hillside, half-covered with roots and soil. Easy to miss — DC 12 Perception — but automatic for the Ranger, who recognizes the metal framework as manufactured rather than natural. Below: a three-chamber monitoring facility, built by the factory in its earliest days to track how the Bliss compound spread through soil and groundwater.</p>
+          <p class="loc-lore">The facility was staffed by one researcher. When their notes became erratic and then stopped, the factory sent no one to check. What the researcher was officially meant to do — log dispersal rates — they did. What they were <em>unofficially</em> doing in their last weeks — trying to find a reversal — was far more valuable. They were close. They did not make it. What they left behind is the most useful collection of objects the party will find before the factory.</p>
+          <p class="loc-lore">The whole structure has shifted — the hill above has settled unevenly over the years. Floors tilt by five or ten degrees. Doorframes are slightly wrong. Nothing is dangerous on its own, but the disorientation is real and the traps, both factory-installed and environment-created, are still active.</p>
+        </div>
+
+        <div class="sec-lbl">Chamber I — The Entry Hall</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Description</span></div>
+          <p class="row-desc">Originally a decontamination and storage room. Metal lockers line the walls, several bent open by the settling of the structure. A pegboard with hooks, most empty. The floor tilts about eight degrees toward the far wall — not enough to slip on, but enough to notice. The air smells of rust and something sweetly chemical.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Traps</span></div>
+          <div class="trap-row"><span class="trap-num">T1</span><span class="trap-body"><strong>Phonograph alarm.</strong> A pressure plate near the entry ladder triggers a phonograph mechanism in the ceiling — a piercing mechanical shriek that lasts 6 seconds, audible throughout the station. DC 13 Perception to spot the plate before stepping on it. No damage, but any creature still in the station is alerted. <em>The Ranger detects it automatically.</em></span></div>
+          <div class="trap-row"><span class="trap-num">T2</span><span class="trap-body"><strong>Booby-trapped locker.</strong> One locker (DC 12 Perception to notice the wire) releases a small Bliss-compound canister when opened — a concentrated burst. DC 12 Hallucination Save for anyone within 5 feet, no Sanity loss but a full vision that lasts one round and leaves them Dazed (disadvantage on their next action). The Ranger's Herbalist ability: automatic detection if they examine the locker before opening.</span></div>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Loot</span></div>
+          <p class="row-desc">Two lockers are untrapped and unlocked — one contains <strong>50 feet of quality rope</strong>. Another holds a pair of <strong>protective goggles</strong> (thick glass lenses, slightly scratched — grant +1 to Hallucination Saves caused by visual effects only). A third locker is locked (DC 11 to pick or force) — inside, nothing of value except a researcher's personal effects: a photograph of a family, a pressed flower, a small notebook of shopping lists. The shopping lists end mid-item six months ago.</p>
+        </div>
+
+        <div class="sec-lbl">Chamber II — The Monitoring Room</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Description</span></div>
+          <p class="row-desc">The main work space. Banks of gauges and dials bolted to the walls, most cracked or dead. A worktable with a chair lying on its side. Papers everywhere — fallen from a toppled filing cabinet, water-damaged and scattered, but many still readable. A map is pinned to the far wall, partially torn. The floor here is the most tilted — nearly 12 degrees. Things left on surfaces have slid to the lower wall.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Traps</span></div>
+          <div class="trap-row"><span class="trap-num">T3</span><span class="trap-body"><strong>Electrified floor panel.</strong> A section of floor (roughly 3x3 feet) still carries live current from the factory's underground cable. It looks slightly different — a faint shimmer, a discoloration, a smell of ozone. DC 13 Perception to notice. Stepping on it: 1d6 lightning damage, DC 12 Dexterity save or knocked prone. The Ranger and any character carrying the Filament Thread from the Lamp-Hvozd recognizes the smell of live electricity immediately.</span></div>
+          <div class="trap-row"><span class="trap-num">T4</span><span class="trap-body"><strong>Overloaded shelf.</strong> A wall-mounted shelf holds water-logged paper files, far beyond its structural limit. Any character who walks directly beneath it (DC 11 Perception to notice the creak) or disturbs the wall triggers it — the shelf collapses. 1d4 bludgeoning damage, DC 12 Dexterity save to dodge entirely. The real hazard: the noise, and the papers now burying the floor, making T3's panel harder to see (DC 15 Perception to spot it beneath the fallen paper).</span></div>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Loot</span></div>
+          <p class="row-desc">The <strong>partial factory map</strong> pinned to the wall is the most important item here — a hand-drawn exterior survey of the castle-factory, annotated with the researcher's observations about smoke timing, guard movement (there is guard movement), and one circled entry point labeled <em>"the service gate — unmonitored at dusk."</em> The map is torn, missing the interior, but invaluable for the approach.</p>
+          <p class="row-desc">In a locked cabinet (DC 11): <strong>three vials of anti-Bliss compound</strong>, the researcher's own formulation — crude but effective. Each grants advantage on one Hallucination Save. The label reads: <em>not a cure. a moment of clarity. do not take more than one.</em></p>
+          <p class="row-desc">In a drawer: <strong>two signal flares</strong>. They are specifically calibrated to be visible from Mellwood's watchtower. Using one will prompt a response from Aldric — a note in his bucket, lowered the next time the party passes through. Aldric made these. He sent them here. He was hoping someone would find them. <em>He's been waiting for a long time.</em></p>
+        </div>
+
+        <div class="sec-lbl">Chamber III — The Research Room</div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Description</span></div>
+          <p class="row-desc">The researcher's personal space. A cot, unmade. A desk, covered in notes. Shelves of glass specimen jars — preserved plants, insects, soil samples labeled with dates and grid coordinates. A half-eaten meal, fully petrified by time. A coat still hanging by the door. On the desk: an open journal, pen still resting in the groove of the binding as if the researcher just stepped away.</p>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">Traps</span></div>
+          <div class="trap-row"><span class="trap-num">T5</span><span class="trap-body"><strong>Living specimen jar.</strong> One specimen shelf holds jars that are mostly inert — all except one, which contains a small Inverse, preserved but still alive, its shadow pressing against the glass. If the jar is broken, dropped, or the shelf is disturbed heavily (DC 12 Perception to identify which jar before touching the shelf), the Inverse emerges. It is disoriented, has only 5 HP, deals 1d4 damage on a hit, and flees after 2 rounds — through a gap in the ceiling too small for anyone to follow. It is more surprise than threat. <em>The sound of the jar breaking is significant.</em></span></div>
+          <div class="trap-row"><span class="trap-num">T6</span><span class="trap-body"><strong>Root incursion.</strong> Tree roots have grown through the ceiling over the years and dangle at head height throughout the room. They absorbed Bliss compound from the soil above. Grabbing them, walking into them carelessly, or disturbing them causes them to release a small amount of absorbed compound — a faint mist. Anyone in the room when this happens must make a DC 10 Hallucination Save or see the room as it was when occupied: the researcher at the desk, alive, writing. The vision lasts one round. No Sanity loss — just vivid and disorienting. <em>The Ranger can identify the roots before they cause this.</em></span></div>
+        </div>
+
+        <div class="row">
+          <div class="row-top"><span class="row-name">The Researcher's Journal</span><span class="row-meta">The most valuable item in the station</span></div>
+          <p class="row-desc">147 pages, varying handwriting — neat at the start, progressively more hurried, then disturbingly calm in the final entries as the Bliss took hold. Key contents:</p>
+          <p class="row-desc"><strong>Weeks 1–8:</strong> dispersal logs, exactly as commissioned. Precise and professional. Includes a complete formula for the Bliss compound — the first time the party can see its chemical nature described plainly.</p>
+          <p class="row-desc"><strong>Weeks 9–16:</strong> the researcher begins to notice something is wrong. Correlates their dispersal maps with behavioral reports from nearby villages. Realizes the compound is not a side effect — it is the purpose. Their tone shifts. They begin working on a neutralizing agent.</p>
+          <p class="row-desc"><strong>Weeks 17–22:</strong> the neutralizing agent is close. Three promising formulations are described in detail. Sable the healer (the hidden three in the cave) can read these and possibly complete the work given time, supplies, and Marta the Herbalist's knowledge. The researcher was interrupted before the fourth attempt.</p>
+          <p class="row-desc"><strong>Final entry:</strong> <em>"The control room has two confirmation switches, both must be held simultaneously to initiate shutdown. I could not find a way to reach both alone. I spent a long time on that. I think I am getting happy. I am going to lie down. I hope whoever finds this is not alone."</em></p>
+        </div>
+
+        <div class="mechbox">
+          <div class="mechbox-title">Trap Difficulty Summary</div>
+          <ul>
+            <li><strong>T1 Phonograph</strong> — DC 13 Perception · No damage · Audible alert · Ranger auto-detects</li>
+            <li><strong>T2 Bliss canister</strong> — DC 12 Perception · DC 12 Hallucination Save · 1 round Dazed · Herbalist auto-detects</li>
+            <li><strong>T3 Electric panel</strong> — DC 13 Perception · 1d6 lightning · DC 12 Dex or Prone · Filament Thread bearer auto-detects</li>
+            <li><strong>T4 Shelf collapse</strong> — DC 11 Perception · 1d4 bludgeoning · DC 12 Dex to dodge · Obscures T3 if triggered</li>
+            <li><strong>T5 Inverse jar</strong> — DC 12 Perception (shelf) · 5 HP Inverse · 1d4 damage · Flees after 2 rounds</li>
+            <li><strong>T6 Root mist</strong> — DC 10 Hallucination Save · Vision only · No Sanity loss · Ranger identifies roots first</li>
+          </ul>
+        </div>
+
+        <div class="dm-note"><strong>DM Return Note ·</strong> The Sinking Station's loot is almost entirely preparation for what comes next. The map, the journal, the anti-Bliss vials, the signal flares — everything here connects forward to the factory or backward to Mellwood. When the party returns to the village after this, they should feel like they understand the situation for the first time. Sable can read the journal. Aldric can confirm the map's exterior. Wren's journal entries will suddenly match specific dates in the researcher's logs. The pieces are now all present. The factory is the only thing left. <em>After this return visit, the factory visit is the point of no return.</em></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  const el=document.getElementById('stars');
+  for(let i=0;i<160;i++){
+    const s=document.createElement('div');
+    s.className='star';
+    const sz=Math.random()*1.6+.3;
+    s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate';
+    el.appendChild(s);
+  }
+})();
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('p'+btn.dataset.i).classList.add('active');
+  });
+});
+const xlabels={
+  't-bliss':    ['▲ Hide Villager Table','▼ Show Villager Table'],
+  't-guests':   ['▲ Hide Notable Guests','▼ Show Notable Guests'],
+  't-fortress': ['▲ Hide Access Methods','▼ Access Methods'],
+  't-hidden':   ['▲ Hide The Hidden Three','▼ The Hidden Three'],
+  't-inverses': ['▲ Hide Inverse Stats','▼ Show Inverse Stats'],
+  't-artifacts':['▲ Hide Artifact Table','▼ Show Artifact Table'],
+};
+function xtoggle(btn,id){
+  const tbl=document.getElementById(id);
+  const open=tbl.classList.toggle('open');
+  if(xlabels[id]) btn.textContent=xlabels[id][open?0:1];
+}
+</script>
+</body>
+</html>
