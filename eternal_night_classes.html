@@ -233,6 +233,11 @@ tbody td strong{color:#ccc0a0}
 }
 .back{display:inline-block;margin-top:2.5rem;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .back:hover{color:var(--dim)}
+
+/* ── Panel image ── */
+.cls-img{width:100%;max-height:320px;overflow:hidden;position:relative;border-bottom:1px solid rgba(255,255,255,.04)}
+.cls-img img{width:100%;height:320px;object-fit:cover;object-position:center top;filter:brightness(.82) saturate(.75);display:block}
+.cls-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,var(--surface));pointer-events:none}
 </style>
 </head>
 <body>
@@ -259,6 +264,7 @@ tbody td strong{color:#ccc0a0}
     <!-- ════════════════════════════════ JESTER ════ -->
     <section class="panel active" id="p0" style="--cc:#a855f7;--cg:rgba(168,85,247,.3)">
       <div class="card">
+        <div class="cls-img"><img src="Class%20images/Jester.png" alt="Jester"></div>
         <div class="cls-hd">
           <h2 class="cls-name">Jester</h2>
           <p class="cls-role">Rogue · Bard · Melee Crit · Stealth</p>
@@ -325,6 +331,7 @@ tbody td strong{color:#ccc0a0}
     <!-- ════════════════════════════ DREAMCASTER ════ -->
     <section class="panel" id="p1" style="--cc:#06b6d4;--cg:rgba(6,182,212,.3)">
       <div class="card">
+        <div class="cls-img"><img src="Class%20images/Dreamcaster.png" alt="Dreamcaster"></div>
         <div class="cls-hd">
           <h2 class="cls-name">Dreamcaster</h2>
           <p class="cls-role">Utility · Crowd Control · Understanding</p>
@@ -378,6 +385,7 @@ tbody td strong{color:#ccc0a0}
     <!-- ════════════════════════════════ RANGER ════ -->
     <section class="panel" id="p2" style="--cc:#22c55e;--cg:rgba(34,197,94,.3)">
       <div class="card">
+        <div class="cls-img"><img src="Class%20images/Ranger.png" alt="Ranger"></div>
         <div class="cls-hd">
           <h2 class="cls-name">Ranger</h2>
           <p class="cls-role">Scout · Ranged Combat · Herbalist</p>
@@ -431,6 +439,7 @@ tbody td strong{color:#ccc0a0}
     <!-- ══════════════════════════ SHAPESHIFTER ════ -->
     <section class="panel" id="p3" style="--cc:#f59e0b;--cg:rgba(245,158,11,.3)">
       <div class="card">
+        <div class="cls-img"><img src="Class%20images/Shapeshifter.png" alt="Shapeshifter"></div>
         <div class="cls-hd">
           <h2 class="cls-name">Shapeshifter</h2>
           <p class="cls-role">Tank · Melee · Infiltration</p>
@@ -516,6 +525,7 @@ tbody td strong{color:#ccc0a0}
     <!-- ═══════════════════════════════ SORCERER ════ -->
     <section class="panel" id="p4" style="--cc:#ef4444;--cg:rgba(239,68,68,.3)">
       <div class="card">
+        <div class="cls-img"><img src="Class%20images/Sorcerer.png" alt="Sorcerer"></div>
         <div class="cls-hd">
           <h2 class="cls-name">Sorcerer</h2>
           <p class="cls-role">Magic Damage · Volatile Power</p>
