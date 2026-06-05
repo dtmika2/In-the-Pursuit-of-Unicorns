@@ -114,10 +114,110 @@ body{
   text-transform:uppercase;
   color:var(--muted);
 }
+
+.card-dm{
+  cursor:pointer;
+  border-color:rgba(160,60,60,.25);
+}
+.card-dm:hover{
+  border-color:rgba(180,70,70,.55);
+  box-shadow:0 0 28px rgba(160,50,50,.18);
+}
+.card-dm .card-title{color:#b06060}
+.card-dm .card-desc{opacity:.7}
+
+/* Modal */
+.overlay{
+  display:none;
+  position:fixed;inset:0;z-index:100;
+  background:rgba(2,2,12,.82);
+  backdrop-filter:blur(4px);
+  align-items:center;justify-content:center;
+}
+.overlay.open{display:flex}
+
+.modal{
+  background:var(--surface);
+  border:1px solid rgba(160,60,60,.35);
+  border-radius:8px;
+  padding:2.2rem 2rem 2rem;
+  max-width:380px;width:90%;
+  text-align:center;
+  animation:fadeUp .3s ease both;
+  position:relative;
+}
+
+.modal-quote{
+  font-family:'EB Garamond',serif;
+  font-size:1.05rem;
+  font-style:italic;
+  color:var(--dim);
+  margin-bottom:1.6rem;
+  line-height:1.5;
+}
+
+.modal-input{
+  width:100%;
+  background:#06060f;
+  border:1px solid rgba(160,60,60,.3);
+  border-radius:4px;
+  padding:.65rem .9rem;
+  font-family:'EB Garamond',serif;
+  font-size:1rem;
+  color:var(--text);
+  letter-spacing:.12em;
+  outline:none;
+  transition:border-color .2s;
+}
+.modal-input:focus{border-color:rgba(180,70,70,.6)}
+
+.modal-error{
+  margin-top:.6rem;
+  font-size:.8rem;
+  color:#b06060;
+  font-style:italic;
+  min-height:1.1rem;
+}
+
+.modal-btn{
+  margin-top:1.1rem;
+  width:100%;
+  padding:.7rem;
+  background:rgba(130,45,45,.35);
+  border:1px solid rgba(160,60,60,.4);
+  border-radius:4px;
+  font-family:'Cinzel',serif;
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#c08080;
+  cursor:pointer;
+  transition:background .2s,border-color .2s;
+}
+.modal-btn:hover{background:rgba(160,55,55,.5);border-color:rgba(180,70,70,.6)}
+
+.modal-close{
+  position:absolute;top:.7rem;right:.9rem;
+  background:none;border:none;
+  color:var(--muted);font-size:1.1rem;
+  cursor:pointer;line-height:1;
+  transition:color .2s;
+}
+.modal-close:hover{color:var(--dim)}
 </style>
 </head>
 <body>
 <canvas id="stars"></canvas>
+
+<div class="overlay" id="dmOverlay" onclick="closeDMOutside(event)">
+  <div class="modal" id="dmModal">
+    <button class="modal-close" onclick="closeDM()">✕</button>
+    <p class="modal-quote">"you are gonna be a truble maker, right?"</p>
+    <input class="modal-input" id="dmPass" type="password" placeholder="Password…" onkeydown="if(event.key==='Enter')checkPass()">
+    <p class="modal-error" id="dmErr"></p>
+    <button class="modal-btn" onclick="checkPass()">Enter</button>
+  </div>
+</div>
 
 <div class="wrap">
   <h1 class="hd-title">In Search of Unicorns</h1>
@@ -134,12 +234,40 @@ body{
       <div class="card-title">Classes</div>
       <div class="card-desc">Custom class options &amp; subclasses for the campaign</div>
     </a>
+    <div class="card card-dm" onclick="openDM()">
+      <div class="card-title">Dungeon Master Cabinet</div>
+      <div class="card-desc">entry forbidden</div>
+    </div>
   </div>
 
   <p class="footer">One-shot &nbsp;·&nbsp; D&amp;D 5e</p>
 </div>
 
 <script>
+function openDM(){
+  document.getElementById('dmOverlay').classList.add('open');
+  document.getElementById('dmPass').value='';
+  document.getElementById('dmErr').textContent='';
+  setTimeout(()=>document.getElementById('dmPass').focus(),50);
+}
+function closeDM(){
+  document.getElementById('dmOverlay').classList.remove('open');
+}
+function closeDMOutside(e){
+  if(e.target===document.getElementById('dmOverlay'))closeDM();
+}
+function checkPass(){
+  const val=document.getElementById('dmPass').value;
+  if(val==='ItPoU'){window.location.href='dm.html';}
+  else{
+    const err=document.getElementById('dmErr');
+    err.textContent='That is not the right words, traveller.';
+    document.getElementById('dmPass').value='';
+    document.getElementById('dmPass').focus();
+  }
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDM();});
+
 (function(){
   const canvas=document.getElementById('stars');
   const ctx=canvas.getContext('2d');
