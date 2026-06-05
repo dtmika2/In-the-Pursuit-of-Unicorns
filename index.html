@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>In Search of Unicorns — Player Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+@keyframes twinkle{from{opacity:.08}to{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+:root{
+  --bg:#04040f;
+  --surface:#09091a;
+  --gold:#c9a84c;
+  --text:#d4c9a8;
+  --muted:#5a5044;
+  --dim:#8a7e64;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  font-family:'EB Garamond',serif;
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow-x:hidden;
+}
+
+#stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.star{position:absolute;background:#fff;border-radius:50%}
+
+.wrap{
+  position:relative;z-index:1;
+  max-width:640px;width:100%;
+  padding:4rem 1.5rem 5rem;
+  text-align:center;
+  animation:fadeUp .8s ease both;
+}
+
+.hd-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2rem,6vw,3.2rem);
+  font-weight:700;
+  letter-spacing:.14em;
+  color:var(--gold);
+  text-shadow:0 0 80px rgba(201,168,76,.3);
+  line-height:1.2;
+}
+
+.hd-sub{
+  margin-top:.55rem;
+  font-size:.7rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.divider{
+  width:120px;
+  height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  margin:2.5rem auto;
+}
+
+.cards{
+  display:flex;
+  flex-direction:column;
+  gap:1.25rem;
+}
+
+.card{
+  display:block;
+  background:var(--surface);
+  border:1px solid rgba(201,168,76,.18);
+  border-radius:6px;
+  padding:1.6rem 2rem;
+  text-decoration:none;
+  color:var(--text);
+  transition:border-color .25s,box-shadow .25s,transform .2s;
+}
+.card:hover{
+  border-color:rgba(201,168,76,.5);
+  box-shadow:0 0 28px rgba(201,168,76,.12);
+  transform:translateY(-2px);
+}
+
+.card-title{
+  font-family:'Cinzel',serif;
+  font-size:1.15rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  color:var(--gold);
+  margin-bottom:.35rem;
+}
+
+.card-desc{
+  font-size:.95rem;
+  color:var(--dim);
+  font-style:italic;
+}
+
+.footer{
+  margin-top:3rem;
+  font-size:.7rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<div class="wrap">
+  <h1 class="hd-title">In Search of Unicorns</h1>
+  <p class="hd-sub">Player Reference &nbsp;·&nbsp; Eternal Night Setting</p>
+
+  <div class="divider"></div>
+
+  <div class="cards">
+    <a class="card" href="eternal_night_races.html">
+      <div class="card-title">Races</div>
+      <div class="card-desc">Ancestries &amp; heritages of the Eternal Night world</div>
+    </a>
+    <a class="card" href="eternal_night_classes.html">
+      <div class="card-title">Classes</div>
+      <div class="card-desc">Custom class options &amp; subclasses for the campaign</div>
+    </a>
+  </div>
+
+  <p class="footer">One-shot &nbsp;·&nbsp; D&amp;D 5e</p>
+</div>
+
+<script>
+(function(){
+  const canvas=document.getElementById('stars');
+  const ctx=canvas.getContext('2d');
+  let stars=[];
+  function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+  function init(){
+    resize();stars=[];
+    for(let i=0;i<160;i++){
+      const r=Math.random()*1.1+.2;
+      stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r,
+        op:Math.random(),spd:.004+Math.random()*.008,dir:Math.random()>.5?1:-1});
+    }
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(const s of stars){
+      s.op+=s.spd*s.dir;
+      if(s.op>=.75||s.op<=.06)s.dir*=-1;
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,255,255,${s.op})`;ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',init);
+  init();draw();
+})();
+</script>
+</body>
+</html>
