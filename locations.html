@@ -48,8 +48,8 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 .row-desc p{margin-top:.65rem}
 .row-desc p:first-child{margin-top:0}
 .bliss-badge{display:inline-block;padding:.1rem .6rem;border-radius:2px;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.18);color:var(--gold);margin-left:.5rem;vertical-align:middle;}
-.xbtn{margin-top:.75rem;display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .7rem;background:none;border:1px solid rgba(255,255,255,.07);color:var(--cc);font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;opacity:.55;border-radius:2px;transition:opacity .2s,border-color .2s;}
-.xbtn:hover{opacity:1;border-color:rgba(255,255,255,.14)}
+.xbtn{margin-top:.75rem;display:inline-flex;align-items:center;gap:.35rem;padding:.22rem .7rem;background:none;border:1px solid color-mix(in srgb,var(--cc) 55%,transparent);color:var(--cc);font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;opacity:1;border-radius:2px;transition:background .2s,border-color .2s,color .2s;}
+.xbtn:hover{border-color:var(--cc);background:color-mix(in srgb,var(--cc) 14%,transparent);color:#fff}
 .xtbl{display:none;margin-top:.85rem;animation:fadeUp .2s ease}
 .xtbl.open{display:block}
 table{width:100%;border-collapse:collapse;font-size:.87rem}

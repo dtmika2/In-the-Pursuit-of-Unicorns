@@ -190,15 +190,15 @@ body{
   display:inline-flex;align-items:center;gap:.35rem;
   padding:.22rem .7rem;
   background:none;
-  border:1px solid rgba(255,255,255,.07);
+  border:1px solid color-mix(in srgb,var(--cc) 55%,transparent);
   color:var(--cc);
   font-family:'Cinzel',serif;
   font-size:.62rem;letter-spacing:.12em;
   text-transform:uppercase;cursor:pointer;
-  opacity:.55;border-radius:2px;
-  transition:opacity .2s,border-color .2s;
+  opacity:1;border-radius:2px;
+  transition:background .2s,border-color .2s,color .2s;
 }
-.xbtn:hover{opacity:1;border-color:rgba(255,255,255,.14)}
+.xbtn:hover{border-color:var(--cc);background:color-mix(in srgb,var(--cc) 14%,transparent);color:#fff}
 
 /* ── Sub-tables ── */
 .xtbl{display:none;margin-top:.85rem;animation:fadeUp .2s ease}
