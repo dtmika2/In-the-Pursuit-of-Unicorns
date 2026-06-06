@@ -1,4 +1,4 @@
-# Eternal Night
+# In the Pursuit of Unicorns
 ### A Homebrew Oneshot · 8 Hours · 5 Players + DM
 
 *A Dream-Like World Sunken in Blissful Darkness*
@@ -11,7 +11,7 @@
 
 > *"Night never ends here. The stars do not move. The moon does not set. And the people — they smile."*
 
-This world has sunken into an **Eternal Night** — not one of danger, but of bliss. A warm, heavy, corrupting contentment that has settled over every living thing like a fog. Its cause is unknown to those who suffer it. Its source is very real.
+This world has sunken into an **eternal night** — not one of danger, but of bliss. A warm, heavy, corrupting contentment that has settled over every living thing like a fog. Its cause is unknown to those who suffer it. Its source is very real.
 
 The world is populated by **humans, gnomes, fairies, and unicorns** — all touched by the bliss in different ways. Some laugh and cannot stop. Some have forgotten fear entirely. Some are lost in dementia, others in paranoia. The bliss is not peace. It is a slow erasure.
 
@@ -72,7 +72,7 @@ The world is rich with herbs, many of them laced with the Bliss. Some are taken 
 
 ### What the Players Think
 
-Somewhere beyond the foggy hills, there is a **mysterious castle**. From its towers rise dark, swirling clouds. The locals say it is ancient. Magical. Sacred. The clouds, they say, are the Eternal Night made manifest — the source of this blessed dark. The party is drawn toward it.
+Somewhere beyond the foggy hills, there is a **mysterious castle**. From its towers rise dark, swirling clouds. The locals say it is ancient. Magical. Sacred. The clouds, they say, are the eternal night made manifest — the source of this blessed dark. The party is drawn toward it.
 
 ### What Is Actually There
 
