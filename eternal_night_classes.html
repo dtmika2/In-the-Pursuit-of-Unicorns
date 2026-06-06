@@ -236,8 +236,8 @@ tbody td strong{color:#ccc0a0}
 
 /* ── Panel image ── */
 .cls-img{width:100%;max-height:90px;overflow:hidden;position:relative;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;transition:max-height .45s ease}
-.cls-img.open{max-height:320px}
-.cls-img img{width:100%;height:320px;object-fit:cover;object-position:center top;filter:brightness(.82) saturate(.75);display:block}
+.cls-img.open{max-height:2000px}
+.cls-img img{width:100%;height:auto;display:block;filter:brightness(.82) saturate(.75)}
 .cls-img::after{content:'▼';position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(transparent,var(--surface));pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:.45rem;font-size:.65rem;color:rgba(255,255,255,.3)}
 .cls-img.open::after{content:'▲';height:50px}
 </style>
