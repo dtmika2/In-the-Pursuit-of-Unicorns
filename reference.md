@@ -61,27 +61,57 @@ No matter the listed cost of an ability, **a failed action always costs only 1 A
 
 ### How Ability Rolls Work
 
+---
+
 **Physical Attacks**
-Roll **d20 + listed ability modifier** against the target's **Armor Class** (AC), plus any bonuses from cover.
+Roll **d20 + listed ability modifier + weapon modifier** against the target's **Armor Class** (AC), plus any bonuses from cover.
 - Meet or beat AC → hit.
-Example: Player rolls 14, ability uses Instinct, player's character has +3 instinct bonus, so he threw 17. The AC of creature was 13 + 2 from half cover. The strike landed.
 
-**Spells & Abilities against environment**
-Roll **d20 + listed ability modifier** against a **Preset DC of that possibility** (e.g., how hard is it to trun a wooden door into a metal door - DC 10 vs. how hard is it to turn a boulder into a cow - DC 20)
+*D&D basis: Standard attack roll. Identical to 5e — d20 + ability modifier vs AC. Half cover adds +2 to AC, three-quarters cover adds +5.*
+
+> **Example — Ranger, Precise Shot:** The Ranger fires at a bandit crouching behind a half-collapsed wall (half cover). Bandit AC 14 + 2 cover = **DC 16**. Ranger rolls d20 + Instinct (+2) + Short bow +1: rolls 13 + 2 + 1 = **16**. Exactly meets AC — the arrow threads the gap. Hit.
+
+---
+
+**Spells & Abilities against the Environment**
+Roll **d20 + listed ability modifier** against a **Preset DC** set by the DM based on how difficult or improbable the transformation/effect is.
+- Meet or beat the DC → success.
+
+*D&D basis: Standard ability check. DM sets DC by task difficulty — Easy DC 10, Normal DC 13, Hard DC 16, Very Hard DC 20. No saving throw from the environment; it simply resists by its nature.*
+
+> **Example — Sorcerer, Dissolve:** The Sorcerer attempts to dissolve a locked iron portcullis into raw energy. Iron is dense and resistant — DM sets DC 17. Sorcerer rolls d20 + Willpower (+2): rolls 15 + 2 = **17**. Success — the gate collapses into crackling sparks.
+
+---
+
+**Spells & Abilities against a Living Target**
+
+**V1 — Attacker rolls vs Preset DC + Defender's Modifier** *(best for player vs. NPC)*
+Roll **d20 + listed ability modifier** against a **Preset DC + the defender's relevant skill modifier** (e.g., Constitution for resisting a physical spell, Wisdom for a mental one).
 - Meet or beat the total → success.
 
-**Spells & Abilities against a living target**
-V1:
-Roll **d20 + listed ability modifier** against a **Preset DC + an appropriate skill bonus** (e.g., Constitution for resisting a physical spell, Wisdom for a mental one - best for resolving player vs. NPCs)
-- Meet or beat the total → success.
+*D&D basis: Equivalent to 5e's spell save system, but inverted — instead of the target rolling d20 + modifier vs the caster's DC, the defender's bonus is folded directly into the DC. The math produces the same probability. Faster for NPCs who don't need their own roll.*
 
-V2:
-Roll **d20 + listed ability modifier** against a **DC which is equal to the number of a skill** (e.g., Constitution directly sets the DC, there is no need to modify it - best for resolving player vs. player conflict)
-- Meet or beat the total → success.
+> **Example — Dreamcaster, Mesmerize:** The Dreamcaster locks eyes with a palace guard (NPC). Mesmerize has a preset DC of 12. The guard has Wisdom +1 — total DC = **13**. Dreamcaster rolls d20 + Understanding (+2): rolls 11 + 2 = **13**. Exactly meets DC — the guard freezes, charmed for 1 round, unsure why.
 
-V3:
-Roll **d20 + listed ability modifier** against a **d20 + defensive ability modifier** (for when a target should have an active chance to defend itself)
-- Higher number wins - in case of a draw, attacker wins.
+---
+
+**V2 — Attacker rolls vs Defender's Raw Ability Score** *(best for player vs. player)*
+Roll **d20 + listed ability modifier** against a **DC equal to the defender's relevant ability score** (the raw score, not the modifier — no roll from the defender).
+- Meet or beat the DC → success.
+
+*D&D basis: Similar to passive ability checks (passive = 10 + modifier). Using the raw ability score as the DC compresses a contested roll into a single throw — keeps PvP fast and decisive without giving the defender a lucky roll that breaks immersion.*
+
+> **Example — Dreamcaster, Puppet:** The Dreamcaster attempts to Puppet the Ranger mid-combat. The Ranger resists with Constitution — raw Constitution score is **13** (modifier +1), so that is the DC. Dreamcaster rolls d20 + Understanding (+2): rolls 10 + 2 = **12**. Fails — the Ranger shakes off the intrusion, aware something tried to take the wheel.
+
+---
+
+**V3 — Both Sides Roll** *(for when a target should have an active chance to defend itself)*
+Roll **d20 + listed ability modifier** against the defender's **d20 + their relevant ability modifier**.
+- Higher total wins. On a draw, the attacker wins.
+
+*D&D basis: The standard contested check from 5e. Both parties roll — the higher result succeeds. Used when the defender's response is active, not passive: grappling, chasing, disguising, or any moment where failure on both sides still needs a winner.*
+
+> **Example — Shapeshifter, Mimic:** The Shapeshifter takes on the exact form of the town captain. The Jester is suspicious and actively scrutinises the disguise. Shapeshifter rolls d20 + Constitution (+2): rolls 12 + 2 = **14**. Jester rolls d20 + Cunningness (+2): rolls 9 + 2 = **11**. Shapeshifter wins — the disguise holds. The Jester cannot place what feels wrong.
 
 ---
 
