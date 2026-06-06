@@ -59,6 +59,15 @@ Each player starts at **Sanity 10**. It decreases on failed Hallucination Saves.
 ### Action Slot Cost on Failure
 No matter the listed cost of an ability, **a failed action always costs only 1 AS** (Action Slot).
 
+### Rules of Thumb — Which Roll to Use
+
+| Target | What to do |
+|--------|-----------|
+| **Environment** | No save. DM sets the DC freely based on difficulty. |
+| **NPC** | Use the DC listed on the ability + the modifier the DM assigns that NPC for the relevant skill. |
+| **Player character** | Ignore the ability's listed DC. Use the raw score of the relevant skill straight from their character sheet as the DC. |
+| **Target can actively fight back** | Skip the save entirely. Both sides roll — d20 + their modifier. Higher wins. |
+
 ### How Ability Rolls Work
 
 ---

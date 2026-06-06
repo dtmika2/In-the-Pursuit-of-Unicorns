@@ -5,7 +5,7 @@
     "role": "Rogue · Bard · Melee Crit · Stealth", "mod": ["Cunningness +2", "Sanity checks +2"],
     "flavor": "You are the chaos at the heart of every encounter. If you can, you avoid fighting, by various means always at hand. The solutions to avoidance are almost limitless. And on the (not so) rare occasion you decide to bleed someone, you make it look like an accident. Because your mind is already so loose and unhinged, it's harder to throw you of ballance. You gain +2 modifier on all sanity checks.",
     "abilities": [
-      { "name": "Mocking Cackle", "mech": "Cunningness · 1 turn · 1AS", "desc": "Your mocking laugh gets under their skin. Target makes a save or cannot attack next turn - too busy fuming, or, worse, giggling. If a target is affected by mocking laugh 3 times consecutively, it start harming itself. The laugh is insuffarable, and it needs to stop. At <strong><i>any</i></strong> cost." },
+      { "name": "Mocking Cackle", "mech": "Cunningness · Save: Willpower 12 · 1 turn · 1AS", "desc": "Your mocking laugh gets under their skin. Target makes a save or cannot attack next turn - too busy fuming, or, worse, giggling. If a target is affected by mocking laugh 3 times consecutively, it start harming itself. The laugh is insuffarable, and it needs to stop. At <strong><i>any</i></strong> cost." },
       { "name": "Trick Blade", "mech": "Cunningness · 1AS", "desc": "A deceptive melee strike, rolled with advantage on attack. If the hit is success, throw a d12. Different rolls have different outcomes.",
         "table": { "id": "t-wonders", "btnOpen": "▼ Show Item Table", "btnClose": "▲ Hide Items",
           "headers": ["d12", "Item", "Effect"],
@@ -32,7 +32,7 @@
             ]
         }
       },
-      { "name": "Jester's Medley",  "mech": "3AS",     "desc": "A performance, a jape, a jest. <em>Inspire</em> one ally - they gain advantage on their next roll. Or: <em>Distract</em> all enemies in sight, they all gain -1 to their next attack throw. Outside of a combat, Jester's Medley causes drawn attention to you. Every mesmerized creature pays almost no attention to what is happening around them." }
+      { "name": "Jester's Medley",  "mech": "Distract Save: Willpower 11 · 3AS",     "desc": "A performance, a jape, a jest. <em>Inspire</em> one ally - they gain advantage on their next roll. Or: <em>Distract</em> all enemies in sight, they all gain -1 to their next attack throw. Outside of a combat, Jester's Medley causes drawn attention to you. Every mesmerized creature pays almost no attention to what is happening around them." }
     ]
   },
   {
@@ -43,9 +43,9 @@
     "abilities": [
       { "name": "Minor Illusion", "mech": "1AS",                          "desc": "Create a small visual or auditory illusion - a sound, a shadow, a drifting light, a fleeting face in the fog. No larger than a person. No direct combat effect. Limited only by your imagination. You may use this freely, as many times as you wish." },
       { "name": "Telepathy",      "mech": "Understanding · 1AS",           "desc": "Reach into a mind within 30 feet. Send a wordless message - emotion, image, intent - silently and instantly. Or read their surface thoughts: what they are focused on right now. The target is unaware in either case." },
-      { "name": "Mesmerize",      "mech": "Understanding · 1 turn · 2AS", "desc": "Lock eyes with one target. If they fail their save, they are Charmed for 1 round - they cannot act against you or your allies. They remember being held. They do not know why." },
+      { "name": "Mesmerize",      "mech": "Understanding · Save: Willpower 12 · 1 turn · 2AS", "desc": "Lock eyes with one target. If they fail their save, they are Charmed for 1 round - they cannot act against you or your allies. They remember being held. They do not know why." },
       { "name": "Magic Mouth",    "mech": "Until triggered · 1AS",        "desc": "Enchant a surface, object, or humanoid with a stored message. Set a trigger - a specific action which activates your spell. When triggered, a magical mouth delivers your words exactly as you spoke them." },
-      { "name": "Puppet",         "mech": "Understanding · 3AS",          "desc": "For one terrifying moment, you take the wheel. Force one creature within 30 feet to take a single action of your choosing. They do it. Water it is. They cannot stop it. <strong>They know it was you</strong>." }
+      { "name": "Puppet",         "mech": "Understanding · Save: Willpower 13 · 3AS",          "desc": "For one terrifying moment, you take the wheel. Force one creature within 30 feet to take a single action of your choosing. They do it. Water it is. They cannot stop it. <strong>They know it was you</strong>." }
     ]
   },
   {
@@ -56,7 +56,7 @@
     "abilities": [
       { "name": "Precise Shot", "mech": "Instinct · +1d10 · 1AS", "desc": "Take careful aim before firing. Your next ranged attack deals 1d10 damage and ignores all cover bonuses. The arrow finds the gap." },
       { "name": "Volley",       "mech": "Constitution · +1d6 · 2AS",  "desc": "Loose a flurry of arrows at up to 3 different targets simultaneously. Roll separately for each target. Each hit deals 1d6 damage. For one moment, the air is full of fletching." },
-      { "name": "Roped Shot",   "mech": "Constitution · 1AS",         "desc": "Fire an arrow with a string attached. Immidiately after succesful shot, you can pull the target 3 feets closer. On every next turn, you can try to disballance the target, throwing it onto a ground - until the sting is cut." },
+      { "name": "Roped Shot",   "mech": "Constitution · Disbalance Save: Constitution 11 · 1AS",         "desc": "Fire an arrow with a string attached. Immidiately after succesful shot, you can pull the target 3 feets closer. On every next turn, you can try to disballance the target, throwing it onto a ground - until the sting is cut." },
       { "name": "Herbalist",    "mech": "Passive",                 "desc": "Identify any herb, drink, fruit, insect before it is consumed - its effects, potency, and DC. When <em>you</em> consume a herb, halve chance to a negative effect. You know what grows in this dark, and what it does to people. You can also make ointment and dip your arrows in it - targets of these arrows suffer the cosecvences of that source." },
       { "name": "Ranger's Eye", "mech": "Instinct · 1AS",         "desc": "You always find the trail - footprints, broken stems, magical residue, lingering scent. Hidden paths reveal themselves. Additionally, you sense hidden dangers, traps, and unnatural presences within 30 feet. You feel the wrongness before you can name it. +3 to all Instinct throws for 10 minutes." },
       { "name": "Read the Move", "mech": "Instinct · 2AS",         "desc": "Before a creature takes their action, the Ranger calls it. They declare what they believe the target is about to do. The DM confirms. If correct, the action is interrupted before it resolves: the Ranger acts first - they have few seconds to directly disrupt that action. <em>Being observant paid off.</em>" }
@@ -73,16 +73,16 @@
           "headers": ["Form", "Movement", "Attack", "Special"],
           "rows": [
             ["Horse",   "Speed +2 tiles",              "Bite 1d6",   "Advantage on attack if an ally is adjacent to the same target. On a critical hit, target falls <strong>Prone</strong>."],
-            ["Bear",    "Normal",                       "Claws 1d8",  "Gain +6 temporary HP on transformation. On a hit, DC 12 save or target is <strong>Grappled</strong>."],
+            ["Bear",    "Normal",                       "Claws 1d8",  "Gain +6 temporary HP on transformation. On a hit, Save: Constitution 12 or target is <strong>Grappled</strong>."],
             ["Frog",    "Sink underwater for 10 minutes","Tongue 1d4","Advantage on all Instinct at range."],
-            ["Serpent", "Stealth while still",          "Bite 1d4",   "On hit, DC 12 Con save or target has -2 to their next roll (venom). Constrict a <strong>Grappled</strong> target for 1d4/round. Can squeeze through small gaps."]
+            ["Serpent", "Stealth while still",          "Bite 1d4",   "On hit, Save: Constitution 12 or target has -2 to their next roll (venom). Constrict a <strong>Grappled</strong> target for 1d4/round. Can squeeze through small gaps."]
           ]
         }
       },
       { "name": "Mimic",                        "mech": "Constitution · 1AS", "desc": "Copy the exact appearance, voice, and mannerisms of any humanoid you have closely observed. The better you observe your target, the easier your constitution check becomes. Others must make a DC 14 Insight check to notice something is off. A perfect copy - down to the nervous habit." },
       { "name": "Partial Shift + Predator Sense","mech": "1 hour · 1AS",      "desc": "Grow one animal feature - claws (1d6 melee), gills, a prehensile tail, or a climbing grip - and simultaneously borrow a set of animal senses: echolocation, heat-sight, a wolf's nose, or an owl's night-vision. You cannot be surprised while active. You can only grow something you have observed through your own eyes. <em>You cannot grow dragon wings by only hearing a tale of a dragon.</em>" },
       { "name": "Regenerate",                   "mech": "3AS",                "desc": "Shift your flesh to push out damage and knit wounds shut. Your body ripples briefly, disturbingly - then settles back to normal. Ragain back some lost life as your flesh grows back. <strong>2d4+2.</strong>" },
-      { "name": "Grotesque Form",               "mech": "1 turn · 2AS",       "desc": "Shift into something <em>wrong</em>. Limbs too many, eyes too wide, angles that shouldn't exist. All enemies who can see you must save or be <strong>Disturbed and Frightened</strong> for 1 round - they cannot move toward you and have -2 to all rolls. Your allies are unaffected." }
+      { "name": "Grotesque Form",               "mech": "Save: Willpower 13 · 1 turn · 2AS",       "desc": "Shift into something <em>wrong</em>. Limbs too many, eyes too wide, angles that shouldn't exist. All enemies who can see you must save or be <strong>Disturbed and Frightened</strong> for 1 round - they cannot move toward you and have -2 to all rolls. Your allies are unaffected." }
     ]
   },
   {
@@ -91,10 +91,10 @@
     "role": "Magic Damage · Volatile Power", "mod": "Willpower +2",
     "flavor": "You were born with a unique sensitivity to the energies of the universe - energies that others perceive merely as wind or heat. You know that all matter carries energy, which gives it its very essence. You have the ability to absorb and transform this energy - into tangible magic or a force capable of causing harm. Everything you do carries a cost - and sometimes, so does everyone standing near you.",
     "abilities": [
-      { "name": "Hex",            "mech": "1 turn · 1AS",                    "desc": "Curse an enemy with magical affliction. They have disadvantage - roll twice, take the worse result - on all their rolls for 1 full round." },
+      { "name": "Hex",            "mech": "Save: Willpower 11 · 1 turn · 1AS",                    "desc": "Curse an enemy with magical affliction. They have disadvantage - roll twice, take the worse result - on all their rolls for 1 full round." },
       { "name": "Arcing Bolt",    "mech": "Willpower · 1d10 → 1d6 → 1d4 · 1AS","desc": "Launch a bolt that leaps between enemies. It hunts. Roll to hit the first target (1d10 on hit). The bolt then automatically jumps to the nearest enemy within 10 feet (1d6), then once more (1d4). It cannot return to a previously struck target." },
-      { "name": "Void Touch",     "mech": "Willpower · 2d4 · 2 turns · 1AS", "desc": "Reach out by hand. The air around a target compresses with vicious invisible force. On hit: 2d4 force damage. Target starts wandering aimlessly for 2 turns. It's mind is empty. Or full of eternity. Who knows..." },
-      { "name": "Gravity well",   "mech": "Willpower · 3 turns · 2AS",                   "desc": "Release a burst of volatile magic - uncontrolled, indiscriminate. All creatures within 15 feet, <em>including allies</em>, must save (Constitution) or start floating (15 feet high). Floating creatures cannot attack or cast spells. They can swim in air 3 feet per turn. After 3 turns, creatures fall. Before you use it, roll d4: on a <strong>1</strong>, you are caught in your own blast as well and must save against your own DC." },
+      { "name": "Void Touch",     "mech": "Willpower · Save: Willpower 12 · 2d4 · 2 turns · 1AS", "desc": "Reach out by hand. The air around a target compresses with vicious invisible force. On hit: 2d4 force damage. Target starts wandering aimlessly for 2 turns. It's mind is empty. Or full of eternity. Who knows..." },
+      { "name": "Gravity well",   "mech": "Willpower · Save: Constitution 13 · 3 turns · 2AS",                   "desc": "Release a burst of volatile magic - uncontrolled, indiscriminate. All creatures within 15 feet, <em>including allies</em>, must save (Constitution) or start floating (15 feet high). Floating creatures cannot attack or cast spells. They can swim in air 3 feet per turn. After 3 turns, creatures fall. Before you use it, roll d4: on a <strong>1</strong>, you are caught in your own blast as well and must save against your own DC." },
       { "name": "Arcane Fortress","mech": "Lasts for Concentration · 2AS",             "desc": "Summon a solid 2×2×2 cube of shimmering force anywhere you can see. It is real and physical. Creatures may stand <em>inside</em> it (full cover from ranged attacks), stand <em>on top</em>, or be blocked entirely by its walls. Lasts until dismissed or you fall unconscious." },
       { "name": "Foreign Limb",   "mech": "Lasts for Concentration · 1AS",             "desc": "Create a limb - a hand or a leg. You probabbly stole it from someone in another dimension. This limb can fly and interact with objects. It cannot push or lift anything heavier than 3kg. The caster must see it to control it. It glows brightly, like a moonshine." },
       { "name": "Dissolve",   "mech": "Willpower · 4AS",             "desc": "By understanding it's energy, transform any object into something completly different - it must have roughly the same weight and size. Or, make it dissolve completly - into pure energy. Which you drain, as it heals your mind - throw 1d8 and regain 1 sanity if you throw 8. You cannot recreate something mindless into something mindfull and vice versa. You powers have limits." }
