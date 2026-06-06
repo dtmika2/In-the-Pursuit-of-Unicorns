@@ -1,7 +1,7 @@
 [
   {
     "id": "p0", "color": "#a855f7", "glow": "rgba(168,85,247,.3)", "tabGlow": "rgba(168,85,247,.4)",
-    "tab": "Jester", "name": "Jester", "image": "Class%20images/Jester.png",
+    "tab": "Jester", "name": "Jester", "image": "Images/Class%20images/Jester.png",
     "role": "Rogue · Bard · Melee Crit · Stealth", "mod": "Cunningness +2",
     "flavor": "You are the chaos at the heart of every encounter. You do not fight — you make fighting unnecessary, impossible, or hilarious. And on the rare occasion you must bleed someone, you make it look like an accident.",
     "abilities": [
@@ -25,7 +25,7 @@
   },
   {
     "id": "p1", "color": "#06b6d4", "glow": "rgba(6,182,212,.3)", "tabGlow": "rgba(6,182,212,.4)",
-    "tab": "Dreamcaster", "name": "Dreamcaster", "image": "Class%20images/Dreamcaster.png",
+    "tab": "Dreamcaster", "name": "Dreamcaster", "image": "Images/Class%20images/Dreamcaster.png",
     "role": "Utility · Crowd Control · Understanding", "mod": "Understanding +2",
     "flavor": "You weave the dream-stuff of this world into veils, voices, and visions. Where others reach for steel or fire, you reach into minds. You are most at home in the space between sleep and waking.",
     "abilities": [
@@ -38,7 +38,7 @@
   },
   {
     "id": "p2", "color": "#22c55e", "glow": "rgba(34,197,94,.3)", "tabGlow": "rgba(34,197,94,.4)",
-    "tab": "Ranger", "name": "Ranger", "image": "Class%20images/Ranger.png",
+    "tab": "Ranger", "name": "Ranger", "image": "Images/Class%20images/Ranger.png",
     "role": "Scout · Ranged Combat · Herbalist", "mod": "Instinct +2",
     "flavor": "You read the land. You read the people. Where others are lost to the bliss, you find the thread. You keep moving. You are the only one in this world who is still truly looking.",
     "abilities": [
@@ -51,7 +51,7 @@
   },
   {
     "id": "p3", "color": "#f59e0b", "glow": "rgba(245,158,11,.3)", "tabGlow": "rgba(245,158,11,.4)",
-    "tab": "Shapeshifter", "name": "Shapeshifter", "image": "Class%20images/Shapeshifter.png",
+    "tab": "Shapeshifter", "name": "Shapeshifter", "image": "Images/Class%20images/Shapeshifter.png",
     "role": "Tank · Melee · Infiltration", "mod": "Constitution +2",
     "flavor": "You are not one thing. You never were. In a world that has forgotten itself entirely, you remember every shape you have ever worn — and a few that haven't been invented yet.",
     "abilities": [
@@ -74,7 +74,7 @@
   },
   {
     "id": "p4", "color": "#ef4444", "glow": "rgba(239,68,68,.3)", "tabGlow": "rgba(239,68,68,.4)",
-    "tab": "Sorcerer", "name": "Sorcerer", "image": "Class%20images/Sorcerer.png",
+    "tab": "Sorcerer", "name": "Sorcerer", "image": "Images/Class%20images/Sorcerer.png",
     "role": "Magic Damage · Volatile Power", "mod": "Willpower +2",
     "flavor": "Magic does not flow through you. It erupts. You are a pressure vessel of arcane force, and this corrupted world has made that pressure volatile. Everything you do carries a cost — and sometimes, so does everyone standing near you.",
     "abilities": [
