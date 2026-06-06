@@ -32,7 +32,7 @@
             ]
         }
       },
-      { "name": "Jester's Medley",  "mech": "Distract Save: Willpower 11 · 3AS",     "desc": "A performance, a jape, a jest. <em>Inspire</em> one ally - they gain advantage on their next roll. Or: <em>Distract</em> all enemies in sight, they all gain -1 to their next attack throw. Outside of a combat, Jester's Medley causes drawn attention to you. Every mesmerized creature pays almost no attention to what is happening around them." }
+      { "name": "Jester's Medley",  "mech": "Save: Willpower 11 · 3AS",     "desc": "A performance, a jape, a jest. <em>Inspire</em> one ally - they gain advantage on their next roll. Or: <em>Distract</em> all enemies in sight, they all gain -1 to their next attack throw. Outside of a combat, Jester's Medley causes drawn attention to you. Every mesmerized creature pays almost no attention to what is happening around them." }
     ]
   },
   {
