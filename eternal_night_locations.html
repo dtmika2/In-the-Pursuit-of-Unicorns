@@ -32,7 +32,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 .loc-name{font-family:'Cinzel',serif;font-size:1.85rem;font-weight:700;letter-spacing:.07em;line-height:1;color:var(--cc);text-shadow:0 0 35px var(--cg);}
 .loc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.55rem;}
 .loc-tag{display:inline-block;padding:.18rem .75rem;border:1px solid rgba(255,255,255,.1);color:var(--cc);font-family:'Cinzel',serif;font-size:.63rem;letter-spacing:.12em;border-radius:2px;opacity:.75;}
-.loc-quote{margin-top:.9rem;font-style:italic;color:var(--dim);font-size:1.05rem;line-height:1.65;max-width:62ch;}
+.loc-quote{margin-top:.9rem;font-style:italic;color:#a69778;font-size:1.05rem;line-height:1.65;max-width:62ch;}
 .loc-lore{margin-top:.65rem;color:#918cac;font-size:1.05rem;line-height:1.75;}
 .loc-lore+.loc-lore{margin-top:.5rem}
 .sec-lbl{padding:.4rem 2.25rem;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cc);opacity:.45;background:rgba(0,0,0,.22);border-bottom:1px solid rgba(255,255,255,.025);}
@@ -43,7 +43,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 .row-name{font-family:'Cinzel',serif;font-size:1.2rem;font-weight:600;color:#ddd0a8;letter-spacing:.03em;}
 .row-meta{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.06em;color:var(--cc);opacity:.65;text-align:right;flex-shrink:0;}
 .row-desc{font-size:1.05rem;color:#afa899;line-height:1.68;}
-.row-desc em{color:#7a7060;font-style:italic}
+.row-desc em{color:#928673;font-style:italic}
 .row-desc strong{color:#d8ceb2;font-style:normal}
 .row-desc p{margin-top:.65rem}
 .row-desc p:first-child{margin-top:0}
@@ -57,7 +57,7 @@ thead th{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.15em;text-t
 tbody td{padding:.52rem .55rem;color:var(--dim);border-bottom:1px solid rgba(255,255,255,.025);vertical-align:top;line-height:1.55;}
 tbody tr:last-child td{border-bottom:none}
 tbody td:first-child{color:#ccc0a0;font-weight:500}
-tbody td em{color:#6a6454;font-style:italic}
+tbody td em{color:#7f7865;font-style:italic}
 tbody td strong{color:#c4b898}
 .mechbox{margin:0 2.25rem 1.25rem;padding:.9rem 1.15rem;border:1px solid rgba(255,255,255,.05);border-left:2px solid var(--cc);border-radius:2px;background:rgba(0,0,0,.18);}
 .mechbox-title{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cc);opacity:.65;margin-bottom:.6rem;}
@@ -65,15 +65,15 @@ tbody td strong{color:#c4b898}
 .mechbox li{font-size:1rem;color:#8a7e64;line-height:1.65;padding:.2rem 0 .2rem 1.1em;position:relative;}
 .mechbox li::before{content:'·';position:absolute;left:0;color:var(--cc);opacity:.5;}
 .mechbox li strong{color:#c0b498}
-.mechbox li em{color:#6a6454;font-style:italic}
-.dm-note{margin:0 2.25rem 1.5rem;padding:.85rem 1.1rem;border:1px solid rgba(255,255,255,.035);border-left:2px solid rgba(255,255,255,.08);border-radius:2px;background:rgba(255,255,255,.012);font-style:italic;font-size:.97rem;color:#4e4840;line-height:1.72;}
+.mechbox li em{color:#7f7865;font-style:italic}
+.dm-note{margin:0 2.25rem 1.5rem;padding:.85rem 1.1rem;border:1px solid rgba(255,255,255,.035);border-left:2px solid rgba(255,255,255,.08);border-radius:2px;background:rgba(255,255,255,.012);font-style:italic;font-size:.97rem;color:#625a50;line-height:1.72;}
 .dm-note strong{color:#6e6454;font-style:normal}
 .trap-num{display:inline-block;width:1.6em;height:1.6em;line-height:1.6em;text-align:center;font-family:'Cinzel',serif;font-size:.65rem;font-weight:700;border:1px solid rgba(255,255,255,.12);border-radius:2px;color:var(--cc);opacity:.8;margin-right:.5rem;vertical-align:middle;flex-shrink:0;}
 .trap-row{display:flex;align-items:flex-start;gap:.5rem;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.025);}
 .trap-row:last-child{border-bottom:none}
 .trap-body{font-size:1rem;color:#afa899;line-height:1.6;flex:1;}
 .trap-body strong{color:#d8ceb2}
-.trap-body em{color:#7a7060;font-style:italic}
+.trap-body em{color:#928673;font-style:italic}
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
@@ -83,6 +83,7 @@ tbody td strong{color:#c4b898}
   .row-top{flex-direction:column;gap:.2rem}
   .row-meta{text-align:left}
 }
+@media(min-width:1024px){html{font-size:120%}}
 .back{display:inline-block;margin-top:2.5rem;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .back:hover{color:var(--dim)}
 </style>
