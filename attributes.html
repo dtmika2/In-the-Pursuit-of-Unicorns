@@ -70,12 +70,73 @@ body{
 .back-top{margin-bottom:1.75rem;display:block}
 .back-bot{margin-top:2.5rem;display:inline-block}
 
+/* ── Mechanics box ── */
+.mech{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  padding:1.25rem 1.5rem;
+  margin-bottom:1.5rem;
+}
+.mech-section + .mech-section{
+  margin-top:1.4rem;
+  padding-top:1.4rem;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.mech-title{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold);
+  opacity:.7;
+  margin-bottom:.9rem;
+}
+.mech-rule{
+  font-size:.98rem;color:var(--dim);line-height:1.75;
+}
+.mech-rule strong{color:var(--text);font-style:normal}
+.mech-rule em{color:#a69778}
+.mech-example{
+  margin:1rem 0 .4rem;
+  background:var(--bg);
+  border:1px solid rgba(255,255,255,.06);
+  border-left:3px solid rgba(201,168,76,.35);
+  border-radius:0 4px 4px 0;
+  padding:.85rem 1.1rem;
+}
+.mech-example-label{
+  font-family:'Cinzel',serif;
+  font-size:.55rem;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.5;
+  margin-bottom:.5rem;
+}
+.mech-example-text{
+  font-size:.95rem;color:var(--dim);
+  font-style:italic;line-height:1.7;
+}
+.mech-example-text strong{color:var(--text);font-style:normal}
+.mech-formula{
+  font-family:'Cinzel',serif;
+  font-size:.85rem;letter-spacing:.07em;
+  color:var(--text);
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:4px;
+  padding:.45rem 1rem;
+  display:block;
+  margin:.7rem 0 .15rem;
+}
+
 /* ── Attribute grid ── */
 .attr-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:14px;
   margin-bottom:1.5rem;
+}
+@media(min-width:680px){
+  .attr-grid{grid-template-columns:repeat(3,1fr)}
 }
 
 /* ── Attribute card ── */
@@ -116,6 +177,16 @@ body{
 .talent:last-child{border-bottom:none}
 .talent:hover{background:rgba(255,255,255,.015)}
 .talent-top{display:flex;align-items:baseline;gap:.5rem}
+.talent-top::after{
+  content:'▾';
+  font-size:1rem;
+  color:var(--acc);
+  opacity:.75;
+  flex-shrink:0;
+  margin-left:auto;
+  transition:opacity .15s;
+}
+.talent.open .talent-top::after{content:'▴';opacity:1}
 .talent-name{
   font-family:'Cinzel',serif;
   font-size:.82rem;font-weight:600;
@@ -136,37 +207,6 @@ body{
   transition:max-height .25s ease,margin-top .2s;
 }
 .talent.open .talent-desc{max-height:120px;margin-top:.25rem}
-
-/* ── Mechanics box ── */
-.mech{
-  background:var(--surface);
-  border:1px solid rgba(255,255,255,.055);
-  border-radius:6px;
-  padding:1.1rem 1.4rem;
-  margin-bottom:1.5rem;
-}
-.mech-title{
-  font-family:'Cinzel',serif;
-  font-size:.6rem;letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--dim);margin-bottom:.75rem;
-}
-.mech-rule{
-  font-size:.98rem;color:var(--dim);line-height:1.72;
-}
-.mech-rule strong{color:var(--text);font-style:normal}
-.mech-rule em{color:#a69778}
-.mech-formula{
-  font-family:'Cinzel',serif;
-  font-size:.88rem;letter-spacing:.08em;
-  color:var(--text);
-  background:var(--bg);
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:4px;
-  padding:.5rem 1rem;
-  display:inline-block;
-  margin:.65rem 0;
-}
 
 /* ── Starting talent tables ── */
 .tables{
@@ -235,15 +275,28 @@ body{
   <a class="back back-top" href="index.html">← back to main</a>
 
   <div class="mech">
-    <div class="mech-title">How Attributes Work</div>
-    <p class="mech-rule">When something in the world needs to be decided, you the player and DM propose which attribute the character uses to resolve it. DM sets a difficulty of that task and player must overcome it by rolling a d20. To your roll, you add your attribute modifier. Attribute modifier is driven from the Attributes whole value. Example: Cunningness (16) -> modifier (+2).</p>
-     
-    <div class="mech-title">How Talents Work</div>
-    <p class="mech-rule">When a roll clearly falls within a talent's scope, add <strong>+1</strong> to the total. This stacks with your attribute modifier.</p>
-    <div class="mech-formula">Example: d20 + modifier (+x) + talent (+y) = d20 + x + y</div>
-    <div class="mech-formula">Example: 16 + Cunningness (+2) + Deceit (+1) = d20 + 2 + 1 = 19</div>
-    <p class="mech-rule" style="margin-top:.45rem">The DM decides whether a talent applies. When in doubt: <em>if you would describe what you're doing using the talent's name, it applies.</em></p>
-    <p class="mech-rule" style="margin-top:.45rem">While creating your character, you can choose <strong>1 talent</strong> from your class Attribute and <strong>2</strong> from your race Attributes. These gain +1 modifier above your attribute modifier. The rest match the modifier of the attribute.</p>
+
+    <div class="mech-section">
+      <div class="mech-title">How Attributes Work</div>
+      <p class="mech-rule">When something in the world needs to be decided, the player and DM agree on which attribute resolves it. The DM sets a difficulty, and you must meet or beat it by rolling a <strong>d20</strong> and adding your attribute modifier. The modifier is derived from the attribute's full value — for example, Constitution (16) gives a modifier of <strong>+2</strong>.</p>
+      <div class="mech-example">
+        <div class="mech-example-label">Example</div>
+        <p class="mech-example-text">The bridge over the gorge has rotted through. The gap is eight feet wide. You decide to run and leap. The DM calls for a <strong>Constitution check — difficulty 14</strong>. You roll a d20 and get 11. You add your Constitution modifier of +2.</p>
+        <div class="mech-formula">d20 (11) + Constitution (+2) = 13 &nbsp;X&nbsp; You don't clear the gap.</div>
+      </div>
+    </div>
+
+    <div class="mech-section">
+      <div class="mech-title">How Talents Work</div>
+      <p class="mech-rule">When a roll clearly falls within a talent's scope, add <strong>+1</strong> on top of your attribute modifier. The DM decides whether it applies — when in doubt: <em>is the activity specific enough that talent should be used?</em></p>
+      <div class="mech-example">
+        <div class="mech-example-label">Same jump — if the use of talent is justified</div>
+        <div class="mech-formula">Athletics insted of Constitution: d20 (11) + Athletics (+2) + Talent Used (+1) = 14 &nbsp;✓&nbsp; You clear the gap.</div>
+        <p class="mech-example-text" style="margin-top:.6rem">The main difference between Talent and Attribute is that you can gain a small bonus by using specific Talent in justified situations and you can also rise few specific Talents above your base attributes when creating character.</p>
+      </div>
+      <p class="mech-rule" style="margin-top:.9rem">While creating your character, choose <strong>1 talent</strong> from your class attribute and <strong>2</strong> from your race attributes as starting talents. If a talent is your <strong>starting talent</strong> (chosen through class or race), its modifier is <strong>+1 higher</strong> than the parent attribute. A starting talent under an attribute with modifier −1 becomes 0 — still worth having. All other talents simply match the modifier of their parent attribute.</p>
+    </div>
+
   </div>
 
   <div class="attr-grid" id="grid"></div>
@@ -345,14 +398,14 @@ attributes.forEach(a => {
   card.innerHTML =
     '<div class="attr-card-hd">' +
       '<div class="attr-card-name">' + a.name + '</div>' +
-      '<span class="attr-card-mod">Modifier ' + a.mod + '</span>' +
+      '' +
     '</div>' +
     '<div class="attr-talents">' +
       a.talents.map(t =>
         '<div class="talent" onclick="this.classList.toggle(\'open\')">' +
           '<div class="talent-top">' +
             '<span class="talent-name">' + t.name + '</span>' +
-            '<span class="talent-badge">+1</span>' +
+            '' +
           '</div>' +
           '<div class="talent-desc">' + t.desc + '</div>' +
         '</div>'
