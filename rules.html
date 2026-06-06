@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>In the Pursuit of Unicorns — Pravidla</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+@keyframes twinkle{from{opacity:.08}to{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+:root{
+  --bg:#04040f;
+  --surface:#09091a;
+  --gold:#c9a84c;
+  --text:#d4c9a8;
+  --muted:#5a5044;
+  --dim:#8a7e64;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  font-family:'EB Garamond',serif;
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+#stars{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  pointer-events:none;z-index:0;
+}
+.star{position:absolute;background:#fff;border-radius:50%}
+
+.wrap{
+  position:relative;z-index:1;
+  max-width:900px;margin:0 auto;
+  padding:3rem 1.25rem 5rem;
+  animation:fadeUp .5s ease both;
+}
+
+/* ── Header ── */
+.hd{text-align:center;margin-bottom:2.5rem}
+.hd-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.9rem,5vw,2.8rem);
+  font-weight:700;letter-spacing:.14em;
+  color:var(--gold);
+  text-shadow:0 0 60px rgba(201,168,76,.28);
+}
+.hd-sub{
+  margin-top:.4rem;
+  font-size:.72rem;letter-spacing:.32em;
+  text-transform:uppercase;color:#6c6052;
+}
+
+/* ── Back link ── */
+.back{
+  display:inline-block;
+  font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#c84040;text-decoration:none;
+  transition:color .2s;
+}
+.back:hover{color:#e05555}
+.back-top{margin-bottom:1.75rem;display:block}
+.back-bot{margin-top:2.5rem;display:inline-block}
+
+/* ── Section label ── */
+.section-label{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.6;
+  margin-bottom:1rem;
+}
+
+/* ── Glossary ── */
+.glossary{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:1.5rem;
+}
+
+.term{
+  padding:.75rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  cursor:pointer;
+  transition:background .15s;
+}
+.term:last-child{border-bottom:none}
+.term:hover{background:rgba(255,255,255,.015)}
+
+.term-top{
+  display:flex;align-items:baseline;gap:.6rem;
+}
+.term-top::after{
+  content:'▾';
+  font-size:1rem;
+  color:var(--gold);
+  opacity:.6;
+  flex-shrink:0;
+  margin-left:auto;
+  transition:opacity .15s;
+}
+.term.open .term-top::after{content:'▴';opacity:1}
+
+.term-name{
+  font-family:'Cinzel',serif;
+  font-size:.88rem;font-weight:600;
+  letter-spacing:.07em;color:var(--text);
+}
+.term-tag{
+  font-size:.78rem;color:var(--dim);
+  font-style:italic;
+}
+
+.term-desc{
+  font-size:.93rem;color:var(--dim);
+  line-height:1.6;
+  margin-top:.15rem;
+  max-height:0;overflow:hidden;
+  transition:max-height .28s ease,margin-top .2s;
+}
+.term.open .term-desc{max-height:200px;margin-top:.45rem}
+.term-desc strong{color:var(--text);font-style:normal}
+
+/* ── Rules box ── */
+.rules-box{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:1.5rem;
+}
+.rules-row{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:.5rem;
+  padding:.8rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  font-size:.93rem;
+  align-items:start;
+}
+.rules-row:last-child{border-bottom:none}
+.rules-target{
+  font-family:'Cinzel',serif;
+  font-size:.8rem;font-weight:600;
+  letter-spacing:.05em;
+  color:var(--gold);
+  padding-top:.1rem;
+}
+.rules-what{color:var(--dim);line-height:1.55}
+.rules-what strong{color:var(--text);font-style:normal}
+
+/* ── Mech block ── */
+.mech{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  padding:1.25rem 1.5rem;
+  margin-bottom:1.5rem;
+}
+.mech-section+.mech-section{
+  margin-top:1.4rem;
+  padding-top:1.4rem;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.mech-title{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.7;
+  margin-bottom:.9rem;
+}
+.mech-rule{
+  font-size:.98rem;color:var(--dim);line-height:1.75;
+}
+.mech-rule strong{color:var(--text);font-style:normal}
+.mech-rule em{color:#a69778}
+
+.note{
+  border-left:3px solid rgba(201,168,76,.3);
+  padding:.7rem 1rem;
+  margin-top:.85rem;
+  background:rgba(201,168,76,.04);
+  border-radius:0 4px 4px 0;
+  font-size:.92rem;
+  color:var(--dim);
+  line-height:1.6;
+}
+.note strong{color:var(--text);font-style:normal}
+
+/* ── Divider ── */
+.divider{
+  width:80px;height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  margin:1.75rem auto 0;
+}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
+
+@media(max-width:560px){
+  .rules-row{grid-template-columns:1fr}
+  .mech,.glossary,.rules-box{border-radius:4px}
+}
+@media(min-width:1024px){html{font-size:120%}}
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<div class="wrap">
+
+  <header class="hd">
+    <h1 class="hd-title">In the Pursuit of Unicorns</h1>
+    <p class="hd-sub">Pravidla &amp; Pojmy</p>
+  </header>
+
+  <a class="back back-top" href="index.html">← zpět na hlavní stránku</a>
+
+  <!-- LEXIKON -->
+  <div class="section-label">Lexikon pojmů</div>
+  <div class="glossary" id="glossary"></div>
+
+  <!-- ZÁCHRANNÉ HODY — PRAVIDLA -->
+  <div class="section-label">Pravidla záchranných hodů — Jaký hod použít?</div>
+
+  <div class="rules-box">
+    <div class="rules-row">
+      <div class="rules-target">Prostředí</div>
+      <div class="rules-what">Žádný záchranný hod. DM volně nastaví DC podle obtížnosti situace.</div>
+    </div>
+    <div class="rules-row">
+      <div class="rules-target">Nehráčská postava (NPC)</div>
+      <div class="rules-what">Použij <strong>DC uvedené u schopnosti</strong> a přičti k němu <strong>modifikátor relevantní dovednosti</strong>, který DM přidělí dané NPC.</div>
+    </div>
+    <div class="rules-row">
+      <div class="rules-target">Hráčská postava (PC)</div>
+      <div class="rules-what">DC schopnosti ignoruj. Jako DC použij přímo <strong>plnou hodnotu</strong> (ne modifikátor) relevantního atributu cíle, jak je uvedena na jeho listu.</div>
+    </div>
+    <div class="rules-row">
+      <div class="rules-target">Cíl se aktivně brání</div>
+      <div class="rules-what">Záchranný hod se přeskočí úplně. Obě strany hodí <strong>d20 + příslušný modifikátor</strong>. Vyšší výsledek vítězí — při remíze vítězí útočník.</div>
+    </div>
+  </div>
+
+  <!-- ŽIVÝ OPONENT -->
+  <div class="mech">
+    <div class="mech-section">
+      <div class="mech-title">Záchrana proti živému tvorovi</div>
+      <p class="mech-rule">Pokud je tvůj oponent <strong>živý tvor</strong>, může se aktivně bránit svou vlastní schopností. To znamená, že k hodnotě záchranného hodu (DC) se přičte jeho <strong>modifikátor příslušné schopnosti</strong>.</p>
+      <p class="mech-rule" style="margin-top:.6rem">Hodnota záchranného hodu závisí na druhu cíle — každý typ cíle se zachytává jinak (viz tabulka výše).</p>
+      <div class="note">
+        <strong>Příklad:</strong> Dreamcaster použije <em>Mesmerize</em> (DC 12) na strážce paláce (NPC). Strážce má Wisdom +1 → celkové DC = <strong>13</strong>. Dreamcaster hodí d20 + Understanding (+2): 11 + 2 = 13. Přesně dosáhl DC — strážce je zmámený.
+      </div>
+    </div>
+
+    <div class="mech-section">
+      <div class="mech-title">Action Slot při neúspěchu</div>
+      <p class="mech-rule">Bez ohledu na to, kolik akčních slotů by schopnost normálně stála, <strong>neúspěšná akce vždy stojí pouze 1 AS</strong> (Action Slot).</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <a class="back back-bot" href="index.html">← zpět na hlavní stránku</a>
+
+</div>
+
+<script>
+(function(){
+  const el=document.getElementById('stars');
+  for(let i=0;i<160;i++){
+    const s=document.createElement('div');s.className='star';
+    const sz=Math.random()*1.6+.3;
+    s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate';
+    el.appendChild(s);
+  }
+})();
+
+const terms = [
+  {
+    name: "Attribute — Vlastnost",
+    tag: "základní statistika",
+    desc: "Vrozená vlastnost tvojí postavy — její přirozené vlohy. Každá postava má 5 atributů: <strong>Cunningness, Understanding, Instinct, Constitution, Willpower</strong>. Atribut určuje základ modifikátoru pro všechny hody i talenty, které pod něj spadají."
+  },
+  {
+    name: "Talent — Dovednost",
+    tag: "odvozená statistika",
+    desc: "Specifická dovednost zastřešená jedním atributem. Míra talentu vychází z modifikátoru nadřazeného atributu. Startovní talenty (zvolené při tvorbě postavy) mají o <strong>+1 vyšší modifikátor</strong> než rodičovský atribut. Příklad: <em>Empathy</em> je talent atributu Understanding."
+  },
+  {
+    name: "Modifikátor",
+    tag: "herní termín",
+    desc: "Číslo přičítané k hodu d20. Odvozuje se z hodnoty atributu nebo talentu. Hrubá hodnota a modifikátor nejsou totéž — jako DC hráčské postavy se používá <strong>hrubá hodnota</strong>, nikoli modifikátor."
+  },
+  {
+    name: "DC — Difficulty Class",
+    tag: "cílové číslo",
+    desc: "Cílové číslo, které musíš svým hodem dosáhnout nebo překonat, aby akce uspěla. Snadné DC 10 · Normální DC 13 · Těžké DC 16 · Velmi těžké DC 20. Přesné dosažení DC se počítá jako úspěch."
+  },
+  {
+    name: "Záchranný hod — Save",
+    tag: "obrana",
+    desc: "Hod, jímž se cíl brání efektu nebo schopnosti útočníka. Způsob výpočtu DC závisí na druhu cíle (prostředí, NPC nebo hráčská postava). Pokud je oponent živý tvor, může k DC přičíst svůj modifikátor příslušné schopnosti."
+  },
+  {
+    name: "Action Slot — AS",
+    tag: "ekonomika akcí",
+    desc: "Slot akce. Určuje, kolik akcí postava za kolo zvládne. Neúspěšná akce vždy stojí pouze <strong>1 AS</strong>, bez ohledu na to, kolik by stála při úspěchu."
+  },
+  {
+    name: "Příčetnost — Sanity",
+    tag: "stav postavy",
+    desc: "Měřítko duševního zdraví postavy. Každý hráč začíná s <strong>Příčetností 10</strong>. Klesá při neúspěšném záchranném hodu proti halucinaci. Při Příčetnosti 0 se postava stane NPC — navždy pohlcena Bliss."
+  },
+  {
+    name: "Výhoda / Nevýhoda",
+    tag: "modifikátor hodu",
+    desc: "<strong>Výhoda:</strong> hoď dvakrát d20 a vezmi vyšší výsledek. <strong>Nevýhoda:</strong> hoď dvakrát d20 a vezmi nižší výsledek. Výhoda a nevýhoda se navzájem ruší — pokud máš obojí, hoď jednou normálně."
+  },
+  {
+    name: "Bliss — Požehnání",
+    tag: "světové pravidlo",
+    desc: "Toxin prostupující celým světem, který způsobuje trvalý euforický stav. Každá NPC je zasažena jinak: nekontrolovatelný smích, ztráta strachu, demence, paranoia. Bliss lidi nedělá zlými — dělá je <em>nedosažitelnými</em>."
+  },
+  {
+    name: "Halucinační záchrana",
+    tag: "speciální hod",
+    desc: "Záchranný hod, když postava narazí na halucinogenní bylinu, oblast nakaženou Bliss nebo psychický útok. Hod: d20 + libovolný modifikátor vs. DC byliny. <strong>Úspěch:</strong> odolání efektu. <strong>Neúspěch:</strong> ztráta 1 bodu Příčetnosti — DM však může odhalit skrytou pravdu z vidění."
+  },
+];
+
+const gl = document.getElementById('glossary');
+terms.forEach(t => {
+  const d = document.createElement('div');
+  d.className = 'term';
+  d.innerHTML =
+    '<div class="term-top">' +
+      '<span class="term-name">' + t.name + '</span>' +
+      '<span class="term-tag">' + t.tag + '</span>' +
+    '</div>' +
+    '<div class="term-desc">' + t.desc + '</div>';
+  d.addEventListener('click', () => d.classList.toggle('open'));
+  gl.appendChild(d);
+});
+</script>
+</body>
+</html>
