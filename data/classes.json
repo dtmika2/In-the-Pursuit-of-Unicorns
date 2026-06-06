@@ -2,11 +2,11 @@
   {
     "id": "p0", "color": "#a855f7", "glow": "rgba(168,85,247,.3)", "tabGlow": "rgba(168,85,247,.4)",
     "tab": "Jester", "name": "Jester", "image": "Images/Class%20images/Jester.png",
-    "role": "Rogue · Bard · Melee Crit · Stealth", "mod": "Cunningness +2",
-    "flavor": "You are the chaos at the heart of every encounter. You do not fight - you make fighting unnecessary, impossible, or hilarious. And on the rare occasion you must bleed someone, you make it look like an accident.",
+    "role": "Rogue · Bard · Melee Crit · Stealth", "mod": ["Cunningness +2", "Sanity checks +2"],
+    "flavor": "You are the chaos at the heart of every encounter. If you can, you avoid fighting, by various means always at hand. The solutions to avoidance are almost limitless. And on the (not so) rare occasion you decide to bleed someone, you make it look like an accident.",
     "abilities": [
-      { "name": "Mocking Cackle", "mech": "Cunningness · 1 turn · 1AS", "desc": "Your mocking laugh gets under their skin. Target makes a save or cannot attack next turn - too busy fuming, or, worse, giggling. If a target is affected by mocking laugh 3 times consecutively, it start harming itself. The laugh is insuffarable, and it needs to stop." },
-      { "name": "Trick Blade", "mech": "Cunningness · 1AS", "desc": "A deceptive melee strike, rolled with advantage. Throw a d12. Different rolls have different outcomes.",
+      { "name": "Mocking Cackle", "mech": "Cunningness · 1 turn · 1AS", "desc": "Your mocking laugh gets under their skin. Target makes a save or cannot attack next turn - too busy fuming, or, worse, giggling. If a target is affected by mocking laugh 3 times consecutively, it start harming itself. The laugh is insuffarable, and it needs to stop. At <strong><i>any</i></strong> cost." },
+      { "name": "Trick Blade", "mech": "Cunningness · 1AS", "desc": "A deceptive melee strike, rolled with advantage on attack. If the hit is success, throw a d12. Different rolls have different outcomes.",
         "table": { "id": "t-wonders", "btnOpen": "▼ Show Item Table", "btnClose": "▲ Hide Items",
           "headers": ["d12", "Item", "Effect"],
           "rows": [
@@ -18,8 +18,20 @@
           ]
         }
       },
-      { "name": "Shadow Step",      "mech": "Passive", "desc": "Melt into shadow or a crowd. You become nearly invisible - DC 15 to detect - and can move at half speed while hidden. Breaking into a full sprint ends the effect immediately." },
-      { "name": "Pocket of Wonders","mech": "2AS",     "desc": "Reach into your endless pockets. Roll a d6 - you never know, what your own pockets can hide." },
+      { "name": "Shadow Step",      "mech": "Passive", "desc": "Melt into shadow or a crowd. You become nearly invisible - DC 15 to detect - and can move at half speed while hidden. Breaking into a full sprint ends the effect immediately. All physical cunningness skills recieve +1 modifier." },
+      { "name": "Pocket of Wonders","mech": "2AS",     "desc": "Reach into your endless pockets. Roll a d6 - you never know, what your own pockets can hide.",
+        "table": { "id": "t-pockets", "btnOpen": "▼ Show possibilities Table", "btnClose": "▲ Hide Items",
+            "headers": ["d6", "Item category"],
+            "rows": [
+              ["1",   "A trinket"],
+              ["2",   "A consumable"],
+              ["3",   "A disposable weapon"],
+              ["4",   "A luxury"],
+              ["5",   "A counterfeit"],
+              ["6",   "An artefact of magic"]
+            ]
+        }
+      },
       { "name": "Jester's Medley",  "mech": "2AS",     "desc": "A performance, a jape, a jest. <em>Inspire</em> one ally - they gain advantage on their next roll. Or: <em>Distract</em> all enemies in sight, they all gain -1 to their next attack throw. Outside of a combat, Jester's Medley causes drawn attention to you. Every mesmerized creature pays almost no attention to what is happening around them." }
     ]
   },
@@ -81,7 +93,7 @@
       { "name": "Hex",            "mech": "1 turn · 1AS",                    "desc": "Curse an enemy with magical affliction. They have disadvantage - roll twice, take the worse result - on all their rolls for 1 full round." },
       { "name": "Arcing Bolt",    "mech": "Willpower · 1d10 → 1d6 → 1d4 · 1AS","desc": "Launch a bolt that leaps between enemies. It hunts. Roll to hit the first target (1d10 on hit). The bolt then automatically jumps to the nearest enemy within 10 feet (1d6), then once more (1d4). It cannot return to a previously struck target." },
       { "name": "Void Touch",     "mech": "Willpower · 2d4 · 3 turns · 1AS", "desc": "Reach out by hand. The air around a target compresses with vicious invisible force. On hit: 2d4 force damage. Target starts wandering aimlessly for 3 turns. It's mind is empty. Or full of eternity. Who knows..." },
-      { "name": "Gravity well",   "mech": "3 turns · 2AS",                   "desc": "Release a burst of volatile magic - uncontrolled, indiscriminate. All creatures within 15 feet, <em>including allies</em>, must save (DC 13) or start floating. Floating creatures cannot attack or cast spells. They can swim in air 6 feet per turn. After 3 turns, creatures fall. Before you use it, roll d20: on a <strong>1–5</strong>, you are caught in your own blast as well." },
+      { "name": "Gravity well",   "mech": "3 turns · 2AS",                   "desc": "Release a burst of volatile magic - uncontrolled, indiscriminate. All creatures within 15 feet, <em>including allies</em>, must save (DC 13) or start floating. Floating creatures cannot attack or cast spells. They can swim in air 6 feet per turn. After 3 turns, creatures fall. Before you use it, roll d4: on a <strong>1</strong>, you are caught in your own blast as well." },
       { "name": "Arcane Fortress","mech": "Concentration · 2AS",             "desc": "Summon a solid 2×2×2 cube of shimmering force anywhere you can see. It is real and physical. Creatures may stand <em>inside</em> it (full cover from ranged attacks), stand <em>on top</em>, or be blocked entirely by its walls. Lasts until dismissed or you fall unconscious." },
       { "name": "Foreign Limb",   "mech": "Concentration · 1AS",             "desc": "Create a limb - a hand or a leg. You probabbly stole it from someone in another dimension. This limb can fly and interact with objects. It cannot push or lift anything heavier than 3kg. The caster must see it to control it. It glows brightly, like a moonshine." }
     ]
