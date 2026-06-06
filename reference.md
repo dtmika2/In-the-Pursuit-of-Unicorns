@@ -54,6 +54,37 @@ Each player starts at **Sanity 10**. It decreases on failed Hallucination Saves.
 
 ---
 
+## Reference Rules
+
+### Action Slot Cost on Failure
+No matter the listed cost of an ability, **a failed action always costs only 1 AS** (Action Slot).
+
+### How Ability Rolls Work
+
+**Physical Attacks**
+Roll **d20 + listed ability modifier** against the target's **Armor Class** (AC), plus any bonuses from cover.
+- Meet or beat AC → hit.
+Example: Player rolls 14, ability uses Instinct, player's character has +3 instinct bonus, so he threw 17. The AC of creature was 13 + 2 from half cover. The strike landed.
+
+**Spells & Abilities against environment**
+Roll **d20 + listed ability modifier** against a **Preset DC of that possibility** (e.g., how hard is it to trun a wooden door into a metal door - DC 10 vs. how hard is it to turn a boulder into a cow - DC 20)
+- Meet or beat the total → success.
+
+**Spells & Abilities against a living target**
+V1:
+Roll **d20 + listed ability modifier** against a **Preset DC + an appropriate skill bonus** (e.g., Constitution for resisting a physical spell, Wisdom for a mental one - best for resolving player vs. NPCs)
+- Meet or beat the total → success.
+
+V2:
+Roll **d20 + listed ability modifier** against a **DC which is equal to the number of a skill** (e.g., Constitution directly sets the DC, there is no need to modify it - best for resolving player vs. player conflict)
+- Meet or beat the total → success.
+
+V3:
+Roll **d20 + listed ability modifier** against a **d20 + defensive ability modifier** (for when a target should have an active chance to defend itself)
+- Higher number wins - in case of a draw, attacker wins.
+
+---
+
 ## Herbs & Substances
 
 The world is rich with herbs, many of them laced with the Bliss. Some are taken willingly. Some are in the water, the air, the food. The **Ranger** can safely identify any herb before use. All others must trust their senses — or their luck.
