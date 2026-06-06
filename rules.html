@@ -128,7 +128,7 @@ body{
   max-height:0;overflow:hidden;
   transition:max-height .28s ease,margin-top .2s;
 }
-.term.open .term-desc{max-height:200px;margin-top:.45rem}
+.term.open .term-desc{max-height:400px;margin-top:.45rem}
 .term-desc strong{color:var(--text);font-style:normal}
 
 /* ── Rules box ── */
@@ -289,6 +289,21 @@ body{
 
 const terms = [
   {
+    name: "DM — Dungeon Master",
+    tag: "vypravěč hry",
+    desc: "Dungeon Master je osoba, která vede hru. DM popisuje svět, hraje za všechny nehráčské postavy (NPC), rozhoduje o výsledcích akcí a nastavuje obtížnosti (DC). DM je arbitrem pravidel a vypravěčem příběhu — to, co DM řekne, platí."
+  },
+  {
+    name: "Hráč — Player",
+    tag: "účastník hry",
+    desc: "Skutečná osoba sedící u stolu, která ovládá jednu hráčskou postavu (PC). Hráč popisuje, co jeho postava dělá a říká, a hází kostkami, když je výsledek nejistý. Hráči dohromady tvoří skupinu, která prochází příběhem řízeným DM."
+  },
+  {
+    name: "Postava — Character",
+    tag: "fiktivní osoba",
+    desc: "Fiktivní osoba ve světě hry. Každý hráč ovládá jednu <strong>hráčskou postavu (PC)</strong> popsanou listem postavy — se svými atributy, talenty a schopnostmi. Postavy ovládané DM se nazývají <strong>nehráčské postavy (NPC)</strong>.<br><br>Hráč a jeho postava nejsou totéž. Hráč může vědět věci, které postava neví — a naopak. Postava může mít strach, předsudky nebo motivace, které hráč nesdílí. Dobrá hra respektuje toto rozdělení: postava se rozhoduje podle toho, <em>co ví a cítí ona</em>, ne podle toho, co ví hráč."
+  },
+  {
     name: "Attribute — Vlastnost",
     tag: "základní statistika",
     desc: "Vrozená vlastnost tvojí postavy — její přirozené vlohy. Každá postava má 5 atributů: <strong>Cunningness, Understanding, Instinct, Constitution, Willpower</strong>. Atribut určuje základ modifikátoru pro všechny hody i talenty, které pod něj spadají."
@@ -297,6 +312,11 @@ const terms = [
     name: "Talent — Dovednost",
     tag: "odvozená statistika",
     desc: "Specifická dovednost zastřešená jedním atributem. Míra talentu vychází z modifikátoru nadřazeného atributu. Startovní talenty (zvolené při tvorbě postavy) mají o <strong>+1 vyšší modifikátor</strong> než rodičovský atribut. Příklad: <em>Empathy</em> je talent atributu Understanding."
+  },
+  {
+    name: "Schopnost — Ability",
+    tag: "zvláštní dovednost",
+    desc: "Unikátní síla nebo dovednost postavy vázaná na její rasu nebo třídu. Použití schopnosti stojí určitý počet <strong>Action Slotů (AS)</strong> a cíl se může bránit záchranným hodem proti DC schopnosti. Každá schopnost má definovaný efekt, dosah a cenu v AS."
   },
   {
     name: "Modifikátor",
