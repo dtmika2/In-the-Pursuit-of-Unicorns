@@ -1,0 +1,142 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+.ss-wrap { font-family: 'EB Garamond', Georgia, serif; padding: 1.5rem 0 2rem; }
+.ss-title { font-family: 'Cinzel', serif; font-size: 1.05rem; letter-spacing: .22em; text-transform: uppercase; color: var(--color-text-secondary); text-align: center; margin-bottom: .2rem; }
+.ss-sub { font-size: .78rem; letter-spacing: .28em; text-transform: uppercase; color: var(--color-text-tertiary); text-align: center; margin-bottom: 2rem; }
+.ss-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(188px, 1fr)); gap: 14px; }
+.ss-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+.ss-card-hd { padding: .85rem 1rem .7rem; border-left: 3px solid var(--acc); }
+.ss-card-name { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; color: var(--acc); letter-spacing: .05em; }
+.ss-card-assoc { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-tertiary); margin-top: .2rem; }
+.ss-card-mod { font-family: 'Cinzel', serif; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--acc); border: 0.5px solid var(--acc); opacity: .7; border-radius: 3px; padding: .1rem .45rem; display: inline-block; margin-top: .4rem; }
+.ss-skills { border-top: 0.5px solid var(--color-border-tertiary); }
+.ss-skill { padding: .6rem 1rem; border-bottom: 0.5px solid var(--color-border-tertiary); cursor: pointer; transition: background .15s; }
+.ss-skill:last-child { border-bottom: none; }
+.ss-skill:hover { background: var(--color-background-primary); }
+.ss-skill-top { display: flex; align-items: baseline; gap: .5rem; }
+.ss-skill-name { font-family: 'Cinzel', serif; font-size: .82rem; font-weight: 600; letter-spacing: .06em; color: var(--color-text-primary); }
+.ss-skill-badge { font-family: 'Cinzel', serif; font-size: .55rem; letter-spacing: .1em; text-transform: uppercase; color: var(--acc); opacity: .65; margin-left: auto; flex-shrink: 0; }
+.ss-skill-desc { font-size: .88rem; color: var(--color-text-secondary); line-height: 1.5; font-style: italic; margin-top: .15rem; max-height: 0; overflow: hidden; transition: max-height .25s ease, margin-top .2s; }
+.ss-skill.open .ss-skill-desc { max-height: 120px; margin-top: .25rem; }
+.ss-mech { margin-top: 1.4rem; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+.ss-mech-title { font-family: 'Cinzel', serif; font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: .7rem; }
+.ss-mech-rule { font-size: .95rem; color: var(--color-text-secondary); line-height: 1.7; }
+.ss-mech-rule strong { color: var(--color-text-primary); font-style: normal; }
+.ss-mech-formula { font-family: 'Cinzel', serif; font-size: .88rem; letter-spacing: .08em; color: var(--color-text-primary); background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: .5rem 1rem; display: inline-block; margin: .6rem 0; }
+.ss-tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 1.4rem; }
+.ss-tbl-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+.ss-tbl-head { font-family: 'Cinzel', serif; font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: var(--color-text-secondary); padding: .65rem 1rem .5rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.ss-tbl-row { display: flex; align-items: baseline; gap: .6rem; padding: .5rem 1rem; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: .88rem; }
+.ss-tbl-row:last-child { border-bottom: none; }
+.ss-tbl-who { font-family: 'Cinzel', serif; font-size: .78rem; font-weight: 600; color: var(--color-text-primary); white-space: nowrap; min-width: 108px; }
+.ss-tbl-skills { color: var(--color-text-secondary); font-style: italic; line-height: 1.45; }
+.ss-divider { width: 80px; height: 0.5px; background: var(--color-border-secondary); margin: 1.4rem auto 0; }
+</style>
+
+<div class="ss-wrap">
+  <div class="ss-title">Sub-Skill System</div>
+  <div class="ss-sub">In the Pursuit of Unicorns · Homebrew</div>
+  <div class="ss-grid" id="grid"></div>
+  <div class="ss-mech">
+    <div class="ss-mech-title">How Sub-Skills Work</div>
+    <p class="ss-mech-rule">When a roll clearly falls within a sub-skill's scope, add <strong>+1</strong> to the total. This stacks with your ability modifier.</p>
+    <div class="ss-mech-formula">d20 + modifier (+2) + sub-skill (+1) = d20 + 3</div>
+    <p class="ss-mech-rule" style="margin-top:.4rem">The DM decides whether a sub-skill applies. When in doubt: <em>if you would describe what you're doing using the sub-skill's name, it applies.</em></p>
+    <p class="ss-mech-rule" style="margin-top:.4rem">While creating your character, you can choose 2 sub-skills from your class and one from your race. These gain +1 modifier above your ability modifier. The rest match modifier of the ability.</p>
+  </div>
+  <div class="ss-tables" id="tables"></div>
+  <div class="ss-divider"></div>
+</div>
+
+<script>
+const abilities = [
+  {
+    name: "Cunningness", mod: "+2", acc: "#a855f7",
+    skills: [
+      { name: "Deceit",      desc: "Lying, bluffing, creating false impressions under pressure." },
+      { name: "Acrobatics",  desc: "Agility, balance, squeezing through tight spaces, tumbling." },
+      { name: "Illusion",    desc: "Minor tricks of the eye and ear — misdirection, false signals, small deceptions the world almost believes." },
+      { name: "Craftiness",  desc: "Finding an unexpected solution — the door no one thought to open, the rule nobody said you couldn't break." },
+      { name: "Stealth",     desc: "Moving unseen, staying quiet, vanishing before anyone noticed you were there." },
+    ]
+  },
+  {
+    name: "Understanding", mod: "+2", acc: "#06b6d4",
+    skills: [
+      { name: "Empathy",      desc: "Reading emotions and motivations, sensing grief or hidden fear." },
+      { name: "Persuasion",   desc: "Convincing, negotiating, rhetoric — making them want to agree." },
+      { name: "Insight",      desc: "Detecting lies, reading hidden intent, noticing what goes unsaid." },
+      { name: "Intimidation", desc: "Projecting menace, breaking resolve, forcing compliance. Through nightmares and hallucinations." },
+      { name: "Folklore",     desc: "Knowledge of creatures, customs, old magic, and forgotten histories." },
+    ]
+  },
+  {
+    name: "Instinct", mod: "+2", acc: "#22c55e",
+    skills: [
+      { name: "Perception",  desc: "Noticing fine details, hearing distant sounds, spotting the hidden." },
+      { name: "Foresight",   desc: "Reading what is about to happen — the next move, the trap not yet sprung, the lie before it is spoken." },
+      { name: "Nature",      desc: "Identifying plants, animals, weather, and natural hazards." },
+      { name: "Vigilance",   desc: "Sensing wrongness before you can name it. Detecting ambushes." },
+      { name: "Survival",    desc: "Navigating wilderness, finding shelter, enduring harsh conditions." },
+    ]
+  },
+  {
+    name: "Constitution", mod: "+2", acc: "#f59e0b",
+    skills: [
+      { name: "Athletics",  desc: "Climbing, swimming, jumping, feats of raw physical strength." },
+      { name: "Endurance",  desc: "Pushing through exhaustion, sustained effort, long marches. You can go beyond limits of your body." },
+      { name: "Fortitude",  desc: "Resisting poison, disease, and physical pain. You can drink a few more beers than others." },
+      { name: "Grapple",    desc: "Wrestling, pinning, holding on — or breaking free by force." },
+      { name: "Stoicism",   desc: "Withstanding psychological pressure, staying unreadable under duress." },
+    ]
+  },
+  {
+    name: "Willpower", mod: "+2", acc: "#ef4444",
+    skills: [
+      { name: "Arcana",         desc: "Identifying spells, enchantments, and magical signatures." },
+      { name: "Resolve",        desc: "Resisting mental effects, trusting your own judgement and not getting swayed by others." },
+      { name: "Concentration",  desc: "Ability to focus and don't get distracted by outside influences." },
+      { name: "Understanding of Universe",   desc: "Deep magic, physics, knowledge of the world beyond border of comprehension" },
+      { name: "Meditation",     desc: "Recovering Sanity through stillness, sensing magical currents." },
+    ]
+  }
+];
+
+const grid = document.getElementById('grid');
+abilities.forEach(a => {
+  const card = document.createElement('div');
+  card.className = 'ss-card';
+  card.style.setProperty('--acc', a.acc);
+  card.innerHTML = `
+    <div class="ss-card-hd">
+      <div class="ss-card-name">${a.name}</div>
+      <div class="ss-card-assoc">${a.assoc}</div>
+      <span class="ss-card-mod">Modifier ${a.mod}</span>
+    </div>
+    <div class="ss-skills">
+      ${a.skills.map(s => `
+        <div class="ss-skill" onclick="this.classList.toggle('open')">
+          <div class="ss-skill-top">
+            <span class="ss-skill-name">${s.name}</span>
+            <span class="ss-skill-badge">+1</span>
+          </div>
+          <div class="ss-skill-desc">${s.desc}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  grid.appendChild(card);
+});
+
+const tables = document.getElementById('tables');
+function makeTable(title, rows) {
+  const d = document.createElement('div');
+  d.className = 'ss-tbl-card';
+  d.innerHTML = `<div class="ss-tbl-head">${title}</div>` +
+    rows.map(r => `<div class="ss-tbl-row"><span class="ss-tbl-who">${r.who}</span><span class="ss-tbl-skills">${r.skills}</span></div>`).join('');
+  return d;
+}
+tables.appendChild(makeTable('Class Starting Sub-Skills (×3)', classStarts));
+tables.appendChild(makeTable('Race Bonus Sub-Skill (×1)', raceStarts));
+</script>
