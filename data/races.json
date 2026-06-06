@@ -11,7 +11,7 @@
   },
   {
     "id": "p1", "color": "#c4a882", "glow": "rgba(196,168,130,.3)", "tabGlow": "rgba(196,168,130,.4)",
-    "tab": "Human", "name": "Human", "image": "Race%20images/Human.png",
+    "tab": "Human", "name": "Human", "image": "Images/Race%20images/Human.png",
     "role": "Adaptable · Resilient · Ordinary",
     "mods": ["+1 to any two stats of your choice"],
     "flavor": "\"No excuse. No heritage. Just the choice, made again every morning, to keep their eyes open.\"",
@@ -21,7 +21,7 @@
   },
   {
     "id": "p2", "color": "#d946ef", "glow": "rgba(217,70,239,.3)", "tabGlow": "rgba(217,70,239,.4)",
-    "tab": "Moth Fairy", "name": "Moth Fairy", "image": "Race%20images/Moth%20Fairy.png",
+    "tab": "Moth Fairy", "name": "Moth Fairy", "image": "Images/Race%20images/Moth%20Fairy.png",
     "role": "Fallen · Fairy-touched · Seeker",
     "mods": ["+1 Understanding", "+1 Willpower"],
     "flavor": "\"You can still see the remnants of colors on now moth wings, from when she still was a butterfly.\"",
@@ -31,7 +31,7 @@
   },
   {
     "id": "p3", "color": "#84cc16", "glow": "rgba(132,204,22,.3)", "tabGlow": "rgba(132,204,22,.4)",
-    "tab": "Barkskinned", "name": "Barkskinned", "image": "Race%20images/Barkskinned.png",
+    "tab": "Barkskinned", "name": "Barkskinned", "image": "Images/Race%20images/Barkskinned.png",
     "role": "Ancient · Enduring · Plant-blooded",
     "mods": ["+2 Constitution"],
     "flavor": "\"She remembers the old king's coronation. She does not remember his name.\"",
@@ -41,7 +41,7 @@
   },
   {
     "id": "p4", "color": "#fb7185", "glow": "rgba(251,113,133,.3)", "tabGlow": "rgba(251,113,133,.4)",
-    "tab": "The Stitched", "name": "The Stitched", "image": "Race%20images/The%20Stitched.png",
+    "tab": "The Stitched", "name": "The Stitched", "image": "Images/Race%20images/The%20Stitched.png",
     "role": "Constructed · Independent · Uncanny",
     "mods": ["+1 Constitution", "+1 to one stat of your choice"],
     "flavor": "\"Inanimate objects made alive by magic - like homonculy, but independent of their creator.\"",
@@ -51,7 +51,7 @@
   },
   {
     "id": "p5", "color": "#38bdf8", "glow": "rgba(56,189,248,.3)", "tabGlow": "rgba(56,189,248,.4)",
-    "tab": "Echoes", "name": "Echoes", "image": "Race%20images/Echoes.png",
+    "tab": "Echoes", "name": "Echoes", "image": "Images/Race%20images/Echoes.png",
     "role": "Ethereal · Perceptive · Between Worlds",
     "mods": ["+1 Instinct", "+1 Willpower"],
     "flavor": "\"They are not ghosts. They are very much alive, and very tired of explaining the difference.\"",
@@ -61,7 +61,7 @@
   },
   {
     "id": "p6", "color": "#818cf8", "glow": "rgba(129,140,248,.3)", "tabGlow": "rgba(129,140,248,.4)",
-    "tab": "Resurrected", "name": "Resurrected", "image": "Race%20images/Resurrected.png",
+    "tab": "Resurrected", "name": "Resurrected", "image": "Images/Race%20images/Resurrected.png",
     "role": "Returned · Cold · Unfinished",
     "mods": ["+1 Constitution", "+1 Willpower"],
     "flavor": "\"They didn't ask to come back. Nobody asked them if they desire to exit the peace of death.\"",
