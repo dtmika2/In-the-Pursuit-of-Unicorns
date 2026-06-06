@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>In the Pursuit of Unicorns — Attributes & Talents</title>
+<title>In the Pursuit of Unicorns - Attributes & Talents</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -282,23 +282,23 @@ body{
 
     <div class="mech-section">
       <div class="mech-title">How Attributes Work</div>
-      <p class="mech-rule">When something in the world needs to be decided, the player and DM agree on which attribute resolves it. The DM sets a difficulty, and you must meet or beat it by rolling a <strong>d20</strong> and adding your attribute modifier. The modifier is derived from the attribute's full value — for example, Constitution (16) gives a modifier of <strong>+2</strong>.</p>
+      <p class="mech-rule">When something in the world needs to be decided, the player and DM agree on which attribute resolves it. The DM sets a difficulty, and you must meet or beat it by rolling a <strong>d20</strong> and adding your attribute modifier. The modifier is derived from the attribute's full value - for example, Constitution (16) gives a modifier of <strong>+2</strong>.</p>
       <div class="mech-example">
         <div class="mech-example-label">Example</div>
-        <p class="mech-example-text">The bridge over the gorge has rotted through. The gap is eight feet wide. You decide to run and leap. The DM calls for a <strong>Constitution check — difficulty 14</strong>. You roll a d20 and get 11. You add your Constitution modifier of +2.</p>
+        <p class="mech-example-text">The bridge over the gorge has rotted through. The gap is eight feet wide. You decide to run and leap. The DM calls for a <strong>Constitution check - difficulty 14</strong>. You roll a d20 and get 11. You add your Constitution modifier of +2.</p>
         <div class="mech-formula">d20 (11) + Constitution (+2) = 13 &nbsp;X&nbsp; You don't clear the gap.</div>
       </div>
     </div>
 
     <div class="mech-section">
       <div class="mech-title">How Talents Work</div>
-      <p class="mech-rule">When a roll clearly falls within a talent's scope, add <strong>+1</strong> on top of your attribute modifier. The DM decides whether it applies — when in doubt: <em>is the activity specific enough that talent should be used?</em></p>
+      <p class="mech-rule">When a roll clearly falls within a talent's scope, add <strong>+1</strong> on top of your attribute modifier. The DM decides whether it applies - when in doubt: <em>is the activity specific enough that talent should be used?</em></p>
       <div class="mech-example">
-        <div class="mech-example-label">Same jump — if the use of talent is justified</div>
+        <div class="mech-example-label">Same jump - if the use of talent is justified</div>
         <div class="mech-formula">Athletics insted of Constitution: d20 (11) + Athletics (+2) + Talent Used (+1) = 14 &nbsp;✓&nbsp; You clear the gap.</div>
         <p class="mech-example-text" style="margin-top:.6rem">The main difference between Talent and Attribute is that you can gain a small bonus by using specific Talent in justified situations and you can also rise few specific Talents above your base attributes when creating character.</p>
       </div>
-      <p class="mech-rule" style="margin-top:.9rem">While creating your character, choose <strong>1 talent</strong> from your class attribute and <strong>2</strong> from your race attributes as starting talents. If a talent is your <strong>starting talent</strong> (chosen through class or race), its modifier is <strong>+1 higher</strong> than the parent attribute. A starting talent under an attribute with modifier −1 becomes 0 — still worth having. All other talents simply match the modifier of their parent attribute.</p>
+      <p class="mech-rule" style="margin-top:.9rem">While creating your character, choose <strong>1 talent</strong> from your class attribute and <strong>2</strong> from your race attributes as starting talents. If a talent is your <strong>starting talent</strong> (chosen through class or race), its modifier is <strong>+1 higher</strong> than the parent attribute. A starting talent under an attribute with modifier −1 becomes 0 - still worth having. All other talents simply match the modifier of their parent attribute.</p>
     </div>
 
   </div>
@@ -324,8 +324,8 @@ const attributes = [
     talents: [
       { name: "Deceit",      desc: "Lying, bluffing, creating false impressions under pressure." },
       { name: "Acrobatics",  desc: "Agility, balance, squeezing through tight spaces, tumbling." },
-      { name: "Illusion",    desc: "Minor tricks of the eye and ear — misdirection, false signals, small deceptions the world almost believes." },
-      { name: "Craftiness",  desc: "Finding an unexpected solution — the door no one thought to open, the rule nobody said you couldn't break." },
+      { name: "Illusion",    desc: "Minor tricks of the eye and ear - misdirection, false signals, small deceptions the world almost believes." },
+      { name: "Craftiness",  desc: "Finding an unexpected solution - the door no one thought to open, the rule nobody said you couldn't break." },
       { name: "Stealth",     desc: "Moving unseen, staying quiet, vanishing before anyone noticed you were there." },
     ]
   },
@@ -333,7 +333,7 @@ const attributes = [
     name: "Understanding", mod: "+2", acc: "#06b6d4",
     talents: [
       { name: "Empathy",      desc: "Reading emotions and motivations, sensing grief or hidden fear." },
-      { name: "Persuasion",   desc: "Convincing, negotiating, rhetoric — making them want to agree." },
+      { name: "Persuasion",   desc: "Convincing, negotiating, rhetoric - making them want to agree." },
       { name: "Insight",      desc: "Detecting lies, reading hidden intent, noticing what goes unsaid." },
       { name: "Intimidation", desc: "Projecting menace, breaking resolve, forcing compliance. Through nightmares and hallucinations." },
       { name: "Folklore",     desc: "Knowledge of creatures, customs, old magic, and forgotten histories." },
@@ -343,7 +343,7 @@ const attributes = [
     name: "Instinct", mod: "+2", acc: "#22c55e",
     talents: [
       { name: "Perception",  desc: "Noticing fine details, hearing distant sounds, spotting the hidden." },
-      { name: "Foresight",   desc: "Reading what is about to happen — the next move, the trap not yet sprung, the lie before it is spoken." },
+      { name: "Foresight",   desc: "Reading what is about to happen - the next move, the trap not yet sprung, the lie before it is spoken." },
       { name: "Nature",      desc: "Identifying plants, animals, weather, and natural hazards." },
       { name: "Vigilance",   desc: "Sensing wrongness before you can name it. Detecting ambushes." },
       { name: "Survival",    desc: "Navigating wilderness, finding shelter, enduring harsh conditions." },
@@ -355,7 +355,7 @@ const attributes = [
       { name: "Athletics",  desc: "Climbing, swimming, jumping, feats of raw physical strength." },
       { name: "Endurance",  desc: "Pushing through exhaustion, sustained effort, long marches. You can go beyond limits of your body." },
       { name: "Fortitude",  desc: "Resisting poison, disease, and physical pain. You can drink a few more beers than others." },
-      { name: "Grapple",    desc: "Wrestling, pinning, holding on — or breaking free by force." },
+      { name: "Grapple",    desc: "Wrestling, pinning, holding on - or breaking free by force." },
       { name: "Stoicism",   desc: "Withstanding psychological pressure, staying unreadable under duress." },
       { name: "Medicine",   desc: "Knowing how to diagnose yourself and others. You can patch up a few wounds before they become serious or tell the source of the pain." },
     ]
