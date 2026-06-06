@@ -121,8 +121,12 @@ body{
   font-size:.72rem;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);
 }
+.cls-stats{
+  display:flex;flex-wrap:wrap;gap:.4rem;
+  margin-top:.7rem;
+}
 .cls-mod{
-  display:inline-block;margin-top:.7rem;
+  display:inline-block;
   padding:.18rem .75rem;
   border:1px solid rgba(255,255,255,.1);
   color:var(--cc);
@@ -313,7 +317,7 @@ fetch('data/classes.json').then(r=>r.json()).then(classes=>{
         '<div class="cls-hd">'+
           '<h2 class="cls-name">'+c.name+'</h2>'+
           '<p class="cls-role">'+c.role+'</p>'+
-          '<span class="cls-mod">'+c.mod+'</span>'+
+          '<div class="cls-stats">'+(Array.isArray(c.mod)?c.mod:[c.mod]).map(m=>'<span class="cls-mod">'+m+'</span>').join('')+'</div>'+
           '<p class="cls-flavor">'+c.flavor+'</p>'+
         '</div>'+
         '<div class="sec-lbl">Abilities</div>'+
