@@ -13,7 +13,7 @@
             ["1-6",   "Ordinary jab",        "Deal the base damage of your weapon."],
             ["7-8",   "Bleeding",            "Target starts bleeding, loosing 1hp at the beggining of it's every turn."],
             ["8-9",   "Aim for the eyeballs","The target becomes blind - he can attack only to distance of 3 feet with disadvantage to attack throws."],
-            ["10-11", "Reckless swing",      "You deal half of the thrown damage to yourself. (the target suffers whole damage)."],
+            ["10-11", "Reckless swing",      "You deal half of the thrown damage to yourself. (the target still suffers the whole damage)."],
             ["12",    "Cut the tendons",     "Deal duble damage."]
           ]
         }
