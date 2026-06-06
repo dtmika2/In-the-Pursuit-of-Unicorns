@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>In the Pursuit of Unicorns — Attributes & Talents</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+@keyframes twinkle{from{opacity:.08}to{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+:root{
+  --bg:#04040f;
+  --surface:#09091a;
+  --gold:#c9a84c;
+  --text:#d4c9a8;
+  --muted:#5a5044;
+  --dim:#8a7e64;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  font-family:'EB Garamond',serif;
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+#stars{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  pointer-events:none;z-index:0;
+}
+.star{position:absolute;background:#fff;border-radius:50%}
+
+.wrap{
+  position:relative;z-index:1;
+  max-width:900px;margin:0 auto;
+  padding:3rem 1.25rem 5rem;
+  animation:fadeUp .5s ease both;
+}
+
+/* ── Header ── */
+.hd{text-align:center;margin-bottom:2.5rem}
+.hd-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.9rem,5vw,2.8rem);
+  font-weight:700;letter-spacing:.14em;
+  color:var(--gold);
+  text-shadow:0 0 60px rgba(201,168,76,.28);
+}
+.hd-sub{
+  margin-top:.4rem;
+  font-size:.72rem;letter-spacing:.32em;
+  text-transform:uppercase;color:#6c6052;
+}
+
+/* ── Back link ── */
+.back{
+  display:inline-block;
+  font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#c84040;text-decoration:none;
+  transition:color .2s;
+}
+.back:hover{color:#e05555}
+.back-top{margin-bottom:1.75rem;display:block}
+.back-bot{margin-top:2.5rem;display:inline-block}
+
+/* ── Attribute grid ── */
+.attr-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+  margin-bottom:1.5rem;
+}
+
+/* ── Attribute card ── */
+.attr-card{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  overflow:hidden;
+}
+.attr-card-hd{
+  padding:.9rem 1.1rem .75rem;
+  border-left:3px solid var(--acc);
+}
+.attr-card-name{
+  font-family:'Cinzel',serif;
+  font-size:1.1rem;font-weight:700;
+  color:var(--acc);letter-spacing:.05em;
+}
+.attr-card-mod{
+  font-family:'Cinzel',serif;
+  font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--acc);
+  border:1px solid var(--acc);
+  opacity:.65;border-radius:3px;
+  padding:.1rem .45rem;
+  display:inline-block;margin-top:.45rem;
+}
+
+/* ── Talent list ── */
+.attr-talents{border-top:1px solid rgba(255,255,255,.04)}
+.talent{
+  padding:.6rem 1.1rem;
+  border-bottom:1px solid rgba(255,255,255,.03);
+  cursor:pointer;
+  transition:background .15s;
+}
+.talent:last-child{border-bottom:none}
+.talent:hover{background:rgba(255,255,255,.015)}
+.talent-top{display:flex;align-items:baseline;gap:.5rem}
+.talent-name{
+  font-family:'Cinzel',serif;
+  font-size:.82rem;font-weight:600;
+  letter-spacing:.06em;color:var(--text);
+}
+.talent-badge{
+  font-family:'Cinzel',serif;
+  font-size:.55rem;letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--acc);opacity:.65;
+  margin-left:auto;flex-shrink:0;
+}
+.talent-desc{
+  font-size:.9rem;color:var(--dim);
+  line-height:1.5;font-style:italic;
+  margin-top:.15rem;
+  max-height:0;overflow:hidden;
+  transition:max-height .25s ease,margin-top .2s;
+}
+.talent.open .talent-desc{max-height:120px;margin-top:.25rem}
+
+/* ── Mechanics box ── */
+.mech{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  padding:1.1rem 1.4rem;
+  margin-bottom:1.5rem;
+}
+.mech-title{
+  font-family:'Cinzel',serif;
+  font-size:.6rem;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--dim);margin-bottom:.75rem;
+}
+.mech-rule{
+  font-size:.98rem;color:var(--dim);line-height:1.72;
+}
+.mech-rule strong{color:var(--text);font-style:normal}
+.mech-rule em{color:#a69778}
+.mech-formula{
+  font-family:'Cinzel',serif;
+  font-size:.88rem;letter-spacing:.08em;
+  color:var(--text);
+  background:var(--bg);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:4px;
+  padding:.5rem 1rem;
+  display:inline-block;
+  margin:.65rem 0;
+}
+
+/* ── Starting talent tables ── */
+.tables{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:14px;
+}
+.tbl-card{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  overflow:hidden;
+}
+.tbl-head{
+  font-family:'Cinzel',serif;
+  font-size:.6rem;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--dim);
+  padding:.65rem 1.1rem .5rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.tbl-row{
+  display:flex;align-items:baseline;gap:.6rem;
+  padding:.5rem 1.1rem;
+  border-bottom:1px solid rgba(255,255,255,.03);
+  font-size:.9rem;
+}
+.tbl-row:last-child{border-bottom:none}
+.tbl-who{
+  font-family:'Cinzel',serif;
+  font-size:.78rem;font-weight:600;
+  color:var(--text);white-space:nowrap;
+  min-width:110px;
+}
+.tbl-skills{color:var(--dim);font-style:italic;line-height:1.45}
+
+/* ── Divider ── */
+.divider{
+  width:80px;height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  margin:1.75rem auto 0;
+}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
+
+@media(max-width:560px){
+  .attr-card-hd,.talent,.mech{padding-left:1rem;padding-right:1rem}
+  .attr-card-name{font-size:1rem}
+}
+@media(min-width:1024px){html{font-size:120%}}
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<div class="wrap">
+
+  <header class="hd">
+    <h1 class="hd-title">In the Pursuit of Unicorns</h1>
+    <p class="hd-sub">Attributes &amp; Talents</p>
+  </header>
+
+  <a class="back back-top" href="index.html">← back to main</a>
+
+  <div class="mech">
+    <div class="mech-title">How Attributes Work</div>
+    <p class="mech-rule">When something in the world needs to be decided, you the player and DM propose which attribute the character uses to resolve it. DM sets a difficulty of that task and player must overcome it by rolling a d20. To your roll, you add your attribute modifier. Attribute modifier is driven from the Attributes whole value. Example: Cunningness (16) -> modifier (+2).</p>
+     
+    <div class="mech-title">How Talents Work</div>
+    <p class="mech-rule">When a roll clearly falls within a talent's scope, add <strong>+1</strong> to the total. This stacks with your attribute modifier.</p>
+    <div class="mech-formula">Example: d20 + modifier (+x) + talent (+y) = d20 + x + y</div>
+    <div class="mech-formula">Example: 16 + Cunningness (+2) + Deceit (+1) = d20 + 2 + 1 = 19</div>
+    <p class="mech-rule" style="margin-top:.45rem">The DM decides whether a talent applies. When in doubt: <em>if you would describe what you're doing using the talent's name, it applies.</em></p>
+    <p class="mech-rule" style="margin-top:.45rem">While creating your character, you can choose <strong>1 talent</strong> from your class Attribute and <strong>2</strong> from your race Attributes. These gain +1 modifier above your attribute modifier. The rest match the modifier of the attribute.</p>
+  </div>
+
+  <div class="attr-grid" id="grid"></div>
+
+  <div class="tables" id="tables"></div>
+
+  <div class="divider"></div>
+  <a class="back back-bot" href="index.html">← back to main</a>
+</div>
+
+<script>
+(function(){
+  const el=document.getElementById('stars');
+  for(let i=0;i<160;i++){
+    const s=document.createElement('div');s.className='star';
+    const sz=Math.random()*1.6+.3;
+    s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate';
+    el.appendChild(s);
+  }
+})();
+
+const attributes = [
+  {
+    name: "Cunningness", mod: "+2", acc: "#a855f7",
+    talents: [
+      { name: "Deceit",      desc: "Lying, bluffing, creating false impressions under pressure." },
+      { name: "Acrobatics",  desc: "Agility, balance, squeezing through tight spaces, tumbling." },
+      { name: "Illusion",    desc: "Minor tricks of the eye and ear — misdirection, false signals, small deceptions the world almost believes." },
+      { name: "Craftiness",  desc: "Finding an unexpected solution — the door no one thought to open, the rule nobody said you couldn't break." },
+      { name: "Stealth",     desc: "Moving unseen, staying quiet, vanishing before anyone noticed you were there." },
+    ]
+  },
+  {
+    name: "Understanding", mod: "+2", acc: "#06b6d4",
+    talents: [
+      { name: "Empathy",      desc: "Reading emotions and motivations, sensing grief or hidden fear." },
+      { name: "Persuasion",   desc: "Convincing, negotiating, rhetoric — making them want to agree." },
+      { name: "Insight",      desc: "Detecting lies, reading hidden intent, noticing what goes unsaid." },
+      { name: "Intimidation", desc: "Projecting menace, breaking resolve, forcing compliance. Through nightmares and hallucinations." },
+      { name: "Folklore",     desc: "Knowledge of creatures, customs, old magic, and forgotten histories." },
+    ]
+  },
+  {
+    name: "Instinct", mod: "+2", acc: "#22c55e",
+    talents: [
+      { name: "Perception",  desc: "Noticing fine details, hearing distant sounds, spotting the hidden." },
+      { name: "Foresight",   desc: "Reading what is about to happen — the next move, the trap not yet sprung, the lie before it is spoken." },
+      { name: "Nature",      desc: "Identifying plants, animals, weather, and natural hazards." },
+      { name: "Vigilance",   desc: "Sensing wrongness before you can name it. Detecting ambushes." },
+      { name: "Survival",    desc: "Navigating wilderness, finding shelter, enduring harsh conditions." },
+    ]
+  },
+  {
+    name: "Constitution", mod: "+2", acc: "#f59e0b",
+    talents: [
+      { name: "Athletics",  desc: "Climbing, swimming, jumping, feats of raw physical strength." },
+      { name: "Endurance",  desc: "Pushing through exhaustion, sustained effort, long marches. You can go beyond limits of your body." },
+      { name: "Fortitude",  desc: "Resisting poison, disease, and physical pain. You can drink a few more beers than others." },
+      { name: "Grapple",    desc: "Wrestling, pinning, holding on — or breaking free by force." },
+      { name: "Stoicism",   desc: "Withstanding psychological pressure, staying unreadable under duress." },
+      { name: "Medicine",   desc: "Knowing how to diagnose yourself and others. You can patch up a few wounds before they become serious or tell the source of the pain." },
+    ]
+  },
+  {
+    name: "Willpower", mod: "+2", acc: "#ef4444",
+    talents: [
+      { name: "Arcana",                   desc: "Identifying spells, enchantments, and magical signatures." },
+      { name: "Resolve",                  desc: "Resisting mental effects, trusting your own judgement and not getting swayed by others." },
+      { name: "Concentration",            desc: "Ability to focus and don't get distracted by outside influences." },
+      { name: "Understanding of Universe",desc: "Deep magic, physics, knowledge of the world beyond border of comprehension." },
+      { name: "Meditation",               desc: "Recovering Sanity through stillness, sensing magical currents." },
+    ]
+  }
+];
+
+const classStarts = [
+  { who: "Jester",       skills: "Any one talent under Cunningness" },
+  { who: "Dreamcaster",  skills: "Any one talent under Understanding" },
+  { who: "Ranger",       skills: "Any one talent under Instinct" },
+  { who: "Shapeshifter", skills: "Any one talent under Constitution" },
+  { who: "Sorcerer",     skills: "Any one talent under Willpower" },
+];
+
+const raceStarts = [
+  { who: "Foxborn",      skills: "Any two talents under Cunningness and Understanding" },
+  { who: "Human",        skills: "Any two talents under Attributes of your initial choice" },
+  { who: "Moth Fairy",   skills: "Any two talents under Understanding and Willpower" },
+  { who: "Barkskinned",  skills: "Any two talents under Constitution" },
+  { who: "The Stitched", skills: "Any two talents under Attributes of your initial choice and Constitution" },
+  { who: "Echoes",       skills: "Any two talents under Instinct and Willpower" },
+  { who: "Resurrected",  skills: "Any two talents under Constitution and Willpower" },
+];
+
+const grid = document.getElementById('grid');
+attributes.forEach(a => {
+  const card = document.createElement('div');
+  card.className = 'attr-card';
+  card.style.setProperty('--acc', a.acc);
+  card.innerHTML =
+    '<div class="attr-card-hd">' +
+      '<div class="attr-card-name">' + a.name + '</div>' +
+      '<span class="attr-card-mod">Modifier ' + a.mod + '</span>' +
+    '</div>' +
+    '<div class="attr-talents">' +
+      a.talents.map(t =>
+        '<div class="talent" onclick="this.classList.toggle(\'open\')">' +
+          '<div class="talent-top">' +
+            '<span class="talent-name">' + t.name + '</span>' +
+            '<span class="talent-badge">+1</span>' +
+          '</div>' +
+          '<div class="talent-desc">' + t.desc + '</div>' +
+        '</div>'
+      ).join('') +
+    '</div>';
+  grid.appendChild(card);
+});
+
+const tables = document.getElementById('tables');
+function makeTable(title, rows) {
+  const d = document.createElement('div');
+  d.className = 'tbl-card';
+  d.innerHTML = '<div class="tbl-head">' + title + '</div>' +
+    rows.map(r =>
+      '<div class="tbl-row">' +
+        '<span class="tbl-who">' + r.who + '</span>' +
+        '<span class="tbl-skills">' + r.skills + '</span>' +
+      '</div>'
+    ).join('');
+  return d;
+}
+tables.appendChild(makeTable('Class Starting Talents (×2)', classStarts));
+tables.appendChild(makeTable('Race Bonus Talent (×1)', raceStarts));
+</script>
+</body>
+</html>
