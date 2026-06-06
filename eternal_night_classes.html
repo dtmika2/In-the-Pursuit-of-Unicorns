@@ -260,382 +260,75 @@ tbody td strong{color:#ccc0a0}
 
   <a class="back back-top" href="index.html">← back to main</a>
 
-  <nav class="tabs" role="tablist" aria-label="Classes">
-    <button class="tab active" role="tab" data-i="0" style="--cc:#a855f7;--cg:rgba(168,85,247,.4)">Jester</button>
-    <button class="tab" role="tab" data-i="1" style="--cc:#06b6d4;--cg:rgba(6,182,212,.4)">Dreamcaster</button>
-    <button class="tab" role="tab" data-i="2" style="--cc:#22c55e;--cg:rgba(34,197,94,.4)">Ranger</button>
-    <button class="tab" role="tab" data-i="3" style="--cc:#f59e0b;--cg:rgba(245,158,11,.4)">Shapeshifter</button>
-    <button class="tab" role="tab" data-i="4" style="--cc:#ef4444;--cg:rgba(239,68,68,.4)">Sorcerer</button>
-  </nav>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Classes"></nav>
 
-  <main>
-
-    <!-- ════════════════════════════════ JESTER ════ -->
-    <section class="panel active" id="p0" style="--cc:#a855f7;--cg:rgba(168,85,247,.3)">
-      <div class="card">
-        <div class="cls-img"><img src="Class%20images/Jester.png" alt="Jester"></div>
-        <div class="cls-hd">
-          <h2 class="cls-name">Jester</h2>
-          <p class="cls-role">Rogue · Bard · Melee Crit · Stealth</p>
-          <span class="cls-mod">Cunningness +2</span>
-          <p class="cls-flavor">You are the chaos at the heart of every encounter. You do not fight — you make fighting unnecessary, impossible, or hilarious. And on the rare occasion you must bleed someone, you make it look like an accident.</p>
-        </div>
-        <div class="sec-lbl">Abilities</div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Mocking Cackle</span>
-            <span class="ab-mech">Cunningness · 1 turn · 1AS</span>
-          </div>
-          <p class="ab-desc">Your mocking laugh gets under their skin. Target makes a save or cannot attack next turn — too busy fuming, or, worse, giggling. If a target is affected by mocking laugh 3 times consecutively, it start harming itself. The laugh is insuffarable, and it needs to stop.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Trick Blade</span>
-            <span class="ab-mech">Cunningness · 1AS</span>
-          </div>
-          <p class="ab-desc">A deceptive melee strike, rolled with advantage. Throw a d12. Different rolls have different outcomes.</p>
-        <button class="xbtn" onclick="toggle(this,'t-wonders')">▼ Show Item Table</button>
-          <div class="xtbl" id="t-wonders">
-            <table>
-              <thead><tr><th>d12</th><th>Item</th><th>Effect</th></tr></thead>
-              <tbody>
-                <tr><td>1-6</td><td>Ordinary jab</td><td>Deal the base damage of your weapon.</td></tr>
-                <tr><td>7-8</td><td>Bleeding</td><td>Target starts bleeding, loosing 1hp at the beggining of it's every turn.</td></tr>
-                <tr><td>8-9</td><td>Aim for the eyeballs</td><td>The target becomes blind - he can attack only to distance of 3 feet with disadvantage to attack throws.</td></tr>
-                <tr><td>10-11</td><td>Reckless swing</td><td>You deal half of the thown damage to yourself. (the target suffers whole damage).</td></tr>
-                <tr><td>12</td><td>Cut the tendons</td><td>Deal duble damage.</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Shadow Step</span>
-            <span class="ab-mech">Passive</span>
-          </div>
-          <p class="ab-desc">Melt into shadow or a crowd. You become nearly invisible — DC 15 to detect — and can move at half speed while hidden. Breaking into a full sprint ends the effect immediately.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Pocket of Wonders</span>
-            <span class="ab-mech">2AS</span>
-          </div>
-          <p class="ab-desc">Reach into your endless pockets. Roll a d6 — you never know, what your own pockets can hide.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Jester's Medley</span>
-            <span class="ab-mech">2AS</span>
-          </div>
-          <p class="ab-desc">A performance, a jape, a jest. <em>Inspire</em> one ally — they gain advantage on their next roll. Or: <em>Distract</em> all enemies in sight, they all gain -1 to their next attack throw. Outside of a combat, Jester's Medley causes drawn attention to you. Every mesmerized creature pays almost no attention to what is happening around them.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════════ DREAMCASTER ════ -->
-    <section class="panel" id="p1" style="--cc:#06b6d4;--cg:rgba(6,182,212,.3)">
-      <div class="card">
-        <div class="cls-img"><img src="Class%20images/Dreamcaster.png" alt="Dreamcaster"></div>
-        <div class="cls-hd">
-          <h2 class="cls-name">Dreamcaster</h2>
-          <p class="cls-role">Utility · Crowd Control · Understanding</p>
-          <span class="cls-mod">Understanding +2</span>
-          <p class="cls-flavor">You weave the dream-stuff of this world into veils, voices, and visions. Where others reach for steel or fire, you reach into minds. You are most at home in the space between sleep and waking.</p>
-        </div>
-        <div class="sec-lbl">Abilities</div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Minor Illusion</span>
-            <span class="ab-mech">1AS</span>
-          </div>
-          <p class="ab-desc">Create a small visual or auditory illusion — a sound, a shadow, a drifting light, a fleeting face in the fog. No larger than a person. No direct combat effect. Limited only by your imagination. You may use this freely, as many times as you wish.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Telepathy</span>
-            <span class="ab-mech">Understanding · 1AS</span>
-          </div>
-          <p class="ab-desc">Reach into a mind within 30 feet. Send a wordless message — emotion, image, intent — silently and instantly. Or read their surface thoughts: what they are focused on right now. The target is unaware in either case.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Mesmerize</span>
-            <span class="ab-mech">Understanding · 1 turn · 2AS</span>
-          </div>
-          <p class="ab-desc">Lock eyes with one target. If they fail their save, they are Charmed for 1 round — they cannot act against you or your allies. They remember being held. They do not know why.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Magic Mouth</span>
-            <span class="ab-mech">Until triggered · 1AS</span>
-          </div>
-          <p class="ab-desc">Enchant a surface, object, humanoid or wall with a stored message. Set a trigger — when someone crosses a threshold, speaks a name, or touches the object. When triggered, a magical mouth delivers your words exactly as you spoke them.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Puppet</span>
-            <span class="ab-mech">Understanding · 2AS</span>
-          </div>
-          <p class="ab-desc">For one terrifying moment, you take the wheel. Force one creature within 30 feet to take a single action of your choosing. They do it. They cannot stop it. <strong>They know it was you</strong>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════════════ RANGER ════ -->
-    <section class="panel" id="p2" style="--cc:#22c55e;--cg:rgba(34,197,94,.3)">
-      <div class="card">
-        <div class="cls-img"><img src="Class%20images/Ranger.png" alt="Ranger"></div>
-        <div class="cls-hd">
-          <h2 class="cls-name">Ranger</h2>
-          <p class="cls-role">Scout · Ranged Combat · Herbalist</p>
-          <span class="cls-mod">Instinct +2</span>
-          <p class="cls-flavor">You read the land. You read the people. Where others are lost to the bliss, you find the thread. You keep moving. You are the only one in this world who is still truly looking.</p>
-        </div>
-        <div class="sec-lbl">Abilities</div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Precise Shot</span>
-            <span class="ab-mech">Instinct · +1d10 · 1AS</span>
-          </div>
-          <p class="ab-desc">Take careful aim before firing. Your next ranged attack deals 1d10 damage and ignores all cover bonuses. The arrow finds the gap.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Volley</span>
-            <span class="ab-mech">Instinct · +1d6 · 2AS</span>
-          </div>
-          <p class="ab-desc">Loose a flurry of arrows at up to 3 different targets simultaneously. Roll separately for each target. Each hit deals 1d6 damage. For one moment, the air is full of fletching.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Roped Shot</span>
-            <span class="ab-mech">Instinct · 1AS</span>
-          </div>
-          <p class="ab-desc">Fire an arrow with a string attached. Immidiately after succesful shot, you can pull the target 3 feets closer. On every next turn, you can try to disballance the target, throwing it onto a ground - until the sting is cut.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Herbalist</span>
-            <span class="ab-mech">Passive</span>
-          </div>
-          <p class="ab-desc">Identify any herb, drink, fruit, insect before it is consumed — its effects, potency, and DC. When <em>you</em> consume a herb, halve chance to a negative effect. You know what grows in this dark, and what it does to people. You can also make ointment and dip your arrows in it - targets of these arrows suffer the cosecvences of that source.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Ranger's Eye</span>
-            <span class="ab-mech">Instinct · 1AS</span>
-          </div>
-          <p class="ab-desc">You always find the trail — footprints, broken stems, magical residue, lingering scent. Hidden paths reveal themselves. Additionally, you sense hidden dangers, traps, and unnatural presences within 30 feet. You feel the wrongness before you can name it. +3 to all Instinct throws for 10 minutes.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ SHAPESHIFTER ════ -->
-    <section class="panel" id="p3" style="--cc:#f59e0b;--cg:rgba(245,158,11,.3)">
-      <div class="card">
-        <div class="cls-img"><img src="Class%20images/Shapeshifter.png" alt="Shapeshifter"></div>
-        <div class="cls-hd">
-          <h2 class="cls-name">Shapeshifter</h2>
-          <p class="cls-role">Tank · Melee · Infiltration</p>
-          <span class="cls-mod">Constitution +2</span>
-          <p class="cls-flavor">You are not one thing. You never were. In a world that has forgotten itself entirely, you remember every shape you have ever worn — and a few that haven't been invented yet.</p>
-        </div>
-        <div class="sec-lbl">Abilities</div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Beast Form</span>
-            <span class="ab-mech">Constitution · 10 min · 1AS</span>
-          </div>
-          <p class="ab-desc">Transform fully into one of four preset forms. You keep your mind, but gain the animal's body, senses, and instincts. Lasts up to 10 minutes.</p>
-          <button class="xbtn" onclick="toggle(this,'t-beast')">▼ Show Beast Forms</button>
-          <div class="xtbl" id="t-beast">
-            <table>
-              <thead><tr><th>Form</th><th>Movement</th><th>Attack</th><th>Special</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td>Horse</td>
-                  <td>Speed +2 tiles</td>
-                  <td>Bite 1d6</td>
-                  <td>Advantage on attack if an ally is adjacent to the same target. On a critical hit, target falls <strong>Prone</strong>.</td>
-                </tr>
-                <tr>
-                  <td>Bear</td>
-                  <td>Normal</td>
-                  <td>Claws 1d8</td>
-                  <td>Gain +6 temporary HP on transformation. On a hit, DC 12 save or target is <strong>Grappled</strong>.</td>
-                </tr>
-                <tr>
-                  <td>Frog</td>
-                  <td>Sink underwater for 10 minutes</td>
-                  <td>Tongue 1d4</td>
-                  <td>Advantage on all Instinct at range.</td>
-                </tr>
-                <tr>
-                  <td>Serpent</td>
-                  <td>Stealth while still</td>
-                  <td>Bite 1d4</td>
-                  <td>On hit, DC 12 Con save or target has -2 to their next roll (venom). Constrict a <strong>Grappled</strong> target for 1d4/round. Can squeeze through small gaps.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Mimic</span>
-            <span class="ab-mech">Constitution · 1AS</span>
-          </div>
-          <p class="ab-desc">Copy the exact appearance, voice, and mannerisms of any humanoid you have closely observed. Others must make a DC 14 Insight check to notice something is off. A perfect copy — down to the nervous habit.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Partial Shift + Predator Sense</span>
-            <span class="ab-mech">1 hour · 1AS</span>
-          </div>
-          <p class="ab-desc">Grow one animal feature — <em>claws (1d6 melee), gills, a prehensile tail, or a climbing grip</em> — and simultaneously borrow a set of animal senses: echolocation, heat-sight, a wolf's nose, or an owl's night-vision. You cannot be surprised while active.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Regenerate</span>
-            <span class="ab-mech">3AS</span>
-          </div>
-          <p class="ab-desc">Shift your flesh to push out damage and knit wounds shut. Your body ripples briefly, disturbingly — then settles back to normal.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Grotesque Form</span>
-            <span class="ab-mech">1 turn · 2AS</span>
-          </div>
-          <p class="ab-desc">Shift into something <em>wrong</em>. Limbs too many, eyes too wide, angles that shouldn't exist. All enemies who can see you must save or be <strong>Frightened</strong> for 1 round — they cannot move toward you and have -2 to all rolls. Your allies are unaffected.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ SORCERER ════ -->
-    <section class="panel" id="p4" style="--cc:#ef4444;--cg:rgba(239,68,68,.3)">
-      <div class="card">
-        <div class="cls-img"><img src="Class%20images/Sorcerer.png" alt="Sorcerer"></div>
-        <div class="cls-hd">
-          <h2 class="cls-name">Sorcerer</h2>
-          <p class="cls-role">Magic Damage · Volatile Power</p>
-          <span class="cls-mod">Willpower +2</span>
-          <p class="cls-flavor">Magic does not flow through you. It erupts. You are a pressure vessel of arcane force, and this corrupted world has made that pressure volatile. Everything you do carries a cost — and sometimes, so does everyone standing near you.</p>
-        </div>
-        <div class="sec-lbl">Abilities</div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Hex</span>
-            <span class="ab-mech">1 turn · 1AS</span>
-          </div>
-          <p class="ab-desc">Curse an enemy with magical affliction. They have disadvantage — roll twice, take the worse result — on all their rolls for 1 full round.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Arcing Bolt</span>
-            <span class="ab-mech">Willpower · 1d10 → 1d6 → 1d4 · 1AS</span>
-          </div>
-          <p class="ab-desc">Launch a bolt that leaps between enemies. It hunts. Roll to hit the first target (1d10 on hit). The bolt then automatically jumps to the nearest enemy within 10 feet (1d6), then once more (1d4). It cannot return to a previously struck target.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Void Touch</span>
-            <span class="ab-mech">Willpower · 2d4 · 3 turns · 1AS</span>
-          </div>
-          <p class="ab-desc">Reach out by hand. The air around a target compresses with vicious invisible force. On hit: 2d4 force damage. Target starts wandering aimlessly for 3 turns. It's mind is empty. Or full of eternity. Who knows...</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Gravity well</span>
-            <span class="ab-mech">3 turns · 2AS</span>
-          </div>
-          <p class="ab-desc">Release a burst of volatile magic — uncontrolled, indiscriminate. All creatures within 15 feet, <em>including allies</em>, must save (DC 13) or start floating.  Floating creatures cannot attack or cast spells. They can swim in air 6 feet per turn. After 3 turns, creatures fall. Before you use it, roll d20: on a <strong>1–5</strong>, you are caught in your own blast as well.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Arcane Fortress</span>
-            <span class="ab-mech">Concentration · 2AS</span>
-          </div>
-          <p class="ab-desc">Summon a solid 2×2×2 cube of shimmering force anywhere you can see. It is real and physical. Creatures may stand <em>inside</em> it (full cover from ranged attacks), stand <em>on top</em>, or be blocked entirely by its walls. Lasts until dismissed or you fall unconscious.</p>
-        </div>
-
-        <div class="ab">
-          <div class="ab-top">
-            <span class="ab-name">Foreign Limb</span>
-            <span class="ab-mech">Concentration · 1AS</span>
-          </div>
-          <p class="ab-desc">Create a limb - a hand or a leg. You probabbly stole it from someone in another dimension. This limb can fly and interact with objects. It cannot push or lift anything heavier than 3kg. The caster must see it to control it. It glows brightly, like a moonshine.</p>
-        </div>
-      </div>
-    </section>
+  <main id="main">
 
   </main>
   <a class="back" href="index.html">← back to main</a>
 </div>
 
 <script>
-/* Stars */
 (function(){
-  const el = document.getElementById('stars');
+  const el=document.getElementById('stars');
   for(let i=0;i<160;i++){
-    const s = document.createElement('div');
-    s.className = 'star';
-    const sz = Math.random()*1.6+.3;
-    s.style.cssText =
-      'left:'+Math.random()*100+'%;'+
-      'top:'+Math.random()*100+'%;'+
-      'width:'+sz+'px;height:'+sz+'px;'+
-      'animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate';
+    const s=document.createElement('div');s.className='star';
+    const sz=Math.random()*1.6+.3;
+    s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate';
     el.appendChild(s);
   }
 })();
 
-/* Tabs */
-document.querySelectorAll('.tab').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
-    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+function toggle(btn,id){
+  const tbl=document.getElementById(id);
+  const open=tbl.classList.toggle('open');
+  btn.textContent=open?btn.dataset.close:btn.dataset.open;
+}
+
+function renderAb(a){
+  let tbl='';
+  if(a.table){
+    const t=a.table;
+    tbl='<button class="xbtn" data-open="'+t.btnOpen+'" data-close="'+t.btnClose+'" onclick="toggle(this,\''+t.id+'\')">'+t.btnOpen+'</button>'+
+      '<div class="xtbl" id="'+t.id+'"><table>'+
+        '<thead><tr>'+t.headers.map(h=>'<th>'+h+'</th>').join('')+'</tr></thead>'+
+        '<tbody>'+t.rows.map(r=>'<tr>'+r.map(c=>'<td>'+c+'</td>').join('')+'</tr>').join('')+'</tbody>'+
+      '</table></div>';
+  }
+  return '<div class="ab"><div class="ab-top"><span class="ab-name">'+a.name+'</span><span class="ab-mech">'+a.mech+'</span></div><p class="ab-desc">'+a.desc+'</p>'+tbl+'</div>';
+}
+
+fetch('data/classes.json').then(r=>r.json()).then(classes=>{
+  const tabs=document.getElementById('tabs');
+  const main=document.getElementById('main');
+  tabs.innerHTML=classes.map((c,i)=>'<button class="tab'+(i===0?' active':'')+'" role="tab" data-i="'+i+'" style="--cc:'+c.color+';--cg:'+c.tabGlow+'">'+c.tab+'</button>').join('');
+  classes.forEach((c,i)=>{
+    const sec=document.createElement('section');
+    sec.className='panel'+(i===0?' active':'');
+    sec.id='p'+i;
+    sec.style.cssText='--cc:'+c.color+';--cg:'+c.glow;
+    sec.innerHTML=
+      '<div class="card">'+
+        '<div class="cls-img"><img src="'+c.image+'" alt="'+c.name+'"></div>'+
+        '<div class="cls-hd">'+
+          '<h2 class="cls-name">'+c.name+'</h2>'+
+          '<p class="cls-role">'+c.role+'</p>'+
+          '<span class="cls-mod">'+c.mod+'</span>'+
+          '<p class="cls-flavor">'+c.flavor+'</p>'+
+        '</div>'+
+        '<div class="sec-lbl">Abilities</div>'+
+        c.abilities.map(renderAb).join('')+
+      '</div>';
+    main.appendChild(sec);
+    sec.querySelector('.cls-img').addEventListener('click',function(){this.classList.toggle('open');});
+  });
+  tabs.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+    tabs.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+    main.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('p'+btn.dataset.i).classList.add('active');
-  });
+  }));
 });
-
-/* Image expand / collapse */
-document.querySelectorAll('.cls-img').forEach(el=>{
-  el.addEventListener('click',()=>el.classList.toggle('open'));
-});
-
-/* Expand / collapse sub-tables */
-function toggle(btn,id){
-  const tbl = document.getElementById(id);
-  const open = tbl.classList.toggle('open');
-  if(id==='t-wonders') btn.textContent = open ? '▲ Hide Items' : '▼ Show Item Table';
-  if(id==='t-beast')   btn.textContent = open ? '▲ Hide Forms' : '▼ Show Beast Forms';
-}
 </script>
 </body>
 </html>
