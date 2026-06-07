@@ -1,5 +1,37 @@
 [
   {
+    "id": "p0", "color": "#38bdf8", "glow": "rgba(56,189,248,.3)", "tabGlow": "rgba(56,189,248,.4)",
+    "tab": "0 · Prologue",
+    "name": "Prologue",
+    "tags": ["x", "x", "x"],
+    "quote": "\"x\"",
+    "lore": [
+      "x"
+    ],
+    "sections": [
+      {
+        "label": "x",
+        "items": [
+          { "type": "row", "name": "x", "meta": "x",
+            "desc": [
+              "x"
+            ]
+          },
+          { "type": "row", "name": "x", "meta": "x",
+            "desc": [
+              "x"
+            ]
+          },
+          { "type": "x", "title": "x",
+            "items": [
+              "x"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "p0", "color": "#f59e0b", "glow": "rgba(245,158,11,.3)", "tabGlow": "rgba(245,158,11,.4)",
     "tab": "I · The Carnival",
     "name": "The Carnival in the Whispering Wood",
