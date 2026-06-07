@@ -150,6 +150,14 @@ The "castle" is a **modernistic factory**. Its stone facade is illusion — with
 
 ---
 
+## Lore
+
+### The Man in the Shiny Black Leather Coat
+
+The man who gives the party their initial quest — clad in a strange, shiny black leather coat — is a former employee of the factory. He fled the region after learning the truth behind the eternal night, and has been searching outside the region for a way to sabotage the plant from within.
+
+---
+
 ## Playable Classes
 
 Each class uses one **modifier (+2)** added to d20 rolls. Abilities marked *Once per scene* recharge after a short rest or major story event. DC for abilities = the number listed; your d20 + modifier must match or beat it.
