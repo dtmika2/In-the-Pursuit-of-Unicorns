@@ -1,0 +1,66 @@
+Červánková Vesnice
+
+Zápletka ve vesnici:
+úkolem družiny bude zajistit informaci o tom, kde se nachází stádo jednorožců. Tuto informaci mohou získat ze 4 zdrojů - od místního stopaře, který je ovšem k nenalezní. Od starosty, který se ale zamkl ve své tvrzy a nevychází. V křišťálové kouli ve strážní kouzelné věži. U červa, který žije v (ve skutečnosti je) svatyni. 
+
+První fází řešení tohoto úkolu bude v první řadě zjistit jaké jsou existující zdroje této informace. K tomu může například dopomoci místní krčmář, který prozradí, že by informaci mohl mít místní stopař nebo nebo kouzelná křišťálová koule, bohužel neví kde stopař je ani jak se koule aktivuje. Další fází bude najít způsob, jak z jednoho z těchto 4 zdrojů infomraci vymámit. Jednorožci se ve skutečnosti nachází u Leského jezera. Všichni vesničané lokaci tohoto jezera znají a pokud se hráči kohokoli zeptají, poté co zjistí, že se právě tam jednorožci nachází, kdokoli je nasměruje.
+
+Vedlejší činnosti ve vesnici:
+Kouzelnický krámek 
+Taverna
+
+Vedlejší úkol ve vesnici
+
+
+
+Lokace ve vesnici:
+
+1 - Svatyně v grotto jeskyni
+/Je před vámi vysoká, ne příliš hluboká jeskyně z černého kamene, který ještě nikdo z vás nikdy neviděl. Vypadá jako kůra velmi velmi staré břízi. Tuto mělkou jeskyni vesničané přetvořili ve svatyni. Plápolají zde svíce, na kameni pod krápníky leží jablka a kus masa, který se jeví jako skopové stehno s kostí. Je pozoruhodné, že každých 15 sekund svíce ve svatyni mění směr svého plamene, jako by si s nimi hrál vítr, ovšem jen ve dvou pravidelnýh směrech./
+
+Do této jeskyně se chodí vesničané modlit, uctívají zde svého boha mnoha tváří*, ve kterého věří. Dary, které sem vesničané přinášejí mizí, proto vesničané věří, že je svatyně skutečná. Jeskyně je ve skutečnosti však chřtán obřího kameného červa, který odpočívá. Odpočívá takto již desýtky let a nemá důvod se pohnout, protože ho vesničané neustále krmí. Se skupinou hráčů začne telepaticky komunikovat okamžitě poté, co hráč zjistí, že se nejedná o jeskyni ale živého tvora. (DC 8 při ohledání (jaký skill?) - /Zdá se , že přesto jak je jeskyně mnělká, její drobný nejzaší bod - do teď schovaný kamenným stolem - je velmi tmavý a jeví se, jako by neměl konce./ Při dalším ohledání DC 12 (jaký skill?) hráči zjistí, že se jeskyně celá nepatrně hýbe.)
+Ovšem, posledních 8 týdnů červa cosi trápí. Má pocit, že spolkl cosi, co nelze zkonzumovat a podivně se to v něm vrtí a dráždí ho to. Pokud ho hráči této nepříjemnosti zbaví, pohne se ze svého místa a půjde vypátrat momentální lokaci jednorožců.
+To co ho ve skutečnosti trápí je fakt, že se mu do útrob nastěhovali 3 vesničané. Tito lidé nemají žádný dobrý důvod, proč tak učnili ani proč neodešli - odejít mohli kdykoli. Blaho je postihlo bezdůvodností. Někteří vesničané zmíní, že z vesnice před 8 týdny zmizeli 3 vesničané. Sebastián, místní kronikář. Měchomura, korokožá žena (barkskinned) a Vren, liškorozený malý kluk (Foxborn). Tyto postavy nemají žádnou důležitost pro příběh.  Jejich obvyká odpověď je "prostě jsme přišli. Prostě jsme zůstali.. Prostě.. No, tak, tak to zkrátka je, no."
+Když hráči vyřeší čerův problém: /pozorujete, jak se cosi, co jste ještě nedávno považovali za kus zlvášeního kamene - cosi, co za kus zvlášního kamene považovali zdejší domorodci pravděpodobně desýtky let - začne třást a vrtět. Země pod vašemi nohami se začne otřásat a jesykyně se najednou začne svírat. Vy dobře víte, že hledíte do chřtánu obřího červa. Tento chřtán se točí jako vlny na moři, jen do spirál a kotoučů. Najednou ústa sklapnou a v mžiku celá jeskyně zmizí z vašeho pohledu. Červ zmizel. Nyní zbývá už jen čekat, než se vrátí./
+
+2 - Nádvoří 
+Jedná se malou náves z udusané hlíny. Uprostřed této návsi stojí vysoká májka s mnoha zavěšenými stuhami které se třepetají ve větru. Kolem májky je slavnost, lidé tančí a tančí. V pravdě, tanečníci jsou do tance tak zabraní, že neumějí přestat. Jedná se o prokletí způsobené Blahem. Když se taneční unaví, prostě si z rázu lehnou a usnou. Pak se po 20 minutách probudí a opět tančí.
+Tanečníky pozorují Ivan a Lucie, obsessivně zamilovaný pár. Vysvětlí hráčům, že taneční tančí neustále, ale mezi každými pár slovy se milenci poblíbí nebo osahávají. Dorozumění s nimi je také těžké. Také neustále upozorňují na to jak jeden druhé milují a odbíhají od tématu aby tomu druhému vyznali lásku.
+
+Vytesané do základny májky: dokud májka stojí, noc končí. Nikdo ve vesnici ji tam nedal. Starší Corm říká, že tam vždycky byla. Nebyla. Zda je to pravdivá stopa, metafora nebo falešná stopa, musí rozhodnout DM. Májka je velmi stará a něco ji sem chce dostat.
+
+
+3 - Hřbitov
+Hřbitov připomíná spíše mělké jezero nebo obří kaluž. Voda v této kaluži ovšem jasně září v barvě zářivé tyrkysové. Důvod tohoto světelného jevu je takový, že vesničané vytvořili vlastní způsob pohřebního rituálu - transformativní vdechnutí druhého bytí (jak to vesničané nazývají). Jedná se o kouzelný proces, kdy vesničané obalí mrtvého v mechu a listí a poté ho polijí alkoholem. Následně pronesou kouzelnou formuli a až poté zesnulého spustí do vody. Hned jakmile se tělo zesnulého dotkne vodní hladiny, začne se rozpouštět v krásný pramen světla. Tehdy, kdy je celé tělo ponořeno, všechno světlo se smrští do jednoho malého bodu a promění se v medůzu. Právě tyto medůzi jsou světélkující. Počet medůz nelze napočítat, ale zdá se, že jich je tisíce.
+Hráči na hřbitově mohou zjistit, že mohou tamní vodu vypít a pak dorazit ke křišťálové kouli, kde skrze duše zesnulých budou na krátkou dobu umět komunikovat s astrálním světem. Křišťálová koule totiž komunikuje jen s obyvateli, kteří ve vesnici žili před stovkami let, na aktuální obyvatele již nereaguje. 
+Ovšem, proto aby k nim medůzy promluvili a tuto infomraci předaly, musí první hráči do vody pohřbít zdejší nemocnou ovci, která se trápí kvůli nemoci. Farmář ví, že by ji trápení měl zbavit, ale nemá na to srdce.
+
+
+4 - Taverna u zabejčeného kozla
+/V taverně u Zabejčeného kozla není ani hluk, ani ticho. Uvnitř je jen pár stolů a pár z nich je obsazených. U pár stolů sedí páry, u někteřích samotáři, u jediného sedí trojice. Hned co jste vstoupili, zbystřil vás krčmář, který se rozesmál nad vaším příchodem./
+Tavernu obsluhuje Pekař Brennan, který se neustále směje, nedokáže přestat (kvůli blaženosti). V taverně jsou 3 hosté, hrající kostky. Družina s nimi může kostky hrát a hazardovat. Jeden z hostů je Učeň Alhoven, který píše dokumentaci - no, kupodivu, o komkoli, kdo zrovna sedí naproti němu. V připadě hráčů tedy - o vás. Alhoven nemá důvod vesnici opustit, píše se mu v ní dobře. Dále rytířka Serrina, ozvěna (Echo) - stěžuje si, že nebude na své cestě pokračovat, dokud jí někdo nesežene oře, kterého si podle ní zaslouží. Darovan, amatérský kouzelník, který zatím ještě neumí žádný trik a je trochu zoufalý. Hráči mohou zjistit, že nejlepší je hrát proti Alhovenovi, kde stačí hodit DC 6. Proti Sereině hráči musí přehodit DC 14. Darovan podvádí a každý třetí hod vyhraje, nehledě na to co hodil (co hodil DM). Jeho obyklé DC je 11.
+Hostinský dolévá už plné poháry. Nikdo neplatí. Nikomu to nevadí.
+
+5 - Tvrz
+V tvrzi žije Stařešina Starosta Korm. Korm trpí demencí. Ví, že je důležitý. Nepamatuje si proč. Občas vytáhne úryvek z minulosti a pak ho zavrhne. Starosta se v tvzri ovšem neuvěznil. Naopak, uvěznila ho zde jeho posádka, která věří, že je vesnice pod útokem a nechtějí pustit nikoho dovnitř ani ven - jsou paranoidní. 
+Tvrz 
+
+6 - Kouzelná strážní věž
+Nikdo ve vesnici si nepamatuje, proč vesnice má vlastní strážní věž, navíc takovou, která stojí v centru vesnice namísto toho aby stála na jejím okraji. Na vesnici taktéž nikdo již desítky let nezaútočil, proto se zdá být tato věž naprosto zbytečná. Přesto se v ní pravidelně udržuje oheň a místní stráž do jejího vrcholu tu a tam zabrouzdá. 
+Co je na věži zajímavější je fakt, že se v ní usídlil vesnický alchymista, který vaří různá tonika - lektvary z ptačích pracek, nadrcené křišťály, roztavená tungstenová ruda, spálené houbové jíšky... Žádný z těchto lektvarů není poživatelný - všechny jsou určeny k umělecké tvorbě - jedná se o výtvarný materiál - alchymista tyto směsy míchá a patlá do prostředí, z čehož vznikají abstraktní a surealistické objekty.
+Alchymista ví o křišťálové kouli na vrcholu věže a přísahá, že už ji párkrát viděl aktivní, ale netuší kdy ani proč. Rozpomene se však, že naposledy když se tak stalo, byl pro luminiscenční vodu na hřibtově.
+
+
+7 - Vstup do Potutelného lesa
+
+
+8 - Farma
+Na farmě je mimo jiné také 8 letá holčička, která řádi mezi kozami, dělá samé nebezpečné věci - nemá strach.
+
+
+
+
+
+
+
+*Bůh mnoha tváří - Ztělesnění všech ras a pohlaví uvnitř jedné bytosti. Lidé věří, že bůh mnoha tváři v sobě nese kus duše každého živého tvora který právě žije. Setkat se s bohem mnoha tváří tedy znamená zjistit, jestli akutální populace planety je spíše dobrá nebo spíše zlá, spíše malicherná nebo skromná a tak dále. Bůh mnoha tváří tedy není nijaký, je jen takový, jací jsou všichni lidé naráz.
