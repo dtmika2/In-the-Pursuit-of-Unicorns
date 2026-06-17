@@ -1,0 +1,21 @@
+Please, convert the village document into a markdown an finish it up.
+
+Take inspiration of what already exists and try to mimic it. What exist should mostly stay as is.
+
+Formating rules:
+
+Each location, person or story beat should have a description directed towrads the players - take example from the cave location. By story beat, we mean when something new happenes or changes after a player interaction. Currently, this content is marked by /mark/ but should be represented by cursive or italic font. 
+Each location or person should have DM notes - this is everything what DM knows, what adds flavor or is used for NPC roleplay. Most of the DM notes players can reveal through various interactions. This is most of the current text in the document.
+
+You can also take edge inspiration from Mellwood page in our locations document, but that is mostly obsolete. (I also already took the main insipration for cave, the yard, the villagers etc. The Watchtower is completly discarded and 
+
+Content rules:
+The whole plot in the village revolve around discovering the location of the unicorns. Here, take example of one already existing path with the crystal magic ball and expand it to the three remianing plots. The Worm/cave plot is also almost finished, it would just be good to include a slightly more towards the extractions of the villagers - some obstacle to how to get inside and outside with them, so it is not just "crawl in, greet and walk out" - but nothing complicated. It should be described in DM notes in few sentances.
+Try to connect various locations and NPCs as hints towards competition of the main plot. Like, always write who knows what bit. 
+I would also like if the various approaches to solving the plot whould rely on different mechanics - talking/obstacles/puzzle/player skills... (but no intended fighting, as it drags the game progression and fighting is reserved for later).
+
+
+You can populate the side activities in the village with some slight content. The side quest leave open - i still yet have to think about it. 
+
+
+Notes like: Hostinský dolévá už plné poháry. Nikdo neplatí. Nikomu to nevadí. - this is more of a DM note - something players have to discover by observation and interaction - in the player description, there should be only information they can directly observe or has already observed from before. There can be also hints to feeling or intuition.
