@@ -122,7 +122,7 @@ body{
 
 .reel-frame{
   position:relative;
-  width:min(100%,320px);
+  width:min(100%,512px);
   aspect-ratio:2/3;
   margin:0 auto;
   border:1px solid var(--red-dim);
@@ -164,6 +164,16 @@ body{
 }
 .reel-black.show{opacity:1}
 
+.reel-whiteout{
+  position:absolute;inset:0;
+  z-index:4;
+  pointer-events:none;
+  background:#fff;
+  opacity:0;
+  transition:opacity .3s ease;
+}
+.reel-whiteout.show{opacity:1}
+
 .back{
   display:inline-block;
   margin-top:2.5rem;
@@ -179,7 +189,6 @@ body{
 @media(min-width:1024px){html{font-size:120%}}
 
 @media(max-width:560px){
-  .reel-frame{width:min(100%,240px)}
   .cat-block{padding:1.2rem 1.25rem}
   #categories{gap:1rem}
 }
@@ -285,9 +294,13 @@ body{
     const black = document.createElement('div');
     black.className = 'reel-black';
 
+    const whiteout = document.createElement('div');
+    whiteout.className = 'reel-whiteout';
+
     frame.appendChild(img);
     frame.appendChild(flash);
     frame.appendChild(black);
+    frame.appendChild(whiteout);
     reelEl.appendChild(frame);
     block.appendChild(btn);
     block.appendChild(reelEl);
@@ -297,7 +310,7 @@ body{
       running: false,
       gen: 0,
       el: reelEl,
-      img, flash, black, btn,
+      img, flash, black, whiteout, btn,
       lastSrc: null,
     };
 
@@ -323,6 +336,7 @@ body{
     reel.flash.classList.remove('fx-white');
     reel.img.classList.remove('fx-invert', 'fx-pulse');
     reel.black.classList.remove('show');
+    reel.whiteout.classList.remove('show');
   }
 
   async function fireFlash(reel) {
@@ -333,31 +347,97 @@ body{
     target.classList.remove(fx);
   }
 
+  // Brief, non-blocking flicker fired during the spin itself, so effects
+  // aren't only ever seen after the reel has settled.
+  function triggerQuickEffect(reel) {
+    const fx = EFFECTS[randInt(0, EFFECTS.length - 1)];
+    const target = fx === 'fx-white' ? reel.flash : reel.img;
+    target.classList.add(fx);
+    setTimeout(() => target.classList.remove(fx), randInt(80, 160));
+  }
+
+  async function dipWhite(reel) {
+    reel.whiteout.classList.add('show');
+    await sleep(300);
+    await sleep(randInt(80, 180));
+    reel.whiteout.classList.remove('show');
+    await sleep(300);
+  }
+
+  // A handful of ticks easing from fast to slow, like one deceleration pass
+  // of the reel. Used both for the main spin-down and for the short
+  // re-acceleration bursts of a "fake" halt.
+  async function doTicks(reel, myGen, count) {
+    for (let i = 0; i < count; i++) {
+      if (!(reel.running && reel.gen === myGen)) return false;
+      const next = pickNext(reel.pool, reel.lastSrc);
+      reel.lastSrc = next;
+      reel.img.src = next;
+      if (Math.random() < 0.1) triggerQuickEffect(reel);
+      const delay = lerp(45, 550, Math.pow(i / count, 2));
+      await sleep(delay);
+    }
+    return true;
+  }
+
+  // Spin down to an apparent halt, but sometimes pick back up speed and
+  // decelerate again one or more times before truly settling.
+  async function spinToHalt(reel, myGen) {
+    if (!(await doTicks(reel, myGen, randInt(18, 30)))) return false;
+    let fakeChance = 0.4;
+    while (Math.random() < fakeChance) {
+      if (!(reel.running && reel.gen === myGen)) return false;
+      if (!(await doTicks(reel, myGen, randInt(10, 18)))) return false;
+      fakeChance *= 0.4;
+    }
+    return true;
+  }
+
+  // Negative afterimage, like the still frame left behind after a
+  // lightning strike: negate, dip to white, return the halted image,
+  // dip to white again, return the image, then resume rolling.
+  async function lightningSequence(reel, myGen) {
+    const alive = () => reel.running && reel.gen === myGen;
+
+    reel.img.classList.add('fx-invert');
+    await sleep(randInt(150, 300));
+    if (!alive()) return false;
+
+    await dipWhite(reel);
+    if (!alive()) return false;
+
+    reel.img.classList.remove('fx-invert');
+    await sleep(randInt(300, 700));
+    if (!alive()) return false;
+
+    await dipWhite(reel);
+    if (!alive()) return false;
+
+    await sleep(randInt(200, 400));
+    return alive();
+  }
+
   async function runReel(reel, myGen) {
-    while (reel.running && reel.gen === myGen) {
-      // SPIN
-      const tickCount = randInt(18, 30);
-      for (let i = 0; i < tickCount; i++) {
-        if (!(reel.running && reel.gen === myGen)) return;
-        const next = pickNext(reel.pool, reel.lastSrc);
-        reel.lastSrc = next;
-        reel.img.src = next;
-        const delay = lerp(45, 550, Math.pow(i / tickCount, 2));
-        await sleep(delay);
-      }
-      if (!(reel.running && reel.gen === myGen)) return;
+    const alive = () => reel.running && reel.gen === myGen;
+    while (alive()) {
+      // SPIN (with occasional fake halts)
+      if (!(await spinToHalt(reel, myGen))) return;
+      if (!alive()) return;
 
       // HOLD
-      await sleep(randInt(1500, 4000));
-      if (!(reel.running && reel.gen === myGen)) return;
+      await sleep(randInt(900, 2400));
+      if (!alive()) return;
 
-      // FLASH_1
-      await fireFlash(reel);
-      if (!(reel.running && reel.gen === myGen)) return;
-
-      // FLASH_2
-      await fireFlash(reel);
-      if (!(reel.running && reel.gen === myGen)) return;
+      // FLASH(ES) — usually a quick double flash, sometimes the longer
+      // lightning afterimage sequence instead.
+      if (Math.random() < 0.3) {
+        if (!(await lightningSequence(reel, myGen))) return;
+      } else {
+        await fireFlash(reel);
+        if (!alive()) return;
+        await fireFlash(reel);
+        if (!alive()) return;
+      }
 
       // BLACKOUT
       reel.black.classList.add('show');
@@ -368,7 +448,7 @@ body{
       reel.img.src = next;
       reel.black.classList.remove('show');
       await sleep(350);
-      if (!(reel.running && reel.gen === myGen)) return;
+      if (!alive()) return;
     }
   }
 
