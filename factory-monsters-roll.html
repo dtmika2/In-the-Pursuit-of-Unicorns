@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>In the Pursuit of Unicorns — Factory Monsters Roll</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fxWhite{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+@keyframes fxPulse{0%{filter:brightness(1)}50%{filter:brightness(3)}100%{filter:brightness(1)}}
+
+:root{
+  --bg:#04040f;
+  --surface:#09091a;
+  --gold:#c9a84c;
+  --text:#d4c9a8;
+  --muted:#5a5044;
+  --dim:#8a7e64;
+  --red:#b06060;
+  --red-dim:rgba(160,60,60,.25);
+  --red-glow:rgba(160,50,50,.18);
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  font-family:'EB Garamond',serif;
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-x:hidden;
+}
+
+#stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+
+.wrap{
+  position:relative;z-index:1;
+  max-width:860px;width:100%;
+  padding:4rem 1.5rem 5rem;
+  text-align:center;
+  animation:fadeUp .8s ease both;
+}
+
+.hd-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2rem,6vw,3.2rem);
+  font-weight:700;
+  letter-spacing:.14em;
+  color:var(--red);
+  text-shadow:0 0 80px rgba(160,60,60,.35);
+  line-height:1.2;
+}
+
+.hd-sub{
+  margin-top:.55rem;
+  font-size:.7rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:#6c6052;
+}
+
+.divider{
+  width:120px;
+  height:1px;
+  background:linear-gradient(to right,transparent,var(--red),transparent);
+  margin:2.5rem auto;
+  opacity:.5;
+}
+
+#categories{
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+}
+
+.cat-block{
+  background:var(--surface);
+  border:1px solid var(--red-dim);
+  border-radius:6px;
+  padding:1.6rem 2rem;
+  transition:border-color .25s,box-shadow .25s;
+}
+
+.cat-btn{
+  display:block;
+  width:100%;
+  min-width:160px;
+  background:none;
+  border:1px solid var(--red-dim);
+  border-radius:6px;
+  padding:1rem 1.5rem;
+  font-family:'Cinzel',serif;
+  font-size:1.05rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--text);
+  cursor:pointer;
+  transition:border-color .25s,box-shadow .25s,transform .2s,color .2s;
+}
+.cat-btn:hover{
+  border-color:rgba(180,70,70,.55);
+  box-shadow:0 0 28px var(--red-glow);
+  transform:translateY(-2px);
+}
+.cat-btn.active{
+  border-color:var(--red);
+  box-shadow:0 0 18px var(--red-glow);
+  color:var(--gold);
+}
+
+.reel{
+  margin-top:1.25rem;
+  animation:fadeUp .5s ease both;
+}
+
+.reel-frame{
+  position:relative;
+  width:min(100%,320px);
+  aspect-ratio:2/3;
+  margin:0 auto;
+  border:1px solid var(--red-dim);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 0 28px var(--red-glow);
+  background:#000;
+}
+
+.reel-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  z-index:1;
+}
+.reel-img.fx-invert{filter:invert(1) brightness(1.4)}
+.reel-img.fx-pulse{animation:fxPulse .2s ease-in-out}
+
+.reel-flash{
+  position:absolute;inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:0;
+  background:transparent;
+}
+.reel-flash.fx-white{
+  background:#fff;
+  animation:fxWhite .2s ease-in-out;
+}
+
+.reel-black{
+  position:absolute;inset:0;
+  z-index:3;
+  pointer-events:none;
+  background:#000;
+  opacity:0;
+  transition:opacity .35s ease;
+}
+.reel-black.show{opacity:1}
+
+.back{
+  display:inline-block;
+  margin-top:2.5rem;
+  font-size:.7rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  transition:color .2s;
+}
+.back:hover{color:var(--dim)}
+
+@media(min-width:1024px){html{font-size:120%}}
+
+@media(max-width:560px){
+  .reel-frame{width:min(100%,240px)}
+  .cat-block{padding:1.2rem 1.25rem}
+  #categories{gap:1rem}
+}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<div class="wrap">
+  <h1 class="hd-title">Factory Monsters Roll</h1>
+  <p class="hd-sub">Random Encounter Generator</p>
+
+  <div class="divider"></div>
+
+  <div id="categories"></div>
+
+  <a class="back" href="dm.html">← back to dm cabinet</a>
+</div>
+
+<script>
+(function(){
+  const canvas=document.getElementById('stars');
+  const ctx=canvas.getContext('2d');
+  let stars=[];
+  function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
+  function init(){
+    resize();stars=[];
+    for(let i=0;i<160;i++){
+      const r=Math.random()*1.1+.2;
+      stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r,
+        op:Math.random(),spd:.004+Math.random()*.008,dir:Math.random()>.5?1:-1});
+    }
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(const s of stars){
+      s.op+=s.spd*s.dir;
+      if(s.op>=.75||s.op<=.06)s.dir*=-1;
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,255,255,${s.op})`;ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',init);
+  init();draw();
+})();
+</script>
+
+<script>
+(function(){
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  const lerp = (a, b, t) => a + (b - a) * t;
+
+  function genFiles(prefix, count) {
+    const arr = [];
+    for (let i = 1; i <= count; i++) {
+      arr.push('Images/Factory%20Monsters/' + prefix + '%20' + String(i).padStart(2, '0') + '.png');
+    }
+    return arr;
+  }
+
+  const CATS = [
+    { key: 'formans',   label: 'Formans',   pool: genFiles('Formans', 15) },
+    { key: 'freak',     label: 'Freak',     pool: genFiles('Freak', 6) },
+    { key: 'janitors',  label: 'Janitors',  pool: genFiles('Janitors', 5) },
+    { key: 'scientist', label: 'Scientist', pool: genFiles('Scientist', 9) },
+    { key: 'smokers',   label: 'Smokers',   pool: genFiles('Smokers', 8) },
+  ];
+
+  const EFFECTS = ['fx-white', 'fx-invert', 'fx-pulse'];
+
+  function pickNext(pool, lastSrc) {
+    if (pool.length === 1) return pool[0];
+    let next;
+    do { next = pool[Math.floor(Math.random() * pool.length)]; } while (next === lastSrc);
+    return next;
+  }
+
+  function buildReel(cat) {
+    const block = document.createElement('div');
+    block.className = 'cat-block';
+
+    const btn = document.createElement('button');
+    btn.className = 'cat-btn';
+    btn.type = 'button';
+    btn.textContent = cat.label;
+
+    const reelEl = document.createElement('div');
+    reelEl.className = 'reel';
+    reelEl.hidden = true;
+
+    const frame = document.createElement('div');
+    frame.className = 'reel-frame';
+
+    const img = document.createElement('img');
+    img.className = 'reel-img';
+    img.alt = cat.label;
+
+    const flash = document.createElement('div');
+    flash.className = 'reel-flash';
+
+    const black = document.createElement('div');
+    black.className = 'reel-black';
+
+    frame.appendChild(img);
+    frame.appendChild(flash);
+    frame.appendChild(black);
+    reelEl.appendChild(frame);
+    block.appendChild(btn);
+    block.appendChild(reelEl);
+
+    const reel = {
+      pool: cat.pool,
+      running: false,
+      gen: 0,
+      el: reelEl,
+      img, flash, black, btn,
+      lastSrc: null,
+    };
+
+    btn.addEventListener('click', () => {
+      if (reel.running) {
+        reel.running = false;
+        btn.classList.remove('active');
+        reelEl.hidden = true;
+        resetVisuals(reel);
+      } else {
+        reel.running = true;
+        reel.gen += 1;
+        btn.classList.add('active');
+        reelEl.hidden = false;
+        runReel(reel, reel.gen);
+      }
+    });
+
+    return block;
+  }
+
+  function resetVisuals(reel) {
+    reel.flash.classList.remove('fx-white');
+    reel.img.classList.remove('fx-invert', 'fx-pulse');
+    reel.black.classList.remove('show');
+  }
+
+  async function fireFlash(reel) {
+    const fx = EFFECTS[randInt(0, EFFECTS.length - 1)];
+    const target = fx === 'fx-white' ? reel.flash : reel.img;
+    target.classList.add(fx);
+    await sleep(randInt(120, 260));
+    target.classList.remove(fx);
+  }
+
+  async function runReel(reel, myGen) {
+    while (reel.running && reel.gen === myGen) {
+      // SPIN
+      const tickCount = randInt(18, 30);
+      for (let i = 0; i < tickCount; i++) {
+        if (!(reel.running && reel.gen === myGen)) return;
+        const next = pickNext(reel.pool, reel.lastSrc);
+        reel.lastSrc = next;
+        reel.img.src = next;
+        const delay = lerp(45, 550, Math.pow(i / tickCount, 2));
+        await sleep(delay);
+      }
+      if (!(reel.running && reel.gen === myGen)) return;
+
+      // HOLD
+      await sleep(randInt(1500, 4000));
+      if (!(reel.running && reel.gen === myGen)) return;
+
+      // FLASH_1
+      await fireFlash(reel);
+      if (!(reel.running && reel.gen === myGen)) return;
+
+      // FLASH_2
+      await fireFlash(reel);
+      if (!(reel.running && reel.gen === myGen)) return;
+
+      // BLACKOUT
+      reel.black.classList.add('show');
+      await sleep(350);
+      await sleep(randInt(250, 700));
+      const next = pickNext(reel.pool, reel.lastSrc);
+      reel.lastSrc = next;
+      reel.img.src = next;
+      reel.black.classList.remove('show');
+      await sleep(350);
+      if (!(reel.running && reel.gen === myGen)) return;
+    }
+  }
+
+  const container = document.getElementById('categories');
+  CATS.forEach(cat => container.appendChild(buildReel(cat)));
+})();
+</script>
+</body>
+</html>
