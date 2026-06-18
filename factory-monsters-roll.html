@@ -384,7 +384,7 @@ body{
   // decelerate again one or more times before truly settling.
   async function spinToHalt(reel, myGen) {
     if (!(await doTicks(reel, myGen, randInt(18, 30)))) return false;
-    let fakeChance = 0.4;
+    let fakeChance = 0.15;
     while (Math.random() < fakeChance) {
       if (!(reel.running && reel.gen === myGen)) return false;
       if (!(await doTicks(reel, myGen, randInt(10, 18)))) return false;
@@ -425,7 +425,7 @@ body{
       if (!alive()) return;
 
       // HOLD
-      await sleep(randInt(900, 2400));
+      await sleep(randInt(1500, 3000));
       if (!alive()) return;
 
       // FLASH(ES) — usually a quick double flash, sometimes the longer
