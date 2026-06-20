@@ -46,11 +46,11 @@ Each player starts at **Sanity 10**. It decreases on failed Hallucination Saves.
 
 | Sanity | State | Effect |
 |--------|-------|--------|
-| 10 – 8 | **Grounded** | You are yourself. No penalties. |
-| 7 – 5 | **Unsettled** | Disadvantage on social rolls. Occasional outbursts (roleplay freely). |
-| 4 – 3 | **Fractured** | DM may give you a false perception once per scene. -2 to all rolls. |
-| 2 – 1 | **Lost** | You act on hallucinations. DM may control one of your actions per combat. |
-| 0 | **Consumed** | You become an NPC. Your character is lost to the bliss forever. |
+| 10 | **Grounded** | You are yourself. No penalties. |
+| 9 – 7 | **Unsettled** | Disadvantage on social rolls. Occasional outbursts (roleplay freely). |
+| 6 – 4 | **Fractured** |  You are not feeling like yourself anymore. -2 to all rolls. |
+| 3 – 1 | **Consumed** | DM may give you a false perception once per scene (he will lie to you about what you think/sense). |
+| 0 | **Blissful** | You act on hallucinations. DM may control one of your actions per combat. |
 
 ---
 

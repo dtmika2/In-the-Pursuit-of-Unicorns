@@ -1,8 +1,6 @@
 # Červánková Vesnice
 
-**Štítky:** Lokace III · Vesnice · Informace · Sociální · Odpočinek
-
-> *„Všichni jsou tu v pořádku. Zeptejte se kohokoliv — skrze smích, skrze slzy, skrze to nic za jejich očima. Všechno je v pořádku."*
+> *„Červánková ves, místo klidu a radosti pro každého - vílu či trpaslíka, medvěda či zlobra. Každý je vítán. "*
 
 ---
 
@@ -54,7 +52,7 @@ Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Všechny vedou 
 
 **Mechaniky:** DC 8 Investigation / Instinct · DC 12 Instinct · DC 8 Persuasion / Empathy (×3 vesničané) · DC 10 Instinct / Agility (pohyb v chřtánu)
 
-*Před vámi se otvírá vysoká, ne příliš hluboká jeskyně z černého kamene, který ještě nikdo z vás nikdy neviděl. Vypadá jako kůra velmi, velmi staré břízy. Vesničané tuto mělkou jeskyni přetvořili ve svatyni. Plápolají zde svíce, na kameni pod krápníky leží jablka a kus masa — skopové stehno s kostí. Je pozoruhodné, že každých patnáct sekund svíce ve svatyni mění směr svého plamene, jako by si s nimi hrál vítr — jenže jenom ve dvou pravidelných směrech, sem a tam, a žádný vítr tu necítíte.*
+*Je před vámi vysoká, ne příliš hluboká jeskyně z černého kamene, který ještě nikdo z vás nikdy neviděl. Vypadá jako kůra velmi velmi staré břízi. Tuto mělkou jeskyni vesničané přetvořili ve svatyni. Plápolají zde svíce, na kameni pod krápníky leží jablka a kus masa, který se jeví jako skopové stehno s kostí. Je pozoruhodné, že každých 15 sekund svíce ve svatyni mění směr svého plamene, jako by si s nimi hrál vítr, ovšem jen ve dvou pravidelnýh směrech.*
 
 **Poznámky pro DM:**
 Jeskyně je ve skutečnosti chřtán obřího kamenného červa, který tu odpočívá již desítky let. Vesničané ho nechtěně krmí obětinami — dary mizí, a proto věří, že jejich modlitby jsou vyslyšeny a že jejich bůh (Bůh mnoha tváří*) je skutečný. Červ jejich víru nevytváří — jen přijímá jídlo.
@@ -66,9 +64,10 @@ Problém červa: posledních 8 týdnů se mu v útrobách usídlili tři vesnič
 **Mechaniky:**
 
 - **DC 8 Investigation / Instinct** — hráč si všimne, že zadní část jeskyně, dosud skrytá kamenným oltářem, je velmi tmavá — tma bez dna, bez odrazu, jako by neměla konec.
-- **DC 12 Instinct** — při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.
 
 *Zdá se, že přes to, jak je jeskyně mělká, její drobný nejzazší bod — dosud skrytý kamenným stolem — je velmi tmavý a jeví se, jako by neměl konce.*
+
+- **DC 12 Instinct** — při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.
 
 *Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech.*
 
@@ -92,7 +91,7 @@ Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíč
 | Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Corma; ví, kde Corm nosí klíč; ví, že stopař odešel dobrovolně          |
 
 
-*Pozorujete, jak se cosi, co jste ještě nedávno považovali za kus zvláštního kamene — cosi, co za kus zvláštního kamene považovali zdejší domorodci pravděpodobně desítky let — začne třást a vrtět. Země pod vašima nohama se začne otřásat a jeskyně se najednou začne svírat. Vy dobře víte, že hledíte do chřtánu obřího červa. Tento chřtán se točí jako vlny na moři, jen do spirál a kotoučů. Najednou ústa sklapnou a v mžiku celá jeskyně zmizí z vašeho pohledu. Červ zmizel. Nyní zbývá už jen čekat, než se vrátí.*
+*Pozorujete, jak se cosi, co jste ještě nedávno považovali za kus zvláštního kamene - cosi, co za kus zvláštního kamene považovali zdejší domorodci pravděpodobně desýtky let - začne třást a vrtět. Země pod vašemi nohami se začne otřásat a jeskyně se najednou začne svírat. Vy dobře víte, že hledíte do chřtánu obřího červa. Tento chřtán se točí jako vlny na moři, jen do spirál a kotoučů. Najednou ústa sklapnou a v mžiku celá jeskyně zmizí z vašeho pohledu. Červ zmizel. Nyní zbývá už jen čekat, než se vrátí.*
 
 ---
 
@@ -169,7 +168,7 @@ Kroky jsou nutné všechny. Formuli rituálu je obecně znám ve vesnici — moh
 
 **Mechaniky:** Hazardní hra — DC 6 / DC 11 / DC 14 · Vedlejší aktivita
 
-*V Taverně u Zabejčeného Kozla není ani hluk, ani ticho. Uvnitř je jen pár stolů a pár z nich je obsazených. U pár stolů sedí páry, u některých samotáři, u jediného sedí trojice. Hned co jste vstoupili, zbystřil vás krčmář — a rozesmál se.*
+*V taverně u Zabejčeného kozla není ani hluk, ani ticho. Uvnitř je jen pár stolů a pár z nich je obsazených. U pár stolů sedí páry, u někteřích samotáři, u jediného sedí trojice. Hned co jste vstoupili, zbystřil vás krčmář, který se rozesmál nad vaším příchodem.*
 
 **Poznámky pro DM:**
 Hostinský **Brennan** se neustále směje — tiše, vytrvale, bez příčiny (Blaho = nekonečný smích). Je to trochu znepokojivé, ale Brennan je plně funkční a pohostinný. Jídlo a pití jsou zdarma. Nikdo neplatí. Nikomu to nevadí.
