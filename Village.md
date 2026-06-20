@@ -76,7 +76,7 @@ Problém červa: posledních 8 týdnů se mu v útrobách usídlili tři vesnič
 Hráči mohou do chřtánu vlízt. Stěny chřtánu jsou teplé a rytmicky se svírají — stejný patnáctivteřinový rytmus, který hráči mohli pozorovat na svících. Červ spolupracuje a snaží se kontrakce zadržet, když cítí pohyb, ale nedokáže to plně ovládat. Pokud postavy přijdou na to, že se mají kupředu hýbat jen když se červ nadechuje, je následující DC nižší, jinak je 15.
 
 - **DC 15(/12) Instinct / Agility / Foresight / Grapple** pro plynulý pohyb vpřed; neúspěch znamená přitlačení ke stěně na jednu kontrakci — nepříjemné, ale ne nebezpečné. Lze opakovat. Postavy musí tento hod 5x zopakovat. 
-- Při hodu nižším než 5, všechny postavy utří 1 damage. Při hodu nižším než 7 jsou postavy při výdechu odfouknuty o jeden hod zpět.
+- Při hodu nižším než 5, všechny postavy utrží 1 damage. Při hodu nižším než 7 jsou postavy při výdechu odfouknuty o jeden hod zpět.
 - Na zpáteční cestě DC 7, případně automatický úspěch — červ se naučil tempovat s hráči.
 
 Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíčky (ukradené ze svatyně), jídlo (z obětí) a naprosto žádný zjevný důvod odejít. Blaho je postihlo bezdůvodností. Jejich typická odpověď: *„Prostě jsme přišli. Prostě jsme zůstali. Prostě... no, tak, tak to zkrátka je, no."*
@@ -99,11 +99,11 @@ Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíč
 
 **Mechaniky:** DC 12 Investigation k přečtení rytiny na základně
 
-*Malá náves z udusané hlíny. Uprostřed stojí vysoká májka s mnoha zavěšenými stuhami, které se třepetají ve větru — ale stuhy jsou protřepané, místy protřené na tenkou nit. Kolem základny jsou do země vyšlapané kruhy — ne pouhé stopy, ale skutečné prohlubeniny, jako by tu někdo tančil tisíckrát na přesně stejném místě. A lidé tu tančí. Tančí teď, tančí bez přestání, tančí s výrazem soustředění, které nepřísluší slavnostem.*
+*Malá náves z udusané hlíny. Uprostřed stojí vysoká májka s mnoha zavěšenými stuhami, které se třepetají ve větru — ale stuhy jsou protřepané, místy protřené na tenkou nit. Kolem základny jsou do země vyšlapané kruhy — ne pouhé stopy, ale skutečné prohlubeniny, jako by tu někdo tančil tisíckrát na přesně stejném místě. A taky že jo, lidé tu tančí. Tančí bez přestání, tančí s výrazem soustředění, které nepřísluší slavnostem.*
 
 *Trochu stranou stojí muž a žena, ruku v ruce. Sledují tanečníky. Při vašem příchodu se otočí — a ještě než muž doříkne pozdrav, otočí se ke ženě a šepne jí něco do ucha. Ona se zasměje a přitiskne se k němu. Pak se oba znovu podívají na vás.*
 
-*U základny májky sedí starý muž. Sedí rovně, ruce na kolenou, oči otevřené. Usmívá se. Nevypadá to, jako by čekal — vypadá to, jako by přišel a pak zapomněl, že chtěl odejít.*
+*U základny májky, uvnitř kruhu tanečníků, sedí starý muž. Sedí rovně, ruce na kolenou, oči otevřené. Usmívá se. Nevypadá to, jako by čekal — vypadá to, jako by přišel a pak zapomněl, že chtěl odejít.*
 
 **Poznámky pro DM:**
 Tanečníci tančí nepřetržitě — Blaho se u nich projevilo jako neschopnost přestat. Když se unaví, prostě se zhroutí na místě a usnou. Po dvaceti minutách se probudí a pokračují, jako by se nic nestalo. Nikoho to nepřekvapuje.
@@ -111,8 +111,6 @@ Tanečníci tančí nepřetržitě — Blaho se u nich projevilo jako neschopnos
 Ivan a Lucie jsou obsessivně zamilovaný pár (Blaho = euforická láska). Dokáží poskytnout informace, ale každých pár vět se přeruší, aby si vzájemně vyznali lásku, políbili se nebo se osahali. Komunikace s nimi vyžaduje trpělivost.
 
 **Štrup** je starý muž, který tu sedí u základny májky. Usmívá se, dýchá, nedělá nic jiného. Doslova. Jeho jediný druh komunikace je pomalé pokyvování hlavou. Humorné je, že několik vesničanů na Štrupa odkazuje jako na chlapa, co toho hodně ví.
-
-Na základně májky je vytesán nápis: *„dokud májka stojí, noc končí."* Nikdo ve vesnici ho tam nedal. Starosta Corm říká, že tam vždycky byl — ale nebyl. Zda je to pravdivá stopa, metafora nebo falešná stopa, musí rozhodnout DM. Májka je velmi stará a *něco ji sem chce dostat*.
 
 *Tanečník se jednoduše zhroutí — bez dramatu, bez bolesti — padá doprostřed kroku na zem a za několik vteřin dýchá klidným spánkovým dechem. Po dvaceti minutách vstane, bez dezorientace, bez zaváhání, a pokračuje v tanci přesně z toho místa, kde přestal.*
 
@@ -132,9 +130,9 @@ Na základně májky je vytesán nápis: *„dokud májka stojí, noc končí."*
 ## 3. Hřbitov
 
 **Mechaniky:** Pohřební rituál (bez DC při správném provedení) · DC 10 Hallucination Save (pití vody bez rituálu) · DC 13 Understanding (komunikace přes kouli, viz sekce 6)
-
-*Hřbitov nepřipomíná hřbitov. Připomíná jezero — mělké, klidné, jasně svítící v barvě zářivé tyrkysové. Voda stojí tam, kde by měly být hroby, a skrze její hladinu vidíte pohyb — tisíce drobných světel, pomalých a rytmických, jako medúzy v nočním moři. Vzduch tu stojí. Je tu ticho jiného druhu než v ostatní vesnici — ne prázdné ticho, ale ticho plného prostoru.*
-
+```
+*Hřbitov nepřipomíná hřbitov. připomíná spíše mělké jezero nebo obří kaluž - mělkou, klidnou, jasně svítící v barvě zářivé tyrkysové. Voda stojí tam, kde by měly být hroby, a skrze její hladinu vidíte pohyb - tisíce drobných světel, pomalých a rytmických. Vzduch tu stojí. Je tu ticho, narozdíl oporti zbytku vesnice. Jedná se o ticho které zní jako krásná melodie, připomínající matčinu ukolébavku. Ano, ticho někdy hraje a teď si to uvědomujete.*
+```
 **Poznámky pro DM:**
 Vesničané vytvořili vlastní pohřební rituál — *transformativní vdechnutí druhého bytí*, jak ho sami nazývají. Je to kouzelný proces, jehož výsledkem jsou světelné medúzy, které tvoří tento hřbitov. Počet medúz nelze napočítat.
 
@@ -161,6 +159,7 @@ Kroky jsou nutné všechny. Formuli rituálu je obecně znám ve vesnici — moh
 
 - Pití vody: *Voda je studená. Nemá žádnou chuť. A ihned poté přichází pocit, jako by vám někdo naslouchal — něco velmi velkého a velmi tichého.*
 - Hráč, který vypil vodu, může použít křišťálovou kouli (sekce 6)
+
 
 ---
 

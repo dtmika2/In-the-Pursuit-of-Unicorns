@@ -60,6 +60,43 @@ Zásoby jídla a klíč
 
 ## 11 - Výzkumná laboratoř
 
+#### Záznam v deníku
+
+*Hypotéza: Za to, co místní krajané nazívají Blažeností, může výroba a užití Elektrolitu užitého pro výrobu a distribuci energie.*
+
+*Den 1: Úspešně se mi podařilo rozbít uschovaný Ereborit v Elektrolit*
+
+*Den 7: Stále se mi nedaří vyrobit přesnou směs Elektrolitu.*
+
+*Den 9: Vynesl jsem více autentických vzorků. Má skrytá cesta ven vedoucí ze šaten k ke stříbrnému dubu pod skalou se osvědčuje.*
+
+*Den 11: Sláva, vzorek 6 dokázal spustit lampičku na mém stole.*
+
+*Den 16: Ulovil jsem zdravého kolibříka, snad bude stačit.*
+
+*D*en 26: Kolibřík v kleci je vystaven výparům Elektrolitu již desátým dnem. Nepozoruji žádnou změnu.*
+
+*Den 44: Včera jsem začal mít pocit, že se Fred - kolibřík - začíná chovat trochu zvláštně.. A proboha. Byla to jen předzvěst hrůz, které začali dnes ráno. Alfred, tedy kolibřík, se začal věšet na bidýlku vzhůru nohama, poté začal klovat kolem sebe jako kdyby lovil neviditelné zrní - podotýkám, že kolibříci nezobají zrní - poté začal chodit po své malé klícce po nožkách, jako naparující se kohout. Je to jisté - způsobili jsme změnu mentálního i fyzického stavu celé krajiny. Způsobujeme Blaho.*
+
+*Den 45: Výroba Elektrolitu musí být zastavena.*
+
+*Den 58: Sláva, konečně jsem vytvořil destilát, který v přímněsi s Elektrolitem reaguje... Explozivně.*
+
+*Den 62: Vymyslel jsem plán, jak výrobu přeruším. Smažu z existence tohoto světa.*
+
+*Den 63: Přišli na mě. Nevím kdo, ani jak. Všichni jsou bezduší. Nikdo už nedbal na mé náhlé odchody skrz tunel v úpatí hory ústící pod tím zvláštním dubem se stříbrnými žaludy. Skoro jsem se přestal hlídat, nebyl důvod. Ale dnes jsem cítil, že na mě divně zírají. Musím zmizet. Na plánku jsem si nechal stručný postup v poznámkách. Bude muset stačit!*
+*Kdokoli kdo čte můj deník! Prosím, napravte mé prohřešky.* 
+
+#### Poznámky na zadní straně plánku budovy 
+
+*Na víc si zpaměti nevzpomenu. Tenhle nákres musí stačit. V kontrolní místnosti je detiální plán výrobního procesu, kouknu se na něj až dorazím.*
+
+*Myslím, že jsem zůstal poslední, jediný. Všichni ostatní se proměnili v přízraky, kopie sebe samých.*
+
+*Opakuji. Řešení je jednoduché. Přimíchat kapku vzroku BC-544 do každé z odpadních kontaminačních nádob. Nastane chemická reakce, která trvá asi 20 minut, poté nastane nesmírná exploze. Vše vyletí do povětří.*
+
+*Jestli ale chci zamezit kontaminaci celé krajiny, první se musí zastavit zprosecovač Elektrolitu! Jen a pouze tehdy může nastat výbuch!*
+
 ## 12 - Finální místnost s pojistnými opatřeními proti vetřelcům
 
 Vyřaditelné mlýnským kolem.
