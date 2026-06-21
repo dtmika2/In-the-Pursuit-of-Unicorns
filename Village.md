@@ -10,7 +10,7 @@
 
 Vesničané vědí, kde jednorožci jsou. Bylo to obecně známé, než Blaho pohltilo každodenní paměť. Cílem skupiny je tuto informaci znovu odkrýt - a existují čtyři cesty, jak toho dosáhnout.
 
-Jednorožci se nachází u **Leského jezera**. Jakmile hráči zjistí tuto odpověď jakýmkoliv způsobem, kdokoli ve vesnici jim potvrdí cestu - to nikdo nezapomněl.
+Jednorožci se nachází u **Lesklého jezera**. Jakmile hráči zjistí tuto odpověď jakýmkoliv způsobem, kdokoli ve vesnici jim potvrdí cestu - to nikdo nezapomněl.
 
 ### Inspirace za zbytečné dobré skutky
 
@@ -102,7 +102,7 @@ Pokud hráči vesničany vyvedou i poté, co už lokaci jednorožců znají z ji
 
 | Jméno     | Kdo jsou                                           | Co vědí                                                                          |
 | --------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Leské jezero      |
+| Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Lesklé jezero      |
 | Měchomura | Korkokůže žena, kůže jako kůra stromu              | Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu                      |
 | Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Korma; ví, že Vilhéma je Kormova sestřenice; ví, že Blahodan odešel dobrovolně; zná jeho psa Žolíka jménem |
 
@@ -348,7 +348,7 @@ Vilhéma mu položí ruku na rameno a tiše řekne jeho jméno. Korm na chvíli 
 
 Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: 
 ```
-„Stádo jednorožců, kde touto dobou přebývá? samozřejmě! To přece všichni vědí, ne snad? I já. Dobře svůj kraj znám. Jsou u Jezera. Proč se ptáte?"
+„Stádo jednorožců, kde touto dobou přebývá? samozřejmě! To přece všichni vědí, ne snad? I já. Dobře svůj kraj znám. Jsou u Lesklého Jezera. Proč se ptáte?"
 ```
 Nerozumí, proč by tato informace mohla být důležitá.
 
