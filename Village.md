@@ -78,7 +78,7 @@ Zdá se, že přes to, jak je jeskyně mělká, její drobný nejzazší bod - d
 - **DC 12 Instinct** - při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.
 
 ```
-Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech. A najednou k vám promluví! "Nojo, tak to víte. Nejsem kámen. Ale všichni si to myslí! Už i já si tak zvykl, že jsem si to skoro začal myslet. Jsem červ, obří červ. Alespoň soudě dle toho, jaký název pro tvora jako jsem já v hlavě nosíte. Ano čtu vám myšlenky. A taky vidím, že hledáte jiného tvora - Jednorožce. Pozoruhodná stvoření. Mohl bych vám je pomoci najít. Když pomůžete vy mě. To víte, před 8 týdny jsem spolkl něco, co mě ne a ne strávit. Vlezte do mě a vyřešte to! 
+Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech. A najednou k vám promluví! "Nojo, tak to víte. Nejsem kámen. Ale všichni si to myslí! Už i já si tak zvykl, že jsem si to skoro začal myslet. Jsem červ, obří červ. Alespoň soudě dle toho, jaký název pro tvora jako jsem já v hlavě nosíte. Ano čtu vám myšlenky. A taky vidím, že hledáte jiného tvora - Jednorožce. Pozoruhodná stvoření. Mohl bych vám je pomoci najít. Když pomůžete vy mě. To víte, před 8 týdny jsem spolkl něco, co mě ne a ne strávit. Vlezte do mě a vyřešte to!" 
 ```
 
 #### Dovnitř: extrakce tří vesničanů
@@ -217,7 +217,7 @@ Brennan je **primárním zdrojem prvních indicií** pro skupinu při příchodu
 Když se skupina zeptá Brennena na lokaci jednorožců:
 
 ```
-Jo, haha, tak to vskutku netuším. Poptejte se po vesnici. Náš starosta Korm by mohl vědět víc, ale ten je zalezlej ve svojí tvrzy kterou neopouští - zkuste se stavit za Vilhémou, přeci jen, je to Kormova sestřenka. Štrup je taky chytrej chlapík, ten ví skoro všechno. Vilhém ve věži toho neví moc, ale to málo co ví, je to co ostaní většinou neví. Jo a kdybych na někoho měl vsadit, tak to bude Blahodan, ten lišák jeden chlupatá. Náš místní stopař. Problém je, že před několika týdny zmizel a my nemáme jiného stopaře, který by ho vystopoval. Jestli někdo bude vědět kde je Blahodan, bude to támhle Alchoven. Všechno si zapisuje. Fakticky, všechno! A vím, že dokud byl ještě Blahodan ve vsi, občas spolu pojíeli a hráli v kostky.
+Jo, haha, tak to vskutku netuším. Poptejte se po vesnici. Náš starosta Korm by mohl vědět víc, ale ten je zalezlej ve svojí tvrzy kterou neopouští - zkuste se stavit za Vilhémou, přeci jen, je to Kormova sestřenka. A nebo si zkuste promluvit rovnou s Horáciem, velitelem Kormovo stráží. Přeci jen, tvrz máte po cestě k návsi. Určitě najděte Štrupa. Štrup je taky chytrej chlapík, ten ví skoro všechno. Vilhém ve věži toho neví moc, ale to málo co ví, je to co ostaní většinou neví. Jo a kdybych na někoho měl vsadit, tak to bude Blahodan, ten lišák jeden chlupatá. Náš místní stopař. Problém je, že před několika týdny zmizel a my nemáme jiného stopaře, který by ho vystopoval. Jestli někdo bude vědět kde je Blahodan, bude to támhle Alchoven. Všechno si zapisuje. Fakticky, všechno! A vím, že dokud byl ještě Blahodan ve vsi, občas spolu pojíeli a hráli v kostky.
 ```
 
 **Blahodan (Cesta 4):** Brennan zmíní místního stopaře Blahodana - na první pohled nejjistější zdroj o jednorožcích, protože je to jeho práce. Zmizel před osmi nebo více týdny. Brennan rovnou pošle hráče za Alchovenem, který s ním dřív pojídal a hrál kostky a možná ví víc. Více v sekci 9 (Blahodanův dům - slepá ulička).
@@ -274,7 +274,7 @@ Indicie, ze kterých si hráči mohou tuto pravdu poskládat:
 
 - **Brennan:** Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé
 - **Ivan & Lucie:** Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví, protože se jim rozhovor zase zvrtl v líbání
-- **Serrina:** Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř. "Že je prý snad někdo zradil"
+- **Serrina:** Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř. "Že je prý snad někdo zradil! Povídali mi, že prý každej může vypadat jako já. Že Serrina může být každej druhej. Kde prý že můžou brát jistotu, že já jsem já. Blázni. Takové jednání si vyprošuju, jenom já jsem přeci já! Až se s Kormem setkám, bude třeba mu vysvětlit, že vesnice musí mít nějakou štábní kluturu!"
 - **Vilhéma:** Viděla Korma venku u studně minulý týden
 - **Samotná stráž:** Lze je buď odposlouchávat nebo číst myšlenky a oni sami předají info o tom, co se skutečně stalo
 
@@ -346,7 +346,11 @@ Korm odpoví na cokoliv okamžitě a s radostí - jenže se mu pozornost rozplyn
 Vilhéma mu položí ruku na rameno a tiše řekne jeho jméno. Korm na chvíli ztichne, podívá se na ni - a poprvé od chvíle, co jste vešli, jeho pohled neuhne.
 ```
 
-Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: *„Leské jezero, samozřejmě! To přece všichni vědí. Proč se ptáte?"* Nerozumí, proč by tato informace mohla být důležitá.
+Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: 
+```
+„Stádo jednorožců, kde touto dobou přebývá? samozřejmě! To přece všichni vědí, ne snad? I já. Dobře svůj kraj znám. Jsou u Jezera. Proč se ptáte?"
+```
+Nerozumí, proč by tato informace mohla být důležitá.
 
 Pokud hráči dovedou Vilhému ke Kormovi i poté, co lokaci jednorožců už znají odjinud - prostě proto, aby se sestřenice po tak dlouhé době znovu setkaly - odměňte to Inspirací (viz Přehled).
 
