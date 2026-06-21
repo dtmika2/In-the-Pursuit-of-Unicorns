@@ -21,7 +21,7 @@ Jednorožci se nachází u **Leského jezera**. Jakmile hráči zjistí tuto odp
 | ----------------------- | ---------------------------- | ----------------------- | ----- |
 | **1. Červ**             | Průzkum + sociální           | Jeskyně-Svatyně         | 1     |
 | **2. Křišťálová Koule** | Rituál + řetězec lokací      | Věž → Hřbitov → Farma   | 3 a 6 |
-| **3. Starosta Corm**    | Překážka + třídní schopnosti | Tvrz                    | 5     |
+| **3. Starosta Korm**    | Překážka + třídní schopnosti | Tvrz                    | 5     |
 | **4. Stopař**           | Stopování + průzkum          | Taverna → Potutelný Les | 4 a 9 |
 
 
@@ -32,18 +32,18 @@ Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Všechny vedou 
 ## Síť indicií - Kdo ví co
 
 
-| NPC / Lokace                 | Cesta 1 (Červ)                                  | Cesta 2 (Koule)                                     | Cesta 3 (Corm)                                    | Cesta 4 (Stopař)                                             |
-| ---------------------------- | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------ |
-| Brennan (Taverna)            | Zmíní tři pohřešované vesničany                 | Ví o existenci koule ve věži, neví jak ji aktivovat | Corm se zabarikádoval - přibližně 6 týdnů         | Stopař odešel před 8 týdny do lesa - nikdo nevěděl proč      |
-| Věkoslav (Alchymista)        | -                                               | Koule potřebuje vodu z hřbitova; viděl ji aktivní   | -                                                 | -                                                            |
-| Ivan & Lucie (Nádvoří)       | Pohřešovaní s nimi tančívali                    | Hřbitov se pravidelně využívá; znají rituál         | Tvrz se uzavřela asi před 6 týdny                 | -                                                            |
-| Farmář (Farma)               | -                                               | Zná pohřební rituál - je vesničanům obecně znám     | -                                                 | -                                                            |
-| Serrina (Hazardní hráčka)    | -                                               | -                                                   | Přišla za Cormem s obchodem, nedostala se dovnitř | -                                                            |
-| Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                 | Zápisky zmiňují odchod stopaře                               |
-| Pip - Dívka na Farmě         | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                 | -                                                            |
-| Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                 | Viděl stopaře odcházet; *„šel rychle, jako když někde hoří"* |
-| Vilhéma (Tkalcovna)          | -                                               | Zná pohřební rituál; může vysvětlit formuli         | Viděla Corma venku u studně minulý týden          | Zná stopaře a jeho trasy; *„vždy chodil ke starému buku"*    |
-| Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Znají všechny čtyři cesty                         | Vren zná stopaře - ví přibližně kudy chodí do lesa           |
+| NPC / Lokace                 | Cesta 1 (Červ)                                  | Cesta 2 (Koule)                                     | Cesta 3 (Korm)                                                                                                                        | Cesta 4 (Stopař)                                             |
+| ---------------------------- | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Brennan (Taverna)            | Zmíní tři pohřešované vesničany                 | Ví o existenci koule ve věži, neví jak ji aktivovat | Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé                                                            | Stopař odešel před 8 týdny do lesa - nikdo nevěděl proč      |
+| Věkoslav (Alchymista)        | -                                               | Koule potřebuje vodu z hřbitova; viděl ji aktivní   | -                                                                                                                                     | -                                                            |
+| Ivan & Lucie (Nádvoří)       | Pohřešovaní s nimi tančívali                    | Hřbitov se pravidelně využívá; znají rituál         | Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví                                                | -                                                            |
+| Farmář (Farma)               | -                                               | Zná pohřební rituál - je vesničanům obecně znám     | -                                                                                                                                     | -                                                            |
+| Serrina (Hazardní hráčka)    | -                                               | -                                                   | Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř                                                       | -                                                            |
+| Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                                                                                                     | Zápisky zmiňují odchod stopaře                               |
+| Pip - Dívka na Farmě         | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                                                                                                     | -                                                            |
+| Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                                                                                                     | Viděl stopaře odcházet; *„šel rychle, jako když někde hoří"* |
+| Vilhéma (Tkalcovna)          | -                                               | Zná pohřební rituál; může vysvětlit formuli         | Je jeho sestřenice; ví, že (na rozdíl od toho, co se ve vsi říká) tvrz pořád občas opouští - viděla ho minulý týden u studně za tvrzí | Zná stopaře a jeho trasy; *„vždy chodil ke starému buku"*    |
+| Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Vren ví, že Vilhéma je Kormova sestřenice                                                                                             | Vren zná stopaře - ví přibližně kudy chodí do lesa           |
 
 
 ---
@@ -74,7 +74,7 @@ Zdá se, že přes to, jak je jeskyně mělká, její drobný nejzazší bod - d
 - **DC 12 Instinct** - při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.
 
 ```
-Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech.
+Také 
 ```
 
 #### Dovnitř: extrakce tří vesničanů
@@ -90,11 +90,11 @@ Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíč
 - **DC 8 Understanding of Universe / Empathy** / **Insight / Stoicism** na přesvědčení každého, aby odešel. Každý potřebuje **dva úspěchy**. Při neúspěchu vesničan souhlasí - a pak si sedne zpátky. Hrajte to jako absurdní komedii, ne jako trest.
 
 
-| Jméno     | Kdo jsou                                           | Co vědí                                                                     |
-| --------- | -------------------------------------------------- | --------------------------------------------------------------------------- |
-| Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Leské jezero |
-| Měchomura | Korkokůže žena, kůže jako kůra stromu              | Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu                 |
-| Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Corma; ví, kde Corm nosí klíč; ví, že stopař odešel dobrovolně          |
+| Jméno     | Kdo jsou                                           | Co vědí                                                                          |
+| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Leské jezero      |
+| Měchomura | Korkokůže žena, kůže jako kůra stromu              | Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu                      |
+| Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Korma; ví, že Vilhéma je Kormova sestřenice; ví, že stopař odešel dobrovolně |
 
 
 ```
@@ -112,11 +112,11 @@ Malá náves z udusané hlíny. Uprostřed stojí vysoká májka s mnoha zavěš
 ```
 
 ```
-Trochu stranou stojí muž a žena, ruku v ruce. Sledují tanečníky. Při vašem příchodu se otočí - a ještě než muž doříkne pozdrav, otočí se ke ženě a šepne jí něco do ucha. Ona se zasměje a přitiskne se k němu. Pak se oba znovu podívají na vás.
+U základny májky, uvnitř kruhu tanečníků, sedí starý muž. Sedí rovně, ruce na kolenou, oči otevřené. Usmívá se. Nevypadá to, jako by čekal - vypadá to, jako by přišel a pak zapomněl, že chtěl odejít.
 ```
 
 ```
-U základny májky, uvnitř kruhu tanečníků, sedí starý muž. Sedí rovně, ruce na kolenou, oči otevřené. Usmívá se. Nevypadá to, jako by čekal - vypadá to, jako by přišel a pak zapomněl, že chtěl odejít.
+Trochu stranou stojí muž a žena, ruku v ruce. Sledují tanečníky. Při vašem příchodu se otočí - a ještě než muž dořekne pozdrav, otočí se ke ženě a šepne jí něco do ucha. Ona se zasměje a přitiskne se k němu. Pak se oba znovu podívají na vás a konečně vás pozdraví.
 ```
 
 **Poznámky pro DM:**
@@ -134,7 +134,7 @@ Tanečník se jednoduše zhroutí - bez dramatu, bez bolesti - padá doprostřed
 
 - Tři pohřešovaní vesničané s nimi tančívali - zmizeli před osmi týdny
 - Hřbitov se pravidelně využívá; pohřební rituál znají a mohou ho vysvětlit
-- Tvrz se uzavřela asi před šesti týdny; posádka přestala normálně odpovídat
+- Tvrz se uzavřela asi před šesti týdny; posádka přestala normálně odpovídat - někdo je údajně zradil
 
 **Co ví Štrup:**
 
@@ -218,7 +218,7 @@ U jednoho stolu sedí tři:
 | Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC (+ Cunningness)                                                   | Co vědí / Co mají                                                            |
 | -------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | Alchoven | Učeň; píše dokumentaci o komkoli, kdo sedí naproti                                           | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; zápisky zmiňují odchod stopaře |
-| Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Cormem, nedostala se do tvrze; ví o uzavřené posádce               |
+| Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Kormem, nedostala se do tvrze; ví o uzavřené posádce               |
 | Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Utkvělá představa, že má vždy pravdu                | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                   |
 
 
@@ -233,43 +233,100 @@ Výhry jsou malé, ale reálné:
 
 ## 5. Tvrz
 
-**Mechaniky:** Více přístupů - viz tabulka · Starosta Corm zná lokaci jednorožců · DC 11 Perception (Corm venku)
+**Mechaniky:** Síť indicií (proč je tvrz zavřená) → přístupy do tvrze (přesvědčení/mimik/loutka riskují přepad) · DC 12 zvrácení přepadu (výhoda se znalostí pravdy) · Vilhéma nutná k uklidnění Korma · DC 11 Perception (Korm venku)
 
 ```
 Kamenná tvrz na okraji vesnice. Těžká, stará, stavěná pro vážnou obranu. Padací most je zdvižen. Ve střílnách je pohyb - oči, které sledují. Když se přiblížíte, ozývá se zevnitř tlumené křičení.
 ```
 
 **Poznámky pro DM:**
-V tvrzi žije **Stařešina Starosta Corm**. Corm trpí demencí - Blaho u něj zesiluje zapomínání. Ví, že je důležitý. Nepamatuje si proč. Občas mu vytane z minulosti úryvek vzpomínky, pak ho zahodí: *„Ach, to. Ano. To bylo něco."*
+V tvrzi žije **Stařešina Starosta Korm**. Korm trpí demencí - Blaho u něj zesiluje zapomínání. Ví, že je důležitý. Nepamatuje si proč. Občas mu vytane z minulosti úryvek vzpomínky, pak ho zahodí: *„Ach, to. Ano. To bylo něco."*
 
-Corm se ovšem sám neuvěznil. Uzavřela ho posádka. Dvanáct vojáků se před šesti týdny zavřelo dovnitř, protože se obávají, že je vesnice kompromitována - jejich Blaho je paranoia. Nejsou tak úplně mimo. Na cizince nereagují.
+Korm se ovšem sám neuvěznil. Uzavřela ho posádka. Dvanáct vojáků se před šesti týdny zavřelo dovnitř, protože se obávají, že je vesnice kompromitována - jejich Blaho je paranoia. Nejsou tak úplně mimo. Na cizince nereagují.
 
-**Corm zná lokaci jednorožců.** Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: *„Leské jezero, samozřejmě! To přece všichni vědí. Proč se ptáte?"* Nerozumí, proč by tato informace mohla být důležitá.
+#### Co se semlelo před šesti týdny
 
-Corm má v kapse klíč od postranní branky - nepamatuje si, k čemu slouží. Pokud se ho hráči zeptají, co má v kapsách, klíč jim dá bez váhání.
+Tohle vesničané nikomu neřeknou přímo - hráči si to musí poskládat ze Sítě indicií, případně to uslyší ve fragmentech, pokud se s posádkou pustí do rozhovoru (viz "Had" v tabulce přístupů níže).
 
-**Pozorování:** Corm tu a tam zapomene na varování posádky a vyjde sám ven, nejčastěji ke studni. **DC 11 Perception** při delším sledování tvrze - hráči ho zahlédnou venku. Pokud ho osloví, dostanou lokaci jednorožců bez nutnosti vstoupit do tvrze.
+Pravda: jeden z vojáků si na krátkou chvíli nepoznal tvář svého spolubojovníka - jeho vlastní Blaho je drobný výpadek paměti. Ostatní to vzali jako důkaz, že se mezi ně vetřelo něco, co nosí lidské tváře a umí přesvědčit ty, co je dobře znají, aby udělali něco, co by jinak nikdy neudělali. Od té doby nikomu nevěří - ani starým známým, jako je Serrina. Posádka o tom mezi sebou nemluví nahlas, ale paniku neumí udržet úplně v sobě.
+
+Tahle poslední věta je důležitá pro hru: posádka se nebojí cizinců jako takových. Bojí se přesně toho, čeho jsou hráči schopní - namluvit jim, předstírat někoho známého, donutit je k něčemu, co nechtěli. Bez téhle znalosti vede "snadná" cesta dovnitř přímo do pasti (viz "Přístupy do tvrze" a "Za branou" níže).
+
+Indicie, ze kterých si hráči mohou tuto pravdu poskládat:
+
+- **Brennan:** Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé
+- **Ivan & Lucie:** Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví - 
+- **Serrina:** Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř. "Že je prý snad někdo zradil"
+- **Vilhéma:** Viděla Korma venku u studně minulý týden
+- **Samotná stráž:** Lze je buď odposlouchávat nebo číst myšlenky a oni sami předají info o tom, co se skutečně stalo
+
+#### Vilhéma: jediná, kdo Korma uklidní
+
+Ve vsi se obecně věří, že Korm tvrz vůbec neopouští - posádka je zavřená, takže logicky i on. Není to pravda, a jediná, kdo to ví jistě, je jeho sestřenice **Vilhéma** (sekce 10), o jejichž příbuzenství skoro nikdo nemluví - další obyčejná věc, kterou Blaho připravilo o váhu. Pokud se jí hráči zeptají na Korma s upřímným zájmem, řekne jim:
+
+```
+„Ale kdepak, kdeže... Samozřejmě že Korm opouští tvrz, zrovna onehdy jsem ho viděla u studny za tvrzí. Když jsem sbírala pampelišky na barvení."
+```
+
+Hráči se o vztahu mohou dozvědět i od **Vrena** (sekce 1, "ví, že Vilhéma je Kormova sestřenice").
+
+Tohle je důležité ze dvou důvodů: potvrzuje, že "Korm venku" (níže) je reálná cesta, a navíc znamená, že **Vilhéma je jediná, kdo umí Korma uklidnit natolik, aby odpověděl souvisle** (viz "Korm: jak ho udržet při odpovědi" níže). Pokud ji hráči poprosí, aby šla s nimi, souhlasí ihned - bojí se o něj.
+
+**Pozorování:** Korm tu a tam zapomene na varování posádky a vyjde sám ven, nejčastěji ke studni za tvrzí. **DC 11 Perception** při delším sledování tvrze - hráči ho zahlédnou venku, nebo se to dozví od Vilhémy. Tahle cesta obchází stráž i riziko přepadu úplně - ale Korm je stále tentýž zapomnětlivý stařík; bez Vilhémy u sebe stejně neudrží myšlenku dost dlouho na odpověď.
 
 ```
 Řetězy zaskřípí. Padací most se pomalu spouští - váhavě, jako mechanismus překvapený vlastní funkcí. Když dosedne, vojáci na druhé straně se zadívají ven. Jejich výraz ještě nemá jméno: úleva a nedůvěra ve stejnou chvíli.
 ```
 
+#### Přístupy do tvrze
+
+Ne všechny přístupy jsou stejně bezpečné - tři z nich jsou nebezpečnější, než vypadají.
+
+
+| Metoda             | Kdo              | Poznámky                                                                                                                                                   |
+| ------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Přesvědčení        | Kdokoli          | DC 17; posádka vás nakonec pustí dovnitř - a přesně proto na vás čeká přepad (viz "Za branou" níže)                                                        |
+| Had (Beast Form)   | Shapeshifter     | Automatický vstup střílnou; voják uvnitř se lekne; vede k napjaté negociaci skrze zeď - žádný přepad, ale odtud může uniknout fragment pravdy o "vetřelci" |
+| Puppet / Telepatie | Dreamcaster      | Automaticky přinutí vojáka spustit most; posádka přesně viděla, jak je někdo donutil udělat něco, co nechtěli - vede rovnou k přepadu (viz "Za branou")    |
+| Mimic vojáka       | Shapeshifter     | DC 14 Persuasion; pokud uspěje, posádka vás vezme za jednoho ze svých - což je přesně ten scénář, kterého se děsí, a vede rovnou k přepadu                 |
+| Korm venku         | Perception DC 11 | Vyžaduje vědět, že chodí ke studni (Vilhéma), nebo samostatný DC 11 Perception; obchází stráž i riziko přepadu úplně                                       |
+
+
+#### Za branou: přepad
+
+Přesvědčení, Puppet/Telepatie a Mimic vojáka mají jedno společné: posádku přiměly udělat něco, co neplánovala - přesně to, čeho se od uzávěrky bojí. Ať byl vstupní hod jakkoli skvělý, jakmile jsou hráči uvnitř, posádka je odvede zdánlivě ke Kormovi a místo toho spustí přepad.
+
+```
+Chodba se zužuje a najednou už nejste sami - vojáci jsou všude kolem vás, blíž než je zdvořilé, zbraně dole, ale ruce na jilcích. Jeden z nich konečně promluví, hlas napůl omluvný, napůl vyděšený: "Vy jste se sem dostali až moc snadno. To je přesně to, co nás děsí."
+```
+
+Nejde o boj na smrt - posádka chce vetřelce zajmout a vyslechnout, ne pobít vlastní vesničany. Čisté zbraně, sítě, přesila.
+
+**DC 12 Insight / Persuasion** na zvrácení situace - hráči musí prokázat, že nejsou to, čeho se bojí. Pokud znají pravdu o vojákovi, který si nepoznal tvář kamaráda (viz "Co se semlelo před šesti týdny"), mají na hodu výhodu - umí jmenovat přesně to, co posádka tajila, a tím dokázat, že nejsou žádná hrozba.
+
+- **Úspěch:** Stráž klesne, omluví se, neklidně je doprovodí ke Kormovi.
+- **Neúspěch:** Krátká, nebezpečná šarvátka nebo zajetí - hráči se ke Kormovi nakonec dostanou (svázaní, pod dohledem), ale draze.
+
+Had a Korm venku se tomuto přepadu vyhýbají úplně - Had proto, že nikdy nepředstíral, že je někdo známý, Korm venku proto, že se s posádkou vůbec nesetkají.
+
 ```
 Stařec ve velkém křesle. Má starostovskou šerpu přes košili, která potřebovala vyprat už před pár dny. Vzhlédne k vám s nepospíchanou vřelostí někoho, kdo nikam nespěchá a přijde mu, že jste opravdu zajímaví. „Důležití hosté!" říká. „Věděl jsem, že někdo přijde. Čekal jsem... na něco." Odmlčí se. „Na co jsem čekal?"
 ```
 
-#### Přístupy do tvrze
+#### Korm: jak ho udržet při odpovědi
 
+Korm odpoví na cokoliv okamžitě a s radostí - jenže se mu pozornost rozplyne během vteřin. **Bez Vilhémy to nejde.** Ať hráči zkusí cokoliv a kolikrát chtějí, žádný hod nezabere - prostě vždycky odbočí. Hrajte to naplno, ne jako trest:
 
-| Metoda                  | Kdo                               | Poznámky                                                                                                    |
-| ----------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Přesvědčení             | Kdokoli                           | DC 17 - posádka je paranoidní a cizincům nevěří                                                             |
-| Had (Beast Form)        | Shapeshifter                      | Automatický vstup střílnou; voják uvnitř se lekne; vede k napjaté negotiaci skrze zeď                       |
-| Puppet / Telepatie      | Dreamcaster                       | Automaticky přinutí vojáka spustit most; posádka ví, co se stalo - jsou naštvaní i vděční ve stejnou chvíli |
-| Postranní branka + klíč | Investigation DC 13 + Cormův klíč | Branka existuje; posádka o ní neví; Corm má klíč a dá ho ochotně, pokud se zeptáte                          |
-| Mimic vojáka            | Shapeshifter                      | DC 14 Persuasion - posádka porovnává s někým, koho osobně zná                                               |
-| Corm venku              | Perception DC 11                  | Blaho: Corm tu a tam na zákaz vyjití zapomene a vydá se ke studni                                           |
+- *„Ach, studna! Já tam chodím docela rád. Počkat... co jste se to ptali?"*
+- *„Vy mi připomínáte mého synovce. Měl jsem synovce? Měl jsem syna. Měl jsem něco."*
 
+**S Vilhémou v místnosti** se to změní okamžitě - žádný hod není potřeba. Stačí, že je tam, řekne mu jméno nebo se ho dotkne, a Korm se na chvíli zklidní a soustředí, jako by ho něco ukotvilo:
+
+```
+Vilhéma mu položí ruku na rameno a tiše řekne jeho jméno. Korm na chvíli ztichne, podívá se na ni - a poprvé od chvíle, co jste vešli, jeho pohled neuhne.
+```
+
+Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: *„Leské jezero, samozřejmě! To přece všichni vědí. Proč se ptáte?"* Nerozumí, proč by tato informace mohla být důležitá.
 
 ---
 
@@ -392,7 +449,7 @@ Vilhéma je **dobrý zdroj informací** - je všímavá a ráda mluví. Bydlí t
 
 - Zná stopaře a jeho obvyklé trasy do lesa; *„vždy chodil tamhle, ke starému buku"* - konkrétní indicie pro tracking v sekci 9
 - Pohřební rituál zná a účastnila se ho mnohokrát; může vysvětlit formuli
-- Všimla si, že Corm tu a tam vychází ke studni - viděla ho minulý týden venku sám
+- **Je Kormova sestřenice** - málokdo o tom ví. Ve vsi se říká, že tvrz nikdy neopouští, ale Vilhéma ví, že to není pravda: *„Ale kdepak, kdeže... Samozřejmě že Korm opouští tvrz, zrovna onehdy jsem ho viděla u studny za tvrzí. Když jsem sbírala pampelišky na barvení."* Pokud se jí hráči zeptají na Korma s upřímným zájmem, vztah i tohle prozradí. Bojí se o něj a nabídne se jít s nimi - viz sekce 5, jen ona ho umí uklidnit natolik, aby odpověděl souvisle
 
 **Hazardní hra v Taverně:** viz sekce 4. Hráči mohou sázet proti třem různým soupeřům s různými obtížnostmi a motivacemi.
 
