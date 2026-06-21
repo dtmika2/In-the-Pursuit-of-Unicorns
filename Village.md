@@ -74,10 +74,14 @@ Zdá se, že přes to, jak je jeskyně mělká, její drobný nejzazší bod - d
 - **DC 12 Instinct** - při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.
 
 ```
-Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech. A najednou k vám promluví! 
+Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech. A najednou k vám promluví! "Nojo, tak to víte. Nejsem kámen. Ale všichni si to myslí! Už i já si tak zvykl, že jsem si to skoro začal myslet. Jsem červ, obří červ. Alespoň soudě dle toho, jaký název pro tvora jako jsem já v hlavě nosíte. Ano čtu vám myšlenky. A taky vidím, že hledáte jiného tvora - Jednorožce. Pozoruhodná stvoření. Mohl bych vám je pomoci najít. Když pomůžete vy mě. To víte, před 8 týdny jsem spolkl něco, co mě ne a ne strávit. Vlezte do mě a vyřešte to! 
 ```
 
 #### Dovnitř: extrakce tří vesničanů
+
+```
+Uvnitř je horko a vlhko. Stěny se lesknou tenkou vrstvou čehosi na pomezí slin, pavučiny a tenoučkého skla. Každým nádechem se k vám line těžká vůně - sladká, trochu zkažená, jako staré ovoce smíchané s bahnem. Hluboko uvnitř to bublá a praská. Když dýchá, zeď se k vám na okamžik přitiskne - teplá, živá, a pak se zase odtáhne.
+```
 
 Hráči mohou do chřtánu vlízt. Stěny chřtánu jsou teplé a rytmicky se svírají - stejný patnáctivteřinový rytmus, který hráči mohli pozorovat na svících. Červ spolupracuje a snaží se kontrakce zadržet, když cítí pohyb, ale nedokáže to plně ovládat. Pokud postavy přijdou na to, že se mají kupředu hýbat jen když se červ nadechuje, je následující DC nižší, jinak je 15.
 
