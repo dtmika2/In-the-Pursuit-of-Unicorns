@@ -233,7 +233,7 @@ U jednoho stolu sedí tři:
 
 | Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC (+ Cunningness)                                                   | Co vědí / Co mají                                                                                                                                     |
 | -------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Alchoven | Učeň; píše dokumentaci o komkoli, kdo sedí naproti                                           | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; neví, kde je Blahodan, ale slyšel před pár dny vyt jeho psa Žolíka u Blahodanova domu - zná lokaci domu |
+| Alchoven | Učeň; "píše dokumentaci o, no, kupodivu právě zrovna o vás!"                                 | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; neví, kde je Blahodan, ale slyšel před pár dny vyt jeho psa Žolíka u Blahodanova domu - zná lokaci domu |
 | Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Kormem, nedostala se do tvrze; ví o uzavřené posádce                                                                                        |
 | Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Utkvělá představa, že má vždy pravdu                | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                                                                                            |
 
@@ -347,9 +347,11 @@ Vilhéma mu položí ruku na rameno a tiše řekne jeho jméno. Korm na chvíli 
 ```
 
 Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: 
+
 ```
 „Stádo jednorožců, kde touto dobou přebývá? samozřejmě! To přece všichni vědí, ne snad? I já. Dobře svůj kraj znám. Jsou u Lesklého Jezera. Proč se ptáte?"
 ```
+
 Nerozumí, proč by tato informace mohla být důležitá.
 
 Pokud hráči dovedou Vilhému ke Kormovi i poté, co lokaci jednorožců už znají odjinud - prostě proto, aby se sestřenice po tak dlouhé době znovu setkaly - odměňte to Inspirací (viz Přehled).
@@ -504,7 +506,15 @@ Vilhéma je **dobrý zdroj informací** - je všímavá a ráda mluví. Bydlí t
 
 ## Vedlejší úkol
 
-*(Obsah zatím není připraven. DM dopíše dle vlastního uvážení.)*
+#### Vilhéma
+
+Zlatíčka. Já bych na vás ovšem měla osobní prosbu. Vpadá te jako skupina náramných dobrodruhů, která se toulá po světě a všech jeho zajímvých zákoutích. No podívejte - mé příze jsou hebké a nádherné! Ale mohli by být ještě krásnější. Slyšela jsem vyprávění o hluboce modré růži. Tak modré, že by jí sám oceán záviděl. Tato růže údajně roste uvnitř ve skalách. Hluboko v jeskyních. Vyjímečně tam, kam slunko prosvitne. Prosím, dobrodruzy! Kdyby jste na tuto růži narazili, doneste mi ji! Zkusím z ní bravu vyextrahovat.. A i kdyby se mi to nepodařilo. Inu, nebude úžasné jen tuto bravu spatřit? Věřím, že ano.
+A nebojte, samozřejmě, že si pro vás připravím odměnu. Naše rodina pečuje o Červánkovou ves již mnoho generací a to s sebou nese jisté benefity. Ano, no ano. Třeba tato pečeť, kterou jsem zdědila. Tu vám daruji. Je to vynález mého pra pra strýce. Teď už utíkejte. Podívejte, jak je venku krásně! (Díky té budete umět rozumět jakékoli řeči, se kterou se setkáte).
+
+#### Věkoslav
+
+Ještě než mě opustíte, záhadní návštěvníci. Neexistuje v mém životě nic duležitějšího, než mé umění. A v hlavě se mi rodí mistrovské dílo. Ale abych jej dosáhl, potřebuji velmi vzácnou ingredienci. Agáta Caelum Nocturnum Rosa. Růži noční oblohy. Tahle růže roste jen vzácně, za zvláštních podmínek, které skoro nikdy nenastávají. Poroste jen v jeskyni, ale zároveň jen na slunečním světle. Zázrak, že? Narazíte-li na tuto růži - určitě ji poznáte - je modrá jako, ach.. Jako noční obloha kterou už si nepamatuji. Nicméně, přineste mi ji a já se vám vřele odvděčím! 
+Nedávno jsem namíchal tonikum, u něhož věřím, že se bude hodit více vám, než mě! Jedná se o tekutinu, které vzplane, když na ni někdo zašeptá! A pak ji nelze uhasit! Hoří, dokud sama sebe nevyčerpá. Nejvtipnější je, že jsem ji vyrobil z jahod! Prostých jahod. No ano. No, a také se špetkou vodničího trusu. 
 
 ---
 
