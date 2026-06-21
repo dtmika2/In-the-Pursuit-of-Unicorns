@@ -1,5 +1,7 @@
 # Laboratoř a sochařská dílna
 
+[https://www.youtube.com/watch?v=gImPWxleXso&list=RDgImPWxleXso&start_radio=1](https://www.youtube.com/watch?v=gImPWxleXso&list=RDgImPWxleXso&start_radio=1)
+
 ## 0 - Přístav
 
 *Ukotvili jste svou loďku na břehu skyrté jeskyně. Od vody sem vane teplý vítr, ve vzduchu cítíte vlhko a dusno. Cítíte ovšem také hřejivý pocit klidu a bezpečí. Je téměř jasné, že o tomto místě víte pouze vy - a kdosi, kdo zde vybudoval pozoruhodnou stavbu. Ano - před vámi je molo a pár dřevěných sloupků, malý přístav a v něm několik beden, polic a truhel. Ovšem, fascinující je roh budovy, který se postupně zapouští hluboko do kamene zdejší skály. Do budouvy vede jediný, skromný vstup skrz dřevěné dveře v přístavu. Po vaší pravé ruce vidíte ve vodě otočený vrak člunu a za ním točící se mlýnské kolo*
@@ -87,7 +89,7 @@ Zásoby jídla a klíč
 *Den 63: Přišli na mě. Nevím kdo, ani jak. Všichni jsou bezduší. Nikdo už nedbal na mé náhlé odchody skrz tunel v úpatí hory ústící pod tím zvláštním dubem se stříbrnými žaludy. Skoro jsem se přestal hlídat, nebyl důvod. Ale dnes jsem cítil, že na mě divně zírají. Musím zmizet. Na plánku jsem si nechal stručný postup v poznámkách. Bude muset stačit!*
 *Kdokoli kdo čte můj deník! Prosím, napravte mé prohřešky.* 
 
-#### Poznámky na zadní straně plánku budovy 
+#### Poznámky na zadní straně plánku budovy
 
 *Na víc si zpaměti nevzpomenu. Tenhle nákres musí stačit. V kontrolní místnosti je detiální plán výrobního procesu, kouknu se na něj až dorazím.*
 
@@ -123,3 +125,4 @@ Vyřaditelné mlýnským kolem.
 **c) Provaz je red harring - ale pokud bude skupina vynalézavá, mohou ho použít.**
 
 ## 15 - Skladiště odpadních tekutin
+

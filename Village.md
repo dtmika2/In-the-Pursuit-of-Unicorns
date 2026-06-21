@@ -40,7 +40,7 @@ Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Všechny vedou 
 | Farmář (Farma)               | -                                               | Zná pohřební rituál - je vesničanům obecně znám     | -                                                 | -                                                            |
 | Serrina (Hazardní hráčka)    | -                                               | -                                                   | Přišla za Cormem s obchodem, nedostala se dovnitř | -                                                            |
 | Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                 | Zápisky zmiňují odchod stopaře                               |
-| Dívka na Farmě               | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                 | -                                                            |
+| Pip - Dívka na Farmě         | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                 | -                                                            |
 | Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                 | Viděl stopaře odcházet; *„šel rychle, jako když někde hoří"* |
 | Vilhéma (Tkalcovna)          | -                                               | Zná pohřební rituál; může vysvětlit formuli         | Viděla Corma venku u studně minulý týden          | Zná stopaře a jeho trasy; *„vždy chodil ke starému buku"*    |
 | Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Znají všechny čtyři cesty                         | Vren zná stopaře - ví přibližně kudy chodí do lesa           |
@@ -202,7 +202,7 @@ V taverně u Zabejčeného kozla není ani hluk, ani ticho. Uvnitř je jen pár 
 **Poznámky pro DM:**
 Hostinský **Brennan** se neustále směje - tiše, vytrvale, bez příčiny (Blaho = nekonečný smích). Je to trochu znepokojivé, ale Brennan je plně funkční a pohostinný. Jídlo a pití jsou zdarma. Nikdo neplatí. Nikomu to nevadí.
 
-Brennan je **primárním zdrojem prvních indicií** pro skupinu při příchodu do vesnice. Ví o křišťálové kouli ve věži. Ví, že tři vesničané zmizeli před osmi týdny. Ví, že stopař odešel a nevrátil se. Pohřební rituál zná jako každý jiný.
+Brennan je **primárním zdrojem prvních indicií** pro skupinu při příchodu do vesnice. Nemá mnoho informací, ale dokáže nasměrovat na lidi s informacemi. "jo, haha, poptejte se po vesnici." Nasměruje např. na Věkoslava, na Štrupena nebo Vilhému.
 
 **Stopař (Cesta 4):** Brennan zmíní místního stopaře - byl by nejjistější zdroj o jednorožcích, protože je to jeho práce. Odešel do lesa před osmi nebo více týdny a nikdy se nevrátil. To neznamená, že je k nenalezení - jen je těžké ho najít. Více v sekci 9 (Vstup do Potutelného Lesa).
 
@@ -215,11 +215,11 @@ Váš pohár ještě není prázdný. Brennan je tu - a dolévá ho po okraj. Us
 U jednoho stolu sedí tři:
 
 
-| Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC                                                                   | Co vědí / Co mají                                                            |
+| Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC (+ Cunningness)                                                   | Co vědí / Co mají                                                            |
 | -------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | Alchoven | Učeň; píše dokumentaci o komkoli, kdo sedí naproti                                           | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; zápisky zmiňují odchod stopaře |
 | Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Cormem, nedostala se do tvrze; ví o uzavřené posádce               |
-| Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Bezdůvodná spokojenost                              | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                   |
+| Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Utkvělá představa, že má vždy pravdu                | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                   |
 
 
 Alchoven píše dokumentaci o komkoli, kdo sedí naproti. Pokud si hráči sednou k němu, začne dokumentovat je. Předchozí zápisky z posledních týdnů mohou obsahovat užitečné postřehy - DM rozhodne, co přesně Alchoven zaznamenal.
@@ -327,7 +327,7 @@ Dívka Pipa. Její Blaho je absence strachu - přibližuje se ke zbraním, magii
 **Mechaniky:** Šafránek nejprve klasifikuje hráče; nákup bez DC
 
 ```
-Vývěsní štít je vybledlý, ale stále čitelný: hvězda a ruka. Zevnitř vychází vůně kadidla a něčeho kovového. Za zaprášeným sklem jsou regály s drobnými předměty, seřazenými s péčí - spíš jako sbírka než obchod. Za pultem sedí starší člověk, který třídí kameny z krabice a tiše si brouká. Nevzhlédne.
+Vývěsní štít je vybledlý, ale stále čitelný: je na mě vyobrazena hvězda a ruka a nad nimi nápis "Kouzelné Arefakty z Daleka i Blízka". Zevnitř vychází vůně kadidla a něčeho kovového, podobně jako chutná krev. Za zaprášeným sklem jsou regály s drobnými předměty, seřazenými s péčí - police s předměty působí jako sbírka než obchodní nabídka. Za pultem sedí starší člověk, který třídí kameny z místa na místo a tiše si při tom brouká. "Dva modrý lazulity doprava, jeden rudej rubín doleva. A tři modrý lazulity doprava."
 ```
 
 **Poznámky pro DM:**
@@ -340,13 +340,14 @@ Majitel je **Šafránek** (bez příjmení; věk: pokročilý; pohlaví: DM). Bl
 #### Zboží
 
 
-| Předmět             | Popis                                       | Efekt                                                                                  |
-| ------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Kamenek klidu       | Hladký šedý kámen                           | Žádný efekt (DC 14 Arcana to potvrdí); Šafránek považuje jeho hladkost za důkaz kouzla |
-| Svíčka bez plamene  | Svíčka, která nikdy nebyla zapálena         | V naprosté tmě vydává tlumené světlo (3 m); **skutečně funguje**                       |
-| Šňůra pravdy        | Červená nit                                 | Šafránek tvrdí, že chrání před nechtěnými lžemi; žádný efekt                           |
-| Láhev šeptů         | Zapečetěná lahvička; po otevření tiše šeptá | DC 18 Insight / Folklore k pochopení původní zprávy; DM rozhodne obsah                 |
-| Prsten nedospělosti | Malý prsten                                 | Hlas nositele zní mírně mladší; efekt subtilní, ale funkční                            |
+| Předmět                                     | Popis                                                                                                    | Efekt                                                                                                          | Cena      |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | --------- |
+| Kamenek klidu                               | Opravdu hladký šedý kámen                                                                                | Žádný efekt (DC 14 Arcana to potvrdí); Šafránek považuje jeho hladkost za důkaz kouzla                         | 140 grošů |
+| Svíčka z čeného vosku, kterou nelze zapálit | Svíčka z čeného vosku, kterou nelze zapálit                                                              | Svíčka, která umí pohltit světlo z okolního prostředí v rozsahu 10 metrů                                       | 90 grošů  |
+| Šňůra pravdy                                | Červená nit, která se třiptí zlatými odlesky, ale natažená pod určitými úhly není vidět, jako by zmizela | Nit je pevná jako skála, nedá se přetrhnout.                                                                   | 112 grošů |
+| Láhev šeptů                                 | Zapečetěná lahvička; po otevření tiše šeptá                                                              | DC 14 Insight / Folklore / Understending of Universe k pochopení původní zprávy; láhev vypraví starověké vtipy | 55 grošů  |
+| Klobouk nedospělosti                        | Myslivecký klobouk se třemi ptačími pery - sojčím, havraním a pelikáním                                  | Hlas nositele zní mírně mladší; efekt subtilní, ale funkční                                                    | 230 grošů |
+| Prsteny lepších partnerských vztahů         | Malý prsten                                                                                              | Nositelé navzájem vědí, když ten druhý lže, při odpovědi na otázku "jak se dnes máš?"                          | 109 grošů |
 
 
 ---
@@ -410,3 +411,17 @@ Vilhéma je **dobrý zdroj informací** - je všímavá a ráda mluví. Bydlí t
 ---
 
  *Bůh mnoha tváří - Ztělesnění všech ras a pohlaví uvnitř jedné bytosti. Lidé věří, že bůh mnoha tváří v sobě nese kus duše každého živého tvora, který právě žije. Setkat se s bohem mnoha tváří tedy znamená zjistit, zda je aktuální populace planety spíše dobrá nebo spíše zlá, spíše malicherná nebo skromná - a tak dále. Bůh mnoha tváří tedy není nijaký - je jen takový, jací jsou všichni lidé naráz.*
+
+*Vtipy z kouzelné lahvičky:*
+
+Bylo nebylo, za sedmero horami žilo sedm trpaslíků, asociálů.  
+Za každou horou jeden.
+
+Melichar praví: „Jak jsem slíbil, pane králi, v tomhle pytli jsou tři dračí hlavy.“   
+Král Balzhatar: „I já své slovo dodržím, v tomhle pytli je ruka princezny.“
+
+Víš, co to znamená, když drak sežere lidi, ale nechá hlavy?  
+Drží bezlebkovou dietu.
+
+Naštvaný král Balzhatar si přivolá kuchaře Maška.  
+„Ano, říkal jsem, že chci, aby z kouzelného hada nic nechybělo, ale tu napůl strávenou myš jsi z něj mohl vyvrhnout!“
