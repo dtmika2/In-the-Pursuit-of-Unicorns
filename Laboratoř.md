@@ -52,7 +52,7 @@ Zde hinty k tomu, komu ubytování patří - zjevné, že jen jedna postava. A s
 
 ## 8 - Sochařský ateliér
 
-Poznámka s: "Příště bych měl jít sochat do zahrady, na slunce. Už to odkládám dlouho a vždy je mi tam na vzduchu o trochu lépe"
+Poznámka s: "Příště bych měl jít sochat do zahrady, na slunce. Už to odkládám dlouho a vždy je mi tam na vzduchu o trochu lépe. Má krásná růže mě výborně inspiruje.."
 
 ## 9 - Zahrada (zdobná i na pěstování)
 
