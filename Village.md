@@ -21,11 +21,11 @@ Vesnice je plná dílčích problémů (trápící se ovce, uvězlí vesničané
 ## Čtyři cesty k jednorožcům
 
 
-| Cesta                   | Mechanika                    | Klíčové lokace          | Sekce |
-| ----------------------- | ---------------------------- | ----------------------- | ----- |
-| **1. Červ**             | Průzkum + sociální           | Jeskyně-Svatyně         | 1     |
-| **2. Křišťálová Koule** | Rituál + řetězec lokací      | Věž → Hřbitov → Farma   | 3 a 6 |
-| **3. Starosta Korm**    | Překážka + třídní schopnosti | Tvrz                    | 5     |
+| Cesta                   | Mechanika                          | Klíčové lokace           | Sekce |
+| ----------------------- | ---------------------------------- | ------------------------ | ----- |
+| **1. Červ**             | Průzkum + sociální                 | Jeskyně-Svatyně          | 1     |
+| **2. Křišťálová Koule** | Rituál + řetězec lokací            | Věž → Hřbitov → Farma    | 3 a 6 |
+| **3. Starosta Korm**    | Překážka + třídní schopnosti       | Tvrz                     | 5     |
 | **4. Blahodan**         | Stopování + průzkum (slepá ulička) | Taverna → Blahodanův dům | 4 a 9 |
 
 
@@ -36,18 +36,18 @@ Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Tři z nich ved
 ## Síť indicií - Kdo ví co
 
 
-| NPC / Lokace                 | Cesta 1 (Červ)                                  | Cesta 2 (Koule)                                     | Cesta 3 (Korm)                                                                                                                        | Cesta 4 (Blahodan)                                                              |
-| ---------------------------- | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Brennan (Taverna)            | Zmíní tři pohřešované vesničany                 | Ví o existenci koule ve věži, neví jak ji aktivovat | Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé                                                            | Blahodan odešel před 8 týdny - nikdo nevěděl proč; pošle hráče za Alchovenem      |
+| NPC / Lokace                 | Cesta 1 (Červ)                                  | Cesta 2 (Koule)                                     | Cesta 3 (Korm)                                                                                                                        | Cesta 4 (Blahodan)                                                                 |
+| ---------------------------- | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Brennan (Taverna)            | Zmíní tři pohřešované vesničany                 | Ví o existenci koule ve věži, neví jak ji aktivovat | Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé                                                            | Blahodan odešel před 8 týdny - nikdo nevěděl proč; pošle hráče za Alchovenem       |
 | Věkoslav (Alchymista)        | -                                               | Koule potřebuje vodu z hřbitova; viděl ji aktivní   | -                                                                                                                                     | -                                                                                  |
 | Ivan & Lucie (Nádvoří)       | Pohřešovaní s nimi tančívali                    | Hřbitov se pravidelně využívá; znají rituál         | Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví                                                | -                                                                                  |
 | Farmář (Farma)               | -                                               | Zná pohřební rituál - je vesničanům obecně znám     | -                                                                                                                                     | -                                                                                  |
 | Serrina (Hazardní hráčka)    | -                                               | -                                                   | Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř                                                       | -                                                                                  |
-| Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                                                                                                     | Neví, kde Blahodan je, ale slyšel jeho psa vyt - zná lokaci Blahodanova domu      |
+| Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                                                                                                     | Neví, kde Blahodan je, ale slyšel jeho psa vyt - zná lokaci Blahodanova domu       |
 | Pip - Dívka na Farmě         | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                                                                                                     | -                                                                                  |
-| Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                                                                                                     | Viděl Blahodana odcházet; *„šel rychle, jako když někde hoří"*                    |
+| Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                                                                                                     | Viděl Blahodana odcházet; *„šel rychle, jako když někde hoří"*                     |
 | Vilhéma (Tkalcovna)          | -                                               | Zná pohřební rituál; může vysvětlit formuli         | Je jeho sestřenice; ví, že (na rozdíl od toho, co se ve vsi říká) tvrz pořád občas opouští - viděla ho minulý týden u studně za tvrzí | Ví, že Blahodanovo Blaho je deprese a pití - varuje, že to nebude radostné setkání |
-| Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Vren ví, že Vilhéma je Kormova sestřenice                                                                                             | Vren zná Blahodanova psa Žolíka jménem - pes ho poslechne                         |
+| Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Vren ví, že Vilhéma je Kormova sestřenice                                                                                             | Vren zná Blahodanova psa Žolíka jménem - pes ho poslechne                          |
 
 
 ---
@@ -100,10 +100,10 @@ Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíč
 Pokud hráči vesničany vyvedou i poté, co už lokaci jednorožců znají z jiné cesty, je to čistě dobrý skutek navíc - odměňte ho Inspirací (viz Přehled).
 
 
-| Jméno     | Kdo jsou                                           | Co vědí                                                                          |
-| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Lesklé jezero      |
-| Měchomura | Korkokůže žena, kůže jako kůra stromu              | Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu                      |
+| Jméno     | Kdo jsou                                           | Co vědí                                                                                                        |
+| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Lesklé jezero                                   |
+| Měchomura | Korkokůže žena, kůže jako kůra stromu              | Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu                                                    |
 | Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Korma; ví, že Vilhéma je Kormova sestřenice; ví, že Blahodan odešel dobrovolně; zná jeho psa Žolíka jménem |
 
 
@@ -231,11 +231,11 @@ Váš pohár ještě není prázdný. Brennan je tu - a dolévá ho po okraj. Us
 U jednoho stolu sedí tři:
 
 
-| Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC (+ Cunningness)                                                   | Co vědí / Co mají                                                            |
-| -------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC (+ Cunningness)                                                   | Co vědí / Co mají                                                                                                                                     |
+| -------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Alchoven | Učeň; píše dokumentaci o komkoli, kdo sedí naproti                                           | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; neví, kde je Blahodan, ale slyšel před pár dny vyt jeho psa Žolíka u Blahodanova domu - zná lokaci domu |
-| Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Kormem, nedostala se do tvrze; ví o uzavřené posádce               |
-| Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Utkvělá představa, že má vždy pravdu                | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                   |
+| Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Kormem, nedostala se do tvrze; ví o uzavřené posádce                                                                                        |
+| Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Utkvělá představa, že má vždy pravdu                | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                                                                                            |
 
 
 Alchoven píše dokumentaci o komkoli, kdo sedí naproti. Pokud si hráči sednou k němu, začne dokumentovat je. Předchozí zápisky z posledních týdnů mohou obsahovat užitečné postřehy - DM rozhodne, co přesně Alchoven zaznamenal.
@@ -368,6 +368,10 @@ Strážní věž stojí uprostřed vesnice - ne na jejím okraji, kde by stráž
 Nikdo ve vesnici si nepamatuje, proč věž stojí uprostřed ani proč ji vesnice vůbec má. Na vesnici nikdo desítky let nezaútočil. Stráž udržuje oheň ze zvyku.
 
 V věži se usídlil vesnický alchymista **Věkoslav** (DM může přejmenovat). Blaho = estetická obsese - nemůže přestat tvořit. Vaří alchymické směsi: z ptačích drápků, rozemletých křišťálů, wolframové rudy, spálených houbových jíšek. Žádná z nich není poživatelná - jedná se o výtvarný materiál - alchymista tyto směsy míchá a patlá do prostředí, z čehož vznikají abstraktní a surealistické objekty. Výsledné objekty pokrývají každou vertikální plochu věže. Věkoslav odpovídá ochotně, ale mezi každé dvě věty vloží nadšený popis svého aktuálního projektu.
+
+```
+Můžete pozorovat jak alchymista, vaří různá tonika - lektvary z ptačích pracek, nadrcené křišťály, roztavená tungstenová ruda, spálené houbové jíšky... Žádný z těchto lektvarů není poživatelný - všechny jsou určeny k umělecké tvorbě - něco se promění v pevnou homotu, něco naopak nikdy neusychá a vždy teče. Něco roste a boptná, jiné pojídá své okolí.
+```
 
 **Věkoslav ví:** křišťálová koule je na vrcholu věže; párkrát ji viděl aktivní; naposledy, co si pamatuje, byl těsně předtím pro vodu na hřbitově - a pak se to stalo. Může naučit pohřební rituál, pokud ho hráči potřebují.
 
