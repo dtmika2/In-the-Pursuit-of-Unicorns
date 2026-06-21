@@ -74,7 +74,7 @@ Zdá se, že přes to, jak je jeskyně mělká, její drobný nejzazší bod - d
 - **DC 12 Instinct** - při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.
 
 ```
-Také 
+Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech. A najednou k vám promluví! 
 ```
 
 #### Dovnitř: extrakce tří vesničanů
@@ -204,6 +204,12 @@ Hostinský **Brennan** se neustále směje - tiše, vytrvale, bez příčiny (Bl
 
 Brennan je **primárním zdrojem prvních indicií** pro skupinu při příchodu do vesnice. Nemá mnoho informací, ale dokáže nasměrovat na lidi s informacemi. "jo, haha, poptejte se po vesnici." Nasměruje např. na Věkoslava, na Štrupena nebo Vilhému.
 
+Když se skupina zeptá Brennena na lokaci jednorožců:
+
+```
+Jo, haha, tak to vskutku netuším. Poptejte se po vesnici. Náš starosta Korm by mohl vědět víc, ale ten je zalezlej ve svojí tvrzy kterou neopouští - zkuste se stavit za Vilhémou, přeci jen, je to Kormova sestřenka. Štrup je taky chytrej chlapík, ten ví skoro všechno. Vilhém ve věži toho neví moc, ale to málo co ví, je to co ostaní většinou neví. Jo a kdybych na někoho měl vsadit, tak to bude Blahodan, ten lišák jeden chlupatá. Náš místní stopař. Problém je, že před několika týdny zmizel a my nemáme jiného stopaře, který by ho vystopoval. Jestli někdo bude vědět kde je Blahodan, bude to támhle Alchoven. Všechno si zapisuje. Fakticky, všechno! A vím, že dokud byl ještě Blahodan ve vsi, občas spolu pojíeli a hráli v kostky.
+```
+
 **Stopař (Cesta 4):** Brennan zmíní místního stopaře - byl by nejjistější zdroj o jednorožcích, protože je to jeho práce. Odešel do lesa před osmi nebo více týdny a nikdy se nevrátil. To neznamená, že je k nenalezení - jen je těžké ho najít. Více v sekci 9 (Vstup do Potutelného Lesa).
 
 ```
@@ -255,7 +261,7 @@ Tahle poslední věta je důležitá pro hru: posádka se nebojí cizinců jako 
 Indicie, ze kterých si hráči mohou tuto pravdu poskládat:
 
 - **Brennan:** Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé
-- **Ivan & Lucie:** Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví - 
+- **Ivan & Lucie:** Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví, protože se jim rozhovor zase zvrtl v líbání
 - **Serrina:** Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř. "Že je prý snad někdo zradil"
 - **Vilhéma:** Viděla Korma venku u studně minulý týden
 - **Samotná stráž:** Lze je buď odposlouchávat nebo číst myšlenky a oni sami předají info o tom, co se skutečně stalo
