@@ -12,6 +12,10 @@ Vesničané vědí, kde jednorožci jsou. Bylo to obecně známé, než Blaho po
 
 Jednorožci se nachází u **Leského jezera**. Jakmile hráči zjistí tuto odpověď jakýmkoliv způsobem, kdokoli ve vesnici jim potvrdí cestu - to nikdo nezapomněl.
 
+### Inspirace za zbytečné dobré skutky
+
+Vesnice je plná dílčích problémů (trápící se ovce, uvězlí vesničané v červu, opilý Blahodan, vyděšená posádka), které hráči nemusí řešit, aby se dostali k odpovědi - zvlášť pokud lokaci jednorožců zjistí jinou cestou dřív. Pokud se do nich pustí i tak, **odměňte to Inspirací** (nebo ekvivalentem ve vašem systému). Nemá to být zbytečné - i dobrý skutek navíc by se měl cítit odměněný. Konkrétní místa jsou označená níže.
+
 ---
 
 ## Čtyři cesty k jednorožcům
@@ -22,28 +26,28 @@ Jednorožci se nachází u **Leského jezera**. Jakmile hráči zjistí tuto odp
 | **1. Červ**             | Průzkum + sociální           | Jeskyně-Svatyně         | 1     |
 | **2. Křišťálová Koule** | Rituál + řetězec lokací      | Věž → Hřbitov → Farma   | 3 a 6 |
 | **3. Starosta Korm**    | Překážka + třídní schopnosti | Tvrz                    | 5     |
-| **4. Stopař**           | Stopování + průzkum          | Taverna → Potutelný Les | 4 a 9 |
+| **4. Blahodan**         | Stopování + průzkum (slepá ulička) | Taverna → Blahodanův dům | 4 a 9 |
 
 
-Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Všechny vedou ke stejné odpovědi.
+Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Tři z nich vedou ke stejné odpovědi - čtvrtá (Blahodan) je úmyslná slepá ulička, která hráče vrátí zpátky k ostatním cestám. Je to ta nejsnazší a nejpřímější na první pohled, což je důvod, proč ji Brennan nabídne jako první.
 
 ---
 
 ## Síť indicií - Kdo ví co
 
 
-| NPC / Lokace                 | Cesta 1 (Červ)                                  | Cesta 2 (Koule)                                     | Cesta 3 (Korm)                                                                                                                        | Cesta 4 (Stopař)                                             |
-| ---------------------------- | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Brennan (Taverna)            | Zmíní tři pohřešované vesničany                 | Ví o existenci koule ve věži, neví jak ji aktivovat | Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé                                                            | Stopař odešel před 8 týdny do lesa - nikdo nevěděl proč      |
-| Věkoslav (Alchymista)        | -                                               | Koule potřebuje vodu z hřbitova; viděl ji aktivní   | -                                                                                                                                     | -                                                            |
-| Ivan & Lucie (Nádvoří)       | Pohřešovaní s nimi tančívali                    | Hřbitov se pravidelně využívá; znají rituál         | Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví                                                | -                                                            |
-| Farmář (Farma)               | -                                               | Zná pohřební rituál - je vesničanům obecně znám     | -                                                                                                                                     | -                                                            |
-| Serrina (Hazardní hráčka)    | -                                               | -                                                   | Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř                                                       | -                                                            |
-| Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                                                                                                     | Zápisky zmiňují odchod stopaře                               |
-| Pip - Dívka na Farmě         | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                                                                                                     | -                                                            |
-| Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                                                                                                     | Viděl stopaře odcházet; *„šel rychle, jako když někde hoří"* |
-| Vilhéma (Tkalcovna)          | -                                               | Zná pohřební rituál; může vysvětlit formuli         | Je jeho sestřenice; ví, že (na rozdíl od toho, co se ve vsi říká) tvrz pořád občas opouští - viděla ho minulý týden u studně za tvrzí | Zná stopaře a jeho trasy; *„vždy chodil ke starému buku"*    |
-| Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Vren ví, že Vilhéma je Kormova sestřenice                                                                                             | Vren zná stopaře - ví přibližně kudy chodí do lesa           |
+| NPC / Lokace                 | Cesta 1 (Červ)                                  | Cesta 2 (Koule)                                     | Cesta 3 (Korm)                                                                                                                        | Cesta 4 (Blahodan)                                                              |
+| ---------------------------- | ----------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Brennan (Taverna)            | Zmíní tři pohřešované vesničany                 | Ví o existenci koule ve věži, neví jak ji aktivovat | Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé                                                            | Blahodan odešel před 8 týdny - nikdo nevěděl proč; pošle hráče za Alchovenem      |
+| Věkoslav (Alchymista)        | -                                               | Koule potřebuje vodu z hřbitova; viděl ji aktivní   | -                                                                                                                                     | -                                                                                  |
+| Ivan & Lucie (Nádvoří)       | Pohřešovaní s nimi tančívali                    | Hřbitov se pravidelně využívá; znají rituál         | Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví                                                | -                                                                                  |
+| Farmář (Farma)               | -                                               | Zná pohřební rituál - je vesničanům obecně znám     | -                                                                                                                                     | -                                                                                  |
+| Serrina (Hazardní hráčka)    | -                                               | -                                                   | Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř                                                       | -                                                                                  |
+| Alchoven (Hazardní hráč)     | Zápisky o pohřešovaných                         | Zápisky zmiňují věž a kouli                         | -                                                                                                                                     | Neví, kde Blahodan je, ale slyšel jeho psa vyt - zná lokaci Blahodanova domu      |
+| Pip - Dívka na Farmě         | *„Ta stará jeskyně se pohybuje"*                | Popsala světla hřbitova                             | -                                                                                                                                     | -                                                                                  |
+| Štrup (Nádvoří)              | -                                               | Viděl záblesk světla z věže                         | -                                                                                                                                     | Viděl Blahodana odcházet; *„šel rychle, jako když někde hoří"*                    |
+| Vilhéma (Tkalcovna)          | -                                               | Zná pohřební rituál; může vysvětlit formuli         | Je jeho sestřenice; ví, že (na rozdíl od toho, co se ve vsi říká) tvrz pořád občas opouští - viděla ho minulý týden u studně za tvrzí | Ví, že Blahodanovo Blaho je deprese a pití - varuje, že to nebude radostné setkání |
+| Sebastián / Měchomura / Vren | Znají všechny čtyři cesty (byli tu před Blahem) | Znají všechny čtyři cesty                           | Vren ví, že Vilhéma je Kormova sestřenice                                                                                             | Vren zná Blahodanova psa Žolíka jménem - pes ho poslechne                         |
 
 
 ---
@@ -93,12 +97,14 @@ Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíč
 
 - **DC 8 Understanding of Universe / Empathy** / **Insight / Stoicism** na přesvědčení každého, aby odešel. Každý potřebuje **dva úspěchy**. Při neúspěchu vesničan souhlasí - a pak si sedne zpátky. Hrajte to jako absurdní komedii, ne jako trest.
 
+Pokud hráči vesničany vyvedou i poté, co už lokaci jednorožců znají z jiné cesty, je to čistě dobrý skutek navíc - odměňte ho Inspirací (viz Přehled).
+
 
 | Jméno     | Kdo jsou                                           | Co vědí                                                                          |
 | --------- | -------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Sebastián | Kronikář vesnice; tichý, pečlivý, trochu zaprášený | Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Leské jezero      |
 | Měchomura | Korkokůže žena, kůže jako kůra stromu              | Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu                      |
-| Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Korma; ví, že Vilhéma je Kormova sestřenice; ví, že stopař odešel dobrovolně |
+| Vren      | Liškorozený chlapec, mlčenlivý a pozorný           | Zná Korma; ví, že Vilhéma je Kormova sestřenice; ví, že Blahodan odešel dobrovolně; zná jeho psa Žolíka jménem |
 
 
 ```
@@ -143,7 +149,7 @@ Tanečník se jednoduše zhroutí - bez dramatu, bez bolesti - padá doprostřed
 **Co ví Štrup:**
 
 - Viděl světlo z věže - neví co to bylo, ale zapamatoval si to (indicie na křišťálovou kouli)
-- Zná stopaře osobně; viděl ho jít do lesa. Pokyne směrem.
+- Zná Blahodana osobně; viděl ho před týdny odcházet směrem k lesu, ale netuší, kde teď je
 
 ---
 
@@ -214,7 +220,7 @@ Když se skupina zeptá Brennena na lokaci jednorožců:
 Jo, haha, tak to vskutku netuším. Poptejte se po vesnici. Náš starosta Korm by mohl vědět víc, ale ten je zalezlej ve svojí tvrzy kterou neopouští - zkuste se stavit za Vilhémou, přeci jen, je to Kormova sestřenka. Štrup je taky chytrej chlapík, ten ví skoro všechno. Vilhém ve věži toho neví moc, ale to málo co ví, je to co ostaní většinou neví. Jo a kdybych na někoho měl vsadit, tak to bude Blahodan, ten lišák jeden chlupatá. Náš místní stopař. Problém je, že před několika týdny zmizel a my nemáme jiného stopaře, který by ho vystopoval. Jestli někdo bude vědět kde je Blahodan, bude to támhle Alchoven. Všechno si zapisuje. Fakticky, všechno! A vím, že dokud byl ještě Blahodan ve vsi, občas spolu pojíeli a hráli v kostky.
 ```
 
-**Stopař (Cesta 4):** Brennan zmíní místního stopaře - byl by nejjistější zdroj o jednorožcích, protože je to jeho práce. Odešel do lesa před osmi nebo více týdny a nikdy se nevrátil. To neznamená, že je k nenalezení - jen je těžké ho najít. Více v sekci 9 (Vstup do Potutelného Lesa).
+**Blahodan (Cesta 4):** Brennan zmíní místního stopaře Blahodana - na první pohled nejjistější zdroj o jednorožcích, protože je to jeho práce. Zmizel před osmi nebo více týdny. Brennan rovnou pošle hráče za Alchovenem, který s ním dřív pojídal a hrál kostky a možná ví víc. Více v sekci 9 (Blahodanův dům - slepá ulička).
 
 ```
 Váš pohár ještě není prázdný. Brennan je tu - a dolévá ho po okraj. Usmívá se, když to dělá. Pohár souseda vedle doleje taky. Nikdo nic neplatí. Nikdo si toho nevšimne. Brennan se pořád směje.
@@ -227,12 +233,14 @@ U jednoho stolu sedí tři:
 
 | Jméno    | Kdo jsou                                                                                     | Blaho                                               | DC (+ Cunningness)                                                   | Co vědí / Co mají                                                            |
 | -------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| Alchoven | Učeň; píše dokumentaci o komkoli, kdo sedí naproti                                           | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; zápisky zmiňují odchod stopaře |
+| Alchoven | Učeň; píše dokumentaci o komkoli, kdo sedí naproti                                           | Nekontrolovatelná dokumentace - nemůže přestat psát | DM d20 - 4                                                           | Zápisky o pohřešovaných; zápisky zmiňují věž; neví, kde je Blahodan, ale slyšel před pár dny vyt jeho psa Žolíka u Blahodanova domu - zná lokaci domu |
 | Serrina  | Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby | Perfekcionistická fixace na standard                | DM d20 + 4                                                           | Přišla za Kormem, nedostala se do tvrze; ví o uzavřené posádce               |
 | Darovan  | Amatérský kouzelník, zatím bez triků, trochu zoufalý                                         | Utkvělá představa, že má vždy pravdu                | DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek | Jednou chtěl studovat u alchymisty ve věži                                   |
 
 
 Alchoven píše dokumentaci o komkoli, kdo sedí naproti. Pokud si hráči sednou k němu, začne dokumentovat je. Předchozí zápisky z posledních týdnů mohou obsahovat užitečné postřehy - DM rozhodne, co přesně Alchoven zaznamenal.
+
+Pokud se ho hráči zeptají na Blahodana, Alchoven je upřímně lituje, že neví, kde je - ale má jednu stopu: *„Kde je, to nevím. Ale slyšel jsem, jak jeho pes Žolík před pár dny vyl u jejich domu. Sám, bez něj. To znamená, že se pes vrátil - a Blahodan ne."* Dům popíše ochotně - je to dobrý začátek pro sekci 9.
 
 **Vedlejší aktivita - Hazardní hra:**
 Výhry jsou malé, ale reálné:
@@ -317,6 +325,8 @@ Nejde o boj na smrt - posádka chce vetřelce zajmout a vyslechnout, ne pobít v
 - **Úspěch:** Stráž klesne, omluví se, neklidně je doprovodí ke Kormovi.
 - **Neúspěch:** Krátká, nebezpečná šarvátka nebo zajetí - hráči se ke Kormovi nakonec dostanou (svázaní, pod dohledem), ale draze.
 
+Pokud se hráči nespokojí s pouhým proklouznutím a posádce skutečně vysvětlí pravdu o vojákovi, který si nepoznal kamaráda - tedy jim natrvalo sundají kámen ze srdce, místo aby jen přežili kontrolu - je to dobrý skutek navíc. Odměňte ho Inspirací (viz Přehled).
+
 Had a Korm venku se tomuto přepadu vyhýbají úplně - Had proto, že nikdy nepředstíral, že je někdo známý, Korm venku proto, že se s posádkou vůbec nesetkají.
 
 ```
@@ -337,6 +347,8 @@ Vilhéma mu položí ruku na rameno a tiše řekne jeho jméno. Korm na chvíli 
 ```
 
 Pokud se ho hráči přímo zeptají, odpoví okamžitě a vesele: *„Leské jezero, samozřejmě! To přece všichni vědí. Proč se ptáte?"* Nerozumí, proč by tato informace mohla být důležitá.
+
+Pokud hráči dovedou Vilhému ke Kormovi i poté, co lokaci jednorožců už znají odjinud - prostě proto, aby se sestřenice po tak dlouhé době znovu setkaly - odměňte to Inspirací (viz Přehled).
 
 ---
 
@@ -376,6 +388,8 @@ Vůně sena a zvířat. Kozy se pohybují po ohradě volně, kolem nástrojů, p
 **Poznámky pro DM:** 
 
 Farmář Parcifal ví, že ovce trpí a že by ji trápení měl zbavit. Nedokáže to ovšem udělat - jeho Blaho je neschopnost uzavírat emocionální cykly. Věc odkládá stále dál. Pokud hráči navrhnou, že to udělají za něj, bude viditelně ulehčen a vděčný. Žádný hod není potřeba - stačí nabídka.
+
+Tohle je dobrý skutek samo o sobě, nezávisle na pohřebním rituálu (sekce 3). Pokud hráči ovci vysvobodí i bez ohledu na křišťálovou kouli - třeba už znají lokaci jednorožců jinou cestou - odměňte to Inspirací (viz Přehled).
 
 Dívka Pipa. Její Blaho je absence strachu - přibližuje se ke zbraním, magii a nebezpečným věcem s čistou zvědavostí. Je to tiše znepokojivé. 
 
@@ -419,28 +433,39 @@ Majitel je **Šafránek** (bez příjmení; věk: pokročilý; pohlaví: DM). Bl
 
 ---
 
-## 9. Vstup do Potutelného Lesa - a Stopař
+## 9. Blahodanův dům - a slepá ulička
 
-**Mechaniky:** DC 12 Instinct (sledovat stopu do lesa) · DC 8 Instinct / Investigation (najít stopaře v lese) · Stopař zná lokaci jednorožců přímo
+**Mechaniky:** DC 8 Investigation/Survival nebo Persuasion/Animal Handling na psa (najít Blahodana) · slepá ulička - Blahodan nemůže odpovědět
+
+Tahle cesta je úmyslně krátká a přímá - je to ta, kterou Brennan nabídne jako první, a má vypadat jako nejsnazší zkratka k odpovědi. Není potřeba žádná gradace navíc; pád přijde sám.
 
 ```
-Za vesnicí, tam kde cesta přestává být cestou, začíná les. Stromy jsou tu jiné než venku - hustší, tišší, starší. Cesta, která sem vede, je vyšlapaná, ale nevypadá, jako by se po ní nedávno chodilo. Přesto jsou tu stopy. Čerstvé. Větve ohnuté tím správným způsobem, zem promáčknutá na správných místech.
+Blahodanův dům stojí kousek od cesty, malý a zarostlý, jako by ho poslední měsíce nikdo neotvíral. Okenice jsou zavřené. U dveří leží vyhrabaná díra do hlíny a v ní pes - hubený, ostražitý, srst slepená blátem. Jakmile vás zahlédne, postaví se, zavětří, a tiše zavrčí. Ne útočně. Spíš jako otázka.
 ```
 
 **Poznámky pro DM:**
-Stopař se jmenuje... (DM pojmenuje). Jeho Blaho je **obsesivní stopování** - před osmi týdny narazil na stopu, jakou v životě neviděl. Jednorožčí stopy. Tak čisté, tak přesné, tak mimořádné, že je od té chvíle sleduje bez přestání. Ví přesně, kde jednorožci jsou - byl tam mnohokrát. Ale nemůže odejít. Nedokáže opustit tu stopu. Pohybuje se v oblasti lesa v okruhu přibližně hodiny chůze od vesnice.
+Blahodanův pes se jmenuje **Žolík**. Vrátil se domů sám před pár dny - vyhublý, sám, bez pána - a od té doby čeká u dveří. Je to on, koho Alchoven slyšel vyt (sekce 4).
 
-Stopař **aktivně nevyhledává kontakt**, ale pokud ho hráči najdou, je přátelský a hovorný - ale při každém rozhovoru znovu odbočí k té stopě, k jejímu tvaru, k hloubce otisku, k rozestupu. Informaci o jednorožcích podá bez problémů: *„Leské jezero. To ví každý, kdo umí číst zem. Tamhle, přes kopec. Jdete tam? Počkejte, ukážu vám tuhle stopu, než půjdete - podívejte se na ten přední levý otisk, to je-"*
+Hráči mají dvě stejně platné možnosti, jak najít Blahodana - obě vedou na stejné místo:
 
-**Mechaniky:**
+- **Animal Handling / Persuasion na Žolíka** (DC 8, nebo automaticky s Speak with Animals) - pes je nedůvěřivý, ale hladový a osamělý; jídlo nebo trpělivost ho přimějí vést hráče.
+- **DC 8 Instinct / Investigation** - čerstvé, bahnité stopy vedou od domu pryč, do malého hájku kousek za vesnicí (ne do Potutelného lesa - tohle je mnohem blíž a mnohem menší).
 
-- **DC 12 Instinct** - sledovat stopu do lesa a neztratit ji; Ranger má výhodu (nebo automatický úspěch dle DM)
-- **DC 8 Instinct / Investigation** - orientovat se v oblasti a najít stopaře; při selhání hráči stráví více času v lese, ale nakonec ho najdou - DM může přidat vedlejší scénu
-- Jakmile je stopař nalezen, informaci podá ochotně; žádný další hod není potřeba
+Jakmile mají směr, vedou je oba způsoby do stejného hájku.
 
 ```
-Vidíte ho dřív, než slyšíte - klečí u kořenů starého buku, prsty lehce přejíždí po zemi. Nevzhlédne hned. Když to udělá, podívá se na vás s výrazem člověka, který právě přerušil nejdůležitější věc na světě. Pak se usmeje. „Ach," říká. „Lidé. Dobré, dobré. Pojďte sem, podívejte se na tohle-"
+Hájek je malý, sotva pár desítek stromů, a páchne kysele - rozlitým, zvětralým alkoholem. Žolík zrychlí, zakňučí a zaboří nos do kupy listí pod jedním z keřů. Tam, schoulený a nehybný, leží Blahodan. Prázdné lahve kolem něj jsou napůl zarostlé do mechu, jako by tu byl už dlouho.
 ```
+
+Blahodanovo Blaho je **deprese** - bezdůvodný, nezvladatelný smutek, který si vybral alkohol jako jediný způsob, jak ho ztlumit. Není to vtipná postava jako ostatní vesničané - hrajte ho tiše a smutně, ne jako gag.
+
+**Tohle je slepá ulička.** Blahodan technicky ví, kde jednorožci jsou - je to jeho práce, byl tam mnohokrát - ale v tomhle stavu z něj nejde nic rozumného dostat. Žádný hod, žádná DC, žádný počet pokusů to nezmění; tady prostě není co řešit, jen co prožít.
+
+```
+Otevře oči, podívá se na vás - ne nepřátelsky, jen prázdně - a zase je zavře. „Jednorožci," zopakuje po vás, jako by to slovo nikdy neslyšel. Pak se otočí k Žolíkovi, položí mu ruku na hlavu, a usne.
+```
+
+Pokud hráči chtějí, mohou ho odvést zpátky do vesnice, nakrmit, postarat se o Žolíka - na hlavní úkol to nemá žádný mechanický dopad (Blahodan zůstává slepou uličkou), ale je to dobrý skutek navíc - odměňte ho Inspirací (viz Přehled). Nasměrujte je zpátky k ostatním cestám (sekce 1, 3 nebo 6).
 
 ---
 
@@ -457,7 +482,7 @@ Vilhéma je **dobrý zdroj informací** - je všímavá a ráda mluví. Bydlí t
 
 **Co ví Vilhéma:**
 
-- Zná stopaře a jeho obvyklé trasy do lesa; *„vždy chodil tamhle, ke starému buku"* - konkrétní indicie pro tracking v sekci 9
+- Zná Blahodana a jeho Blaho - deprese, ze které se propil. Pokud se hráči chystají za ním, varuje je: *„Tomu chudákovi nikdo nepomůže s úsměvem na tváři. Najdete ho, ale nečekejte, že z něj něco rozumného dostanete."*
 - Pohřební rituál zná a účastnila se ho mnohokrát; může vysvětlit formuli
 - **Je Kormova sestřenice** - málokdo o tom ví. Ve vsi se říká, že tvrz nikdy neopouští, ale Vilhéma ví, že to není pravda: *„Ale kdepak, kdeže... Samozřejmě že Korm opouští tvrz, zrovna onehdy jsem ho viděla u studny za tvrzí. Když jsem sbírala pampelišky na barvení."* Pokud se jí hráči zeptají na Korma s upřímným zájmem, vztah i tohle prozradí. Bojí se o něj a nabídne se jít s nimi - viz sekce 5, jen ona ho umí uklidnit natolik, aby odpověděl souvisle
 
