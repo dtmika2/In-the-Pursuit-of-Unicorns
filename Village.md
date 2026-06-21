@@ -278,13 +278,13 @@ Stařec ve velkém křesle. Má starostovskou šerpu přes košili, která potř
 **Mechaniky:** Aktivace koule vyžaduje vodu z hřbitova (po pohřebním rituálu) · DC 13 Understanding / Arcana k formulaci otázky
 
 ```
-Strážní věž stojí uprostřed vesnice - ne na jejím okraji, kde by strážní věž stát měla. Nahoře hoří oheň, udržovaný z důvodů, které si nikdo nepamatuje. Z vyšších pater přichází zvláštní vůně - kyselá, kovová, kvetoucí, chemická, všechno naráz. Dveře jsou otevřené.
+Strážní věž stojí uprostřed vesnice - ne na jejím okraji, kde by strážní věž stát měla. Přesto je na jejím vrcholu udržován oheň, není jisté proč, ale nikdo v okolí to nezpochybňuje. Z nižších pater přichází zvláštní vůně - kyselá, kovová, kvetoucí, chemická, všechno naráz. Dveře jsou otevřené.
 ```
 
 **Poznámky pro DM:**
 Nikdo ve vesnici si nepamatuje, proč věž stojí uprostřed ani proč ji vesnice vůbec má. Na vesnici nikdo desítky let nezaútočil. Stráž udržuje oheň ze zvyku.
 
-V věži se usídlil vesnický alchymista **Věkoslav** (DM může přejmenovat). Blaho = estetická obsese - nemůže přestat tvořit. Vaří alchymické směsi: z ptačích drápků, rozemletých křišťálů, wolframové rudy, spálených houbových jíšek. Žádná z nich není poživatelná - jsou určeny k umělecké tvorbě. Výsledné objekty pokrývají každou horizontální plochu věže. Věkoslav odpovídá ochotně, ale mezi každé dvě věty vloží nadšený popis svého aktuálního projektu.
+V věži se usídlil vesnický alchymista **Věkoslav** (DM může přejmenovat). Blaho = estetická obsese - nemůže přestat tvořit. Vaří alchymické směsi: z ptačích drápků, rozemletých křišťálů, wolframové rudy, spálených houbových jíšek. Žádná z nich není poživatelná - jedná se o výtvarný materiál - alchymista tyto směsy míchá a patlá do prostředí, z čehož vznikají abstraktní a surealistické objekty. Výsledné objekty pokrývají každou vertikální plochu věže. Věkoslav odpovídá ochotně, ale mezi každé dvě věty vloží nadšený popis svého aktuálního projektu.
 
 **Věkoslav ví:** křišťálová koule je na vrcholu věže; párkrát ji viděl aktivní; naposledy, co si pamatuje, byl těsně předtím pro vodu na hřbitově - a pak se to stalo. Může naučit pohřební rituál, pokud ho hráči potřebují.
 
@@ -293,7 +293,7 @@ V věži se usídlil vesnický alchymista **Věkoslav** (DM může přejmenovat)
 Po pohřebním rituálu (viz sekce 3 - Hřbitov) a po vypití vody koule aktivuje most k nově zemřelému. **DC 13 Understanding / Arcana** k tomu, aby otázka byla položena způsobem, jemuž dávný obyvatel rozumí. Jedna otázka na jedno sezení. Odpověď: lokace jednorožců.
 
 ```
-Koule nesvítí - spíš se chvěje světlem. Jako by uvnitř něco dýchalo jazykem, který místo hlásek používá záblesky. Máte pocit - nikoli vidinu - že se to snaží něčeho dosáhnout.
+Koule se rozsvítí světlem, které připomíná odrazy slunce od vodní hladiny. Poté se zdá, jako by začala pulzovat, i přesto že je zřejmé, že je pevně ukotvená na svém piedestálu. Skrze pocity, nikoli sluch či zrak, posloucháte sdělení, které k vám promlouvá. V hlavě každého z vás se zjevuje vidina. Černá plocha. Vlny. Louka. Inkoust. A stádo koní s parožím - jedním rohem ve středu lebky. Pasoucí se na travnaté pláži.
 ```
 
 ---
