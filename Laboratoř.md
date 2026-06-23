@@ -25,8 +25,7 @@
 
 *Místnost je malá a tmavá - a zatopená - a přesto, cosi v ní září. Zlato. Hromada zlata. Mince, poháry, pláty, zdobné zbraně, cihly a pruty. Většina z toho je poškozená kontaktem s vodou, ale tu tam se z hromady dá vyzobat pár kusů, které rozhodně neztratily svou cenu. Je jen otázka, jak je dostat ven ze zavřené pokladnice.*
 
-**Do pokladnice se dostane kdokoli, kdo umí udržet dech pod vodou. Záludností je ovšem fakt, že do pokladnice vedou dveře, které se musí vypáčit, vyrazit nebo jinak prolomit, aby mohl být poklad vynesen. (dovnitř se může dostat někdo i podedveřmi pokud je malý tvor). Klíč ke dveřím se případně nachází ve spižírně mezi obrazy a nalezne jej kdokoli, kdo se rozhodne horní patro obrazů prohledávat.**
-**Nachází se zde dostatek pokladu v hodnotě, aby si skupina mohla koupit jeden kouzelný artefakt ve vesnici.**
+**Do pokladnice se dostane kdokoli, kdo umí udržet dech pod vodou. Záludností je ovšem fakt, že do pokladnice vedou dveře, které se musí vypáčit, vyrazit nebo jinak prolomit, aby mohl být poklad vynesen. (dovnitř se může dostat někdo i podedveřmi pokud je malý tvor). Klíč ke dveřím se případně nachází ve spižírně mezi obrazy a nalezne jej kdokoli, kdo se rozhodne horní patro obrazů prohledávat.** **Nachází se zde dostatek pokladu v hodnotě, aby si skupina mohla koupit jeden kouzelný artefakt ve vesnici. - cca 200 grošů.**
 
 ## 4 - Lázeň
 
@@ -48,17 +47,27 @@
 
 ## 7 - Ložnice
 
-Zde hinty k tomu, komu ubytování patří - zjevné, že jen jedna postava. A stejné znaky jako na kabátu zadavatele celé mise.
+*Vstupujete do útulné, vyhřáté místnosti. Jedná se o ložnici. Ložnici někoho, kdo rád čte, neboť vidíte po stranách hned několik knihoven, plně zaplněných tenkými i tlustými svazky. Většina z nich pojednává o nauce o kameni, krystalech a horninách, chemických látkách, o flóře a nakonec i magii. Mezi knihami je i několik beletristických či poterických kusů, jako například věhlasně známé - údolí lilií, narození bílého muže a nebo havraní hrad. Kromě knih v ložnici není mnoho dekorací, jen honosná postel prázdná truhlice na oblečení a obraz potoka. Nakonec vaše oko však zauje něco známého - nad dveřmi je znak - ten stejný a podivný znak, který na svém kabátě měl onen muž, jenž vás poslal na tuto vaši pouť. Černý kruh, zaplněný rudým polem a v něm 4 vysoké hranaté věže, postupně se zůžující a zleva doprava se zmenšující.* 
+
+**Zde hinty k tomu, komu ubytování patří - zjevné, že jen jedna postava. A stejné znaky jako na kabátu zadavatele celé mise.**
 
 ## 8 - Sochařský ateliér
 
-Poznámka s: "Příště bych měl jít sochat do zahrady, na slunce. Už to odkládám dlouho a vždy je mi tam na vzduchu o trochu lépe. Má krásná růže mě výborně inspiruje.."
+*Tato místnost je ateliérem, zjevně sochažským. Je to snadné usoudit na základě nástrojů - dláta, kladiv, špachtlý různých tvarů, míchadla a kýble špinavé od hlíny... A zejména podle kamení, osekaného a povalujícího se všude kolem. Uprostřed místnosti na podstavci, zdá se být cosi jako rozpracovaná socha, ovšem v příliš brzkém stavu, aby se dalo soudit. Mezi kamenem a podstavcem je však vsunutý kus papíru vytržený z nějakého zápisníku. Stojí na něm: "Příště bych už opravdu měl jít sochat do zahrady, na slunce. Už to odkládám dlouho a vždy je mi tam na vzduchu o trochu lépe. Má krásná růže mě náramně inspiruje..."*
 
 ## 9 - Zahrada (zdobná i na pěstování)
 
+*Procházíte úzkou chodbou, která se postupně mění ve skalní útvar. Už chápete, proč byl ve spojovací chodbě tak čistý vzduch. Otevírá se totiž v otevřenou jeskyni, která má velký průduch ve svém stropě. Proudí sem tak nejen vítr, ale doknce také sluneční paprsky. Obyvatel útočistě tohoto jevu využil naplno - v jeskyni před vámi je krásně udržovaná zahrada. Úvodem do zahrady je dřevěný oblouk porostlý vinnou révou, za ním je několik keřů sestřihaných do tvarů pyramid. Mezi keři stojí nízký strom - citrónovník. Naproti citrónovníku stojí druhý strom, vysoký, Olše. Na samém konci zahrady je několik hnojníků a v nich roste zelenina a bylinky. Zahradě nechybí ani kamené, ručně tesané lavice. A uprostřed toho v malém kroužku obskáldaném oblázky - roste jediná, těžce modrá růže.* 
+
+**Zde hráči mohou nalézt růži potřebnou pro splnění vedlejšího úkolu z vesnice.**
+
 ## 10 - Spižírna a sklad
 
-Zásoby jídla a klíč
+*Místnost do které jste vstoupili má dřevěnou podlahu a voní sladce a kysele. Bude to pravděpodobě tím, že se jedná o spižírnu jídla a některé ovoce zde kvasí. Vypadá to však, že je v policích i dost čerstvého jídla, nepoznamenaného časem. Když zvednete hlavy, všimnete si také, že místnost není pouze spižírnou, ale také skladem - místnost má vlastní mezipatro a v mezipatře je sklad starožitností a uměleckých děl - obrazů, svícnů, byst...*
+
+**V této místnosti se nacházejí dvě užitečné věci - zásoby jídla, pokud by postavám chyběly. Také klíč zapadlý mezi obrazy. Tento klíč slouží k otevření zatopené pokladnice.**
+
+**Nakonec je v místnosti poklad v hodnotě cca 80 grošů, pokud se postavy rozhodnou sbalit s sebou nekteré nepoškozené obrazy a jiné dekorace zde schované.**
 
 ## 11 - Výzkumná laboratoř
 
@@ -101,15 +110,21 @@ Zásoby jídla a klíč
 
 ## 12 - Finální místnost s pojistnými opatřeními proti vetřelcům
 
-Vyřaditelné mlýnským kolem.
+**Celá místnost je vyřaditelné z provozu mlýnským kolem.**
 
-Po cestě zpátky, pokud bude čas - boss fight agains single tank (stone golem) with 3 abilities of low damage - vždy hraje 2x za sebou. Spin attack (všichni v dosahu těla). Push attack (odsune o 3 metry - pokud odsun končí ve stěně, extra 2 damage). A mana embuded/overflow attack - zaměřená postava musí okamžitě zahrát jednu ze svých schopností. Odolnost proti piercing, slashing.
+**Po cestě zpátky, pokud bude čas - boss fight agains single tank (stone golem) with 3 abilities of low damage - vždy hraje 2x za sebou. Spin attack (všichni v dosahu těla). Push attack (odsune o 3 metry - pokud odsun končí ve stěně, extra 2 damage). A mana embuded/overflow attack - zaměřená postava musí okamžitě zahrát jednu ze svých schopností. Odolnost proti piercing, slashing.**
 
 ## 13 - Malá místnost s rébusem
 
+*Podařilo se vám vstoupit do malé místnůstky - jedná se sice o chodbu, ale je natolik zaplněná předměty, že se stává plnohodnotnou místností. Podél stěn jsou vysoké římsy a na nich stojí mramorové květináče s kapradinami. Kolem květináčů jsou zdobené sloupky pokryté reliéfy. Pod římsami jsou prohlubně sahající hluběji do zdi a v nich stojí hlinění trpaslíci ve styčené pozci. Ze stropu vysí dekorovaný lustr ošetřený modrým sklem, tvořícím 3 lucerny. Nakonec, naproti vám, stojí mramorové dveře se zlatou kruhovou klikou.* 
+
+**V této místnosti je past -** pokud postavy zaberou za kliku na dveřích, dříve než vyřadí pojistku, utrží 4 náhodní tvorové v místnosti 1d4 zranění - bodnutí od hliněných trpaslíků. (zranění utrží 4 postavy, které hodí nejnižší číslo na d20). Pojistka se nachází za jedním z květináčů a lze ji najít při investigaci d13.
+
+*Na první pohled nic neacházíte, ale poté spatříte, všichni trpaslíci stojí na mírné vyvíšenině, ze které se ozývá rachtavý zvuk ozubeného kola. Tato skutečnost indikuje, že se jedná o skrytý mechanismus. S touto znalostí a motivací odhalit podstatu mechanismu, nebylo složité zjistit, že 2. kapradí na po pravé straně za sebou skrývá malou dřevěnou páčku.*
+
 Trpaslící ve zdi - killable or just a trap?
 
-Vyřaditelné mlýnským kolem.
+**Vyřaditelné mlýnským kolem.**
 
 ## 14 - Propast s římsou
 
@@ -117,12 +132,20 @@ Vyřaditelné mlýnským kolem.
 
 **Intended řešení:**
 **a) Jedna z postav může propast přeskočit, s acrobatics DC 14 nebo athletics DC 17 (je duležité zdůraznit, že je těžké strefit se přímo na lokaci dveří a udržet se dostatečně dlouho, aby se dali otevřít nebo prorazit samotným skokem).**
+
+
 **b) Dalším řešením je vypozorovat nášlapný disk dole v propasti. Pokud postavy použijí jakoukoli oheldávací schopnost:**
 
 *Když se nakolníte, hned z kraje propasti, téměř pod vašimi nohami, si všímáte lesklého plátu. Jedná se zjevně o nášlapný mechanismus. Plát je mírně nakloněný a po jeho levé straně je nízký otvor, vedoucí kamsi do zdi.*
 
 **Když postavy hodí cokoli na tento plát, vysune se nad propast průchozí kovový most.**
+
+
 **c) Provaz je red harring - ale pokud bude skupina vynalézavá, mohou ho použít.**
+
+
+
+**Pokud postavy vyřadí z provozu mlýnské kolo, plát neaktivuje kovový most.**
 
 ## 15 - Skladiště odpadních tekutin
 
