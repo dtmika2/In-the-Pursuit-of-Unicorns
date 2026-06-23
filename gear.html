@@ -63,15 +63,63 @@ body{
 .back-top{margin-bottom:1.75rem;display:block}
 .back-bot{margin-top:2.5rem;display:inline-block}
 
-.placeholder{
+/* ── Mechanics intro ── */
+.mech{
   background:var(--surface);
   border:1px solid rgba(255,255,255,.055);
   border-radius:6px;
-  padding:2.5rem 1.5rem;
-  text-align:center;
-  color:var(--dim);
-  font-style:italic;
+  padding:1.1rem 1.4rem;
+  margin-bottom:2rem;
 }
+.mech-title{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.7;
+  margin-bottom:.7rem;
+}
+.mech-rule{font-size:.93rem;color:var(--dim);line-height:1.65}
+.mech-rule strong{color:var(--text);font-style:normal}
+.mech-rule+.mech-rule{margin-top:.5rem}
+
+/* ── Section label ── */
+.section-label{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.6;
+  margin-bottom:1rem;
+}
+
+/* ── Gear list ── */
+.gear-list{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:1.75rem;
+}
+.gear-row{
+  padding:.85rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.gear-row:last-child{border-bottom:none}
+.gear-name{
+  font-family:'Cinzel',serif;
+  font-size:.9rem;font-weight:600;
+  letter-spacing:.05em;color:var(--text);
+}
+.gear-desc{
+  margin-top:.4rem;
+  font-size:.87rem;color:var(--dim);
+  line-height:1.55;font-style:italic;
+}
+.gear-desc strong{color:var(--text);font-style:normal}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
+
 @media(min-width:1024px){html{font-size:120%}}
 </style>
 </head>
@@ -86,7 +134,13 @@ body{
     <p class="hd-sub">Tools, supplies &amp; the rest of the pack</p>
   </div>
 
-  <div class="placeholder">Content coming soon…</div>
+  <div class="mech">
+    <div class="mech-title">How Gear Works</div>
+    <p class="mech-rule">Most gear is simple flavor - a thing you own, not a thing that rolls dice. A few pieces carry a real mechanical effect, noted below. Saves named below use the difficulty scale from <a href="rules.html" style="color:var(--gold)">Rules &amp; Terms</a> (Easy 10 · Normal 13 · Hard 16 · Very Hard 20).</p>
+  </div>
+
+  <div class="section-label">Gear</div>
+  <div class="gear-list" id="gear-list"></div>
 
   <a class="back back-bot" href="starter-equipment.html">← back to starter equipment</a>
 </div>
@@ -118,6 +172,43 @@ body{
   window.addEventListener('resize',init);
   init();draw();
 })();
+
+const gear = [
+  { name:"Ball Bearings", desc:"As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 2 meters on a side. A creature moving across the covered area must succeed on a <strong>DC 10 Cunningness save</strong> or fall Prone. A creature moving through the area at half speed doesn't need to make the save." },
+  { name:"Candle", desc:"For 1 hour, a candle sheds bright light in a 1 meter radius and dim light for an additional 1 meter." },
+  { name:"Chain", desc:"A chain has 10 hit points. It can be burst with a successful <strong>DC 20 Constitution check</strong>." },
+  { name:"Crowbar", desc:"Using a crowbar grants Advantage to Constitution checks where the crowbar's leverage can be applied." },
+  { name:"Fishing Tackle", desc:"This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting." },
+  { name:"Healer's Kit", desc:"This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, bringing them to 7 HP instead of 1." },
+  { name:"Lock", desc:"A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful <strong>DC 15 Cunningness check</strong>. Your DM may decide that better locks are available for higher prices." },
+  { name:"Magnifying Glass", desc:"This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite. A magnifying glass grants Advantage on any check made to appraise or inspect an item that is small or highly detailed." },
+  { name:"Mess Kit", desc:"This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl." },
+  { name:"Manacles", desc:"These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful <strong>DC 20 Cunningness check</strong>. Breaking them requires a successful <strong>DC 20 Constitution check</strong>. Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful <strong>DC 15 Cunningness check</strong>. Manacles have 15 hit points." },
+  { name:"Rope", desc:"Rope, whether made of hemp or silk, has 2 hit points and can be burst with a <strong>DC 17 Constitution check</strong>." },
+  { name:"Tent", desc:"A simple and portable canvas shelter, a tent sleeps two." },
+  { name:"Tinderbox", desc:"This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch - or anything else with abundant, exposed fuel - takes an action. Lighting any other fire takes 1 minute." },
+  { name:"Pen and Ink", desc:"To write stuff down in a very nice way." },
+  { name:"Block and Tackle", desc:"A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift." },
+  { name:"A Picture", desc:"A nicely framed picture of someone or something important - for example, a bowl of fruits." },
+  { name:"Music Box", desc:"Spin the lever and then listen to a melody, for a short while." },
+  { name:"A Small Mirror", desc:"To reflect your face, or something else." },
+  { name:"A Pair of Fancy Gloves", desc:"To look very pretty when you work with something decent - or when you choke someone to death with them." },
+  { name:"A Set of Fancy Attire", desc:"If you want to attend a ball, this is perfect." },
+];
+
+function render(id, list) {
+  const el = document.getElementById(id);
+  list.forEach(g => {
+    const row = document.createElement('div');
+    row.className = 'gear-row';
+    row.innerHTML =
+      '<div class="gear-name">' + g.name + '</div>' +
+      '<div class="gear-desc">' + g.desc + '</div>';
+    el.appendChild(row);
+  });
+}
+
+render('gear-list', gear);
 </script>
 </body>
 </html>

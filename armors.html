@@ -63,14 +63,79 @@ body{
 .back-top{margin-bottom:1.75rem;display:block}
 .back-bot{margin-top:2.5rem;display:inline-block}
 
-.placeholder{
+/* ── Mechanics intro ── */
+.mech{
   background:var(--surface);
   border:1px solid rgba(255,255,255,.055);
   border-radius:6px;
-  padding:2.5rem 1.5rem;
-  text-align:center;
-  color:var(--dim);
-  font-style:italic;
+  padding:1.1rem 1.4rem;
+  margin-bottom:2rem;
+}
+.mech-title{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.7;
+  margin-bottom:.7rem;
+}
+.mech-rule{font-size:.93rem;color:var(--dim);line-height:1.65}
+.mech-rule strong{color:var(--text);font-style:normal}
+.mech-rule+.mech-rule{margin-top:.5rem}
+
+/* ── Section label ── */
+.section-label{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--gold);opacity:.6;
+  margin-bottom:1rem;
+}
+
+/* ── Armor list ── */
+.amr-list{
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:1.75rem;
+}
+.amr-row{
+  padding:.85rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.amr-row:last-child{border-bottom:none}
+.amr-top{
+  display:flex;align-items:baseline;flex-wrap:wrap;
+  gap:.45rem .6rem;
+}
+.amr-name{
+  font-family:'Cinzel',serif;
+  font-size:.9rem;font-weight:600;
+  letter-spacing:.05em;color:var(--text);
+}
+.amr-badges{display:flex;gap:.4rem;margin-left:auto}
+.badge{
+  font-family:'Cinzel',serif;
+  font-size:.6rem;letter-spacing:.07em;
+  text-transform:uppercase;
+  padding:.16rem .5rem;border-radius:3px;
+  border:1px solid;white-space:nowrap;
+}
+.badge-ac{color:#e0c068;border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.07)}
+.amr-perk{
+  margin-top:.4rem;
+  font-size:.87rem;color:var(--dim);
+  line-height:1.55;font-style:italic;
+}
+.amr-perk strong{color:var(--text);font-style:normal}
+.amr-perk em.counter{color:#b06060;font-style:italic}
+
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
+
+@media(max-width:560px){
+  .amr-badges{margin-left:0;width:100%}
 }
 @media(min-width:1024px){html{font-size:120%}}
 </style>
@@ -86,7 +151,14 @@ body{
     <p class="hd-sub">What stands between you and the world</p>
   </div>
 
-  <div class="placeholder">Content coming soon…</div>
+  <div class="mech">
+    <div class="mech-title">How Armor Works</div>
+    <p class="mech-rule"><strong>Armor Class (AC):</strong> the number an enemy's attack roll must meet or beat to hit you. Higher AC means you are harder to hit.</p>
+    <p class="mech-rule">Heavier armor tends to grant a stronger benefit, but the heaviest sets carry a real drawback in exchange for the protection. Saves named below use the difficulty scale from <a href="rules.html" style="color:var(--gold)">Rules &amp; Terms</a> (Easy 10 · Normal 13 · Hard 16 · Very Hard 20).</p>
+  </div>
+
+  <div class="section-label">Armors</div>
+  <div class="amr-list" id="armor-list"></div>
 
   <a class="back back-bot" href="starter-equipment.html">← back to starter equipment</a>
 </div>
@@ -118,6 +190,34 @@ body{
   window.addEventListener('resize',init);
   init();draw();
 })();
+
+const armors = [
+  { name:"Free Armor", ac:10, perk:"<strong>Unburdened:</strong> +2 to attack throws." },
+  { name:"Agile Armor", ac:11, perk:"<strong>Quickstep:</strong> +3 to Initiative, and +1 to any talent under Cunningness, Willpower, or Understanding." },
+  { name:"Meditative Armor", ac:11, perk:"<strong>Centered Mind:</strong> all your saving throws are easier by 2 (meaning, you the DC is lower by 2 to overthrow by you)." },
+  { name:"Sturdy Armor", ac:13, perk:"<strong>Weighted Strike:</strong> +2 to all damage throws. <em class=\"counter\">Heavy Set: -2 to Initiative.</em>" },
+  { name:"Hideous Armor", ac:13, perk:"<strong>Thick Hide:</strong> +5 maximum health. <em class=\"counter\">Repulsive: Disadvantage on all social checks.</em>" },
+  { name:"Full Body Strong Armor", ac:14, perk:"<strong>Iron Shell:</strong> the strongest protection available. <em class=\"counter\">Crushing Weight: -2 to any one base attribute, and to all of its talents.</em>" },
+];
+
+function render(id, list) {
+  const el = document.getElementById(id);
+  list.forEach(a => {
+    const row = document.createElement('div');
+    row.className = 'amr-row';
+    row.innerHTML =
+      '<div class="amr-top">' +
+        '<span class="amr-name">' + a.name + '</span>' +
+        '<span class="amr-badges">' +
+          '<span class="badge badge-ac">AC ' + a.ac + '</span>' +
+        '</span>' +
+      '</div>' +
+      '<div class="amr-perk">' + a.perk + '</div>';
+    el.appendChild(row);
+  });
+}
+
+render('armor-list', armors);
 </script>
 </body>
 </html>
