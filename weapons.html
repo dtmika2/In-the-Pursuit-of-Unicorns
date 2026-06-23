@@ -152,6 +152,23 @@ body{
   white-space:nowrap;
 }
 
+/* ── View toggle ── */
+.view-toggle{display:flex;gap:.5rem;margin-bottom:1.75rem;flex-wrap:wrap}
+.view-btn{
+  font-family:'Cinzel',serif;
+  font-size:.65rem;letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--dim);
+  background:var(--surface);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:4px;
+  padding:.5rem 1.1rem;
+  cursor:pointer;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.view-btn:hover{color:var(--text);border-color:rgba(201,168,76,.3)}
+.view-btn.active{color:var(--gold);border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.08)}
+
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:#22203a;border-radius:2px}
@@ -177,21 +194,17 @@ body{
     <div class="mech-title">How Weapon Stats Work</div>
     <p class="mech-rule"><strong>Attack roll:</strong> d20 + the weapon's <strong>Attack stat</strong>, compared against the target's AC. Meeting or beating AC is a hit.</p>
     <p class="mech-rule"><strong>Damage roll:</strong> on a hit, roll the weapon's damage die and add its <strong>damage modifier</strong>.</p>
-    <p class="mech-rule">Many weapons carry a <strong>perk</strong> — a special trick the weapon allows. Weaker hitters tend to carry the strongest perks; the heaviest hitters often need none at all. Saves named below use the difficulty scale from <a href="rules.html" style="color:var(--gold)">Rules &amp; Terms</a> (Easy 10 · Normal 13 · Hard 16 · Very Hard 20).</p>
-    <p class="mech-rule">Each weapon also lists a <strong>Fits</strong> tag — a purely cosmetic suggestion for which class and race the weapon suits in look and spirit. It carries no mechanical bonus or restriction; any character can wield any weapon.</p>
+    <p class="mech-rule">Many weapons carry a <strong>perk</strong> - a special trick the weapon allows. Weaker hitters tend to carry the strongest perks; the heaviest hitters often need none at all. Saves named below use the difficulty scale from <a href="rules.html" style="color:var(--gold)">Rules &amp; Terms</a> (Easy 10 · Normal 13 · Hard 16 · Very Hard 20).</p>
+    <p class="mech-rule">Each weapon also lists a <strong>Fits</strong> tag - a purely cosmetic suggestion for which class and race the weapon suits in look and spirit. It carries no mechanical bonus or restriction; any character can wield any weapon. Switch the view below to reorder the whole list by class or by race instead.</p>
   </div>
 
-  <div class="section-label">Light Weapons</div>
-  <div class="wpn-list" id="light"></div>
+  <div class="view-toggle" id="viewToggle">
+    <button class="view-btn active" data-view="utility">By Utility</button>
+    <button class="view-btn" data-view="class">By Class</button>
+    <button class="view-btn" data-view="race">By Race</button>
+  </div>
 
-  <div class="section-label">Medium Weapons</div>
-  <div class="wpn-list" id="medium"></div>
-
-  <div class="section-label">Heavy Weapons</div>
-  <div class="wpn-list" id="heavy"></div>
-
-  <div class="section-label">Ranged &amp; Thrown Weapons</div>
-  <div class="wpn-list" id="ranged"></div>
+  <div id="weapon-sections"></div>
 
   <a class="back back-bot" href="starter-equipment.html">← back to starter equipment</a>
 </div>
@@ -232,18 +245,21 @@ const raceColors = {
   Foxborn:"#f97316", Human:"#c4a882", "Moth Fairy":"#d946ef",
   Barkskinned:"#84cc16", "The Stitched":"#fb7185", Echoes:"#38bdf8", Resurrected:"#818cf8"
 };
+const catColors = {
+  Light:"#9ca3af", Medium:"#eab308", Heavy:"#dc2626", Ranged:"#3b82f6", Magic:"#c026d3"
+};
 
 const light = [
   { name:"Sickle", atk:"+3", dmg:"1d6+1", perk:"<strong>Hooking Strike:</strong> Caused bleeding to a target, meaning it will take 1 damage at the beggining of it's turn.", cls:"Ranger", race:"Barkskinned" },
-  { name:"War Fan", atk:"+4", dmg:"1d4+1", perk:"<strong>Distracting Flourish:</strong> instead of dealing damage, you can force a DC 13 Instinct save — on a failure, the target has Disadvantage on its next attack.", cls:"Dreamcaster", race:"Moth Fairy" },
+  { name:"War Fan", atk:"+4", dmg:"1d4+1", perk:"<strong>Distracting Flourish:</strong> instead of dealing damage, you can force a DC 13 Instinct save - on unsucessful save, the target has Disadvantage on its next attack.", cls:"Dreamcaster", race:"Moth Fairy" },
   { name:"Whip with frayed end", atk:"+3", dmg:"1d4+1", perk:"<strong>Trip Lash:</strong> instead of dealing damage, you can force the target to make a DC 13 Constitution save or falls Prone (falls on the ground).", cls:"Sorcerer", race:"The Stitched" },
   { name:"Iron Claws", atk:"+3", dmg:"1d6+1", perk:"<strong>Rend:</strong> if you hit the same target two turns in a row, the second hit deals +1d4 damage.", cls:"Shapeshifter", race:"The Stitched" },
   { name:"Punch dagger (Katar)", atk:"+3", dmg:"1d6+1", perk:"<strong>Piercing Thrust:</strong> treat the target's AC as 1 lower if it was previously hit by your ally.", cls:"Jester", race:"Foxborn" },
   { name:"Kukri", atk:"+3", dmg:"1d8+1", perk:"<strong>Vicious Curve:</strong> if you throw 18 or 19 on attack throw, deals an extra 1d6 damage.", cls:"Ranger", race:"Human" },
   { name:"Dagger", atk:"+4", dmg:"1d4+1", perk:"<strong>Sudden Strike:</strong> if the target is unaware of the attack, deal an extra 2d4 damage.", cls:"Jester", race:"Foxborn" },
-  { name:"Twisted daggers", atk:"+3", dmg:"2d4+1", perk:"<strong>These weapons do not have any special perk, but you throw twice for damage, which is good on it's own!.", cls:"Sorcerer", race:"Echoes" },
+  { name:"Twisted daggers", atk:"+3", dmg:"2d4+1", perk:"", none:"No perk - but you throw twice for damage, which is good on its own.", cls:"Sorcerer", race:"Echoes" },
   { name:"Rapier", atk:"+4", dmg:"1d6+1", perk:"<strong>Riposte:</strong> when an enemy misses you in melee, as your reaction you make a free attack against them.", cls:"Jester", race:"Human" },
-  { name:"Sai", atk:"+3", dmg:"1d4+1", perk:"<strong>Disarming Trap:</strong> forgo damage — the target makes a DC 13 Constitution save or drops whatever it's holding.", cls:"Dreamcaster", race:"Moth Fairy" },
+  { name:"Sai", atk:"+3", dmg:"1d4+1", perk:"<strong>Disarming Trap:</strong> forgo damage - the target makes a DC 13 Constitution save or drops whatever it's holding.", cls:"Dreamcaster", race:"Moth Fairy" },
 ];
 
 const medium = [
@@ -257,11 +273,11 @@ const medium = [
 ];
 
 const heavy = [
-  { name:"Scythe", atk:"+1", dmg:"1d10+2", perk:"<strong>Reaping Arc:</strong> you can attack two enemies with one swing, the second enemy takes half the damage. They must stay with 1 meter away. <em class=\"counter\">Unwieldy: Disadvantage on attacks in spaces narrower than 5ft. Also, you are exposed, -1 to you AC.</em>", cls:"Sorcerer", race:"Resurrected" },
-  { name:"Claymore Sword", atk:"+2", dmg:"1d12+2", perk:"", none:"No perk — raw power is its own reward.", cls:"Shapeshifter", race:"Human" },
+  { name:"Scythe", atk:"+1", dmg:"1d10+2", perk:"<strong>Reaping Arc:</strong> you can attack two enemies with one swing, the second enemy takes half the damage. They must stay with 1 meter away. <em class=\"counter\">Unwieldy: Disadvantage on attacks in spaces narrower than 1 meter. Also, you are exposed, -1 to you AC.</em>", cls:"Sorcerer", race:"Resurrected" },
+  { name:"Claymore Sword", atk:"+2", dmg:"1d12+2", perk:"", none:"No perk - raw power is its own reward.", cls:"Shapeshifter", race:"Human" },
   { name:"Mace", atk:"+2", dmg:"1d8+2", perk:"<strong>Armor Crusher:</strong> ignores up to 2 points of the target's AC bonus from worn armor.", cls:"Shapeshifter", race:"The Stitched" },
   { name:"Heavy Hammer", atk:"+1", dmg:"1d12+2", perk:"<strong>Concussive Blow:</strong> on a hit, the target makes a DC 13 Willpower save or must flee away from you his next trun.", cls:"Shapeshifter", race:"Barkskinned" },
-  { name:"Pike", atk:"+1", dmg:"1d10+2", perk:"<strong>Brace:</strong> if a creature moves into your reach, you may attack it before it finishes moving. <em class=\"counter\">Cumbersome: Disadvantage on attacks against targets within 5ft of you.</em>", cls:"Ranger", race:"Human" },
+  { name:"Pike", atk:"+1", dmg:"1d10+2", perk:"<strong>Brace:</strong> if a creature moves into your reach, you may attack it before it finishes moving. <em class=\"counter\">Cumbersome: Disadvantage on attacks against targets within 1 meter of you.</em>", cls:"Ranger", race:"Human" },
   { name:"Glaive", atk:"+1", dmg:"1d10+1", perk:"<strong>Wide Sweep:</strong> once per turn, instead of normal attack you can attack every enemy adjacent to you at -4 to the attack roll.", cls:"Dreamcaster", race:"Echoes" },
   { name:"Flail", atk:"+2", dmg:"1d8+2", perk:"<strong>Unblockable Arc:</strong> you have advantage on attack throws. <em class=\"counter\">Wild Swing: on a throw of 2, 3, 4, 5, 6, 7, or 8 you miss even if you overthrow the targets AC.</em>", cls:"Jester", race:"The Stitched" },
 ];
@@ -269,7 +285,7 @@ const heavy = [
 const ranged = [
   { name:"Blow pipe", atk:"+3", dmg:"1d4+1", perk:"<strong>Numbing Toxin:</strong> on a hit, the target makes a DC 10 Constitution save or has Disadvantage on its next attack.", cls:"Ranger", race:"Foxborn" },
   { name:"Chakrams", atk:"+3", dmg:"1d6+1", perk:"<strong>Ricochet:</strong> on a hit, the chakram can strike a second enemy for half damage, but than, you have to pick up the chakram from within 1 meter of that enemy (otherwise, the Chakram returns)", cls:"Dreamcaster", race:"Moth Fairy" },
-  { name:"Shortbow", atk:"+4", dmg:"1d6+1", perk:"", none:"No perk — simple, light, and reliable.", cls:"Ranger", race:"Foxborn" },
+  { name:"Shortbow", atk:"+4", dmg:"1d6+1", perk:"", none:"No perk - simple, light, and reliable.", cls:"Ranger", race:"Foxborn" },
   { name:"Longbow", atk:"+2", dmg:"1d8+2", perk:"<strong>Long Reach:</strong> Advantage on attack rolls against targets more than 6 meters away.", cls:"Ranger", race:"Barkskinned" },
   { name:"Sling", atk:"+3", dmg:"?", perk:"<strong>Improvised Ammo:</strong> Before your damage throw, throw a d4, it than determines, wether you use a d4, d6, d8 or d10 for a damage throw - each stone you load is sharp differently.", cls:"Jester", race:"Human" },
   { name:"Crossbow", atk:"+2", dmg:"2d6+3", perk:"<em class=\"counter\">Slow Reload: on your next attack, you have disadvantage on attack throw.</em>", cls:"Ranger", race:"The Stitched" },
@@ -277,35 +293,89 @@ const ranged = [
   { name:"Atlatl", atk:"+1", dmg:"1d10+1", perk:"<strong>Leveraged Throw:</strong> deals +1d4 damage against targets more than 6 meters away.", cls:"Shapeshifter", race:"Echoes" },
 ];
 
-function render(id, list) {
-  const el = document.getElementById(id);
-  list.forEach(w => {
-    const row = document.createElement('div');
-    row.className = 'wpn-row';
-    row.innerHTML =
-      '<div class="wpn-top">' +
-        '<span class="wpn-name">' + w.name + '</span>' +
-        '<span class="wpn-badges">' +
-          '<span class="badge badge-atk">ATK ' + w.atk + '</span>' +
-          '<span class="badge badge-dmg">DMG ' + w.dmg + '</span>' +
-        '</span>' +
-      '</div>' +
-      (w.none
-        ? '<div class="wpn-perk none">' + w.none + '</div>'
-        : '<div class="wpn-perk">' + w.perk + '</div>') +
-      '<div class="wpn-fit">' +
-        '<span class="wpn-fit-label">Fits</span>' +
-        '<span class="fit-chip" style="--fc:' + classColors[w.cls] + '">' + w.cls + '</span>' +
-        '<span class="fit-chip" style="--fc:' + raceColors[w.race] + '">' + w.race + '</span>' +
-      '</div>';
-    el.appendChild(row);
-  });
+const magic = [
+  { name:"Wand", atk:"+4", dmg:"1d4+1", perk:"<strong>Volatile Spark:</strong> our attack has a 1% chance to instantly evaporate you enemy. (throw two d10, if you throw dubble 0, it is counted as success.", cls:"Sorcerer", race:"Echoes" },
+  { name:"Staff", atk:"+2", dmg:"1d8+1", perk:"<strong>Mind's Reach:</strong> instead of dealing damage, force a DC 16 Willpower save - on unsucessful save, the target will attack his ally next turn. <em class=\"counter\">Cumbersome Focus: Disadvantage on attacks against targets within 1 meter of you.</em>", cls:"Dreamcaster", race:"Moth Fairy" },
+  { name:"Orb", atk:"+3", dmg:"1d6+1", perk:"<strong>Piercing Gaze:</strong> Instead of attack, you can ignite the enemy. You do not throw for attack, you always hit and deal 1d6, but take 1 damage aswell.", cls:"Sorcerer", race:"Resurrected" },
+  { name:"Magical Ring", atk:"+4", dmg:"1d6+1", perk:"<strong>Lucky Channel:</strong> you may reroll the damage throw once, but must use the new result.", cls:"Jester", race:"Foxborn" },
+];
+
+[[light,"Light"],[medium,"Medium"],[heavy,"Heavy"],[ranged,"Ranged"],[magic,"Magic"]]
+  .forEach(([list,cat]) => list.forEach(w => w.cat = cat));
+
+const utilityGroups = [
+  { label:"Light Weapons", list:light },
+  { label:"Medium Weapons", list:medium },
+  { label:"Heavy Weapons", list:heavy },
+  { label:"Ranged & Thrown Weapons", list:ranged },
+  { label:"Magic Implements", list:magic },
+];
+const classOrder = Object.keys(classColors);
+const raceOrder = Object.keys(raceColors);
+const allWeapons = [].concat(light, medium, heavy, ranged, magic);
+
+function chip(label, color) {
+  return '<span class="fit-chip" style="--fc:' + color + '">' + label + '</span>';
 }
 
-render('light', light);
-render('medium', medium);
-render('heavy', heavy);
-render('ranged', ranged);
+function weaponRowHTML(w, mode) {
+  const chips = mode === 'utility'
+    ? chip(w.cls, classColors[w.cls]) + chip(w.race, raceColors[w.race])
+    : mode === 'class'
+    ? chip(w.cat, catColors[w.cat]) + chip(w.race, raceColors[w.race])
+    : chip(w.cat, catColors[w.cat]) + chip(w.cls, classColors[w.cls]);
+
+  return '<div class="wpn-row">' +
+    '<div class="wpn-top">' +
+      '<span class="wpn-name">' + w.name + '</span>' +
+      '<span class="wpn-badges">' +
+        '<span class="badge badge-atk">ATK ' + w.atk + '</span>' +
+        '<span class="badge badge-dmg">DMG ' + w.dmg + '</span>' +
+      '</span>' +
+    '</div>' +
+    (w.none
+      ? '<div class="wpn-perk none">' + w.none + '</div>'
+      : '<div class="wpn-perk">' + w.perk + '</div>') +
+    '<div class="wpn-fit">' +
+      '<span class="wpn-fit-label">Fits</span>' +
+      chips +
+    '</div>' +
+  '</div>';
+}
+
+function renderGroup(label, list, mode) {
+  return '<div class="section-label">' + label + '</div>' +
+    '<div class="wpn-list">' + list.map(w => weaponRowHTML(w, mode)).join('') + '</div>';
+}
+
+function renderView(view) {
+  const container = document.getElementById('weapon-sections');
+  let html = '';
+  if (view === 'utility') {
+    utilityGroups.forEach(g => { html += renderGroup(g.label, g.list, 'utility'); });
+  } else if (view === 'class') {
+    classOrder.forEach(cls => {
+      const list = allWeapons.filter(w => w.cls === cls);
+      if (list.length) html += renderGroup(cls, list, 'class');
+    });
+  } else {
+    raceOrder.forEach(race => {
+      const list = allWeapons.filter(w => w.race === race);
+      if (list.length) html += renderGroup(race, list, 'race');
+    });
+  }
+  container.innerHTML = html;
+}
+
+document.getElementById('viewToggle').addEventListener('click', e => {
+  const btn = e.target.closest('.view-btn');
+  if (!btn) return;
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderView(btn.dataset.view);
+});
+
+renderView('utility');
 </script>
 </body>
 </html>
