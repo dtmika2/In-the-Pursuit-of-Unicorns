@@ -71,6 +71,10 @@
 
 ## 11 - Výzkumná laboratoř
 
+*Vstoupili jste do místnosti, jejíž stěny i podlaha jsou pokryté zvláštním kamenem, vypadajím jako kov. V místnosti je velký chlad, ale vy máte zároveň pocit, jako by vám v ní nemohla být zima. Místnost je plná různých skleněných a kovových zařízení některé se točí, některé svítí. V některých je kapalina, která kape z jedné strany na druhou. V rohu je také jakási pec a vedle ní nádoba s vodou. Ničemu z toho nerozumíte, jediné s čím si celé zjevení dokážete spojit je alchemie, ale jakéhosi pokročilého druhu. Na zdech jsou lampy, které svítí modrým světlem - bez ohně, bez jasné zdroje onoho světla.*
+
+*Nakonec jsou v místnosti dva stoly a na tom větším je denník a do jeho čela zapýchlá jakási mapa - plánek.*
+
 #### Záznam v deníku
 
 *Hypotéza: Za to, co místní krajané nazívají Blažeností, může výroba a užití Elektrolitu užitého pro výrobu a distribuci energie.*
@@ -110,6 +114,22 @@
 
 ## 12 - Finální místnost s pojistnými opatřeními proti vetřelcům
 
+*Rozléhá se před vámi veliká místnost. Nelze si nevšimnout, že podlaha této místnosti probíjí statickou elektřinou. Podlaha pod elektrickými výboji je zkonstruována z pískovnce, ovšem, odedveří vedou dvě zdánlivé cesty - jedna cesta z modrých kachliček, druhá z rudých kachliček. Každá z cest je metr široká a klikatí se, obě cesty ovšem vedou k velkým dveřím na protější straně místnosti.*
+
+*Uprostřed místnosti je zhruba 4 metry široká a dlouhá vyvíšenina, na kterou vede několik schodů - zdá se, že na této vyvýšenině elektřina neprobíjí. Na jejím vrcholu stojí jakési zařízení a na tomto zařízení tři modré krystaly. Ze zařízení vede potrubí, do jižní stěny místnosti.*
+
+*Kolem velkých dveří na západě jsou také jakási měděná zařízení, stejně jako na dvou západních sloupech zdobících místnost v rozích. Další dva sloupy jsou na východě, také v rozích.*
+
+*Pod velkými dveřmi leží kostra člověka.*
+
+*Nakonec, v severní stěně jsou jedny skromnější dveře.*
+
+**V této místnosti u země probíjí elektřina - v podlaze jsou barevné dlaždice, ale ty jsou red herring. Nejsou k ničemu duležité. Způsob, jak projít přes elektřinu bez zranění je položit na zem jakoukoli vyvíšeninu, vyšší alespoň více než 20 centimetrů. Poté lze bezpečně kráčet. Je také možnost sestřelit akumulátor energie ve středu místnosti. Akumulátor má AC 14 a musí být trefen 3x, aby z něj vypadl i poslední krystal.  Elektřina jinak při kontaktu způsobuje 1d4 zranění.**
+
+**Když postavy ohledají kostlivce u severních dveří zjistí (při DC 5), že je kostra vytesaná z kamene.** 
+
+**V severní části místnosti jsou dveře - za dveřmi se nic nenachází, ovšem kdo je otevře - dostane elektircký výboj z dvou oblkoupujícíh krystalů. (1d4)**
+
 **Celá místnost je vyřaditelné z provozu mlýnským kolem.**
 
 **Po cestě zpátky, pokud bude čas - boss fight agains single tank (stone golem) with 3 abilities of low damage - vždy hraje 2x za sebou. Spin attack (všichni v dosahu těla). Push attack (odsune o 3 metry - pokud odsun končí ve stěně, extra 2 damage). A mana embuded/overflow attack - zaměřená postava musí okamžitě zahrát jednu ze svých schopností. Odolnost proti piercing, slashing.**
@@ -133,19 +153,18 @@ Trpaslící ve zdi - killable or just a trap?
 **Intended řešení:**
 **a) Jedna z postav může propast přeskočit, s acrobatics DC 14 nebo athletics DC 17 (je duležité zdůraznit, že je těžké strefit se přímo na lokaci dveří a udržet se dostatečně dlouho, aby se dali otevřít nebo prorazit samotným skokem).**
 
-
 **b) Dalším řešením je vypozorovat nášlapný disk dole v propasti. Pokud postavy použijí jakoukoli oheldávací schopnost:**
 
 *Když se nakolníte, hned z kraje propasti, téměř pod vašimi nohami, si všímáte lesklého plátu. Jedná se zjevně o nášlapný mechanismus. Plát je mírně nakloněný a po jeho levé straně je nízký otvor, vedoucí kamsi do zdi.*
 
 **Když postavy hodí cokoli na tento plát, vysune se nad propast průchozí kovový most.**
 
-
 **c) Provaz je red harring - ale pokud bude skupina vynalézavá, mohou ho použít.**
-
-
 
 **Pokud postavy vyřadí z provozu mlýnské kolo, plát neaktivuje kovový most.**
 
 ## 15 - Skladiště odpadních tekutin
 
+*Opustili jste člověkem tvořený úbytek a nacházíte se v malém skalním výklenku s přístupem k vodě. Přístup k vodě je ohraničený nízkým plotem. Před vámi se nachází několik dóz, váz, uren a jiných nádob. Všechny zvláštně zapáchají, vůněmi, které vám nejsou povědomé. některé štípou v nose, trochu jako pepř. Jiné vonní suše, jako kdyby spalovali vzduch pod vašimi nozdrami.* 
+
+**Zde nic duležitého**
