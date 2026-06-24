@@ -418,7 +418,7 @@ Dívka Pipa. Její Blaho je absence strachu - přibližuje se ke zbraním, magii
 **Mechaniky:** Šafránek nejprve klasifikuje hráče; nákup bez DC
 
 ```
-Vývěsní štít je vybledlý, ale stále čitelný: je na mě vyobrazena hvězda a ruka a nad nimi nápis "Kouzelné Arefakty z Daleka i Blízka". Zevnitř vychází vůně kadidla a něčeho kovového, podobně jako chutná krev. Za zaprášeným sklem jsou regály s drobnými předměty, seřazenými s péčí - police s předměty působí jako sbírka než obchodní nabídka. Za pultem sedí starší člověk, který třídí kameny z místa na místo a tiše si při tom brouká. "Dva modrý lazulity doprava, jeden rudej rubín doleva. A tři modrý lazulity doprava."
+Vývěsní štít je vybledlý, ale stále čitelný: je na mě vyobrazena hvězda a ruka a nad nimi nápis "Šafránkovi Kouzelné Arefakty z Daleka i Blízka". Zevnitř vychází vůně kadidla a něčeho kovového, podobně jako chutná krev. Za zaprášeným sklem jsou regály s drobnými předměty, seřazenými s péčí - police s předměty působí jako sbírka než obchodní nabídka. Za pultem sedí starší člověk, který třídí kameny z místa na místo a tiše si při tom brouká. "Dva modrý lazulity doprava, jeden rudej rubín doleva. A tři modrý lazulity doprava."
 ```
 
 **Poznámky pro DM:**

@@ -29,8 +29,10 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 .narration{margin:1.6rem 0;padding:1.3rem 1.6rem;border-left:2px solid rgba(201,168,76,.4);background:rgba(201,168,76,.035);border-radius:2px;position:relative;}
 .narration::before{content:'“';position:absolute;top:-.3rem;left:.5rem;font-family:Georgia,serif;font-size:2.4rem;color:rgba(201,168,76,.25);line-height:1;}
 .narration-label{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);opacity:.55;margin-bottom:.6rem;}
-.narration p{font-style:italic;color:#cdbf98;font-size:1.08rem;line-height:1.8;}
+.narration p{color:#cdbf98;font-size:1.08rem;line-height:1.8;}
 .narration p+p{margin-top:.7rem}
+
+.dc{font-weight:700;color:var(--gold);}
 
 .divider{display:flex;align-items:center;justify-content:center;gap:.9rem;margin:2.75rem 0;color:rgba(201,168,76,.4);}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.25),transparent);}
@@ -114,7 +116,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   </div>
 
   <div class="gm">
-    <p>Pokud postavy vak prohledají, najdou v něm hrst velmi symetrických vysušených okvětních lístků růže. (hod 1k12+2 pro ověření množství). Pokud postavy místo ohledají pomocí jakékoli schopnosti, najdou dalších 2k4 lístků dole pod cedulí a za cedulí zastrčený papírek s poznámkou zjevně napsanou dítětem - pan Perrin byl moc hodný! a vedle nápisu je malůvka pána ve špičatém klobouku. Pokud použijí k ohledání místa Instinkt, při DC 8 zjistí, že cedule je ve stromě již minimálně 8 let.</p>
+    <p>Pokud postavy vak prohledají, najdou v něm hrst velmi symetrických vysušených okvětních lístků růže. (hod 1k12+2 pro ověření množství). Pokud postavy místo ohledají pomocí jakékoli schopnosti, najdou dalších 2k4 lístků dole pod cedulí a za cedulí zastrčený papírek s poznámkou zjevně napsanou dítětem - pan Perrin byl moc hodný! a vedle nápisu je malůvka pána ve špičatém klobouku. Pokud použijí k ohledání místa Instinkt, při <span class="dc">DC 8</span> zjistí, že cedule je ve stromě již minimálně 8 let.</p>
   </div>
 
   <div class="gm">
@@ -205,6 +207,11 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
     <p>Jestli chcete, projděte se karnevalem. Projeďte se na kolotoči, zahrajte si kostky, navštivte cirkus! Jezte a berte co hrdlo ráčí! Bavte se. Ať se nakrmí i vaše duše, na cestu která je před vámi.”</p>
   </div>
 
+  <div class="cue">
+    <div class="cue-label">Image — Bouquet</div>
+    <img src="Images/Location%20images/Bouquet.png" alt="Bouquet" loading="lazy" onclick="openLightbox(this)">
+  </div>
+
   <div class="gm">
     <p>Gnóm, který si říká Perrin vám předá pytel bylin, dost pro každého, aby vám nikdy nedošly. Květiny mají 5 barev, 5 názvů, jak Perrin dovysvětlil: Modrý Třpitukvítek, rudý Blahotaj, zlatavý Hnivák, šedivý Smutitul a nakonec do 6 barev zbarvený a se trny na stonku Dužník. Údajně by každá z nich měla jinak ovlivnit vaši mysl, přivodit vám jiné vidiny. Máte se připravit na halucinace a bolesti. Každá rostlina vám přitom ukáže něco blahodárného, něco nápomocného. Je však možné, že některá požití vám zůstanou v krvi a už se nevyplaví. V takovém případě přijdete o krapet příčetnosti. A s každým ztraceným momentem příčetnosti se vám začnou dít více a více nekontrolovatelné stavy.</p>
     <p>Byliny je ovšem nutné konzumovat, jelikož se jedná o jediný zdroj toho, jak si doplnit ztracené Akční Sloty (AS). Zároveň je prý také nutné první ztratit trochu příčetnosti, než budete schopni komunikovat s Jednorožci. To přece dává smysl. Jak poznamenal Perrin, pouze mysl nakročená mezi realitou a výmyslem je schopná uvěřit, že umí nemožné.</p>
@@ -216,6 +223,11 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
     <p>Mezi nejzajímavější objekty kolem vás spadá - kolotoč s krásně malovanými dřevěnými zvířaty. Lvy, draky, koňmi, kočkopsi, ptáky Nohy, velrybou a dokonce jedním jednorožcem. Májka, která spojuje všechny stany a tvoří karnevalu malé náměstíčko. Stůl plný čerstvého jídla. Dokonce i takového, které se v lese jen tak nemůže octnout. Chléb, preclíky, jablka, víno, dort se šlehačkou, pečené skopové, paštiky, klobásy, cukrkandl… Kupodivu nikde nevidíte Cirkus, který Perrin zmínil. Určitě by jste nepřehlédli něco tak velikého. Nakonec vaše oko zaujme stan, s nápisem na plachtě “věštění budoucnosti.”</p>
   </div>
 
+  <div class="cue">
+    <div class="cue-label">Image — Carousel</div>
+    <img src="Images/Location%20images/Carousel.png" alt="Carousel" loading="lazy" onclick="openLightbox(this)">
+  </div>
+
   <div class="gm">
     <p>Když se postavy projedou na kolotoči, na 24 hodin dostanou 1x inspiraci (jednu výhodu na libovolný hod)</p>
     <p>Když postavy ohledají jídlo pomocí instinktu 15, budou si naprosto jisti, že je jídlo v pořádku a poživatelné. Když ho ohledají při 7 a méně, budou přesvědčeni, že se jedná o otrávený materiál, který jen jako jídlo vypadá. mezi si budou nejisti, spíše se přiklánět k tomu, že je jídlo ok.</p>
@@ -225,12 +237,18 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   <div class="divider"><span>❦</span></div>
 
   <div class="narration">
-    <div class="narration-label">Read Aloud</div>
+    <div class="narration-label">Read Aloud</div> 
     <p>Když les opouštíte, těsně před jeho lemem, který jej dělí od luk, narážíte na velikánský pařez. Zprvu vás na pařezu zaujmou dvě jasná světla, která nad ním poletují, dokud si neuvědomíte, že se jedná o dvě drobné bytosti. Přesněji řečeno, dvě malé víly!</p>
     <p>Tyto dvě víly se o něčem dohadují, hádají se. Jedna z víl má duhové šaty a malou hůlku s hvězdou na konci. Druhá víla má na sobě zimní kožich a na hlavě přilbičku s parohy. V rukou drží tyrkysový krystal. Gestikulují na sebe, jako by hráli divadlo, jehož cílem je přesvědčit tu druhou, kdo je v hlavní roli.</p>
   </div>
 
-  <div class="gm">
+  <div class="cue">
+    <div class="cue-label">Image — Fairies</div>
+    <img src="Images/Location%20images/Fairies.png" alt="Fairies" loading="lazy" onclick="openLightbox(this)">
+  </div>
+
+  <div class="narration">
+    <div class="narration-label">Read Aloud</div> 
     <p>Když si všimnou vaší přítomnosti, nejsou vůbec zaskočeny. Naopak, otočí se na vás, jako kdyby vás potkávali každý den a spustí:</p>
   </div>
 
@@ -263,7 +281,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   </div>
 
   <div class="gm">
-    <p>(Folklore DC 12 - Hráč, který zná zvyky víl, si uvědomuje, že hádka před smrtelníky je sama o sobě rituální výzvou - víly chtějí publikum a verdikt. Pokud se hráč prohlásí za formálního prostředníka, získá automaticky bonus +2 ke všem následujícím sociálním hodům v tomto setkání. Hráč může také vycítit, že tyrkysový krystal v sobě nese emocionální stopy toho, kdo jej držel. Krystal truchlí. Není neutrální).</p>
+    <p>(Folklore <span class="dc">DC 12</span> - Hráč, který zná zvyky víl, si uvědomuje, že hádka před smrtelníky je sama o sobě rituální výzvou - víly chtějí publikum a verdikt. Pokud se hráč prohlásí za formálního prostředníka, získá automaticky bonus +2 ke všem následujícím sociálním hodům v tomto setkání. Hráč může také vycítit, že tyrkysový krystal v sobě nese emocionální stopy toho, kdo jej držel. Krystal truchlí. Není neutrální).</p>
   </div>
 
   <div class="gm">
@@ -279,7 +297,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   </div>
 
   <div class="gm">
-    <p>Pokud je Alexandra konfrontována aniž by předtím proběhla empatická konverzace, vystřelí k nohám hráčů eldrich blast a řekne a dost, nemáte právo na mé pocity. Všechny DC oproti ní jsou na dále +4.</p>
+    <p>Pokud je Alexandra konfrontována aniž by předtím proběhla empatická konverzace, vystřelí k nohám hráčů eldrich blast a řekne a dost, nemáte právo na mé pocity. Všechny <span class="dc">DC</span> oproti ní jsou na dále +4.</p>
   </div>
 
   <div class="gm">
@@ -299,15 +317,15 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   </div>
 
   <div class="gm">
-    <p>Konflikt se dá vyřešit pomocí Perusation, DC se pohybuje mezi 14-20 podle toho, kolik informací hráči odhalili. Ideální výsledek je přesvědčit obě sestry, že matka určitě měla kladný vztah k oběma sestrám a že na krystalu možná ani nesejde. Nejde o to o čem jsou víly přesvědčeny, jde jen o to, aby obě měli pocit smíření.</p>
+    <p>Konflikt se dá vyřešit pomocí Perusation, <span class="dc">DC se pohybuje mezi 14-20</span> podle toho, kolik informací hráči odhalili. Ideální výsledek je přesvědčit obě sestry, že matka určitě měla kladný vztah k oběma sestrám a že na krystalu možná ani nesejde. Nejde o to o čem jsou víly přesvědčeny, jde jen o to, aby obě měli pocit smíření.</p>
   </div>
 
   <div class="gm">
-    <p>Lze také přesvědčit jen jednu ze sester DC 8-16, aby ustoupila - to se stane, ale tato sestra zůstane zhrzená a její život potemní. To je nutné jasně hráčům dát najevo. Něco jako "Víla souhlasila s tím, že ustoupí, ale zdá se, že se zlomeným srdcem, které už nikdy nesroste"</p>
+    <p>Lze také přesvědčit jen jednu ze sester <span class="dc">DC 8-16</span>, aby ustoupila - to se stane, ale tato sestra zůstane zhrzená a její život potemní. To je nutné jasně hráčům dát najevo. Něco jako "Víla souhlasila s tím, že ustoupí, ale zdá se, že se zlomeným srdcem, které už nikdy nesroste"</p>
   </div>
 
   <div class="gm">
-    <p>Pomocí lží lze ze situace také vybruslit tak, že jedna ze sester ustoupí ale přitom se necítí jako prohra. DC Deceit 12 se správným argumentem.</p>
+    <p>Pomocí lží lze ze situace také vybruslit tak, že jedna ze sester ustoupí ale přitom se necítí jako prohra. <span class="dc">DC Deceit 12</span> se správným argumentem.</p>
   </div>
 
   <a class="back" href="dm.html">← back to dm cabinet</a>
