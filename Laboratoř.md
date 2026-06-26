@@ -136,6 +136,54 @@
 
 **Po cestě zpátky, pokud bude čas - boss fight agains single tank (stone golem) with 3 abilities of low damage - vždy hraje 2x za sebou. Spin attack (všichni v dosahu těla). Push attack (odsune o 3 metry - pokud odsun končí ve stěně, extra 2 damage). A mana embuded/overflow attack - zaměřená postava musí okamžitě zahrát jednu ze svých schopností. Odolnost proti piercing, slashing.**
 
+---
+
+## STONE GOLEM — Boss
+
+
+|                |             |
+| -------------- | ----------- |
+| **HP**         | 125no       |
+| **AC**         | 13          |
+| **Speed**      | 4m per turn |
+| **Initiative** | −1          |
+
+
+**Double Action** — The Golem always takes exactly **2 actions** per round (any combination of the 3 abilities; may repeat the same one twice).
+
+**Resistances** — Piercing, Slashing *(take half)*
+**Immunities** — Charmed, Frightened, all Willpower-based saves *(mindless construct)*
+
+---
+
+### ABILITIES
+
+**Spin Attack**
+*Constitution Save DC 12 · All creatures in melee reach*
+Every creature within arm's length must save. Failure: **1d4+1** bludgeoning. Success: half damage.
+
+**Push Attack**
+*+5 to hit · 1 target · Melee*
+On hit: **1d6** bludgeoning. Target is shoved **3m back**. If the push ends at a wall or fixed obstacle: +**2** bludgeoning damage.
+
+**Mana Overflow**
+*Willpower Save DC 13 · 1 visible target within 15m*
+The golem emits a pulse of raw unstable mana at one target. On failure: that creature must immediately activate one of their abilities — player picks which, but must use it this instant (DM can override if they stall). No direct damage.
+
+---
+
+
+| Ability       | Avg damage          | Notes                        |
+| ------------- | ------------------- | ---------------------------- |
+| Spin Attack   | 3.5                 | hits everyone in melee reach |
+| Push Attack   | 3.5 + 2 conditional | single target                |
+| Mana Overflow | 0                   | burns an ability, not HP     |
+
+
+*Note: immune to Willpower saves — Mocking Cackle, Mesmerize, and Puppet won't work on it.*
+
+---
+
 ## 13 - Malá místnost s rébusem
 
 *Podařilo se vám vstoupit do malé místnůstky - jedná se sice o chodbu, ale je natolik zaplněná předměty, že se stává plnohodnotnou místností. Podél stěn jsou vysoké římsy a na nich stojí mramorové květináče s kapradinami. Kolem květináčů jsou zdobené sloupky pokryté reliéfy. Pod římsami jsou prohlubně sahající hluběji do zdi a v nich stojí hlinění trpaslíci ve styčené pozci. Ze stropu vysí dekorovaný lustr ošetřený modrým sklem, tvořícím 3 lucerny. Nakonec, naproti vám, stojí mramorové dveře se zlatou kruhovou klikou.* 
