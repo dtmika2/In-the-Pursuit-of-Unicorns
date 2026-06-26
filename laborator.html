@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Laboratoř a sochařská dílna</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@keyframes twinkle{from{opacity:.08}to{opacity:.7}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+:root{--bg:#04040f;--surface:#09091a;--gold:#c9a84c;--text:#d4c9a8;--muted:#5a5044;--dim:#8a7e64;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-height:100vh;overflow-x:hidden;}
+#stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.star{position:absolute;background:#fff;border-radius:50%;}
+.wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:3rem 1.25rem 5rem;}
+.hd{text-align:center;margin-bottom:2rem;animation:fadeUp .8s ease both}
+.hd-title{font-family:'Cinzel',serif;font-size:clamp(1.7rem,5vw,2.6rem);font-weight:700;letter-spacing:.12em;color:var(--gold);text-shadow:0 0 60px rgba(201,168,76,.28);}
+
+.section-title{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;letter-spacing:.1em;color:var(--gold);text-shadow:0 0 35px rgba(201,168,76,.22);margin:3.5rem 0 1.75rem;text-align:center;}
+.section-sub{font-family:'Cinzel',serif;font-size:1rem;font-weight:600;letter-spacing:.08em;color:var(--gold);opacity:.8;margin:2rem 0 1rem;}
+
+.gm p,.gm li{font-size:1.02rem;color:#9c9078;line-height:1.75;}
+.gm p+p{margin-top:.8rem}
+.gm{margin:1.4rem 0;}
+
+.narration{margin:1.6rem 0;padding:1.3rem 1.6rem;border-left:2px solid rgba(201,168,76,.4);background:rgba(201,168,76,.035);border-radius:2px;position:relative;}
+.narration::before{content:'"';position:absolute;top:-.3rem;left:.5rem;font-family:Georgia,serif;font-size:2.4rem;color:rgba(201,168,76,.25);line-height:1;}
+.narration-label{font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);opacity:.55;margin-bottom:.6rem;}
+.narration p{color:#cdbf98;font-size:1.08rem;line-height:1.8;}
+.narration p+p{margin-top:.7rem}
+
+.dc{font-weight:700;color:var(--gold);}
+
+.divider{display:flex;align-items:center;justify-content:center;gap:.9rem;margin:2.75rem 0;color:rgba(201,168,76,.4);}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.25),transparent);}
+.divider span{font-size:.9rem;}
+
+.cue{margin:1.4rem auto;text-align:center;}
+.cue-label{display:inline-block;font-family:'Cinzel',serif;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:.6;margin-bottom:.55rem;border:1px solid rgba(201,168,76,.25);padding:.18rem .65rem;border-radius:2px;}
+.music-link{display:inline-block;color:var(--gold);text-decoration:none;font-size:1rem;opacity:.75;transition:opacity .2s;letter-spacing:.04em;}
+.music-link:hover{opacity:1}
+
+/* Tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:.2rem;border-bottom:1px solid rgba(201,168,76,.15);margin-bottom:2.5rem;padding-bottom:.25rem;}
+.tab{font-family:'Cinzel',serif;padding:.4rem .75rem;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:color .2s,border-color .2s,text-shadow .2s;}
+.tab:hover{color:var(--gold);}
+.tab.active{color:var(--gold);border-bottom-color:var(--gold);text-shadow:0 0 20px rgba(201,168,76,.3);}
+.panel{display:none;}
+.panel.active{display:block;animation:fadeUp .3s ease;}
+
+/* Boss stat tables */
+.stat-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;}
+.stat-table td{padding:.45rem .9rem;border:1px solid rgba(201,168,76,.2);font-size:1.02rem;line-height:1.6;}
+.stat-table td:first-child{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);width:38%;}
+.ability-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;}
+.ability-table th{font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);text-align:left;padding:.4rem .8rem;border-bottom:1px solid rgba(201,168,76,.25);}
+.ability-table td{padding:.4rem .8rem;font-size:1rem;line-height:1.6;border-bottom:1px solid rgba(201,168,76,.08);}
+
+.back{display:inline-block;margin-top:2.5rem;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.back:hover{color:var(--dim)}
+@media(min-width:1024px){html{font-size:115%}}
+@media(max-width:560px){.narration{padding:1.1rem 1.1rem}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<div class="wrap">
+
+  <header class="hd">
+    <h1 class="hd-title">Laboratoř a sochařská dílna</h1>
+    <div class="cue" style="margin-top:1.1rem;">
+      <div class="cue-label">Hudba</div>
+      <a class="music-link" href="https://www.youtube.com/watch?v=gImPWxleXso&list=RDgImPWxleXso&start_radio=1" target="_blank" rel="noopener">▶ YouTube — Ambient track</a>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Místnosti">
+    <button class="tab active" data-i="0">0</button>
+    <button class="tab" data-i="1">1</button>
+    <button class="tab" data-i="2">2</button>
+    <button class="tab" data-i="3">3</button>
+    <button class="tab" data-i="4">4</button>
+    <button class="tab" data-i="5">5</button>
+    <button class="tab" data-i="6">6</button>
+    <button class="tab" data-i="7">7</button>
+    <button class="tab" data-i="8">8</button>
+    <button class="tab" data-i="9">9</button>
+    <button class="tab" data-i="10">10</button>
+    <button class="tab" data-i="11">11</button>
+    <button class="tab" data-i="12">12</button>
+    <button class="tab" data-i="13">13</button>
+    <button class="tab" data-i="14">14</button>
+    <button class="tab" data-i="15">15</button>
+  </nav>
+
+  <!-- ═══════════════════════════════ ROOM 0 ═══════════════════════════════ -->
+  <div class="panel active" id="p0">
+    <h2 class="section-title" style="margin-top:0">0 — Přístav</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Ukotvili jste svou loďku na břehu skyrté jeskyně. Od vody sem vane teplý vítr, ve vzduchu cítíte vlhko a dusno. Cítíte ovšem také hřejivý pocit klidu a bezpečí. Je téměř jasné, že o tomto místě víte pouze vy - a kdosi, kdo zde vybudoval pozoruhodnou stavbu. Ano - před vámi je molo a pár dřevěných sloupků, malý přístav a v něm několik beden, polic a truhel. Ovšem, fascinující je roh budovy, který se postupně zapouští hluboko do kamene zdejší skály. Do budouvy vede jediný, skromný vstup skrz dřevěné dveře v přístavu. Po vaší pravé ruce vidíte ve vodě otočený vrak člunu a za ním točící se mlýnské kolo.</p>
+    </div>
+    <div class="gm">
+      <p>Postavy v truhlách mohou nalézt oblečení, zvlhlé knihy a běžné nářadí. Také pár lesklých kamenů bez zdánlivé hodnoty.</p>
+      <p>Pokud postavy napadne vyřadit z provozu mlýnské kolo, zastaví se přívod elektřiny do celého komplexu.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 1 ═══════════════════════════════ -->
+  <div class="panel" id="p1">
+    <h2 class="section-title" style="margin-top:0">1 — Předsálí</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Před vámi se rozprostírá kupodivu prázdná místnost zdobená několika kapradinami ve vysokých květináčích. Stěny jsou holé a podlaha z tyrkisového mramoru. Místnost voní po kadidle a pryskyřici. Uprostřed místnosti jsou dva kamené stoly a na nich bílý ubrus. Z místnosti vedou 3 dveře. Jedny široké dřevené dveře s propleteným zdobením. Jedny malé dřevené dveře a na konec další velké dřevěné dveře s železným kováním.</p>
+    </div>
+    <div class="gm">
+      <p>Zde nic zajímavého</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 2 ═══════════════════════════════ -->
+  <div class="panel" id="p2">
+    <h2 class="section-title" style="margin-top:0">2 — Zdobná spojovací chodba</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Urazili jste odedveří 6 metrů a ocitáte se v malé místnůstce uprostřed chodby. Mísnost zdobí bista, s trochu abstraktním obličejem. Nebo možná jen nešikovně vytesaným. Nebo obojí. Místnost dále pokračuje na západ, kde končí chodba stejnými dveřmi, jako kterými jste předchvíli vstoupili. Na severní stěně je průchod kamsi mimo budovu. Pozoruhodně, v rohu místnosti kde právě stojíte je zbortěná zeď a za ní schody. Nedá se přehlédnout, že schody vedou pod hladinu vody. Je zároveň zřejmé, že schody stavěl někdo jiný, než dosavadní architekturu - působí ještě honosněji, ale staře - jako architektura dávno zapomenuté bohaté civilizace.</p>
+    </div>
+    <div class="gm">
+      <p>Zde nic zajímavého</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 3 ═══════════════════════════════ -->
+  <div class="panel" id="p3">
+    <h2 class="section-title" style="margin-top:0">3 — Zatopená pokladnice</h2>
+    <p class="hd-sub" style="text-align:center;margin-bottom:1rem;">Pravěká ruina předcházející hideoutu vědce</p>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Místnost je malá a tmavá - a zatopená - a přesto, cosi v ní září. Zlato. Hromada zlata. Mince, poháry, pláty, zdobné zbraně, cihly a pruty. Většina z toho je poškozená kontaktem s vodou, ale tu tam se z hromady dá vyzobat pár kusů, které rozhodně neztratily svou cenu. Je jen otázka, jak je dostat ven ze zavřené pokladnice.</p>
+    </div>
+    <div class="gm">
+      <p>Do pokladnice se dostane kdokoli, kdo umí udržet dech pod vodou. Záludností je ovšem fakt, že do pokladnice vedou dveře, které se musí vypáčit, vyrazit nebo jinak prolomit, aby mohl být poklad vynesen. (dovnitř se může dostat někdo i podedveřmi pokud je malý tvor). Klíč ke dveřím se případně nachází ve spižírně mezi obrazy a nalezne jej kdokoli, kdo se rozhodne horní patro obrazů prohledávat. Nachází se zde dostatek pokladu v hodnotě, aby si skupina mohla koupit jeden kouzelný artefakt ve vesnici. - cca 200 grošů.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 4 ═══════════════════════════════ -->
+  <div class="panel" id="p4">
+    <h2 class="section-title" style="margin-top:0">4 — Lázeň</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>V místnosti, do které jste vstoupili je ještě větší teplo a dusno, než kde doposud. Vzuch zde stojí, není žde žádný průvan. Uprostřed místnosti je zabudovaná lázeň a podél stěn jsou kamené lavice určené k odpočívání - je patrné, že jste vstoupili do koupelen. Vedle lázně leží ručník a mýdlo.</p>
+    </div>
+    <div class="gm">
+      <p>Pokud se zde nějaká postava rozhodné umýt, obdrží permanentní +1 k jednomu z následujících talentů: Concentration, Resolve, Meditation, Stoicism, Foresight. Platí jen pro první 2 postavy. Poté voda už nadále není čistá. Okomentovat hezky, jako že si postava nepamatuje kdy naposledy byla čistá, teď je ještě vymydlená a voňavá.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 5 ═══════════════════════════════ -->
+  <div class="panel" id="p5">
+    <h2 class="section-title" style="margin-top:0">5 — Latríny</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Otevíráte dveře do malé, ale krásně zdobené místnůstky. Podlaha je obložena mahagonovým dřevem, v levém rohu stojí koš s nedopáleným dřevem, v pravém rohu je na zdi zavěšená louč, pod ní police s knihou a vedle ní - latrína. Objevili jste toaletu.</p>
+    </div>
+    <div class="gm">
+      <p>Místnost nenabízí nic duležitého. Kniha nese jméno "1000 rad jak se stát lepším kameníkem" - kniha se zdá být moc tenká, aby v ní skutečně bylo 1000 rad.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 6 ═══════════════════════════════ -->
+  <div class="panel" id="p6">
+    <h2 class="section-title" style="margin-top:0">6 — Spojovací chodba</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Vstoupili jste do těsné spojovací chodby. V chodbě je kupodivu čerstvý vzduch, přesto, že pokračujete hlouběji do podzemního komplexu. Z jihu vedou dvě úzké chodby, obě do lázně, ze které jste přišli. Na západě chodba ústí mohutnými dvoukřídlými dveřmi. Na severovýchodní stěne jsou jedny užší dveře. Chodba pokračuje na sever, odkud přichází čerstvý vzduch</p>
+    </div>
+    <div class="gm">
+      <p>Zde nic zajímavého</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 7 ═══════════════════════════════ -->
+  <div class="panel" id="p7">
+    <h2 class="section-title" style="margin-top:0">7 — Ložnice</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Vstupujete do útulné, vyhřáté místnosti. Jedná se o ložnici. Ložnici někoho, kdo rád čte, neboť vidíte po stranách hned několik knihoven, plně zaplněných tenkými i tlustými svazky. Většina z nich pojednává o nauce o kameni, krystalech a horninách, chemických látkách, o flóře a nakonec i magii. Mezi knihami je i několik beletristických či poterických kusů, jako například věhlasně známé - údolí lilií, narození bílého muže a nebo havraní hrad. Kromě knih v ložnici není mnoho dekorací, jen honosná postel prázdná truhlice na oblečení a obraz potoka. Nakonec vaše oko však zauje něco známého - nad dveřmi je znak - ten stejný a podivný znak, který na svém kabátu měl onen muž, jenž vás poslal na tuto vaši pouť. Černý kruh, zaplněný rudým polem a v něm 4 vysoké hranaté věže, postupně se zůžující a zleva doprava se zmenšující.</p>
+    </div>
+    <div class="gm">
+      <p>Zde hinty k tomu, komu ubytování patří - zjevné, že jen jedna postava. A stejné znaky jako na kabátu zadavatele celé mise.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 8 ═══════════════════════════════ -->
+  <div class="panel" id="p8">
+    <h2 class="section-title" style="margin-top:0">8 — Sochařský ateliér</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Tato místnost je ateliérem, zjevně sochažským. Je to snadné usoudit na základě nástrojů - dláta, kladiv, špachtlý různých tvarů, míchadla a kýble špinavé od hlíny... A zejména podle kamení, osekaného a povalujícího se všude kolem. Uprostřed místnosti na podstavci, zdá se být cosi jako rozpracovaná socha, ovšem v příliš brzkém stavu, aby se dalo soudit. Mezi kamenem a podstavcem je však vsunutý kus papíru vytržený z nějakého zápisníku. Stojí na něm: "Příště bych už opravdu měl jít sochat do zahrady, na slunce. Už to odkládám dlouho a vždy je mi tam na vzduchu o trochu lépe. Má krásná růže mě náramně inspiruje..."</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ROOM 9 ═══════════════════════════════ -->
+  <div class="panel" id="p9">
+    <h2 class="section-title" style="margin-top:0">9 — Zahrada</h2>
+    <p class="hd-sub" style="text-align:center;margin-bottom:1rem;">Zdobná i na pěstování</p>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Procházíte úzkou chodbou, která se postupně mění ve skalní útvar. Už chápete, proč byl ve spojovací chodbě tak čistý vzduch. Otevírá se totiž v otevřenou jeskyni, která má velký průduch ve svém stropě. Proudí sem tak nejen vítr, ale doknce také sluneční paprsky. Obyvatel útočistě tohoto jevu využil naplno - v jeskyni před vámi je krásně udržovaná zahrada. Úvodem do zahrady je dřevěný oblouk porostlý vinnou révou, za ním je několik keřů sestřihaných do tvarů pyramid. Mezi keři stojí nízký strom - citrónovník. Naproti citrónovníku stojí druhý strom, vysoký, Olše. Na samém konci zahrady je několik hnojníků a v nich roste zelenina a bylinky. Zahradě nechybí ani kamené, ručně tesané lavice. A uprostřed toho v malém kroužku obskáldaném oblázky - roste jediná, těžce modrá růže.</p>
+    </div>
+    <div class="gm">
+      <p>Zde hráči mohou nalézt růži potřebnou pro splnění vedlejšího úkolu z vesnice.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ ROOM 10 ═══════════════════════════════ -->
+  <div class="panel" id="p10">
+    <h2 class="section-title" style="margin-top:0">10 — Spižírna a sklad</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Místnost do které jste vstoupili má dřevěnou podlahu a voní sladce a kysele. Bude to pravděpodobě tím, že se jedná o spižírnu jídla a některé ovoce zde kvasí. Vypadá to však, že je v policích i dost čerstvého jídla, nepoznamenaného časem. Když zvednete hlavy, všimnete si také, že místnost není pouze spižírnou, ale také skladem - místnost má vlastní mezipatro a v mezipatře je sklad starožitností a uměleckých děl - obrazů, svícnů, byst...</p>
+    </div>
+    <div class="gm">
+      <p>V této místnosti se nacházejí dvě užitečné věci - zásoby jídla, pokud by postavám chyběly. Také klíč zapadlý mezi obrazy. Tento klíč slouží k otevření zatopené pokladnice.</p>
+      <p>Nakonec je v místnosti poklad v hodnotě cca 80 grošů, pokud se postavy rozhodnou sbalit s sebou nekteré nepoškozené obrazy a jiné dekorace zde schované.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ ROOM 11 ═══════════════════════════════ -->
+  <div class="panel" id="p11">
+    <h2 class="section-title" style="margin-top:0">11 — Výzkumná laboratoř</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Vstoupili jste do místnosti, jejíž stěny i podlaha jsou pokryté zvláštním kamenem, vypadajím jako kov. V místnosti je velký chlad, ale vy máte zároveň pocit, jako by vám v ní nemohla být zima. Místnost je plná různých skleněných a kovových zařízení některé se točí, některé svítí. V některých je kapalina, která kape z jedné strany na druhou. V rohu je také jakási pec a vedle ní nádoba s vodou. Ničemu z toho nerozumíte, jediné s čím si celé zjevení dokážete spojit je alchemie, ale jakéhosi pokročilého druhu. Na zdech jsou lampy, které svítí modrým světlem - bez ohně, bez jasné zdroje onoho světla.</p>
+      <p>...několik dóz, váz, uren a jiných nádob. Všechny zvláštně zapáchají, vůněmi, které vám nejsou/jsou povědomé. některé štípou v nose, trochu jako pepř. Jiné vonní suše, jako kdyby spalovali vzduch pod vašimi nozdrami.</p>
+      <p>Nakonec jsou v místnosti dva stoly a na tom větším je denník a do jeho čela zapýchlá jakási mapa - plánek.</p>
+    </div>
+
+    <h3 class="section-sub">Záznam v deníku</h3>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Hypotéza: Za to, co místní krajané nazívají Blažeností, může výroba a užití Elektrolitu užitého pro výrobu a distribuci energie.</p>
+      <p>Den 1: Úspešně se mi podařilo rozbít uschovaný Ereborit v Elektrolit</p>
+      <p>Den 7: Stále se mi nedaří vyrobit přesnou směs Elektrolitu.</p>
+      <p>Den 9: Vynesl jsem více autentických vzorků. Má skrytá cesta ven vedoucí ze šaten k ke stříbrnému dubu pod skalou se osvědčuje.</p>
+      <p>Den 11: Sláva, vzorek 6 dokázal spustit lampičku na mém stole.</p>
+      <p>Den 16: Ulovil jsem zdravého kolibříka, snad bude stačit.</p>
+      <p>Den 26: Kolibřík v kleci je vystaven výparům Elektrolitu již desátým dnem. Nepozoruji žádnou změnu.</p>
+      <p>Den 44: Včera jsem začal mít pocit, že se Fred - kolibřík - začíná chovat trochu zvláštně.. A proboha. Byla to jen předzvěst hrůz, které začali dnes ráno. Alfred, tedy kolibřík, se začal věšet na bidýlku vzhůru nohama, poté začal klovat kolem sebe jako kdyby lovil neviditelné zrní - podotýkám, že kolibříci nezobají zrní - poté začal chodit po své malé klícce po nožkách, jako naparující se kohout. Je to jisté - způsobili jsme změnu mentálního i fyzického stavu celé krajiny. Způsobujeme Blaho.</p>
+      <p>Den 45: Výroba Elektrolitu musí být zastavena.</p>
+      <p>Den 58: Sláva, konečně jsem vytvořil destilát, který v přímněsi s Elektrolitem reaguje... Explozivně.</p>
+      <p>Den 62: Vymyslel jsem plán, jak výrobu přeruším. Smažu z existence tohoto světa.</p>
+      <p>Den 63: Přišli na mě. Nevím kdo, ani jak. Všichni jsou bezduší. Nikdo už nedbal na mé náhlé odchody skrz tunel v úpatí hory ústící pod tím zvláštním dubem se stříbrnými žaludy. Skoro jsem se přestal hlídat, nebyl důvod. Ale dnes jsem cítil, že na mě divně zírají. Musím zmizet. Na plánku jsem si nechal stručný postup v poznámkách. Bude muset stačit!</p>
+      <p>Kdokoli kdo čte můj deník! Prosím, napravte mé prohřešky.</p>
+    </div>
+
+    <h3 class="section-sub">Poznámky na zadní straně plánku budovy</h3>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Na víc si zpaměti nevzpomenu. Tenhle nákres musí stačit. V kontrolní místnosti je detiální plán výrobního procesu, kouknu se na něj až dorazím.</p>
+      <p>Myslím, že jsem zůstal poslední, jediný. Všichni ostatní se proměnili v přízraky, kopie sebe samých.</p>
+      <p>Opakuji. Řešení je jednoduché. Přimíchat kapku vzroku BC-544 do každé z odpadních kontaminačních nádob. Nastane chemická reakce, která trvá asi 20 minut, poté nastane nesmírná exploze. Vše vyletí do povětří.</p>
+      <p>Jestli ale chci zamezit kontaminaci celé krajiny, první se musí zastavit zprosecovač Elektrolitu! Jen a pouze tehdy může nastat výbuch!</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ ROOM 12 ═══════════════════════════════ -->
+  <div class="panel" id="p12">
+    <h2 class="section-title" style="margin-top:0">12 — Finální místnost s pojistnými opatřeními</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Rozléhá se před vámi veliká místnost. Nelze si nevšimnout, že podlaha této místnosti probíjí statickou elektřinou. Podlaha pod elektrickými výboji je zkonstruována z pískovnce, ovšem, odedveří vedou dvě zdánlivé cesty - jedna cesta z modrých kachliček, druhá z rudých kachliček. Každá z cest je metr široká a klikatí se, obě cesty ovšem vedou k velkým dveřím na protější straně místnosti.</p>
+      <p>Uprostřed místnosti je zhruba 4 metry široká a dlouhá vyvíšenina, na kterou vede několik schodů - zdá se, že na této vyvýšenině elektřina neprobíjí. Na jejím vrcholu stojí jakési zařízení a na tomto zařízení tři modré krystaly. Ze zařízení vede potrubí, do jižní stěny místnosti.</p>
+      <p>Kolem velkých dveří na západě jsou také jakási měděná zařízení, stejně jako na dvou západních sloupech zdobících místnost v rozích. Další dva sloupy jsou na východě, také v rozích.</p>
+      <p>Pod velkými dveřmi leží kostra člověka.</p>
+      <p>Nakonec, v severní stěně jsou jedny skromnější dveře.</p>
+    </div>
+    <div class="gm">
+      <p>V této místnosti u země probíjí elektřina - v podlaze jsou barevné dlaždice, ale ty jsou red herring. Nejsou k ničemu duležité. Způsob, jak projít přes elektřinu bez zranění je položit na zem jakoukoli vyvíšeninu, vyšší alespoň více než 20 centimetrů. Poté lze bezpečně kráčet. Je také možnost sestřelit akumulátor energie ve středu místnosti. Akumulátor má AC 14 a musí být trefen 3x, aby z něj vypadl i poslední krystal. Elektřina jinak při kontaktu způsobuje 1d4 zranění.</p>
+      <p>Když postavy ohledají kostlivce u severních dveří zjistí (při <span class="dc">DC 5</span>), že je kostra vytesaná z kamene.</p>
+      <p>V severní části místnosti jsou dveře - za dveřmi se nic nenachází, ovšem kdo je otevře - dostane elektircký výboj z dvou oblkoupujícíh krystalů. (1d4)</p>
+      <p>Celá místnost je vyřaditelné z provozu mlýnským kolem.</p>
+      <p>Po cestě zpátky, pokud bude čas - boss fight agains single tank (stone golem) with 3 abilities of low damage - vždy hraje 2x za sebou. Spin attack (všichni v dosahu těla). Push attack (odsune o 3 metry - pokud odsun končí ve stěně, extra 2 damage). A mana embuded/overflow attack - zaměřená postava musí okamžitě zahrát jednu ze svých schopností. Odolnost proti piercing, slashing.</p>
+    </div>
+
+    <div class="divider"><span>❦</span></div>
+
+    <h2 class="section-title" style="margin-top:1rem;">STONE GOLEM — Boss</h2>
+
+    <table class="stat-table">
+      <tbody>
+        <tr><td><strong>HP</strong></td><td>125no</td></tr>
+        <tr><td><strong>AC</strong></td><td>13</td></tr>
+        <tr><td><strong>Speed</strong></td><td>4m per turn</td></tr>
+        <tr><td><strong>Initiative</strong></td><td>−1</td></tr>
+      </tbody>
+    </table>
+
+    <div class="gm">
+      <p><strong>Double Action</strong> — The Golem always takes exactly <strong>2 actions</strong> per round (any combination of the 3 abilities; may repeat the same one twice).</p>
+      <p><strong>Resistances</strong> — Piercing, Slashing <em>(take half)</em><br>
+      <strong>Immunities</strong> — Charmed, Frightened, all Willpower-based saves <em>(mindless construct)</em></p>
+    </div>
+
+    <div class="divider"><span>❦</span></div>
+
+    <h3 class="section-sub">Abilities</h3>
+
+    <div class="gm">
+      <p><strong>Spin Attack</strong><br>
+      <em>Constitution Save <span class="dc">DC 12</span> · All creatures in melee reach</em><br>
+      Every creature within arm's length must save. Failure: <strong>1d4+1</strong> bludgeoning. Success: half damage.</p>
+
+      <p><strong>Push Attack</strong><br>
+      <em>+5 to hit · 1 target · Melee</em><br>
+      On hit: <strong>1d6</strong> bludgeoning. Target is shoved <strong>3m back</strong>. If the push ends at a wall or fixed obstacle: +<strong>2</strong> bludgeoning damage.</p>
+
+      <p><strong>Mana Overflow</strong><br>
+      <em>Willpower Save <span class="dc">DC 13</span> · 1 visible target within 15m</em><br>
+      The golem emits a pulse of raw unstable mana at one target. On failure: that creature must immediately activate one of their abilities — player picks which, but must use it this instant (DM can override if they stall). No direct damage.</p>
+    </div>
+
+    <div class="divider"><span>❦</span></div>
+
+    <table class="ability-table">
+      <thead>
+        <tr>
+          <th>Ability</th>
+          <th>Avg damage</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Spin Attack</td><td>3.5</td><td>hits everyone in melee reach</td></tr>
+        <tr><td>Push Attack</td><td>3.5 + 2 conditional</td><td>single target</td></tr>
+        <tr><td>Mana Overflow</td><td>0</td><td>burns an ability, not HP</td></tr>
+      </tbody>
+    </table>
+
+    <div class="gm">
+      <p><em>Note: immune to Willpower saves — Mocking Cackle, Mesmerize, and Puppet won't work on it.</em></p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ ROOM 13 ═══════════════════════════════ -->
+  <div class="panel" id="p13">
+    <h2 class="section-title" style="margin-top:0">13 — Malá místnost s rébusem</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Podařilo se vám vstoupit do malé místnůstky - jedná se sice o chodbu, ale je natolik zaplněná předměty, že se stává plnohodnotnou místností. Podél stěn jsou vysoké římsy a na nich stojí mramorové květináče s kapradinami. Kolem květináčů jsou zdobené sloupky pokryté reliéfy. Pod římsami jsou prohlubně sahající hluběji do zdi a v nich stojí hlinění trpaslíci ve styčné pozci. Ze stropu vysí dekorovaný lustr ošetřený modrým sklem, tvořícím 3 lucerny. Nakonec, naproti vám, stojí mramorové dveře se zlatou kruhovou klikou.</p>
+    </div>
+    <div class="gm">
+      <p><strong>V této místnosti je past —</strong> pokud postavy zaberou za kliku na dveřích, dříve než vyřadí pojistku, utrží 4 náhodní tvorové v místnosti 1d4 zranění - bodnutí od hliněných trpaslíků. (zranění utrží 4 postavy, které hodí nejnižší číslo na d20). Pojistka se nachází za jedním z květináčů a lze ji najít při investigaci d13.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Na první pohled nic neacházíte, ale poté spatříte, všichni trpaslíci stojí na mírné vyvíšenině, ze které se ozývá rachtavý zvuk ozubeného kola. Tato skutečnost indikuje, že se jedná o skrytý mechanismus. S touto znalostí a motivací odhalit podstatu mechanismu, nebylo složité zjistit, že 2. kapradí na po pravé straně za sebou skrývá malou dřevěnou páčku.</p>
+    </div>
+    <div class="gm">
+      <p>Trpaslící ve zdi - killable or just a trap?</p>
+      <p>Vyřaditelné mlýnským kolem.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ ROOM 14 ═══════════════════════════════ -->
+  <div class="panel" id="p14">
+    <h2 class="section-title" style="margin-top:0">14 — Propast s římsou</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Rozprostírá se před vámi 10 metrů dlouhá a 2 metry široká chodba. Po 5 metrech se chodba ovšem mění v hlubokou propast. Na dně propasti jsou dřevěné kůly. Propast je hluboká 8 metrů a její stěny jsou naprosto hladké. Nad propastí z jedné skalní stěny do druhé vede silná dřevěná římsa a z té do propasti visí provaz. Na druhé straně propasti, po pravé straně vidíte dveře.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Intended řešení:</strong></p>
+      <p><strong>a)</strong> Jedna z postav může propast přeskočit, s acrobatics <span class="dc">DC 14</span> nebo athletics <span class="dc">DC 17</span> (je duležité zdůraznit, že je těžké strefit se přímo na lokaci dveří a udržet se dostatečně dlouho, aby se dali otevřít nebo prorazit samotným skokem).</p>
+      <p><strong>b)</strong> Dalším řešením je vypozorovat nášlapný disk dole v propasti. Pokud postavy použijí jakoukoli oheldávací schopnost:</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Když se nakolníte, hned z kraje propasti, téměř pod vašimi nohami, si všímáte lesklého plátu. Jedná se zjevně o nášlapný mechanismus. Plát je mírně nakloněný a po jeho levé straně je nízký otvor, vedoucí kamsi do zdi.</p>
+    </div>
+    <div class="gm">
+      <p>Když postavy hodí cokoli na tento plát, vysune se nad propast průchozí kovový most.</p>
+      <p><strong>c)</strong> Provaz je red harring - ale pokud bude skupina vynalézavá, mohou ho použít.</p>
+      <p>Pokud postavy vyřadí z provozu mlýnské kolo, plát neaktivuje kovový most.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ ROOM 15 ═══════════════════════════════ -->
+  <div class="panel" id="p15">
+    <h2 class="section-title" style="margin-top:0">15 — Skladiště odpadních tekutin</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Opustili jste člověkem tvořený úbytek a nacházíte se v malém skalním výklenku s přístupem k vodě. Přístup k vodě je ohraničený nízkým plotem. Před vámi se nachází několik dóz, váz, uren a jiných nádob. Všechny zvláštně zapáchají, vůněmi, které vám nejsou/jsou povědomé. některé štípou v nose, trochu jako pepř. Jiné vonní suše, jako kdyby spalovali vzduch pod vašimi nozdrami.</p>
+    </div>
+    <div class="gm">
+      <p>Zde nic duležitého</p>
+    </div>
+  </div>
+
+  <a class="back" href="dm.html">← Back</a>
+
+</div>
+
+<script>
+(function(){
+  const s=document.getElementById('stars');
+  for(let i=0;i<160;i++){
+    const el=document.createElement('div');
+    el.className='star';
+    const sz=.3+Math.random()*1.6;
+    el.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation:twinkle '+(2+Math.random()*3.5)+'s '+(Math.random()*4)+'s infinite alternate;';
+    s.appendChild(el);
+  }
+})();
+
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('p'+btn.dataset.i).classList.add('active');
+}));
+</script>
+</body>
+</html>
