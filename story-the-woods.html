@@ -78,6 +78,22 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 
 .back{display:inline-block;margin-top:2.5rem;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
 .back:hover{color:var(--dim)}
+
+/* Village location tabs */
+.loc-tabs{display:flex;flex-wrap:wrap;gap:.2rem;border-bottom:1px solid rgba(201,168,76,.12);margin:1.5rem 0 2rem;padding-bottom:.25rem;}
+.loc-tab{font-family:'Cinzel',serif;padding:.4rem .75rem;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:color .2s,border-color .2s,text-shadow .2s;}
+.loc-tab:hover{color:var(--gold);}
+.loc-tab.active{color:var(--gold);border-bottom-color:var(--gold);text-shadow:0 0 20px rgba(201,168,76,.3);}
+.loc-panel{display:none;}
+.loc-panel.active{display:block;animation:fadeUp .3s ease;}
+/* Scrollable tables */
+.table-wrap{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch;}
+.data-table{width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.6;min-width:420px;}
+.data-table th{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:left;padding:.45rem .7rem;border-bottom:1px solid rgba(201,168,76,.25);}
+.data-table td{padding:.4rem .7rem;border-bottom:1px solid rgba(201,168,76,.07);vertical-align:top;}
+.data-table tr:last-child td{border-bottom:none;}
+/* Village intro quote */
+.village-quote{text-align:center;font-style:italic;color:var(--gold);opacity:.65;margin:0 0 2rem;font-size:1.1rem;line-height:1.7;}
 @media(min-width:1024px){html{font-size:115%}}
 @media(max-width:560px){.narration{padding:1.1rem 1.1rem}}
 </style>
@@ -95,6 +111,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 
   <nav class="ch-tabs" role="tablist" aria-label="Chapters">
     <button class="ch-tab active" data-ch="woods">Ch. I — The Woods</button>
+    <button class="ch-tab" data-ch="village">Ch. II — Village</button>
     <button class="ch-tab" data-ch="lab">Ch. V — Lab</button>
   </nav>
 
@@ -364,6 +381,537 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   <a class="back" href="dm.html">← back to dm cabinet</a>
 
   </div><!-- end ch-woods -->
+
+  <!-- ══════════════════════ CHAPTER II — VILLAGE ══════════════════════ -->
+  <div class="ch-panel" id="ch-village">
+
+  <p class="village-quote">„Červánková ves, místo klidu a radosti pro každého - vílu či trpaslíka, medvěda či zlobra. Každý je vítán."</p>
+
+  <nav class="loc-tabs" role="tablist" aria-label="Sekce">
+    <button class="loc-tab" data-l="all">All</button>
+    <button class="loc-tab active" data-l="prehled">Přehled</button>
+    <button class="loc-tab" data-l="1">1</button>
+    <button class="loc-tab" data-l="2">2</button>
+    <button class="loc-tab" data-l="3">3</button>
+    <button class="loc-tab" data-l="4">4</button>
+    <button class="loc-tab" data-l="5">5</button>
+    <button class="loc-tab" data-l="6">6</button>
+    <button class="loc-tab" data-l="7">7</button>
+    <button class="loc-tab" data-l="8">8</button>
+    <button class="loc-tab" data-l="9">9</button>
+    <button class="loc-tab" data-l="10">10</button>
+    <button class="loc-tab" data-l="ukol">Úkol</button>
+  </nav>
+
+  <!-- ── PŘEHLED ── -->
+  <div class="loc-panel active" id="v-prehled">
+    <h2 class="section-title" style="margin-top:0">Přehled</h2>
+    <div class="gm">
+      <p>Červánková Vesnice je řádná vesnice. Šedesát-a-pár lidí, studna, tržiště, mlýn u říčního břehu. Vypadá tak, jak by vesnice vypadat měla. To, co je špatně, je zcela v detailech - hostinský, který tiše a bez přestání směje, zatímco čepuje; dítě, které klidně sáhne po nejostřejší zbrani skupiny; stařec, který sedí na nádvoří od čtvrtka v dokonalé spokojenosti. Blaho z těchto lidí nedělá zlé lidi. Dělá je nedosažitelnými, každého svým vlastním způsobem.</p>
+      <p>Vesničané vědí, kde jednorožci jsou. Bylo to obecně známé, než Blaho pohltilo každodenní paměť. Cílem skupiny je tuto informaci znovu odkrýt - a existují čtyři cesty, jak toho dosáhnout.</p>
+      <p>Jednorožci se nachází u <strong>Lesklého jezera</strong>. Jakmile hráči zjistí tuto odpověď jakýmkoliv způsobem, kdokoli ve vesnici jim potvrdí cestu - to nikdo nezapomněl.</p>
+    </div>
+
+    <h3 class="section-sub">Inspirace za zbytečné dobré skutky</h3>
+    <div class="gm">
+      <p>Vesnice je plná dílčích problémů (trápící se ovce, uvězlí vesničané v červu, opilý Blahodan, vyděšená posádka), které hráči nemusí řešit, aby se dostali k odpovědi - zvlášť pokud lokaci jednorožců zjistí jinou cestou dřív. Pokud se do nich pustí i tak, <strong>odměňte to Inspirací</strong> (nebo ekvivalentem ve vašem systému). Nemá to být zbytečné - i dobrý skutek navíc by se měl cítit odměněný. Konkrétní místa jsou označená níže.</p>
+    </div>
+
+    <h2 class="section-title">Čtyři cesty k jednorožcům</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Cesta</th><th>Mechanika</th><th>Klíčové lokace</th><th>Sekce</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Červ</strong></td><td>Průzkum + sociální</td><td>Jeskyně-Svatyně</td><td>1</td></tr>
+          <tr><td><strong>2. Křišťálová Koule</strong></td><td>Rituál + řetězec lokací</td><td>Věž → Hřbitov → Farma</td><td>3 a 6</td></tr>
+          <tr><td><strong>3. Starosta Korm</strong></td><td>Překážka + třídní schopnosti</td><td>Tvrz</td><td>5</td></tr>
+          <tr><td><strong>4. Blahodan</strong></td><td>Stopování + průzkum (slepá ulička)</td><td>Taverna → Blahodanův dům</td><td>4 a 9</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gm">
+      <p>Hráči nemusí tušit, kolik cest existuje. Ať si zvolí svou. Tři z nich vedou ke stejné odpovědi - čtvrtá (Blahodan) je úmyslná slepá ulička, která hráče vrátí zpátky k ostatním cestám. Je to ta nejsnazší a nejpřímější na první pohled, což je důvod, proč ji Brennan nabídne jako první.</p>
+    </div>
+
+    <h2 class="section-title">Síť indicií — Kdo ví co</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>NPC / Lokace</th><th>Cesta 1 (Červ)</th><th>Cesta 2 (Koule)</th><th>Cesta 3 (Korm)</th><th>Cesta 4 (Blahodan)</th></tr></thead>
+        <tbody>
+          <tr><td>Brennan (Taverna)</td><td>Zmíní tři pohřešované vesničany</td><td>Ví o existenci koule ve věži, neví jak ji aktivovat</td><td>Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé</td><td>Blahodan odešel před 8 týdny - nikdo nevěděl proč; pošle hráče za Alchovenem</td></tr>
+          <tr><td>Věkoslav (Alchymista)</td><td>—</td><td>Koule potřebuje vodu z hřbitova; viděl ji aktivní</td><td>—</td><td>—</td></tr>
+          <tr><td>Ivan &amp; Lucie (Nádvoří)</td><td>Pohřešovaní s nimi tančívali</td><td>Hřbitov se pravidelně využívá; znají rituál</td><td>Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví</td><td>—</td></tr>
+          <tr><td>Farmář (Farma)</td><td>—</td><td>Zná pohřební rituál - je vesničanům obecně znám</td><td>—</td><td>—</td></tr>
+          <tr><td>Serrina (Hazardní hráčka)</td><td>—</td><td>—</td><td>Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř</td><td>—</td></tr>
+          <tr><td>Alchoven (Hazardní hráč)</td><td>Zápisky o pohřešovaných</td><td>Zápisky zmiňují věž a kouli</td><td>—</td><td>Neví, kde Blahodan je, ale slyšel jeho psa vyt - zná lokaci Blahodanova domu</td></tr>
+          <tr><td>Pip - Dívka na Farmě</td><td><em>„Ta stará jeskyně se pohybuje"</em></td><td>Popsala světla hřbitova</td><td>—</td><td>—</td></tr>
+          <tr><td>Štrup (Nádvoří)</td><td>—</td><td>Viděl záblesk světla z věže</td><td>—</td><td>Viděl Blahodana odcházet; <em>„šel rychle, jako když někde hoří"</em></td></tr>
+          <tr><td>Vilhéma (Tkalcovna)</td><td>—</td><td>Zná pohřební rituál; může vysvětlit formuli</td><td>Je jeho sestřenice; ví, že (na rozdíl od toho, co se ve vsi říká) tvrz pořád občas opouští - viděla ho minulý týden u studně za tvrzí</td><td>Ví, že Blahodanovo Blaho je deprese a pití - varuje, že to nebude radostné setkání</td></tr>
+          <tr><td>Sebastián / Měchomura / Vren</td><td>Znají všechny čtyři cesty (byli tu před Blahem)</td><td>Znají všechny čtyři cesty</td><td>Vren ví, že Vilhéma je Kormova sestřenice</td><td>Vren zná Blahodanova psa Žolíka jménem - pes ho poslechne</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- end v-prehled -->
+
+  <!-- ── SEKCE 1 ── -->
+  <div class="loc-panel" id="v-1">
+    <h2 class="section-title" style="margin-top:0">1 — Jeskyně-Svatyně</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> <span class="dc">DC 8</span> Investigation / Instinct · <span class="dc">DC 12</span> Instinct · <span class="dc">DC 8</span> Persuasion / Empathy (×3 vesničané) · <span class="dc">DC 10</span> Instinct / Agility (pohyb v chřtánu)</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Je před vámi vysoká, ne příliš hluboká jeskyně z černého kamene, který ještě nikdo z vás nikdy neviděl. Vypadá jako kůra velmi velmi staré břízi. Tuto mělkou jeskyni vesničané přetvořili ve svatyni. Plápolají zde svíce, na kameni pod krápníky leží jablka a kus masa, který se jeví jako skopové stehno s kostí. Je pozoruhodné, že každých 15 sekund svíce ve svatyni mění směr svého plamene, jako by si s nimi hrál vítr, ovšem jen ve dvou pravidelnýh směrech.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Jeskyně je ve skutečnosti chřtán obřího kamenného červa, který tu odpočívá již desítky let. Vesničané ho nechtěně krmí obětinami - dary mizí, a proto věří, že jejich modlitby jsou vyslyšeny a že jejich bůh (Bůh mnoha tváří*) je skutečný. Červ jejich víru nevytváří - jen přijímá jídlo.</p>
+      <p>Červ začne s hráči telepaticky komunikovat okamžitě poté, co některý hráč zjistí, že se jedná o živého tvora - ne o jeskyni. Do té chvíle mlčí.</p>
+      <p>Problém červa: posledních 8 týdnů se mu v útrobách usídlili tři vesničané. Cítí, že spolkl něco, co nelze strávit, a to ho obtěžuje. Pokud ho hráči tohoto trápení zbaví, vydá se najít momentální lokaci jednorožců - a vrátí se s odpovědí. Někteří vesničané zmíní, že před 8 týdny z vesnice zmizeli tři lidé - pokud se jich hráči zeptají.</p>
+    </div>
+    <div class="gm">
+      <p><strong><span class="dc">DC 8</span> Investigation / Instinct</strong> — hráč si všimne, že zadní část jeskyně, dosud skrytá kamenným oltářem, je velmi tmavá - tma bez dna, bez odrazu, jako by neměla konec.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Zdá se, že přes to, jak je jeskyně mělká, její drobný nejzazší bod - dosud skrytý kamenným stolem - je velmi tmavý a jeví se, jako by neměl konce.</p>
+    </div>
+    <div class="gm">
+      <p><strong><span class="dc">DC 12</span> Instinct</strong> — při dalším zkoumání hráč zjistí, že se jeskyně celá nepatrně hýbe. Pomalý, pravidelný rytmus. Jako dech.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Celá jeskyně se nepatrně hýbe. Pomalý rytmus. Pravidelný. Jako dech. A najednou k vám promluví! „Nojo, tak to víte. Nejsem kámen. Ale všichni si to myslí! Už i já si tak zvykl, že jsem si to skoro začal myslet. Jsem červ, obří červ. Alespoň soudě dle toho, jaký název pro tvora jako jsem já v hlavě nosíte. Ano čtu vám myšlenky. A taky vidím, že hledáte jiného tvora - Jednorožce. Pozoruhodná stvoření. Mohl bych vám je pomoci najít. Když pomůžete vy mě. To víte, před 8 týdny jsem spolkl něco, co mě ne a ne strávit. Vlezte do mě a vyřešte to!"</p>
+    </div>
+
+    <h3 class="section-sub">Dovnitř: extrakce tří vesničanů</h3>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Uvnitř je horko a vlhko. Stěny se lesknou tenkou vrstvou čehosi na pomezí slin, pavučiny a tenoučkého skla. Každým nádechem se k vám line těžká vůně - sladká, trochu zkažená, jako staré ovoce smíchané s bahnem. Hluboko uvnitř to bublá a praská. Když dýchá, zeď se k vám na okamžik přitiskne - teplá, živá, a pak se zase odtáhne.</p>
+    </div>
+    <div class="gm">
+      <p>Hráči mohou do chřtánu vlízt. Stěny chřtánu jsou teplé a rytmicky se svírají - stejný patnáctivteřinový rytmus, který hráči mohli pozorovat na svících. Červ spolupracuje a snaží se kontrakce zadržet, když cítí pohyb, ale nedokáže to plně ovládat. Pokud postavy přijdou na to, že se mají kupředu hýbat jen když se červ nadechuje, je následující DC nižší, jinak je 15.</p>
+      <p><strong><span class="dc">DC 15</span>(/12) Instinct / Agility / Foresight / Grapple</strong> pro plynulý pohyb vpřed; neúspěch znamená přitlačení ke stěně na jednu kontrakci - nepříjemné, ale ne nebezpečné. Lze opakovat. Postavy musí tento hod 5x zopakovat.</p>
+      <p>Při hodu nižším než 5, všechny postavy utrží 1 damage. Při hodu nižším než 7 jsou postavy při výdechu odfouknuty o jeden hod zpět.</p>
+      <p>Na zpáteční cestě <span class="dc">DC 7</span>, případně automatický úspěch - červ se naučil tempovat s hráči.</p>
+      <p>Uvnitř, v prostorné komoře: tři vesničané. Jsou tu pohodlní. Mají svíčky (ukradené ze svatyně), jídlo (z obětí) a naprosto žádný zjevný důvod odejít. Blaho je postihlo bezdůvodností. Jejich typická odpověď: <em>„Prostě jsme přišli. Prostě jsme zůstali. Prostě... no, tak, tak to zkrátka je, no."</em></p>
+      <p><strong><span class="dc">DC 8</span> Understanding of Universe / Empathy / Insight / Stoicism</strong> na přesvědčení každého, aby odešel. Každý potřebuje <strong>dva úspěchy</strong>. Při neúspěchu vesničan souhlasí - a pak si sedne zpátky. Hrajte to jako absurdní komedii, ne jako trest.</p>
+      <p>Pokud hráči vesničany vyvedou i poté, co už lokaci jednorožců znají z jiné cesty, je to čistě dobrý skutek navíc - odměňte ho Inspirací (viz Přehled).</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Jméno</th><th>Kdo jsou</th><th>Co vědí</th></tr></thead>
+        <tbody>
+          <tr><td>Sebastián</td><td>Kronikář vesnice; tichý, pečlivý, trochu zaprášený</td><td>Všechny čtyři cesty; historii vesnice; pohřební rituál; kde je Lesklé jezero</td></tr>
+          <tr><td>Měchomura</td><td>Korkokůže žena, kůže jako kůra stromu</td><td>Zná Věkoslava osobně; pohřební rituál; zná cestu k hřbitovu</td></tr>
+          <tr><td>Vren</td><td>Liškorozený chlapec, mlčenlivý a pozorný</td><td>Zná Korma; ví, že Vilhéma je Kormova sestřenice; ví, že Blahodan odešel dobrovolně; zná jeho psa Žolíka jménem</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Pozorujete, jak se cosi, co jste ještě nedávno považovali za kus zvláštního kamene - cosi, co za kus zvláštního kamene považovali zdejší domorodci pravděpodobně desýtky let - začne třást a vrtět. Země pod vašimi nohami se začne otřásat a jeskyně se najednou začne svíjet. Vy dobře víte, že hledíte do chřtánu obřího červa. Tento chřtán se točí jako vlny na moři, jen do spirál a kotoučů. Najednou ústa sklapnou a v mžiku celá jeskyně zmizí z vašeho pohledu. Červ zmizel. Nyní zbývá už jen čekat, než se vrátí.</p>
+    </div>
+  </div><!-- end v-1 -->
+
+  <!-- ── SEKCE 2 ── -->
+  <div class="loc-panel" id="v-2">
+    <h2 class="section-title" style="margin-top:0">2 — Nádvoří s Májkou</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> <span class="dc">DC 12</span> Investigation k přečtení rytiny na základně</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Malá náves z udusané hlíny. Uprostřed stojí vysoká májka s mnoha zavěšenými stuhami, které se třepetají ve větru - ale stuhy jsou protřepané, místy protřené na tenkou nit. Kolem základny jsou do země vyšlapané kruhy - ne pouhé stopy, ale skutečné prohlubeniny, jako by tu někdo tančil tisíckrát na přesně stejném místě. A taky že jo, lidé tu tančí. Tančí bez přestání, tančí s výrazem soustředění, které nepřísluší slavnostem.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>U základny májky, uvnitř kruhu tanečníků, sedí starý muž. Sedí rovně, ruce na kolenou, oči otevřené. Usmívá se. Nevypadá to, jako by čekal - vypadá to, jako by přišel a pak zapomněl, že chtěl odejít.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Trochu stranou stojí muž a žena, ruku v ruce. Sledují tanečníky. Při vašem příchodu se otočí - a ještě než muž dořekne pozdrav, otočí se ke ženě a šepne jí něco do ucha. Ona se zasměje a přitiskne se k němu. Pak se oba znovu podívají na vás a konečně vás pozdraví.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Tanečníci tančí nepřetržitě - Blaho se u nich projevilo jako neschopnost přestat. Když se unaví, prostě se zhroutí na místě a usnou. Po dvaceti minutách se probudí a pokračují, jako by se nic nestalo. Nikoho to nepřekvapuje.</p>
+      <p>Ivan a Lucie jsou obsessivně zamilovaný pár (Blaho = euforická láska). Dokáží poskytnout informace, ale každých pár vět se přeruší, aby si vzájemně vyznali lásku, políbili se nebo se osahali. Komunikace s nimi vyžaduje trpělivost.</p>
+      <p><strong>Štrup</strong> je starý muž, který tu sedí u základny májky. Usmívá se, dýchá, nedělá nic jiného. Doslova. Jeho jediný druh komunikace je pomalé pokyvování hlavou. Humorné je, že několik vesničanů na Štrupa odkazuje jako na chlapa, co toho hodně ví.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Tanečník se jednoduše zhroutí - bez dramatu, bez bolesti - padá doprostřed kroku na zem a za několik vteřin dýchá klidným spánkovým dechem. Po dvaceti minutách vstane, bez dezorientace, bez zaváhání, a pokračuje v tanci přesně z toho místa, kde přestal.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Co ví Ivan &amp; Lucie:</strong> Tři pohřešovaní vesničané s nimi tančívali - zmizeli před osmi týdny. Hřbitov se pravidelně využívá; pohřební rituál znají a mohou ho vysvětlit. Tvrz se uzavřela asi před šesti týdny; posádka přestala normálně odpovídat - někdo je údajně zradil.</p>
+      <p><strong>Co ví Štrup:</strong> Viděl světlo z věže - neví co to bylo, ale zapamatoval si to (indicie na křišťálovou kouli). Zná Blahodana osobně; viděl ho před týdny odcházet směrem k lesu, ale netuší, kde teď je.</p>
+    </div>
+  </div><!-- end v-2 -->
+
+  <!-- ── SEKCE 3 ── -->
+  <div class="loc-panel" id="v-3">
+    <h2 class="section-title" style="margin-top:0">3 — Hřbitov</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> Pohřební rituál (bez <span class="dc">DC</span> při správném provedení) · <span class="dc">DC 10</span> Hallucination Save (pití vody bez rituálu) · <span class="dc">DC 13</span> Understanding (komunikace přes kouli, viz sekce 6)</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Hřbitov nepřipomíná hřbitov. Připomíná spíše mělké jezero nebo obří kaluž - mělkou, klidnou, jasně svítící v barvě zářivé tyrkysové. Voda stojí tam, kde by měly být hroby, a skrze její hladinu vidíte pohyb - tisíce drobných světel, pomalých a rytmických. Vzduch tu stojí. Je tu ticho, narozdíl oporti zbytku vesnice. Jedná se o ticho které zní jako krásná melodie, připomínající matčinu ukolébavku. Ano, ticho někdy hraje a teď si to uvědomujete.</p>
+      <p>Všichni máte pocit, jako by k vám jezero chtělo promluvit - jen nevíte, jak správně naslouchat.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Důvod tohoto světelného jevu je takový, že vesničané vytvořili vlastní způsob pohřebního rituálu - transformativní vdechnutí druhého bytí (jak to vesničané nazývají). Jedná se o kouzelný proces, kdy vesničané obalí mrtvého v mechu a listí a poté ho polijí alkoholem. Následně pronesou kouzelnou formuli a až poté zesnulého spustí do vody. Hned jakmile se tělo zesnulého dotkne vodní hladiny, začne se rozpouštět v krásný pramen světla. Tehdy, kdy je celé tělo ponořeno, všechno světlo se smrští do jednoho malého bodu a promění se v medůzu. Právě tyto medůzi jsou světélkující. Počet medúz nelze napočítat, ale zdá se, že jich je tisíce.</p>
+      <p>Hráči na hřbitově mohou zjistit, že mohou tamní vodu vypít a pak dorazit ke křišťálové kouli, kde skrze duše zesnulých budou na krátkou dobu umět komunikovat s astrálním světem. Křišťálová koule totiž komunikuje jen s obyvateli, kteří ve vesnici žili před stovkami let, na aktuální obyvatele již nereaguje.</p>
+      <p>Ovšem, proto aby k nim medúzy promluvili a tuto infomraci předaly, musí první hráči do vody pohřbít zdejší nemocnou ovci, která se trápí kvůli nemoci. Farmář ví, že by ji trápení měl zbavit, ale nemá na to srdce.</p>
+      <p>Voda z hřbitova aktivuje křišťálovou kouli ve věži - ale koule komunikuje jen s obyvateli, kteří ve vesnici žili před stovkami let. Současní vesničané pro ni neexistují.</p>
+      <p><strong>Výjimka:</strong> Pokud hráči provedou pohřební rituál s novou obětinou (nemocná ovce z Farmy), nově vzniklá medúza je přítomná a čerstvá. Hráči, kteří poté vypijí vodu a dorazí ke kouli, mohou na krátkou dobu komunikovat s tímto nedávno zemřelým - a skrze něj s pamětí místa, která koule přijímá.</p>
+    </div>
+
+    <h3 class="section-sub">Pohřební rituál</h3>
+    <div class="gm">
+      <p>Kroky jsou nutné všechny. Formuli rituálu je obecně znám ve vesnici - mohou ji naučit Brennan, Ivan &amp; Lucie nebo Věkoslav:</p>
+      <ol>
+        <li>Obal tělo zesnulého v mechu a listí</li>
+        <li>Polij alkoholem</li>
+        <li>Proneseš formuli</li>
+        <li>Spusť do vody</li>
+      </ol>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Pozorujete jak Parifal pomalu spouští svou ovečku Rozárku obalenou v mechu a listí vonící po jalovici pod hladinu vodu. U toho pronáší: „Abrachum himam luha no. Ať žiješ dál. Abrachum himam luha he. Ať žiješ sladce. Abrachum himam luha nominano. Ať žiješ tak, jak touží tvé srdce." Sotva se ovčí tělo dotkne vodní hladiny, začne se rozpouštět v krásný pramen světla. Tok připomínající polární záři mění barvy, z oranžové na žlutou, potom zezelená. A poté se v mžiku celé světlo smrští do jediného bodu. Než se tento bod úplně ztratí ve vodách jezera, vídíte že se jedná o malou medůzku. A dochází vám, že jich je jezero plné po tisících.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Bez rituálu:</strong> Pití vody z hřbitova: <span class="dc">DC 10</span> Hallucination Save — hráč slyší hlasy starých medúz mluvící jazykem, jemuž nerozumí (příliš staré, příliš vzdálené). Žádná užitečná informace.</p>
+      <p><strong>Po rituálu:</strong> Pití vody: <em>Voda je studená. Nemá žádnou chuť. A ihned poté přichází pocit, jako by vám někdo naslouchal - něco velmi velkého a velmi tichého.</em> Hráč, který vypil vodu, může použít křišťálovou kouli (sekce 6).</p>
+    </div>
+  </div><!-- end v-3 -->
+
+  <!-- ── SEKCE 4 ── -->
+  <div class="loc-panel" id="v-4">
+    <h2 class="section-title" style="margin-top:0">4 — Taverna u Zabejčeného Kozla</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> Hazardní hra — <span class="dc">DC 6</span> / <span class="dc">DC 11</span> / <span class="dc">DC 14</span> · Vedlejší aktivita</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>V taverně u Zabejčeného kozla není ani hluk, ani ticho. Uvnitř je jen pár stolů a pár z nich je obsazených. U pár stolů sedí páry, u někteřích samotáři, u jediného sedí trojice. Hned co jste vstoupili, zbystřil vás krčmář, který se rozesmál nad vaším příchodem.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Hostinský <strong>Brennan</strong> se neustále směje - tiše, vytrvale, bez příčiny (Blaho = nekonečný smích). Je to trochu znepokojivé, ale Brennan je plně funkční a pohostinný. Jídlo a pití jsou zdarma. Nikdo neplatí. Nikomu to nevadí.</p>
+      <p>Brennan je <strong>primárním zdrojem prvních indicií</strong> pro skupinu při příchodu do vesnice. Nemá mnoho informací, ale dokáže nasměrovat na lidi s informacemi. „jo, haha, poptejte se po vesnici." Nasměruje např. na Věkoslava, na Štrupena nebo Vilhému.</p>
+      <p>Když se skupina zeptá Brennena na lokaci jednorožců:</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Jo, haha, tak to vskutku netuším. Poptejte se po vesnici. Náš starosta Korm by mohl vědět víc, ale ten je zalezlej ve svojí tvrzy kterou neopouští - zkuste se stavit za Vilhémou, přeci jen, je to Kormova sestřenka. A nebo si zkuste promluvit rovnou s Horáciem, velitelem Kormovo stráží. Přeci jen, tvrz máte po cestě k návsi. Určitě najděte Štrupa. Štrup je taky chytrej chlapík, ten ví skoro všechno. Vilhém ve věži toho neví moc, ale to málo co ví, je to co ostaní většinou neví. Jo a kdybych na někoho měl vsadit, tak to bude Blahodan, ten lišák jeden chlupatá. Náš místní stopař. Problém je, že před několika týdny zmizel a my nemáme jiného stopaře, který by ho vystopoval. Jestli někdo bude vědět kde je Blahodan, bude to támhle Alchoven. Všechno si zapisuje. Fakticky, všechno! A vím, že dokud byl ještě Blahodan ve vsi, občas spolu pojíeli a hráli v kostky.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Blahodan (Cesta 4):</strong> Brennan zmíní místního stopaře Blahodana - na první pohled nejjistější zdroj o jednorožcích, protože je to jeho práce. Zmizel před osmi nebo více týdny. Brennan rovnou pošle hráče za Alchovenem, který s ním dřív pojídal a hrál kostky a možná ví víc. Více v sekci 9 (Blahodanův dům - slepá ulička).</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Váš pohár ještě není prázdný. Brennan je tu - a dolévá ho po okraj. Usmívá se, když to dělá. Pohár souseda vedle doleje taky. Nikdo nic neplatí. Nikdo si toho nevšimne. Brennan se pořád směje.</p>
+    </div>
+
+    <h3 class="section-sub">Hazardní hráči</h3>
+    <div class="gm"><p>U jednoho stolu sedí tři:</p></div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Jméno</th><th>Kdo jsou</th><th>Blaho</th><th>DC (+ Cunningness)</th><th>Co vědí / Co mají</th></tr></thead>
+        <tbody>
+          <tr><td>Alchoven</td><td>Učeň; „píše dokumentaci o, no, kupodivu právě zrovna o vás!"</td><td>Nekontrolovatelná dokumentace - nemůže přestat psát</td><td>DM d20 - 4</td><td>Zápisky o pohřešovaných; zápisky zmiňují věž; neví, kde je Blahodan, ale slyšel před pár dny vyt jeho psa Žolíka u Blahodanova domu - zná lokaci domu</td></tr>
+          <tr><td>Serrina</td><td>Rytířka rasy Ozvěna (Echo); odmítá pokračovat v cestě, dokud nezíská koně hodného její osoby</td><td>Perfekcionistická fixace na standard</td><td>DM d20 + 4</td><td>Přišla za Kormem, nedostala se do tvrze; ví o uzavřené posádce</td></tr>
+          <tr><td>Darovan</td><td>Amatérský kouzelník, zatím bez triků, trochu zoufalý</td><td>Utkvělá představa, že má vždy pravdu</td><td>DM d20 + 1; podvádí - každý třetí hod vyhraje bez ohledu na výsledek</td><td>Jednou chtěl studovat u alchymisty ve věži</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="gm">
+      <p>Alchoven píše dokumentaci o komkoli, kdo sedí naproti. Pokud si hráči sednou k němu, začne dokumentovat je. Předchozí zápisky z posledních týdnů mohou obsahovat užitečné postřehy - DM rozhodne, co přesně Alchoven zaznamenal.</p>
+      <p>Pokud se ho hráči zeptají na Blahodana, Alchoven je upřímně lituje, že neví, kde je - ale má jednu stopu: <em>„Kde je, to nevím. Ale slyšel jsem, jak jeho pes Žolík před pár dny vyl u jejich domu. Sám, bez něj. To znamená, že se pes vrátil - a Blahodan ne."</em> Dům popíše ochotně - je to dobrý začátek pro sekci 9.</p>
+      <p><strong>Vedlejší aktivita — Hazardní hra:</strong> Výhry jsou malé, ale reálné: Postavy vždy vyhrají to, co vsadí ×2.</p>
+    </div>
+  </div><!-- end v-4 -->
+
+  <!-- ── SEKCE 5 ── -->
+  <div class="loc-panel" id="v-5">
+    <h2 class="section-title" style="margin-top:0">5 — Tvrz</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> Síť indicií (proč je tvrz zavřená) → přístupy do tvrze · <span class="dc">DC 12</span> zvrácení přepadu (výhoda se znalostí pravdy) · Vilhéma nutná k uklidnění Korma · <span class="dc">DC 11</span> Perception (Korm venku)</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Kamenná tvrz na okraji vesnice. Těžká, stará, stavěná pro vážnou obranu. Padací most je zdvižen. Ve střílnách je pohyb - oči, které sledují. Když se přiblížíte, ozývá se zevnitř tlumené křičení.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> V tvrzi žije <strong>Stařešina Starosta Korm</strong>. Korm trpí demencí - Blaho u něj zesiluje zapomínání. Ví, že je důležitý. Nepamatuje si proč. Občas mu vytane z minulosti úryvek vzpomínky, pak ho zahodí: <em>„Ach, to. Ano. To bylo něco."</em></p>
+      <p>Korm se ovšem sám neuvěznil. Uzavřela ho posádka. Dvanáct vojáků se před šesti týdny zavřelo dovnitř, protože se obávají, že je vesnice kompromitována - jejich Blaho je paranoia. Nejsou tak úplně mimo. Na cizince nereagují.</p>
+    </div>
+
+    <h3 class="section-sub">Co se semlelo před šesti týdny</h3>
+    <div class="gm">
+      <p>Tohle vesničané nikomu neřeknou přímo - hráči si to musí poskládat ze Sítě indicií, případně to uslyší ve fragmentech, pokud se s posádkou pustí do rozhovoru.</p>
+      <p>Pravda: jeden z vojáků si na krátkou chvíli nepoznal tvář svého spolubojovníka - jeho vlastní Blaho je drobný výpadek paměti. Ostatní to vzali jako důkaz, že se mezi ně vetřelo něco, co nosí lidské tváře a umí přesvědčit ty, co je dobře znají, aby udělali něco, co by jinak nikdy neudělali. Od té doby nikomu nevěří - ani starým známým, jako je Serrina. Posádka o tom mezi sebou nemluví nahlas, ale paniku neumí udržet úplně v sobě.</p>
+      <p>Tahle poslední věta je důležitá pro hru: posádka se nebojí cizinců jako takových. Bojí se přesně toho, čeho jsou hráči schopní - namluvit jim, předstírat někoho známého, donutit je k něčemu, co nechtěli. Bez téhle znalosti vede „snadná" cesta dovnitř přímo do pasti.</p>
+      <p>Indicie, ze kterých si hráči mohou tuto pravdu poskládat:<br>
+      <strong>Brennan:</strong> Korm se zabarikádoval - přibližně 6 týdnů, posádka nepustí ani staré známé<br>
+      <strong>Ivan &amp; Lucie:</strong> Tvrz se uzavřela asi před 6 týdny; krátce předtím se v posádce něco semlelo - víc neví, protože se jim rozhovor zase zvrtl v líbání<br>
+      <strong>Serrina:</strong> Přišla za Kormem s obchodem, kterým obchoduje roky - i tak ji nepustili dovnitř. „Že je prý snad někdo zradil! Povídali mi, že prý každej může vypadat jako já. Že Serrina může být každej druhej. Kde prý že můžou brát jistotu, že já jsem já. Blázni. Takové jednání si vyprošuju, jenom já jsem přeci já! Až se s Kormem setkám, bude třeba mu vysvětlit, že vesnice musí mít nějakou štábní kulturu!"<br>
+      <strong>Vilhéma:</strong> Viděla Korma venku u studně minulý týden<br>
+      <strong>Samotná stráž:</strong> Lze je buď odposlouchávat nebo číst myšlenky a oni sami předají info o tom, co se skutečně stalo</p>
+    </div>
+
+    <h3 class="section-sub">Vilhéma: jediná, kdo Korma uklidní</h3>
+    <div class="gm">
+      <p>Ve vsi se obecně věří, že Korm tvrz vůbec neopouští - posádka je zavřená, takže logicky i on. Není to pravda, a jediná, kdo to ví jistě, je jeho sestřenice <strong>Vilhéma</strong> (sekce 10), o jejichž příbuzenství skoro nikdo nemluví - další obyčejná věc, kterou Blaho připravilo o váhu. Pokud se jí hráči zeptají na Korma s upřímným zájmem, řekne jim:</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>„Ale kdepak, kdeže... Samozřejmě že Korm opouští tvrz, zrovna onehdy jsem ho viděla u studny za tvrzí. Když jsem sbírala pampelišky na barvení."</p>
+    </div>
+    <div class="gm">
+      <p>Hráči se o vztahu mohou dozvědět i od <strong>Vrena</strong> (sekce 1, „ví, že Vilhéma je Kormova sestřenice").</p>
+      <p>Tohle je důležité ze dvou důvodů: potvrzuje, že „Korm venku" je reálná cesta, a navíc znamená, že <strong>Vilhéma je jediná, kdo umí Korma uklidnit natolik, aby odpověděl souvisle</strong>. Pokud ji hráči poprosí, aby šla s nimi, souhlasí ihned - bojí se o něj.</p>
+      <p><strong>Pozorování:</strong> Korm tu a tam zapomene na varování posádky a vyjde sám ven, nejčastěji ke studni za tvrzí. <span class="dc">DC 11</span> Perception při delším sledování tvrze - hráči ho zahlédnou venku, nebo se to dozví od Vilhémy. Tahle cesta obchází stráž i riziko přepadu úplně - ale Korm je stále tentýž zapomnětlivý stařík; bez Vilhémy u sebe stejně neudrží myšlenku dost dlouho na odpověď.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Řetězy zaskřípí. Padací most se pomalu spouští - váhavě, jako mechanismus překvapený vlastní funkcí. Když dosedne, vojáci na druhé straně se zadívají ven. Jejich výraz ještě nemá jméno: úleva a nedůvěra ve stejnou chvíli.</p>
+    </div>
+
+    <h3 class="section-sub">Přístupy do tvrze</h3>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Metoda</th><th>Kdo</th><th>Poznámky</th></tr></thead>
+        <tbody>
+          <tr><td>Přesvědčení</td><td>Kdokoli</td><td><span class="dc">DC 17</span>; posádka vás nakonec pustí dovnitř - a přesně proto na vás čeká přepad</td></tr>
+          <tr><td>Had (Beast Form)</td><td>Shapeshifter</td><td>Automatický vstup střílnou; voják uvnitř se lekne; vede k napjaté negociaci skrze zeď - žádný přepad, ale odtud může uniknout fragment pravdy o „vetřelci"</td></tr>
+          <tr><td>Puppet / Telepatie</td><td>Dreamcaster</td><td>Automaticky přinutí vojáka spustit most; posádka přesně viděla, jak je někdo donutil udělat něco, co nechtěli - vede rovnou k přepadu</td></tr>
+          <tr><td>Mimic vojáka</td><td>Shapeshifter</td><td><span class="dc">DC 14</span> Persuasion; pokud uspěje, posádka vás vezme za jednoho ze svých - což je přesně ten scénář, kterého se děsí, a vede rovnou k přepadu</td></tr>
+          <tr><td>Korm venku</td><td>Perception <span class="dc">DC 11</span></td><td>Vyžaduje vědět, že chodí ke studni (Vilhéma), nebo samostatný DC 11 Perception; obchází stráž i riziko přepadu úplně</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="section-sub">Za branou: přepad</h3>
+    <div class="gm">
+      <p>Přesvědčení, Puppet/Telepatie a Mimic vojáka mají jedno společné: posádku přiměly udělat něco, co neplánovala - přesně to, čeho se od uzávěrky bojí. Ať byl vstupní hod jakkoli skvělý, jakmile jsou hráči uvnitř, posádka je odvede zdánlivě ke Kormovi a místo toho spustí přepad.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Chodba se zužuje a najednou už nejste sami - vojáci jsou všude kolem vás, blíž než je zdvořilé, zbraně dole, ale ruce na jilcích. Jeden z nich konečně promluví, hlas napůl omluvný, napůl vyděšený: „Vy jste se sem dostali až moc snadno. To je přesně to, co nás děsí."</p>
+    </div>
+    <div class="gm">
+      <p>Nejde o boj na smrt - posádka chce vetřelce zajmout a vyslechnout, ne pobít vlastní vesničany. Čisté zbraně, sítě, přesila.</p>
+      <p><span class="dc">DC 12</span> Insight / Persuasion na zvrácení situace - hráči musí prokázat, že nejsou to, čeho se bojí. Pokud znají pravdu o vojákovi, který si nepoznal tvář kamaráda, mají na hodu výhodu - umí jmenovat přesně to, co posádka tajila, a tím dokázat, že nejsou žádná hrozba.</p>
+      <p><strong>Úspěch:</strong> Stráž klesne, omluví se, neklidně je doprovodí ke Kormovi.</p>
+      <p><strong>Neúspěch:</strong> Krátká, nebezpečná šarvátka nebo zajetí - hráči se ke Kormovi nakonec dostanou (svázaní, pod dohledem), ale draze.</p>
+      <p>Pokud se hráči nespokojí s pouhým proklouznutím a posádce skutečně vysvětlí pravdu o vojákovi, který si nepoznal kamaráda - tedy jim natrvalo sundají kámen ze srdce, místo aby jen přežili kontrolu - je to dobrý skutek navíc. Odměňte ho Inspirací (viz Přehled).</p>
+      <p>Had a Korm venku se tomuto přepadu vyhýbají úplně - Had proto, že nikdy nepředstíral, že je někdo známý, Korm venku proto, že se s posádkou vůbec nesetkají.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Stařec ve velkém křesle. Má starostovskou šerpu přes košili, která potřebovala vyprat už před pár dny. Vzhlédne k vám s nepospíchanou vřelostí někoho, kdo nikam nespěchá a přijde mu, že jste opravdu zajímaví. „Důležití hosté!" říká. „Věděl jsem, že někdo přijde. Čekal jsem... na něco." Odmlčí se. „Na co jsem čekal?"</p>
+    </div>
+
+    <h3 class="section-sub">Korm: jak ho udržet při odpovědi</h3>
+    <div class="gm">
+      <p>Korm odpoví na cokoliv okamžitě a s radostí - jenže se mu pozornost rozplyne během vteřin. <strong>Bez Vilhémy to nejde.</strong> Ať hráči zkusí cokoliv a kolikrát chtějí, žádný hod nezabere - prostě vždycky odbočí. Hrajte to naplno, ne jako trest:</p>
+      <p><em>„Ach, studna! Já tam chodím docela rád. Počkat... co jste se to ptali?"</em><br>
+      <em>„Vy mi připomínáte mého synovce. Měl jsem synovce? Měl jsem syna. Měl jsem něco."</em></p>
+      <p><strong>S Vilhémou v místnosti</strong> se to změní okamžitě - žádný hod není potřeba. Stačí, že je tam, řekne mu jméno nebo se ho dotkne, a Korm se na chvíli zklidní a soustředí, jako by ho něco ukotvilo:</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Vilhéma mu položí ruku na rameno a tiše řekne jeho jméno. Korm na chvíli ztichne, podívá se na ni - a poprvé od chvíle, co jste vešli, jeho pohled neuhne.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>„Stádo jednorožců, kde touto dobou přebývá? Samozřejmě! To přece všichni vědí, ne snad? I já. Dobře svůj kraj znám. Jsou u Lesklého Jezera. Proč se ptáte?"</p>
+    </div>
+    <div class="gm">
+      <p>Nerozumí, proč by tato informace mohla být důležitá.</p>
+      <p>Pokud hráči dovedou Vilhému ke Kormovi i poté, co lokaci jednorožců už znají odjinud - prostě proto, aby se sestřenice po tak dlouhé době znovu setkaly - odměňte to Inspirací (viz Přehled).</p>
+    </div>
+  </div><!-- end v-5 -->
+
+  <!-- ── SEKCE 6 ── -->
+  <div class="loc-panel" id="v-6">
+    <h2 class="section-title" style="margin-top:0">6 — Kouzelná Strážní Věž</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> Aktivace koule vyžaduje vodu z hřbitova (po pohřebním rituálu) · <span class="dc">DC 13</span> Understanding / Arcana k formulaci otázky</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Strážní věž stojí uprostřed vesnice - ne na jejím okraji, kde by strážní věž stát měla. Přesto je na jejím vrcholu udržován oheň, není jisté proč, ale nikdo v okolí to nezpochybňuje. Z nižších pater přichází zvláštní vůně - kyselá, kovová, kvetoucí, chemická, všechno naráz. Dveře jsou otevřené.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Nikdo ve vesnici si nepamatuje, proč věž stojí uprostřed ani proč ji vesnice vůbec má. Na vesnici nikdo desítky let nezaútočil. Stráž udržuje oheň ze zvyku.</p>
+      <p>V věži se usídlil vesnický alchymista <strong>Věkoslav</strong>. Blaho = estetická obsese - nemůže přestat tvořit. Vaří alchymické směsi: z ptačích drápků, rozemletých křišťálů, wolframové rudy, spálených houbových jíšek. Žádná z nich není poživatelná - jedná se o výtvarný materiál - alchymista tyto směsy míchá a patlá do prostředí, z čehož vznikají abstraktní a surealistické objekty. Výsledné objekty pokrývají každou vertikální plochu věže. Věkoslav odpovídá ochotně, ale mezi každé dvě věty vloží nadšený popis svého aktuálního projektu.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Můžete pozorovat jak alchymista, vaří různá tonika - lektvary z ptačích pracek, nadrcené křišťály, roztavená tungstenová ruda, spálené houbové jíšky... Žádný z těchto lektvarů není poživatelný - všechny jsou určeny k umělecké tvorbě - něco se promění v pevnou homotu, něco naopak nikdy neusychá a vždy teče. Něco roste a boptná, jiné pojídá své okolí.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Věkoslav ví:</strong> křišťálová koule je na vrcholu věže; párkrát ji viděl aktivní; naposledy, co si pamatuje, byl těsně předtím pro vodu na hřbitově - a pak se to stalo. Může naučit pohřební rituál, pokud ho hráči potřebují.</p>
+      <p><strong>Křišťálová koule:</strong> Komunikuje s obyvateli, kteří ve vesnici žili před stovkami let - jejich rámec reference je zcela jiný. Aktuální vesničané pro ni neexistují. Aktivuje se vodou z hřbitova. Bez pohřebního rituálu s novou obětinou odpovídají jen dávno mrtví způsobem, jemuž nikdo nerozumí.</p>
+      <p>Po pohřebním rituálu (viz sekce 3 - Hřbitov) a po vypití vody koule aktivuje most k nově zemřelému. <span class="dc">DC 13</span> Understanding / Arcana k tomu, aby otázka byla položena způsobem, jemuž dávný obyvatel rozumí. Jedna otázka na jedno sezení. Odpověď: lokace jednorožců.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Koule se rozsvítí světlem, které připomíná odrazy slunce od vodní hladiny. Poté se zdá, jako by začala pulzovat, i přesto že je zřejmé, že je pevně ukotvená na svém piedestálu. Skrze pocity, nikoli sluch či zrak, posloucháte sdělení, které k vám promlouvá. V hlavě každého z vás se zjevuje vidina. Černá plocha. Vlny. Louka. Inkoust. A stádo koní s parožím - jedním rohem ve středu lebky. Pasoucí se na travnaté pláži.</p>
+    </div>
+  </div><!-- end v-6 -->
+
+  <!-- ── SEKCE 7 ── -->
+  <div class="loc-panel" id="v-7">
+    <h2 class="section-title" style="margin-top:0">7 — Farma</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> Žádné povinné · Pohřební rituál s ovcí viz sekce 3</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Vůně sena a zvířat. Kozy se pohybují po ohradě volně, kolem nástrojů, po hromadách sena, skrze sušící se povlečením postelí. Mezi kozami sedí dívka, tak osmiletá, s rukama roztaženýma do stran, se zabraným pohledem, jak kdyby vymýšlela jak provést jakousi uličárnu. V oddělené ohrádce leží ovce, stranou od ostatních. Dýchá mělce. Nad ovcí stojí Farmář, skleslý. Zjevně rozjímá nad trápící se ovcí.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Farmář Parcifal ví, že ovce trpí a že by ji trápení měl zbavit. Nedokáže to ovšem udělat - jeho Blaho je neschopnost uzavírat emocionální cykly. Věc odkládá stále dál. Pokud hráči navrhnou, že to udělají za něj, bude viditelně ulehčen a vděčný. Žádný hod není potřeba - stačí nabídka.</p>
+      <p>Tohle je dobrý skutek samo o sobě, nezávisle na pohřebním rituálu (sekce 3). Pokud hráči ovci vysvobodí i bez ohledu na křišťálovou kouli - třeba už znají lokaci jednorožců jinou cestou - odměňte to Inspirací (viz Přehled).</p>
+      <p>Dívka Pipa. Její Blaho je absence strachu - přibližuje se ke zbraním, magii a nebezpečným věcem s čistou zvědavostí. Je to tiše znepokojivé.</p>
+      <p><strong>Pipa zná červa:</strong> <em>„Ta stará jeskyně kam ostatní nosí svíčky. Mění tvaj. Fakt. Dneska je zas jiná než pšet týdnem."</em></p>
+      <p><strong>Pipa ví, že hřbitov mluví:</strong> <em>„Jó, občas se pwojdu na hžbitov. Něcí děcka se tam prý bvojí chodit. To já né. Onehdá jsem se donutila Lema, aby šel semnou. Do jezera na hžbitově jsme spadli. Žbluňka. Trochu se nalokali a pak jsme slyšeli věééci. Divný věci. Lem se pokadil strachy. No fakt. Měl hnědý spoďáry. Brečel potom ještě čvi dny. To byla panečku zážitek. Občas si to chvodím zvopakovat."</em></p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>„Čo myšlíte. Když hupsnu na tuhle kozu a chytnu jí za wohy, kam až dojedu? Nebo na tuhle, Žbetku. Ta je strašně hwuu, kope a skáčí. Papá žíká, ať se jí vyhýbám, co onehdy potrkala Ňufa, našeho ožecha. Co myslíte, mám skočit na Žbetku? To bude vjízda!" Povídá dívka s naprostým zaujetím, jako kdyby právě vymyslela ten nejdůmyslnější plán, který kdo kdy slyšel. Zdá se, že dívenka má nulový koncept o nebezpečí či strachu z něj spojeným.</p>
+    </div>
+  </div><!-- end v-7 -->
+
+  <!-- ── SEKCE 8 ── -->
+  <div class="loc-panel" id="v-8">
+    <h2 class="section-title" style="margin-top:0">8 — Kouzelnický Krámek</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> Šafránek nejprve klasifikuje hráče; nákup bez DC</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Vývěsní štít je vybledlý, ale stále čitelný: je na mě vyobrazena hvězda a ruka a nad nimi nápis „Šafránkovi Kouzelné Arefakty z Daleka i Blízka". Zevnitř vychází vůně kadidla a něčeho kovového, podobně jako chutná krev. Za zaprášeným sklem jsou regály s drobnými předměty, seřazenými s péčí - police s předměty působí jako sbírka než obchodní nabídka. Za pultem sedí starší člověk, který třídí kameny z místa na místo a tiše si při tom brouká. „Dva modrý lazulity doprava, jeden rudej rubín doleva. A tři modrý lazulity doprava."</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Majitel je <strong>Šafránek</strong> (bez příjmení; věk: pokročilý; pohlaví: DM). Blaho = nutkání katalogizovat. Nemohou přestat třídit, řadit a organizovat předměty. Zákazníci jsou pro ně v první řadě položky k zaevidování. Než Šafránek přistoupí k prodeji, položí hráčům několik klasifikačních otázek: jakou barvu mají boty? Přibližná váha? Cestují na sever nebo na jih?</p>
+      <p>Šafránek přikládá každému svému předmětu přesvědčení, že byl mnohokrát zakouzlen. Ve skutečnosti opakované zakouzlení předchozí vždy přepisuje. Většina věcí v obchodě je efektivně zpátky na mundánní úrovni. <em>Svíčka bez plamene</em> funguje, protože byla zakouzlena jako první - ještě v době, kdy byl Šafránek plně lucidní.</p>
+      <p>Šafránek může potvrdit existenci alchymisty Věkoslava (<em>„Katalogizoval jsem ho dvakrát"</em>) a že voda z hřbitova <em>„svítí na úrovni sedm na luminescenční škále, kterou jsem si sám vynalezl."</em></p>
+    </div>
+
+    <h3 class="section-sub">Zboží</h3>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Předmět</th><th>Popis</th><th>Efekt</th><th>Cena</th></tr></thead>
+        <tbody>
+          <tr><td>Kamenek klidu</td><td>Opravdu hladký šedý kámen</td><td>Žádný efekt (<span class="dc">DC 14</span> Arcana to potvrdí); Šafránek považuje jeho hladkost za důkaz kouzla</td><td>140 grošů</td></tr>
+          <tr><td>Svíčka z čeného vosku, kterou nelze zapálit</td><td>Svíčka z čeného vosku, kterou nelze zapálit</td><td>Svíčka, která umí pohltit světlo z okolního prostředí v rozsahu 10 metrů</td><td>90 grošů</td></tr>
+          <tr><td>Šňůra pravdy</td><td>Červená nit, která se třiptí zlatými odlesky, ale natažená pod určitými úhly není vidět, jako by zmizela</td><td>Nit je pevná jako skála, nedá se přetrhnout.</td><td>112 grošů</td></tr>
+          <tr><td>Láhev šeptů</td><td>Zapečetěná lahvička; po otevření tiše šeptá</td><td><span class="dc">DC 14</span> Insight / Folklore / Understending of Universe k pochopení původní zprávy; láhev vypraví starověké vtipy</td><td>55 grošů</td></tr>
+          <tr><td>Klobouk nedospělosti</td><td>Myslivecký klobouk se třemi ptačími pery - sojčím, havraním a pelikáním</td><td>Hlas nositele zní mírně mladší; efekt subtilní, ale funkční</td><td>230 grošů</td></tr>
+          <tr><td>Prsteny lepších partnerských vztahů</td><td>Malý prsten</td><td>Nositelé navzájem vědí, když ten druhý lže, při odpovědi na otázku „jak se dnes máš?"</td><td>109 grošů</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- end v-8 -->
+
+  <!-- ── SEKCE 9 ── -->
+  <div class="loc-panel" id="v-9">
+    <h2 class="section-title" style="margin-top:0">9 — Blahodanův dům — slepá ulička</h2>
+    <div class="gm">
+      <p><strong>Mechaniky:</strong> <span class="dc">DC 8</span> Investigation / Survival nebo Persuasion / Animal Handling na psa (najít Blahodana) · slepá ulička — Blahodan nemůže odpovědět</p>
+    </div>
+    <div class="gm">
+      <p>Tahle cesta je úmyslně krátká a přímá - je to ta, kterou Brennan nabídne jako první, a má vypadat jako nejsnazší zkratka k odpovědi. Není potřeba žádná gradace navíc; pád přijde sám.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Blahodanův dům stojí kousek od cesty, malý a zarostlý, jako by ho poslední měsíce nikdo neotvíral. Okenice jsou zavřené. U dveří leží vyhrabaná díra do hlíny a v ní pes - hubený, ostražitý, srst slepená blátem. Jakmile vás zahlédne, postaví se, zavětří, a tiše zavrčí. Ne útočně. Spíš jako otázka.</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> Blahodanův pes se jmenuje <strong>Žolík</strong>. Vrátil se domů sám před pár dny - vyhublý, sám, bez pána - a od té doby čeká u dveří. Je to on, koho Alchoven slyšel vyt (sekce 4).</p>
+      <p>Hráči mají dvě stejně platné možnosti, jak najít Blahodana - obě vedou na stejné místo:</p>
+      <p><strong>Animal Handling / Persuasion na Žolíka</strong> (<span class="dc">DC 8</span>, nebo automaticky s Speak with Animals) — pes je nedůvěřivý, ale hladový a osamělý; jídlo nebo trpělivost ho přimějí vést hráče.</p>
+      <p><strong><span class="dc">DC 8</span> Instinct / Investigation</strong> — čerstvé, bahnité stopy vedou od domu pryč, do malého hájku kousek za vesnicí.</p>
+      <p>Jakmile mají směr, vedou je oba způsoby do stejného hájku.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Hájek je malý, sotva pár desítek stromů, a páchne kysele - rozlitým, zvětralým alkoholem. Žolík zrychlí, zakňučí a zaboří nos do kupy listí pod jedním z keřů. Tam, schoulený a nehybný, leží Blahodan. Prázdné lahve kolem něj jsou napůl zarostlé do mechu, jako by tu byl už dlouho.</p>
+    </div>
+    <div class="gm">
+      <p>Blahodanovo Blaho je <strong>deprese</strong> - bezdůvodný, nezvladatelný smutek, který si vybral alkohol jako jediný způsob, jak ho ztlumit. Není to vtipná postava jako ostatní vesničané - hrajte ho tiše a smutně, ne jako gag.</p>
+      <p><strong>Tohle je slepá ulička.</strong> Blahodan technicky ví, kde jednorožci jsou - je to jeho práce, byl tam mnohokrát - ale v tomhle stavu z něj nejde nic rozumného dostat. Žádný hod, žádné DC, žádný počet pokusů to nezmění; tady prostě není co řešit, jen co prožít.</p>
+    </div>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Otevře oči, podívá se na vás - ne nepřátelsky, jen prázdně - a zase je zavře. „Jednorožci," zopakuje po vás, jako by to slovo nikdy neslyšel. Pak se otočí k Žolíkovi, položí mu ruku na hlavu, a usne.</p>
+    </div>
+    <div class="gm">
+      <p>Pokud hráči chtějí, mohou ho odvést zpátky do vesnice, nakrmit, postarat se o Žolíka - na hlavní úkol to nemá žádný mechanický dopad (Blahodan zůstává slepou uličkou), ale je to dobrý skutek navíc - odměňte ho Inspirací (viz Přehled). Nasměrujte je zpátky k ostatním cestám (sekce 1, 3 nebo 6).</p>
+    </div>
+  </div><!-- end v-9 -->
+
+  <!-- ── SEKCE 10 ── -->
+  <div class="loc-panel" id="v-10">
+    <h2 class="section-title" style="margin-top:0">10 — Vilhémina Tkalcovna</h2>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Malá dílna s otevřeným oknem do ulice. Uvnitř je slyšet pravidelný rytmus tkalcovského stavu. Žena u okna se na vás podívá, zatímco tká - a pláče. Pláče vydatně, nepřetržitě, a přesto se usmívá. „Promiňte," říká a zamává rukou, jako by odháněla mouchu. „Je to tak nádherné. Vše. Prostě vše. Mé nitě. Měsíce. Vaše tváře! Tak nádherné!"</p>
+    </div>
+    <div class="gm">
+      <p><strong>Poznámky pro DM:</strong> <strong>Vilhéma</strong> je tkalka, která pláče štěstím bez přestání (Blaho = pláč z radosti). Zcela to myslí vážně - není smutná ani zlomená, jen ji vše dojímá k slzám. Obličej má mokrý, hlas trochu zachraptělý, a přesto mluví jasně a srozumitelně. Tento kontrast je jeden z podivuhodnějších obrazů vesnice.</p>
+      <p>Vilhéma je <strong>dobrý zdroj informací</strong> - je všímavá a ráda mluví. Bydlí tu celý život a dobře zná rytmus vesnice. Informace podává věcně, jen ji čas od času přeruší nový záchvat dojatosti z úplně nesouvisející věci (barva nití, vzduch z okna, vaše tváře).</p>
+      <p><strong>Co ví Vilhéma:</strong><br>
+      Zná Blahodana a jeho Blaho - deprese, ze které se propil. Pokud se hráči chystají za ním, varuje je: <em>„Tomu chudákovi nikdo nepomůže s úsměvem na tváři. Najdete ho, ale nečekejte, že z něj něco rozumného dostanete."</em><br>
+      Pohřební rituál zná a účastnila se ho mnohokrát; může vysvětlit formuli.<br>
+      <strong>Je Kormova sestřenice</strong> - málokdo o tom ví. Ve vsi se říká, že tvrz nikdy neopouští, ale Vilhéma ví, že to není pravda: <em>„Ale kdepak, kdeže... Samozřejmě že Korm opouští tvrz, zrovna onehdy jsem ho viděla u studny za tvrzí. Když jsem sbírala pampelišky na barvení."</em> Pokud se jí hráči zeptají na Korma s upřímným zájmem, vztah i tohle prozradí. Bojí se o něj a nabídne se jít s nimi - viz sekce 5, jen ona ho umí uklidnit natolik, aby odpověděl souvisle.</p>
+    </div>
+  </div><!-- end v-10 -->
+
+  <!-- ── VEDLEJŠÍ ÚKOL ── -->
+  <div class="loc-panel" id="v-ukol">
+    <h2 class="section-title" style="margin-top:0">Vedlejší úkol</h2>
+
+    <h3 class="section-sub">Vilhéma</h3>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Zlatíčka. Já bych na vás ovšem měla osobní prosbu. Vpadá te jako skupina náramných dobrodruhů, která se toulá po světě a všech jeho zajímvých zákoutích. No podívejte - mé příze jsou hebké a nádherné! Ale mohli by být ještě krásnější. Slyšela jsem vyprávění o hluboce modré růži. Tak modré, že by jí sám oceán záviděl. Tato růže údajně roste uvnitř ve skalách. Hluboko v jeskyních. Vyjímečně tam, kam slunko prosvitne. Prosím, dobrodruzy! Kdyby jste na tuto růži narazili, doneste mi ji! Zkusím z ní bravu vyextrahovat.. A i kdyby se mi to nepodařilo. Inu, nebude úžasné jen tuto bravu spatřit? Věřím, že ano.</p>
+      <p>A nebojte, samozřejmě, že si pro vás připravím odměnu. Naše rodina pečuje o Červánkovou ves již mnoho generací a to s sebou nese jisté benefity. Ano, no ano. Třeba tato pečeť, kterou jsem zdědila. Tu vám daruji. Je to vynález mého pra pra strýce. Teď už utíkejte. Podívejte, jak je venku krásně! (Díky té budete umět rozumět jakékoli řeči, se kterou se setkáte).</p>
+    </div>
+
+    <h3 class="section-sub">Věkoslav</h3>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Ještě než mě opustíte, záhadní návštěvníci. Neexistuje v mém životě nic duležitějšího, než mé umění. A v hlavě se mi rodí mistrovské dílo. Ale abych jej dosáhl, potřebuji velmi vzácnou ingredienci. Agáta Caelum Nocturnum Rosa. Růži noční oblohy. Tahle růže roste jen vzácně, za zvláštních podmínek, které skoro nikdy nenastávají. Poroste jen v jeskyni, ale zároveň jen na slunečním světle. Zázrak, že? Narazíte-li na tuto růži - určitě ji poznáte - je modrá jako, ach.. Jako noční obloha kterou už si nepamatuji. Nicméně, přineste mi ji a já se vám vřele odvděčím!</p>
+      <p>Nedávno jsem namíchal tonikum, u něhož věřím, že se bude hodit více vám, než mě! Jedná se o tekutinu, které vzplane, když na ni někdo zašeptá! A pak ji nelze uhasit! Hoří, dokud sama sebe nevyčerpá. Nejvtipnější je, že jsem ji vyrobil z jahod! Prostých jahod. No ano. No, a také se špetkou vodničího trusu.</p>
+    </div>
+
+    <div class="divider"><span>❦</span></div>
+
+    <div class="gm">
+      <p><em>Bůh mnoha tváří — Ztělesnění všech ras a pohlaví uvnitř jedné bytosti. Lidé věří, že bůh mnoha tváří v sobě nese kus duše každého živého tvora, který právě žije. Setkat se s bohem mnoha tváří tedy znamená zjistit, zda je aktuální populace planety spíše dobrá nebo spíše zlá, spíše malicherná nebo skromná - a tak dále. Bůh mnoha tváří tedy není nijaký - je jen takový, jací jsou všichni lidé naráz.</em></p>
+    </div>
+
+    <div class="divider"><span>❦</span></div>
+
+    <h3 class="section-sub">Vtipy z kouzelné lahvičky</h3>
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Bylo nebylo, za sedmero horami žilo sedm trpaslíků, asociálů.<br>Za každou horou jeden.</p>
+      <p>Melichar praví: „Jak jsem slíbil, pane králi, v tomhle pytli jsou tři dračí hlavy."<br>Král Balzhatar: „I já své slovo dodržím, v tomhle pytli je ruka princezny."</p>
+      <p>Víš, co to znamená, když drak sežere lidi, ale nechá hlavy?<br>Drží bezlebkovou dietu.</p>
+      <p>Naštvaný král Balzhatar si přivolá kuchaře Maška.<br>„Ano, říkal jsem, že chci, aby z kouzelného hada nic nechybělo, ale tu napůl strávenou myš jsi z něj mohl vyvrhnout!"</p>
+    </div>
+  </div><!-- end v-ukol -->
+
+  <a class="back" href="dm.html">← back to dm cabinet</a>
+
+  </div><!-- end ch-village -->
 
   <!-- ════════════════════════ CHAPTER V — LAB ════════════════════════ -->
   <div class="ch-panel" id="ch-lab">
@@ -726,6 +1274,19 @@ document.querySelectorAll('.room-tab').forEach(function(btn){
       document.querySelectorAll('.room-panel').forEach(function(p){p.classList.add('active');});
     } else {
       document.getElementById('r'+btn.dataset.r).classList.add('active');
+    }
+  });
+});
+
+document.querySelectorAll('.loc-tab').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.loc-tab').forEach(function(b){b.classList.remove('active');});
+    document.querySelectorAll('.loc-panel').forEach(function(p){p.classList.remove('active');});
+    btn.classList.add('active');
+    if(btn.dataset.l==='all'){
+      document.querySelectorAll('.loc-panel').forEach(function(p){p.classList.add('active');});
+    } else {
+      document.getElementById('v-'+btn.dataset.l).classList.add('active');
     }
   });
 });
