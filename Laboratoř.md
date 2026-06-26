@@ -73,6 +73,8 @@
 
 *Vstoupili jste do místnosti, jejíž stěny i podlaha jsou pokryté zvláštním kamenem, vypadajím jako kov. V místnosti je velký chlad, ale vy máte zároveň pocit, jako by vám v ní nemohla být zima. Místnost je plná různých skleněných a kovových zařízení některé se točí, některé svítí. V některých je kapalina, která kape z jedné strany na druhou. V rohu je také jakási pec a vedle ní nádoba s vodou. Ničemu z toho nerozumíte, jediné s čím si celé zjevení dokážete spojit je alchemie, ale jakéhosi pokročilého druhu. Na zdech jsou lampy, které svítí modrým světlem - bez ohně, bez jasné zdroje onoho světla.*
 
+*...několik dóz, váz, uren a jiných nádob. Všechny zvláštně zapáchají, vůněmi, které vám nejsou/jsou povědomé. některé štípou v nose, trochu jako pepř. Jiné vonní suše, jako kdyby spalovali vzduch pod vašimi nozdrami.* 
+
 *Nakonec jsou v místnosti dva stoly a na tom větším je denník a do jeho čela zapýchlá jakási mapa - plánek.*
 
 #### Záznam v deníku
@@ -89,7 +91,7 @@
 
 *Den 16: Ulovil jsem zdravého kolibříka, snad bude stačit.*
 
-*D*en 26: Kolibřík v kleci je vystaven výparům Elektrolitu již desátým dnem. Nepozoruji žádnou změnu.*
+*Den 26: Kolibřík v kleci je vystaven výparům Elektrolitu již desátým dnem. Nepozoruji žádnou změnu.*
 
 *Den 44: Včera jsem začal mít pocit, že se Fred - kolibřík - začíná chovat trochu zvláštně.. A proboha. Byla to jen předzvěst hrůz, které začali dnes ráno. Alfred, tedy kolibřík, se začal věšet na bidýlku vzhůru nohama, poté začal klovat kolem sebe jako kdyby lovil neviditelné zrní - podotýkám, že kolibříci nezobají zrní - poté začal chodit po své malé klícce po nožkách, jako naparující se kohout. Je to jisté - způsobili jsme změnu mentálního i fyzického stavu celé krajiny. Způsobujeme Blaho.*
 
@@ -165,6 +167,6 @@ Trpaslící ve zdi - killable or just a trap?
 
 ## 15 - Skladiště odpadních tekutin
 
-*Opustili jste člověkem tvořený úbytek a nacházíte se v malém skalním výklenku s přístupem k vodě. Přístup k vodě je ohraničený nízkým plotem. Před vámi se nachází několik dóz, váz, uren a jiných nádob. Všechny zvláštně zapáchají, vůněmi, které vám nejsou povědomé. některé štípou v nose, trochu jako pepř. Jiné vonní suše, jako kdyby spalovali vzduch pod vašimi nozdrami.* 
+*Opustili jste člověkem tvořený úbytek a nacházíte se v malém skalním výklenku s přístupem k vodě. Přístup k vodě je ohraničený nízkým plotem. Před vámi se nachází několik dóz, váz, uren a jiných nádob. Všechny zvláštně zapáchají, vůněmi, které vám nejsou/jsou povědomé. některé štípou v nose, trochu jako pepř. Jiné vonní suše, jako kdyby spalovali vzduch pod vašimi nozdrami.* 
 
 **Zde nic duležitého**
