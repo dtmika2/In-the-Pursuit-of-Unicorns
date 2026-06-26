@@ -112,6 +112,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   <nav class="ch-tabs" role="tablist" aria-label="Chapters">
     <button class="ch-tab active" data-ch="woods">Ch. I — The Woods</button>
     <button class="ch-tab" data-ch="village">Ch. II — Village</button>
+    <button class="ch-tab" data-ch="iii">Ch. III — Lamp Park</button>
     <button class="ch-tab" data-ch="iv">Ch. IV — First Contact</button>
     <button class="ch-tab" data-ch="lab">Ch. V — Lab</button>
   </nav>
@@ -388,6 +389,15 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 
   <p class="village-quote">„Červánková ves, místo klidu a radosti pro každého - vílu či trpaslíka, medvěda či zlobra. Každý je vítán."</p>
 
+  <div class="narration">
+    <div class="narration-label">Číst nahlas</div>
+    <p>Cesta ústí do vesnice. Červánková Vesnice — jméno, které jste slyšeli. Vypadá přesně tak, jak by vesnice vypadat měla.</p>
+    <p>Domy jsou obílené, ploty povětšinou rovné. Z komínů stoupá kouř. Někde v pozadí mlýn, studna, tržiště. Nic podezřelého. Nic neobvyklého.</p>
+    <p>A přesto. Hned při prvním kroku za bránu se vám na kůži usadí pocit — tenký jako pavučina, těžko pojmenovatelný. Lidé se tu pohybují pomalu. Tváře mají klidné. Příliš klidné. Jako by se nikam nespěchalo. Jako by nikamnikdo spěchat ani nemusel.</p>
+    <p>Stará žena u okna vás sleduje s mírným úšklebkem, ani trochu překvapená vaším příchodem. Dítě na návsi se zastaví, podívá se na vás — a pak se dál chichotá čemusi neviditelnému. Starý muž před kovářstvím zvedne hlavu, pohlédné skrz vás, jako byste byli vzduch a pak se vrátí ke svém.</p>
+    <p>Vítejte v Červánkové Vesnici. Stojíte před dřevěným domem, ze kterého se line teplo a vůně čerstvého chleba. Před domem, nad jehož dveřmi se houpe štít s nápisem: Taverna u Zabejčeného Kozla."</p>
+  </div>
+
   <nav class="loc-tabs" role="tablist" aria-label="Sekce">
     <button class="loc-tab" data-l="all">All</button>
     <button class="loc-tab active" data-l="prehled">Přehled</button>
@@ -407,6 +417,12 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   <!-- ── PŘEHLED ── -->
   <div class="loc-panel active" id="v-prehled">
     <h2 class="section-title" style="margin-top:0">Přehled</h2>
+
+    <div class="cue">
+      <div class="cue-label">Image — Village</div>
+      <img src="Images/Location%20images/Village.png" alt="Village" loading="lazy" onclick="openLightbox(this)">
+    </div>
+
     <div class="gm">
       <p>Červánková Vesnice je řádná vesnice. Šedesát-a-pár lidí, studna, tržiště, mlýn u říčního břehu. Vypadá tak, jak by vesnice vypadat měla. To, co je špatně, je zcela v detailech - hostinský, který tiše a bez přestání směje, zatímco čepuje; dítě, které klidně sáhne po nejostřejší zbrani skupiny; stařec, který sedí na nádvoří od čtvrtka v dokonalé spokojenosti. Blaho z těchto lidí nedělá zlé lidi. Dělá je nedosažitelnými, každého svým vlastním způsobem.</p>
       <p>Vesničané vědí, kde jednorožci jsou. Bylo to obecně známé, než Blaho pohltilo každodenní paměť. Cílem skupiny je tuto informaci znovu odkrýt - a existují čtyři cesty, jak toho dosáhnout.</p>
@@ -552,6 +568,12 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
   <!-- ── SEKCE 3 ── -->
   <div class="loc-panel" id="v-3">
     <h2 class="section-title" style="margin-top:0">3 — Hřbitov</h2>
+
+    <div class="cue">
+      <div class="cue-label">Image — Hřbitov</div>
+      <img src="Images/Location%20images/H%C5%99bitov.png" alt="Hřbitov" loading="lazy" onclick="openLightbox(this)">
+    </div>
+
     <div class="gm">
       <p><strong>Mechaniky:</strong> Pohřební rituál (bez <span class="dc">DC</span> při správném provedení) · <span class="dc">DC 10</span> Hallucination Save (pití vody bez rituálu) · <span class="dc">DC 13</span> Understanding (komunikace přes kouli, viz sekce 6)</p>
     </div>
@@ -914,6 +936,66 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
 
   </div><!-- end ch-village -->
 
+  <!-- ════════════════════════ CHAPTER III — LAMP PARK ════════════════════════ -->
+  <div class="ch-panel" id="ch-iii">
+
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Kráčíte po cestě, ktrou vám vysvětlil „x", když v tom v dáli vidíte světlo zahalené v mlze. Mlha si usedá a světlo vyjasňuje.</p>
+      <p>Před vámi je zvláštní les kovových stromů s drobnými zářícími korunami. Když přistoupíte blíže, je vám jasné, že se nejedná o stromy, ale jakési železné konstrukce.</p>
+      <p>Jedná se snad o jakési obří louče, pochodně. Kterým ovšem nerozumíte. Konce loučí jsou zahalené ve skle a v nich je žhavý drát, bez plamene.</p>
+      <p>Kolem vrcholů loučí poletují můry a světlušky. Ve vzduchu se nese zvláštní pocit - jakoby někdo polknul tajemství, které mělo být slyšet. Skrývá se snad něco v tomto zvláštním hvzodu? Poklad? Odpovědi?</p>
+      <p>Pocit doprovází zvuk jemného přerušovaného bzukotu, jako kdyby komár nemohl popadnout dech.</p>
+    </div>
+
+    <div class="cue">
+      <div class="cue-label">Image — Lamp Park</div>
+      <img src="Images/Location%20images/Lamp%20Park.png" alt="Lamp Park" loading="lazy" onclick="openLightbox(this)">
+    </div>
+
+    <div class="cue">
+      <div class="cue-label">Image — Lamp Park 2</div>
+      <img src="Images/Location%20images/Lamp%20Park2.png" alt="Lamp Park 2" loading="lazy" onclick="openLightbox(this)">
+    </div>
+
+    <div class="narration">
+      <div class="narration-label">Číst nahlas</div>
+      <p>Hledíte na Bobromila Rajtbeka v čele, jak prochází mezi loučemi. Hledíte na jeho siluetu, kterou dobře znáte. Když v tom najednou, otočíte se nalevo od vás, kde Bobromil Rajtbek stojí také, prohlížející si svoji zbraň. Tenhle druhý Bobromil se řízne o čepel. A v tom zabliští, jako by byl ze skla. A pak ta věc, vypadající jako váš přítel, pomalu. Velmi pomalu. Zvedne hlavu směrem k vám. Naprosto bez výrazu, jako by za těmi očimi nic nebylo. Jen vzduch. A pak zaútočí.</p>
+    </div>
+
+    <div class="gm">
+      <p>Na začátku boje hráči nevědí, který je který, kdo z nich je hráč a kdo z nich je Inverse. Každy hráč dostane papírek s informací pouze svém dvojníkovi. Použít šachové figurky ve dvojicích pro tuto interakci.</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Condition</th><th>AC</th><th>Attack Rolls Against Them</th><th>Behavior</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>In shadow (between lamps, more than 5ft from any light)</td>
+              <td><span class="dc">15</span></td>
+              <td>Disadvantage — hard to target something that is the darkness</td>
+              <td>Preferred state. They try to stay here and attack from it.</td>
+            </tr>
+            <tr>
+              <td>In light (within 5ft of any lamp)</td>
+              <td><span class="dc">10</span></td>
+              <td>Normal — their edges are crisp and visible</td>
+              <td>They hiss and act desperately, attacking harder to escape back to shadow.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Movement:</strong> As their action, an Inverse may collapse into any nearby shadow and emerge from any other shadow pool within 30ft. This is not teleportation — it is absence moving.</p>
+      <p><strong>Attack — Shade-touch:</strong> d20+2 vs AC. On hit: 1d4 psychic damage. Target also has -1 to their next attack roll (the cold of it lingers).</p>
+      <p><strong>Action instead of attack — Player shuffle:</strong> The Inverse can change place with its double (practicly switch figures on the board). Players must use any investigative talent as action with <span class="dc">DC 8</span> to tell which person is the real one.</p>
+      <p><strong>Defeat:</strong> An Inverse reduced to 0 HP simply... stops. It collapses into a small pool of warm darkness that fades within a minute, leaving nothing behind.</p>
+    </div>
+
+    <a class="back" href="dm.html">← back to dm cabinet</a>
+
+  </div><!-- end ch-iii -->
+
   <!-- ════════════════════════ CHAPTER IV — FIRST CONTACT ════════════════════════ -->
   <div class="ch-panel" id="ch-iv">
 
@@ -933,6 +1015,8 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
       <p>Až u uplného břehu spatříte, že naproti vám stojí stádo. Stádo jednorožců. Vypadají plaše, ale nebojí se. Vypadají ztrápeně, pohuble, ale stojí vzpřímeně. Vypadají unaveně. Ale hrdě.</p>
       <p>Najednou uslyšíte ve svých hlavách — „přistupte blíže..." A vy přistoupíte.</p>
     </div>
+
+    [Image Černé jezero]
 
     <div class="narration">
       <div class="narration-label">Číst nahlas</div>
@@ -965,10 +1049,7 @@ body{background:var(--bg);font-family:'EB Garamond',serif;color:var(--text);min-
       Člun září, je zbudován pouze z plazmatické hmoty. Světlo se odráží od hladiny, jako by lodě byly dvě. A vy pozorujete sami sebe, jak vás loď táhne k sobě. Jak vás volá. Toužíte nastoupit.</p>
     </div>
 
-    <div class="cue">
-      <div class="cue-label">Image — Černé jezero</div>
-      <img src="Images/Location%20images/%C4%8Cern%C3%A9%20jezero.png" alt="Černé jezero" loading="lazy" onclick="openLightbox(this)">
-    </div>
+    [Image Uni Boar]
 
     <div class="narration">
       <div class="narration-label">Číst nahlas</div>
