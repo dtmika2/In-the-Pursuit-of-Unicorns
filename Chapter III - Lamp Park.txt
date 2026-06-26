@@ -1,0 +1,27 @@
+*Kráčíte po cestě, ktrou vám vysvětlil "x", když v tom v dáli vidíte světlo zahalené v mlze. Mlha si usedá a světlo vyjasňuje.*
+Před vámi je zvláštní les kovových stromů s drobnými zářícími korunami. Když přistoupíte blíže, je vám jasné, že se nejedná o stromy, ale jakési železné konstrukce.
+Jedná se snad o jakési obří louče, pochodně. Kterým ovšem nerozumíte. Konce loučí jsou zahalené ve skle a v nich je žhavý drát, bez plamene.
+Kolem vrcholů loučí poletují můry a světlušky. Ve vzduchu se nese zvláštní pocit - jakoby někdo polknul tajemství, které mělo být slyšet. Skrývá se snad něco v tomto zvláštním hvzodu? Poklad? Odpovědi?
+Pocit doprovází zvuk jemného přerušovaného bzukotu, jako kdyby komár nemohl popadnout dech.*
+
+[Image Lamp Park]
+
+[Image Lamp Park2]
+
+**Když se postavy začnou pohybovat mezi lampami:**
+
+"You notice [character name] walking just a few feet to your left — same coat, same weapon. You don't think much of it. And then you look ahead, and [character name] is already there, talking to someone else. You look back. The thing wearing [character name]'s face slowly turns its head toward you. And then it attacks."
+
+*Hledíte na Bobromila Rajtbeka v čele, jak prochází mezi loučemi. Hledíte na jeho siluetu, kterou dobře znáte. Když v tom najednou, otočíte se nalevo od vás, kde Bobromil Rajtbek stojí také, prohlížející si svoji zbraň. Tenhle druhý Bobromil se řízne o čepel. A v tom zabliští, jako by byl ze skla. A pak ta věc, vypadající jako váš přítel, pomalu. Velmi pomalu. Zvedne hlavu směrem k vám. Naprosto bez výrazu, jako by za těmi očimi nic nebylo. Jen vzduch. A pak zaútočí.*
+
+**Na začátku boje hráči nevědí, který je který, kdo z nich je hráč a kdo z nich je Inverse. Každy hráč dostane papírek s informací pouze svém dvojníkovi. Použít šachové figurky ve dvojicích pro tuto interakci.**
+
+**Condition	AC	Attack Rolls Against Them	Behavior
+In shadow (between lamps, more than 5ft from any light)	15	Disadvantage — hard to target something that is the darkness	Preferred state. They try to stay here and attack from it.
+In light (within 5ft of any lamp)	10	Normal — their edges are crisp and visible	They hiss and act desperately, attacking harder to escape back to shadow.
+Movement: As their action, an Inverse may collapse into any nearby shadow and emerge from any other shadow pool within 30ft. This is not teleportation — it is absence moving.
+Attack: Shade-touch. d20+2 vs AC. On hit: 1d4 psychic damage. Target also has -1 to their next attack roll (the cold of it lingers).
+Action instead of attack: Player shuffle - the Inverse can change place with it's duble (practicly switch figures on the board). Players must use any investigative talent as action with DC 8 to tell which person is the real one.
+Defeat: An Inverse reduced to 0 HP simply... stops. It collapses into a small pool of warm darkness that fades within a minute, leaving nothing behind.**
+
+
